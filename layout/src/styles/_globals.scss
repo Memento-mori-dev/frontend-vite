@@ -1,0 +1,51 @@
+@use 'helpers' as *;
+
+body{
+    @include fluid-text(18, 14);
+
+    font-family: var(--font-family);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+    color: #000;
+}
+
+h1, .h1{
+    @include fluid-text();
+}
+h2, .h2{
+    @include fluid-text();
+}
+h3, .h3{
+    @include fluid-text();
+}
+h4, .h4{
+    @include fluid-text();
+}
+h5, .h5{
+    @include fluid-text();
+}
+h6, .h6{
+    @include fluid-text();
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg *{
+    transition-duration: var(--transition-duration);
+}
+
+:focus-visible{
+    outline: rem(2) dashed #000;
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}

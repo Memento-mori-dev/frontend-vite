@@ -1,0 +1,16 @@
+@use 'helpers' as *;
+
+:root{
+    // color
+
+
+    // font
+    --font-family: '';
+
+    // width and padding
+    --container-width: #{rem(1600)};
+    --container-padding-x: #{rem(1600)};
+
+    // animation
+    --transition-duration: .2s;
+}
