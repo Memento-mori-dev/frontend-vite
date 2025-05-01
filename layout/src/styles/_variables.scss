@@ -2,14 +2,17 @@
 
 :root{
     // color
-
+    --dark: #222224;
+    --white: #fff;
+    --orange: #EA4C14;
+    --grey: #efefef;
 
     // font
-    --font-family: '';
+    --font-family: "Roboto", sans-serif;
 
     // width and padding
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(1600)};
+    --container-width: #{rem(1366)};
+    --container-padding-x: #{rem(16)};
 
     // animation
     --transition-duration: .2s;
