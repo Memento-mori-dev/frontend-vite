@@ -2,7 +2,15 @@
 
 :root{
     // color
+    --black:#000000;
+    --black-37:#373737;
+    --white:#FFFFFF;
+    --white-f8:#f8f8f8;
+    --grey-c2:#c2c2c2;
+    --blue: #12b0ea;
 
+    --border:  1px solid rgba(255, 255, 255, 0.25);
+    --border-black: 1px solid #414141;
 
     // font
     --font-family: "Gilroy", sans-serif;
@@ -10,8 +18,8 @@
     --third-family: "Onest", sans-serif;
 
     // width and padding
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(1600)};
+    --container-width: #{rem(1400)};
+    --container-padding-x: #{rem(16)};
 
     // animation
     --transition-duration: .2s;

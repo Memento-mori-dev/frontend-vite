@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.button{
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    &--48{
+        padding: rem(13) rem(43.5);
+        border-radius: rem(30);
+
+        font-size: rem(14);
+
+        & .icon-right{
+            padding-left: rem(10);
+
+            display: flex;
+            align-items: center;
+
+            & svg{
+                width: rem(12);
+            }
+        }
+    }
+
+    &--white{
+        background-color: var(--white);
+        color: var(--black-37);
+    }
+
+    &--border{
+        border: var(--border-black);
+    }
+
+    &-circle{
+
+    }
+
+
+}

@@ -9,8 +9,8 @@
 }
 
 @function fluid($max: 100, $min: 10) {
-  $maxViewportWidth: 1600; // Максимальное разрешение макета
-  $minViewportWidth: 390; // Минимальное разрешение макета
+  $maxViewportWidth: 1400; // Максимальное разрешение макета
+  $minViewportWidth: 360; // Минимальное разрешение макета
 
   $maxSize: math.div($max, 16);
   $minSize: math.div($min, 16);

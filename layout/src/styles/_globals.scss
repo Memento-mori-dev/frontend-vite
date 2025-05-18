@@ -12,26 +12,42 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6{
-    color: #000;
+    font-family: var(--second-family);
+    font-weight: 700;
+    color: var(--white-f8);
 }
 
 h1, .h1{
-    @include fluid-text();
+    @include fluid-text(160, 80);
+    line-height: 134%;
+    letter-spacing: 0.01em;
 }
 h2, .h2{
-    @include fluid-text();
+    @include fluid-text(130, 65);
+    line-height: 126%;
+    letter-spacing: 0.02em;
 }
 h3, .h3{
-    @include fluid-text();
+    @include fluid-text(100, 50);
+    line-height: 126%;
+    letter-spacing: 0.02em;
 }
 h4, .h4{
-    @include fluid-text();
+    @include fluid-text(90, 45);
+    line-height: 134%;
+    letter-spacing: 0.02em;
 }
 h5, .h5{
-    @include fluid-text();
+    @include fluid-text(53, 26.5);
+    line-height: 145%;
+    letter-spacing: 0.01em;
 }
 h6, .h6{
     @include fluid-text();
+}
+
+.text-up{
+    text-transform: uppercase;
 }
 
 a,
@@ -42,6 +58,26 @@ textarea,
 select,
 svg *{
     transition-duration: var(--transition-duration);
+}
+
+a,
+button{
+    @include hover{
+        opacity: .8;
+    }
+}
+
+a{
+    @include fluid-text(20, 16);
+    font-family: var(--font-family);
+    line-height: 145%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #12aee7;
+}
+
+body{
+    background-color: var(--black);
 }
 
 :focus-visible{

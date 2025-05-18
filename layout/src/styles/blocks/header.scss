@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+.header{
+    &__container{
+        padding-top: rem(24);
+        padding-bottom: rem(30);
+
+        display: grid;
+        align-items: center;
+        grid-template-areas: "start . address . form";
+        grid-template-columns: rem(225) rem(90) rem(290) auto min-content;
+
+        border-bottom: var(--border);
+    }
+
+    &__start{
+        display: flex;
+        align-items: center;
+
+        grid-area: start;
+    }
+    &__logo{
+        display: block;
+        width: rem(53);
+
+        & img{
+            width: 100%;
+        }
+    }
+    &__text{
+        padding-left: rem(23);
+        font-family: var(--third-family);
+        font-weight: 300;
+        font-size: rem(11);
+        line-height: 132%;
+        color: var(--grey-c2);
+        white-space: nowrap;
+    }
+
+    &__address{
+        grid-area: address;
+    }
+
+    &__form{
+        grid-area: form;
+    }
+}
