@@ -1,0 +1,122 @@
+@use '../helpers' as *;
+
+.presentation{
+    position: relative;
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: rem(30);
+        right: rem(-110);
+
+        width: rem(320);
+        height: rem(410);
+
+        border-radius: rem(900);
+        background-color: var(--blue-0c);
+
+        transform: rotate(-150deg);
+        filter: blur(350px);
+    }
+
+    &__container{
+        display: grid;
+        grid-template-areas:"banner main"
+                            "cards cards";
+        grid-template-columns: 53% 47%;
+        grid-template-rows: repeat(2, auto);
+        column-gap: rem(105);
+        row-gap: rem(105);
+    }
+
+    &__banner{
+        grid-area: banner;
+
+        & .banner{
+            width: 100%;
+        }
+    }
+
+    &__content{
+        grid-area: main;
+
+        &-header{
+            display: inline-block;
+
+            position: relative;
+            &::after{
+                @include square(rem(69));
+
+                content: '';
+
+                position: absolute;
+                top: rem(33);
+                right: rem(-130);
+
+                background-image: url(../../../public/svg/star.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+
+            &-sub{
+                padding-top: rem(35);
+
+                font-weight: 500;
+                font-size: rem(24);
+                line-height: 145%;
+                color: var(--white-f8);
+            }
+        }
+        &-text{
+            max-width: rem(554);
+
+            padding-top: rem(50);
+
+            font-size: rem(23);
+            line-height: 151%;
+            color: var(--white-da);
+
+            & span{
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__cards{
+        grid-area: cards;
+
+        display: flex;
+        gap: rem(35);
+
+        &-item{
+            width: calc(25% - rem(17.5));
+
+            padding: rem(21.5) rem(30);
+            border: var(--border);
+            border-radius: rem(15);
+        }
+
+        &-number{
+            font-family: var(--font-Outline);
+            font-weight: 400;
+            font-size: rem(50);
+            line-height: 145%;
+            letter-spacing: 0.08em;
+            color: var(--blue);
+
+            &::before{
+                content: '/';
+            }
+        }
+        &-text{
+            padding-top: rem(20);
+
+            font-weight: 500;
+            font-size: rem(22);
+            line-height: 145%;
+            color: var(--white);
+
+            max-width: 85%;
+        }
+    }
+}

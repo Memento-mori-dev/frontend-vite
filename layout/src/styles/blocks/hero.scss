@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .hero{
-    overflow-x: hidden;
+    overflow: hidden;
 
     padding-top: rem(71);
     padding-bottom: rem(41);

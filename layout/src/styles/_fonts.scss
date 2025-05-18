@@ -49,3 +49,11 @@
       url("../fonts/Steelfish-Bold.woff") format("woff");
     font-weight: 700;
 }
+
+@font-face {
+    font-family: "Steelfish Outline";
+    src: local("Steelfish-Outline-Regular"),
+      local("Steelfish Outline Regular"),
+      url("../fonts/SteelfishOutline-Regular.woff") format("woff");
+    font-weight: 400;
+}
