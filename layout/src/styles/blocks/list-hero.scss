@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.list-hero{
+    list-style-type: none;
+
+    font-size: rem(20);
+    line-height: 145%;
+    color: var(--white-f8);
+
+    display: flex;
+    
+    & li{
+        --padding: #{rem(45)};
+
+        &:not(:last-child){
+            padding-right: var(--padding);
+        }
+        &:not(:first-child){
+            padding-left: var(--padding);
+        }
+
+        position: relative;
+        &:not(:first-child)::before{
+            @include square(rem(5));
+
+            content: '';
+            
+            position: absolute;
+            top: rem(12);
+            left: rem(-2.5);
+
+            border-radius: 50%;
+            background-color: var(--blue);
+        }
+    }
+}

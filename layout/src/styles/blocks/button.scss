@@ -2,6 +2,7 @@
 
 .button{
     text-decoration: none;
+    border: none;
 
     display: flex;
     align-items: center;
@@ -24,9 +25,52 @@
         }
     }
 
+    &--85{
+        overflow: hidden;
+
+        border-radius: rem(90);
+        padding: rem(28) rem(50) rem(28) rem(63);
+
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: 106%;
+
+        & .icon-right{
+            padding-left: rem(35);
+
+            display: flex;
+            align-items: center;
+
+            & svg{
+                width: rem(29);
+            }
+        }
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            right: rem(29);
+
+            width: rem(156);
+            height: rem(57);
+
+            border-radius: 50%;
+
+            background-color: var(--white);
+            transform: rotate(-63deg);
+            filter: blur(130px);
+        }
+    }
+
     &--white{
         background-color: var(--white);
         color: var(--black-37);
+    }
+    &--blue{
+        background-color: var(--blue);
+        color: var(--white-f8);
     }
 
     &--border{

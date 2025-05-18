@@ -1,6 +1,22 @@
 @use '../helpers' as *;
 
 .header{
+    position: relative;
+    &::before{
+        @include square(rem(466));
+
+        content: '';
+
+        position: absolute;
+        top: rem(60);
+        left: rem(-322);
+
+        background-color: var(--blue-0c);
+        border-radius: 50%;
+        filter: blur(350px);
+        opacity: 0.45;
+    }
+
     &__container{
         padding-top: rem(24);
         padding-bottom: rem(30);

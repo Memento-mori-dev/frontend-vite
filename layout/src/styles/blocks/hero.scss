@@ -1,5 +1,122 @@
 @use '../helpers' as *;
 
 .hero{
-    
+    overflow-x: hidden;
+
+    padding-top: rem(71);
+    padding-bottom: rem(41);
+
+    &__container{
+        display: grid;
+        grid-template-areas: 'content banner';
+        grid-template-columns: 52% 48%;
+        gap: rem(75);
+    }
+
+    &__content{
+        grid-area: content;
+
+        position: relative;
+        &::after{
+            @include square(rem(227));
+
+            content: '';
+
+            position: absolute;
+            left: -51%;
+            bottom: 15%;
+
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    &__list{}
+    &__title{
+        padding-top: rem(17);
+
+        position: relative;
+        &::before{
+            content: '';
+
+            position: absolute;
+            top: rem(65);
+            right: 3%;
+
+            @include square(rem(51));
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
+    &__week{
+        padding-top: rem(50);
+
+        display: flex;
+        align-items: center;
+    }
+    &__week-icon{
+        @include square(rem(65))
+    }
+    &__week-text{
+        max-width: rem(410);
+
+        padding-left: rem(45);
+        font-weight: 500;
+        font-size: rem(27);
+        line-height: 145%
+
+        & span{
+            font-weight: 600;
+        }
+    }
+    &__button{
+        padding-top: rem(50);
+    }
+
+    &__banner{
+        grid-area: banner;
+
+        & .banner{
+            width: 132%;
+        }
+
+        position: relative;
+        &::before{
+            content: '';
+
+            position: absolute;
+            top: -12%;
+            left: -18%;
+
+            width: rem(410);
+            height: rem(285);
+
+            border-radius: rem(900);
+
+            transform: rotate(118deg);
+            opacity: 0.3;
+            background-color: var(--blue-0c);
+            filter: blur(300px);
+            z-index: -1;
+        }
+
+
+        &::after{
+            @include square(rem(500));
+
+            content: '';
+
+            position: absolute;
+            left: rem(-290);
+            bottom: rem(-50);
+
+            background-image: url(../../../public/images/hero-sticks.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // transform: rotate(-133deg);
+
+            z-index: 1;
+        }
+    }
 }

@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.banner{
+    width: 100%;
+    height: 100%;
+
+    border-radius: rem(10) rem(35);
+
+    transform: rotate(-0.45deg);
+
+    background-color: var(--blue);
+
+    & img{
+        width: 100%;
+        height: 100%;
+
+        transform: rotate(-1.46deg);
+    }
+}

@@ -50,6 +50,28 @@ h6, .h6{
     text-transform: uppercase;
 }
 
+.text-line{
+    position: relative;
+    &::after{
+        content: '';
+
+        position: absolute;
+        left: 0;
+        bottom: 4%;
+
+        width: 100%;
+        height: 14%;
+
+        background-color: var(--blue);
+
+        z-index: -1;
+        transform: rotate(-0.55deg);
+    }
+}
+.text-blue{
+    color: var(--blue);
+}
+
 a,
 button,
 label,
@@ -69,7 +91,6 @@ button{
 
 a{
     @include fluid-text(20, 16);
-    font-family: var(--font-family);
     line-height: 145%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
