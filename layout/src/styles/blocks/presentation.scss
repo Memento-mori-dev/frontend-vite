@@ -23,7 +23,7 @@
         display: grid;
         grid-template-areas:"banner main"
                             "cards cards";
-        grid-template-columns: 53% 47%;
+        grid-template-columns: calc(56% - rem(52.5)) calc(44% - rem(52.5));
         grid-template-rows: repeat(2, auto);
         column-gap: rem(105);
         row-gap: rem(105);

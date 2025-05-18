@@ -108,5 +108,7 @@ body{
 }
 
 .section{
+    overflow: hidden;
+    max-width: 100vw;
     padding-top: rem(150);
 }
