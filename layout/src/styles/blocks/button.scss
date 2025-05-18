@@ -78,8 +78,17 @@
     }
 
     &-circle{
+        @include square(rem(37));
+        display: block;
+        border-radius: 50%;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & svg{
+            width: rem(17);
+            height: rem(17);
+        }
     }
-
-
 }

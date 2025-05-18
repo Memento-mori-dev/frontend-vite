@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.socials{
+    display: flex;
+    align-items: center;
+
+    &__item{
+        &:not(:first-child){
+            padding-left: rem(22);
+        }
+    }
+}

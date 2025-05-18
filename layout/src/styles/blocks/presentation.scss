@@ -35,6 +35,60 @@
         & .banner{
             width: 100%;
         }
+
+        position: relative;
+        &-container{
+            position: absolute;
+            right: rem(52);
+            bottom: rem(37);
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            &::before{
+                content: '';
+
+                position: absolute;
+                top: -10%;
+                left: -10%;
+
+                width: 100%;
+                height: 120%;
+                border-radius: 100%;
+
+                background-color: rgba(0, 0, 0, 0.5);
+                filter: blur(200px);
+                z-index: -1;
+            }
+
+            z-index: 3;
+        }
+        &-social{
+            padding-top: rem(24);
+        }
+        &-text{
+            max-width: rem(244);
+
+            font-weight: 500;
+            font-size: rem(19);
+            line-height: 151%;
+            color: var(--white);
+
+            position: relative;
+            &::after{
+                @include square(rem(10));
+
+                content: '';
+
+                position: absolute;
+                top: rem(8);
+                left: rem(-29);
+
+                border-radius: 50%;
+                background-color: var(--blue);
+            }
+        }
     }
 
     &__content{
