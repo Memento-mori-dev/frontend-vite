@@ -75,6 +75,21 @@
         }
     }
 
+    @include tablet{
+        &__item{
+            flex-shrink: 0;
+
+            grid-template-areas:'big big'
+                                'top top'
+                                'bottom bottom';
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            row-gap: rem(20);
+        }
+
+
+    }
+
     & .swiper-slider{
         @media (width <= rem(2228)) {
             // margin-left: rem(-144);
@@ -83,6 +98,20 @@
 
         & .swiper-slide{
             flex-shrink: 1;
+        }
+
+        @include pc-top{
+            margin-left: -13%;
+        }
+
+        @include tablet{
+            margin-left: rem(-16);
+
+            & .swiper-slide{
+                width: 70%;
+
+                flex-shrink: 0;
+            }
         }
     }
 }
