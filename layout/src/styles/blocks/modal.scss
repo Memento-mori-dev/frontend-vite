@@ -138,4 +138,63 @@
         }
     }
 
+
+    @include tablet{
+        padding: 0 rem(16);
+
+        &__item{
+            &--sticks{
+                padding-top: rem(93);
+            }
+            width: 100%;
+        }
+        &__block{
+            width: 100%;
+            padding: rem(20) rem(40);
+        }
+    }
+
+    @include mobile{
+        align-items: start;
+
+        &__block{
+            &-form{
+                padding-top: rem(30);
+
+                width: 100%;
+
+                align-items: center;
+            }
+
+            &-item{
+                &:not(:first-child){
+                    padding-top: rem(15);
+                }
+
+                width: 100%;
+
+                & .button{
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    @include mobile-s{
+        &__block{
+            padding: rem(16);
+
+            &::before{
+                @include square(rem(300));
+
+                top: rem(-128);
+                left: rem(-124);
+            }
+
+            &-input{
+                padding: rem(15) rem(20);
+                font-size: rem(16);
+            }
+        }
+    }
 }
