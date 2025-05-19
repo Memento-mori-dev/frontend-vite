@@ -7,6 +7,5 @@ const swiper = new Swiper('.swiper-slider', {
   direction: 'horizontal',
   slidesPerView: "auto",
   spaceBetween: 70,
-  centeredSlides: true,
-  centeredSlidesBounds: true,
+  initialSlide: 2,
 });
