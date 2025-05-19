@@ -9,8 +9,7 @@
                             "cards cards";
         grid-template-columns: calc(56% - rem(52.5)) calc(44% - rem(52.5));
         grid-template-rows: repeat(2, auto);
-        column-gap: rem(105);
-        row-gap: rem(105);
+        gap: rem(105);
     }
 
     &__banner{
@@ -155,6 +154,63 @@
             color: var(--white);
 
             max-width: 85%;
+        }
+    }
+
+    @include laptop{
+        &__container{
+            grid-template-columns: calc(56% - rem(25)) calc(44% - rem(25));
+            gap: rem(50);
+        }
+
+        &__cards{
+            flex-wrap: wrap;
+            
+            &-item{
+                width: calc(50% - rem(17.5));
+            }
+        }
+    }
+
+    @include tablet{
+        &__container{
+            grid-template-areas:"banner"
+                                "main"
+                                "cards";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        &__content{
+            &-text{
+                max-width: 70%;
+            }
+        }
+    }
+
+    @include mobile{
+        &__content{
+            &-text{
+                max-width: 100%;
+            }
+        }
+
+        &__cards{
+            &-item{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile-s{
+        &__banner-container{
+            right: rem(16);
+            bottom: rem(16);
+        }
+
+        &__content-header::after{
+            top: 5%;
+            right: -15%;
         }
     }
 }
