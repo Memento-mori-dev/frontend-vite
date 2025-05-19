@@ -1,0 +1,81 @@
+@use '../helpers' as *;
+
+.blue-blocks{
+    &__one{
+        position: relative;
+
+        &::after{
+            @include square(rem(466));
+
+            content: '';
+
+            position: absolute;
+            top: rem(-50);
+            left: rem(-300);
+
+            background-color: var(--blue-0c);
+            border-radius: 50%;
+            filter: blur(350px);
+            opacity: 0.45;
+        }
+    }
+
+    &__two{
+        position: relative;
+
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: rem(-10);
+            right: rem(-100);    
+
+            width: rem(320);
+            height: rem(410);
+
+            border-radius: rem(900);
+            background-color: var(--blue-0c);
+
+            transform: rotate(-150deg);
+            filter: blur(350px);
+        }
+    }
+
+    &__three{
+        position: relative;
+
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: rem(-150);
+            left: rem(-200);
+
+            border-radius: 900px;
+            width: rem(631);
+            height: rem(576);
+
+            background-color: var(--blue-0c);
+            transform: rotate(-166deg);
+            filter: blur(300px);
+            opacity: 0.4;
+        }
+
+        &::before{
+            content: '';
+
+            position: absolute;
+            right: rem(0);
+            bottom: rem(-320);
+
+            border-radius: 900px;
+            width: rem(631);
+            height: rem(576);
+
+            background-color: var(--blue-0c);
+            transform: rotate(-166deg);
+            filter: blur(300px);
+            opacity: 0.4;
+        }
+    }
+}

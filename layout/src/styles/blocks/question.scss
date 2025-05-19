@@ -3,42 +3,6 @@
 .question{
     position: relative;
 
-    &__blue{
-        position: relative;
-        &::after{
-            content: '';
-
-            position: absolute;
-            top: rem(-150);
-            left: rem(-430);
-
-            border-radius: 900px;
-            width: rem(631);
-            height: rem(576);
-
-            background-color: var(--blue-0c);
-            transform: rotate(-166deg);
-            filter: blur(300px);
-            opacity: 0.4;
-        }
-        &::before{
-            content: '';
-
-            position: absolute;
-            right: -400px;
-            bottom: -320px;
-
-            border-radius: 900px;
-            width: rem(631);
-            height: rem(576);
-
-            background-color: var(--blue-0c);
-            transform: rotate(-166deg);
-            filter: blur(300px);
-            opacity: 0.4;
-        }
-    }
-
     &__container{
         display: grid;
         grid-template-areas: 'title images cards';

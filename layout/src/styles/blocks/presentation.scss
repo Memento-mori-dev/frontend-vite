@@ -2,22 +2,6 @@
 
 .presentation{
     position: relative;
-    &::after{
-        content: '';
-
-        position: absolute;
-        top: rem(30);
-        right: rem(-110);
-
-        width: rem(320);
-        height: rem(410);
-
-        border-radius: rem(900);
-        background-color: var(--blue-0c);
-
-        transform: rotate(-150deg);
-        filter: blur(350px);
-    }
 
     &__container{
         display: grid;
