@@ -2,8 +2,77 @@
 
 .question{
     &__container{
-        
+        display: grid;
+        grid-template-areas: 'title images cards';
+        grid-template-columns: 37% 31% 32%;
     }
 
-    &__title{}
+    &__title{
+        grid-area: title;
+    }
+
+    &__images{
+        grid-area: images;
+
+        position: relative;
+        &::after{
+            @include square(rem(51));
+
+            content: '';
+
+            position: absolute;
+            top: 6%;
+            left: 20%;
+
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        &::before{
+            @include square(rem(27));
+
+            content: '';
+
+            position: absolute;
+            top: 29%;
+            right: 30%;
+
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+
+        &-main{
+            @include square(rem(660));
+
+            position: absolute;
+            top: -16%;
+            left: -32%;
+
+            transform: rotate(-4deg);;
+        }
+    }
+
+    &__cards{
+        grid-area: cards;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(45);
+
+        &-item{
+            &:not(:last-child){
+                padding-bottom: rem(45);
+                border-bottom: var(--border);
+            }
+        }
+
+        &-text{
+            padding-top: rem(25);
+            font-size: rem(20);
+            line-height: 145%;
+            color: var(--grey-cc);
+        }
+    }
 }
