@@ -1,5 +1,77 @@
 @use '../helpers' as *;
 
 .footer{
-    
+    padding-bottom: rem(75);
+
+    &__container{
+        display: grid;
+        grid-template-areas:'main images'
+                            'about images';
+        grid-template-columns: 52% 48%;
+        grid-template-rows: repeat(2, auto);
+        row-gap: rem(88);
+    }
+
+    &__main{
+        grid-area: main;
+
+        &-button{
+            padding-top: rem(60);
+        }
+    }
+
+    &__about{
+        grid-area: about;
+
+        &-text{
+            font-size: rem(20);
+            line-height: 145%;
+
+            color: var(--white);
+        }
+
+        &-link{
+            padding-top: rem(29);
+        }
+    }
+
+    &__images{
+        grid-area: images;
+
+        position: relative;
+        &::after{
+            @include square(rem(71));
+
+            content: '';
+
+            position: absolute;
+            top: -9%;
+            right: 17%;
+
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        &::before{
+            @include square(rem(51));
+
+            content: '';
+
+            position: absolute;
+            top: -5%;
+            left: 10%;
+
+            background-image: url(../../../public/svg/star.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        & img{
+            position: absolute;
+            left: -13%;
+            bottom: -25%;
+
+            width: 950px;
+        }
+    }
 }
