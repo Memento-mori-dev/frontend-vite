@@ -1,5 +1,84 @@
 @use '../helpers' as *;
 
 .slider{
-    
+    &__container{
+        margin: auto;
+        width: 100%;
+        max-width: rem(2214);
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item{
+        &:not(:first-child){
+            padding-left: rem(70);
+        }
+
+        display: grid;
+        grid-template-areas:'big top'
+                            'big bottom';
+        grid-template-columns: rem(612) rem(392);
+        grid-template-rows: repeat(2, rem(208));
+        column-gap: rem(65);
+        row-gap: rem(47);
+
+        position: relative;
+        
+        &--blue{
+            &::before{
+                content: '';
+
+                position: absolute;
+                top: 30%;
+                left: 15%;
+
+                width: rem(638);
+                height: rem(302);
+
+                background-color: var(--blue-0c);
+
+                border-radius: rem(900);
+                transform: rotate(151deg);
+                filter: blur(200px);
+                opacity: 0.2;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__big{
+        @include square(100%);
+
+        grid-area: big;
+        border-radius: rem(30);
+
+        object-fit: cover;
+        object-position: center
+    }
+    &__small{
+        @include square(100%);
+
+        object-fit: cover;
+        object-position: center;
+        border-radius: rem(25);
+
+        &--top{
+            grid-area: top;
+            border-radius: rem(25);
+        }
+        &--bottom{
+            grid-area: bottom;
+            border-radius: rem(25);
+        }
+    }
+}
+
+.swiper-slider{
+    & .swiper-slide{
+        flex-shrink: 1;
+    }
+
+    & .swiper-wrapper{
+    }
 }
