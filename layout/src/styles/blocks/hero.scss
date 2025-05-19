@@ -162,9 +162,12 @@
 
                 background-size: contain;
             }
+            &::before{
+                display: none;
+            }
         }
 
-        .hero__content{
+        &__content{
             &::after{
                 display: none;
             }
