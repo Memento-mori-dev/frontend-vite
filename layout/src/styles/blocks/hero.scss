@@ -115,9 +115,109 @@
             background-image: url(../../../public/images/hero-sticks.png);
             background-repeat: no-repeat;
             background-size: 100%;
-            // transform: rotate(-133deg);
 
             z-index: 1;
+        }
+    }
+
+    @include laptop{
+        &__title{
+            &::before{
+                top: rem(60);
+                right: -8%;
+
+                width: 10%;
+                aspect-ratio: 1;
+
+                background-size: contain;
+            }
+        }
+
+        &__banner{
+            &::after{
+                @include square(rem(400));
+
+                left: -30%;
+                bottom: -10%;
+            }
+        }
+    }
+
+    @include tablet{
+        &__title{
+            padding-right: 10%;
+
+            &::before{
+                right: 0;
+            }
+        }
+
+        &__banner{
+            &::after{
+                @include square(70%);
+
+                left: auto;
+                top: -63%;
+                right: -30%;
+
+                background-size: contain;
+            }
+        }
+
+        .hero__content{
+            &::after{
+                display: none;
+            }
+        }
+
+
+        &__container{
+            grid-template-areas:"content"
+                                "banner";
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            row-gap: rem(40);
+        }
+
+        &__week,&__button{
+            padding-top: rem(25);
+        }
+
+        &__banner{
+            & .banner{
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile{
+        padding-top: rem(30);
+        
+        &__title{
+            text-align: center;
+        }
+
+        &__week{
+            justify-content: center;
+
+            &-icon{
+                @include square(rem(50));
+            }
+            &-text{
+                padding-left: rem(20);
+                font-size: rem(20);
+            }
+        }
+
+        &__button{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__banner{
+            &::after{
+                display: none;
+            }
         }
     }
 }

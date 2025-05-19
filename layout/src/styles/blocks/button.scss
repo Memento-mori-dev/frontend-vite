@@ -91,4 +91,16 @@
             height: rem(17);
         }
     }
+
+    @include mobile{
+        &--85{
+            padding: rem(20) rem(40);
+
+            font-size: rem(16);
+
+            & .icon-right{
+                padding-left: rem(20);
+            }
+        }
+    }
 }

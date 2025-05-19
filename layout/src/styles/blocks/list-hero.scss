@@ -33,4 +33,14 @@
             background-color: var(--blue);
         }
     }
+
+    @include laptop{
+        & li{
+            --padding: #{rem(25)};
+        }
+    }
+
+    @include mobile{
+        font-size: rem(16);
+    }
 }
