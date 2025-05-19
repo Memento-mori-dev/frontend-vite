@@ -87,9 +87,61 @@
         & img{
             position: absolute;
             left: -13%;
-            bottom: -25%;
+            top: 0%;
 
-            width: 950px;
+            width: 140%;
+        }
+    }
+
+    @include laptop{
+        &__images{
+            & img{
+                width: 200%;
+            }
+        } 
+    }
+
+    @include tablet{
+        padding-bottom: rem(30);
+
+        &__container{
+            grid-template-areas:'main'
+                                'images'
+                                'about';
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, auto);
+        }
+
+        &__main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__images{
+            display: flex;
+            justify-content: center;
+
+            & img{
+                position: static;
+                width: 100%;
+                max-width: rem(400);
+            }
+        }
+
+        &__about{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-text{
+                text-align: center;
+            }
+
+            & a{
+                display: inline-block;
+                text-align: center;
+            }
         }
     }
 }
