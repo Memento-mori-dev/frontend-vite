@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body data-js-scroll>
     <div class="wrapper">
       <header class="header">
         <div class="header__container container">
@@ -34,7 +34,7 @@
           </address>
 
           <div class="header__form">
-            <a href="#" class="button button--white button--border button--48">
+            <a href="#" class="button button--white button--border button--48" data-js-modal-open="1">
               <span>Консультация</span>
               <span class="icon-right">
                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="hero__button">
-                  <button class="button button--85 button--blue">
+                  <button class="button button--85 button--blue"  data-js-modal-open="1">
                     <span>
                       Записаться на бесплатное занятие
                     </span>
@@ -285,7 +285,7 @@
           <div class="footer__main">
             <p class="h1 text-up">мы <span class="text-line">ждем</span> тебя!</p>
             <div class="footer__main-button">
-              <button class="button button--85 button--blue">
+              <button class="button button--85 button--blue" data-js-modal-open="1">
                   <span>
                     Записаться на бесплатное занятие
                   </span>
@@ -312,8 +312,8 @@
       </footer>
     </div>
 
-    <div class="modal is-open">
-      <div class="modal__item modal__item--sticks is-show">
+    <div class="modal" data-js-modal>
+      <div class="modal__item modal__item--sticks" data-js-modal-item="1">
         <div class="modal__block">
           <div class="modal__block-title">
             <p class="h4 text-up">

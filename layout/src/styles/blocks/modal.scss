@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .modal{
+    overflow-x: auto;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -17,6 +19,8 @@
     pointer-events: none;
     opacity: 0;
 
+    transition: opacity var(--transition-duration);
+
     &.is-open{
         pointer-events: auto;
         opacity: 1;
@@ -31,7 +35,7 @@
         }
 
         &--sticks{
-            padding-top: rem(50);
+            margin-top: rem(90);
         }
     }
 
@@ -144,7 +148,7 @@
 
         &__item{
             &--sticks{
-                padding-top: rem(93);
+                margin-top: rem(93);
             }
             width: 100%;
         }
@@ -155,8 +159,6 @@
     }
 
     @include mobile{
-        align-items: start;
-
         &__block{
             &-form{
                 padding-top: rem(30);
