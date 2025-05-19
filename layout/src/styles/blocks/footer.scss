@@ -110,12 +110,17 @@
                                 'about';
             grid-template-columns: auto;
             grid-template-rows: repeat(3, auto);
+            row-gap: rem(40);
         }
 
         &__main{
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            &-button{
+                padding-top: rem(30);
+            }
         }
 
         &__images{

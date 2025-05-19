@@ -1,0 +1,141 @@
+@use '../helpers' as *;
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+
+    &.is-open{
+        pointer-events: auto;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    &__item{
+        display: none;
+
+        &.is-show{
+            display: block;
+        }
+
+        &--sticks{
+            padding-top: rem(50);
+        }
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: rem(725);
+        padding: rem(40) rem(73.5) rem(60);
+        border-radius: rem(25);
+        background-color: var(--black);
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: rem(25);
+            background-color: var(--blue);
+
+            z-index: -1;
+            transform: rotate(-1.46deg);
+        }
+        &::before{
+            @include square(rem(500));
+            content: '';
+
+            position: absolute;
+            top: rem(-200);
+            left: rem(-200);
+
+            background-image: url(../../../public/images/hero-sticks.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // transform: rotate(-133deg);
+        }
+
+        &-title{
+            text-align: center;
+        }
+
+        &-form{
+            margin: auto;
+            max-width: rem(548);
+
+            padding-top: rem(50);
+            
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item{
+            &:not(:first-child){
+                padding-top: rem(35);
+            }
+        }
+
+        &-input{
+            width: 100%;
+            padding: rem(31) rem(44);
+
+            border: var(--border);
+            background: none;
+            border-radius: rem(90);
+
+            font-size: rem(20);
+            line-height: 106%;
+            color: var(--white);
+
+            &::placeholder{
+                color: var(--grey-c7);
+            }
+
+            &:focus{
+                outline: rem(3) solid var(--blue);
+                outline-offset: 0;
+            }
+
+            transition: outline var(--transition-duration);
+        }
+
+        &-about{
+            text-align: center;
+
+            &-text{
+                font-weight: 300;
+                font-size: rem(15);
+                line-height: 145%;
+                color: var(--grey-c7);
+
+                & a{
+                    font-weight: 300;
+                    font-size: rem(15);
+                    line-height: 145%;
+                }
+            }
+        }
+    }
+
+}

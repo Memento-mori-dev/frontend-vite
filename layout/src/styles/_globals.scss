@@ -54,6 +54,7 @@ h6, .h6{
     white-space: nowrap;
 
     position: relative;
+    z-index: 3;
     &::after{
         content: '';
 
@@ -101,6 +102,10 @@ a{
 
 body{
     background-color: var(--black);
+
+    &.is-stop{
+        overflow: hidden;
+    }
 }
 
 main{

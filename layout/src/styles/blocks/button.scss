@@ -77,6 +77,20 @@
         border: var(--border-black);
     }
 
+    &--submit{
+        position: relative;
+        & input{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            opacity: 0;
+        }
+    }
+
     &-circle{
         @include square(rem(37));
         display: block;
