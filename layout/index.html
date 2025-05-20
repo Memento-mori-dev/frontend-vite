@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./src/styles/main.scss">
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
   </head>
   <body data-js-scroll>
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="hero__title">
-                  <p class="h2 text-up">
+                  <p class="h2 text-up text-block">
                     Не упусти шанс <span class="text-line">исполнить мечту!</span>
                   </p>
                 </div>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="presentation__content">
                   <div class="presentation__content-header">
-                    <p class="h3 text-up">Влад шоки</p>
+                    <p class="h3 text-up typewriter-text">Влад шоки</p>
                     <p class="presentation__content-header-sub">Старший преподаватель</p>
                   </div>
                   <p class="presentation__content-text">
@@ -236,12 +236,18 @@
         <div class="blue-blocks__three">
           <section class="question section">
             <div class="question__container container">
-              <div class="question__title">
-                <p class="h4 text-up"><span class="text-line">вопросы</span>, которые чаще всего задают</p>
-              </div>
+              <div class="question__animate">
+                <div class="question__animate-wrapeer">
+                  <div class="question__animate-content">
+                  <div class="question__title">
+                    <p class="h4 text-up"><span class="text-line">вопросы</span>, которые чаще всего задают</p>
+                  </div>
 
-              <div class="question__images">
-                <img src="./public/images/hero-sticks.png" alt="барабанные палочки" class="question__images-main">
+                  <div class="question__images">
+                    <img src="./public/images/hero-sticks.png" alt="барабанные палочки" class="question__images-main">
+                  </div>
+                </div>
+                </div>
               </div>
 
               <div class="question__cards">
@@ -353,6 +359,9 @@
     <script type="module" src="/src/main.js"></script>
     
     <script>
+      
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
       const scrollGsap = () => {
         const inner = document.querySelector(".slider__container");
         const block = document.querySelectorAll(".slider__item");
@@ -383,8 +392,19 @@
 
       // Обработка изменения размера окна
       const resizeObserver = new ResizeObserver(scrollGsap);
-      resizeObserver.observe(document.querySelector('.slider__container'));    
+      resizeObserver.observe(document.querySelector('.slider__container'));
+
+      gsap.to(".question__animate-content", {
+        scrollTrigger: {
+          trigger: ".question__animate-wrapeer", // элемент, относительно которого работает sticky
+          start: "top +=160",     // когда верх триггера достигнет верха viewport
+          end: "bottom +=130", // когда низ триггера достигнет низа viewport
+          pin: true,            // закрепляем элемент
+        }
+      });
     
+
+      
     </script>
   </body>
 </html>
