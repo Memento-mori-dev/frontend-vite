@@ -188,6 +188,19 @@
 
     @include mobile{
         &__content{
+            &-header{
+                &::after{
+                    @include square(rem(44));
+
+                    top: rem(22);
+                    right: -30%;
+                }
+
+                &-sub{
+                    padding-top: rem(25);
+                    font-size: rem(17);
+                }
+            }
             &-text{
                 max-width: 100%;
             }
@@ -206,9 +219,36 @@
             bottom: rem(16);
         }
 
-        &__content-header::after{
-            top: 5%;
-            right: -15%;
+        &__content{
+            &-header{
+                &::after{
+                    top: rem(13);
+                    // right: 13%;
+                }
+            }
+
+            &-text{
+                padding-top: rem(28);
+                font-size: rem(15);
+            }
+        }
+
+        &__banner{
+            height: rem(522);
+
+            & img{
+                object-position: 20%;
+            }
+
+            &-container{
+                right: rem(20);
+                bottom: rem(34);
+            }
+
+            &-text{
+                max-width: rem(208);
+                font-size: rem(16);
+            }
         }
     }
 }
