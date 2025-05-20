@@ -120,7 +120,18 @@
         }
     }
 
+    @include pc-top{
+        &__content{
+            &::after{
+                left: -30%;
+
+                z-index: -1;
+            }
+        }
+    }
+
     @include laptop{
+
         &__title{
             &::before{
                 top: rem(60);
@@ -171,7 +182,8 @@
 
         &__content{
             &::after{
-                display: none;
+                top: 85%;
+                left: rem(-123.5);
             }
         }
 
@@ -196,32 +208,58 @@
     }
 
     @include mobile{
-        padding-top: rem(30);
+        padding-top: rem(35);
         
+        &__content{
+            &::after{
+                @include square(rem(67));
+
+                top: 100%;
+                left: rem(-48);
+            }
+        }
+
         &__title{
+            padding-top: rem(26);
+            padding-right: 0;
             text-align: center;
+
+            &::before{
+                display: none;
+            }
         }
 
         &__week{
             justify-content: center;
 
             &-icon{
-                @include square(rem(50));
+                display: none;
             }
             &-text{
-                padding-left: rem(20);
+                padding-left: 0;
                 font-size: rem(20);
+                text-align: center;
             }
         }
 
         &__button{
+            padding-top: rem(34);
+
             display: flex;
             justify-content: center;
         }
 
+        &__container{
+            row-gap: rem(50);
+        }
+
         &__banner{
             &::after{
-                display: none;
+                top: auto;
+                left: -20%;
+                bottom: -20%;
+
+                z-index: 1;
             }
         }
     }

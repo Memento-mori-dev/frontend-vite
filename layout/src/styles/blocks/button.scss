@@ -114,12 +114,16 @@
         }
 
         &--85{
-            padding: rem(20) rem(40);
+            padding: rem(20.5) rem(27);
 
             font-size: rem(16);
 
             & .icon-right{
-                padding-left: rem(20);
+                display: none;
+            }
+
+            &::after{
+                right: -16%;
             }
         }
     }
