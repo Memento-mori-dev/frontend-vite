@@ -172,8 +172,8 @@
 
     @include tablet{
         &__container{
-            grid-template-areas:"banner"
-                                "main"
+            grid-template-areas:"main"
+                                "banner"
                                 "cards";
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, auto);

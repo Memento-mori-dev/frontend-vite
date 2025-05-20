@@ -17,6 +17,8 @@
             border-radius: 50%;
             filter: blur(350px);
             opacity: .6;
+
+            z-index: -1;
         }
     }
 
@@ -38,6 +40,8 @@
 
             transform: rotate(-150deg);
             filter: blur(250px);
+
+            z-index: -1;
         }
     }
 
@@ -59,6 +63,8 @@
             transform: rotate(-166deg);
             filter: blur(300px);
             opacity: 0.6;
+
+            z-index: -1;
         }
 
         &::before{
@@ -76,6 +82,8 @@
             transform: rotate(-166deg);
             filter: blur(300px);
             opacity: 0.6;
+
+            z-index: -1;
         }
     }
 }
