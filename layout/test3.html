@@ -7,129 +7,30 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
 <style>
 
-body{
-    height: 2000px;
-}
-
-.follow-block {
-  position: relative;
-  width: 300px;
-  height: 150px;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  will-change: transform;
-  margin: 20px auto;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
 </style>
 </head>
 
 <body>
-<div class="js-follow-scroll follow-block">
-  Этот блок будет следовать за скроллом до конца страницы
+
+<div class="scrolling-container" style="overflow: hidden; white-space: nowrap;">
+  <div class="scrolling-content" style="display: inline-block;">
+    <!-- Ваши элементы здесь -->
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 1</div>
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 2</div>
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 3</div>
+  </div>
 </div>
 
-
-
 <script>
-/**
- * Инициализация блока, который следует за скроллом до конца страницы
- * @param {string} selector - CSS селектор блока
- * @param {Object} options - Настройки анимации
- */
-function initFollowScrollBlock(selector = '.js-follow-scroll', options = {}) {
-  // Проверяем наличие GSAP и ScrollTrigger
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
-    console.error('GSAP и ScrollTrigger требуются для работы этой функции');
-    return;
-  }
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  // Параметры по умолчанию
-  const defaults = {
-    startPosition: 'top top', // Позиция начала анимации
-    endTrigger: 'body', // Элемент, который определяет конец анимации
-    endPosition: 'bottom bottom', // Позиция конца анимации
-    pin: true, // Фиксировать блок во время анимации
-    pinSpacing: false, // Не добавлять отступы при фиксации
-    ease: 'none', // Линейная анимация
-    markers: false // Отладочные маркеры
-  };
 
-  // Объединяем настройки
-  const config = { ...defaults, ...options };
 
-  // Получаем элемент
-  const element = document.querySelector(selector);
-  if (!element) return;
 
-  // Создаем анимацию
-  const animation = gsap.to(element, {
-    y: () => {
-      // Рассчитываем максимальное смещение
-      const elementRect = element.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      return viewportHeight - elementRect.height;
-    },
-    ease: config.ease,
-    scrollTrigger: {
-      trigger: element,
-      start: config.startPosition,
-      end: `${config.endTrigger} ${config.endPosition}`,
-      pin: config.pin,
-      pinSpacing: config.pinSpacing,
-      scrub: true, // Привязка к скроллу
-      markers: config.markers,
-      invalidateOnRefresh: true // Важно для пересчета при ресайзе
-    }
-  });
-
-  // Обработчик ресайза
-  const handleResize = () => {
-    ScrollTrigger.refresh();
-  };
-
-  // Добавляем обработчик
-  window.addEventListener('resize', handleResize);
-
-  // Возвращаем функцию для очистки
-  return () => {
-    animation.kill();
-    ScrollTrigger.getAll().forEach(trigger => {
-      if (trigger.trigger === element) {
-        trigger.kill();
-      }
-    });
-    window.removeEventListener('resize', handleResize);
-  };
-}
-
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  // Пример инициализации с настройками по умолчанию
-  const cleanup = initFollowScrollBlock('.js-follow-scroll', {
-    markers: false // Включить для отладки
-  });
-
-  // Для демо-страницы можно добавить контент после блока
-  const demoContent = document.createElement('div');
-  demoContent.style.height = '200vh';
-  demoContent.style.background = 'linear-gradient(to bottom, #f5f5f5, #ddd)';
-  demoContent.textContent = 'Прокрутите вниз, чтобы увидеть эффект';
-  document.body.appendChild(demoContent);
-});
-
-// Опционально: Очистка при уничтожении компонента (для SPA)
-// cleanup();
 </script>
 
 </body>

@@ -1,7 +1,19 @@
 @use '../helpers' as *;
 
 .header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 100;
+
+    transition: background-color var(--transition-duration);
+
+    &.is-scroll{
+        background-color: var(--black);
+    }
+
     &::before{
         @include square(rem(466));
 

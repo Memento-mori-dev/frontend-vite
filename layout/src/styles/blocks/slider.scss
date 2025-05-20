@@ -5,20 +5,17 @@
         // width: 100%;
         
         display: flex;
+        column-gap: rem(70);
     }
 
     &__item{
-        width: 55.83%;
+        width: 55%;
         flex-shrink: 0;
-
-        &:not(:first-child){
-            padding-left: rem(70);
-        }
 
         display: grid;
         grid-template-areas:'big top'
                             'big bottom';
-        grid-template-columns: 57.5% 37%;
+        grid-template-columns: 2fr 1.3fr;
         grid-template-rows: repeat(2, 44.5%);
         column-gap: rem(65);
         row-gap: rem(47);

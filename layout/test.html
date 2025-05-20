@@ -9,18 +9,18 @@
 
     <style>
         .marquee-container {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
         }
 
         .marquee-track {
-        display: flex;
+          display: flex;
         }
 
         .marquee-content {
-        flex: 0 0 auto;
-        padding: 0 20px; /* Отступы между копиями текста */
+          flex: 0 0 auto;
+          padding: 0 20px; /* Отступы между копиями текста */
         }
     </style>
 </head>
@@ -41,31 +41,31 @@
 
 
     <script>
-const setupMarquee = () => {
-  const track = document.querySelector('.marquee-track');
-  const content = document.querySelector('.marquee-content');
-  const contentWidth = content.offsetWidth;
-  
-  // Удаляем предыдущую анимацию, если есть
-  gsap.killTweensOf(track);
-  
-  gsap.to(track, {
-    x: -contentWidth,
-    duration: contentWidth / 100,
-    ease: "none",
-    repeat: -1,
-    modifiers: {
-      x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
-    }
-  });
-};
+    const setupMarquee = () => {
+      const track = document.querySelector('.marquee-track');
+      const content = document.querySelector('.marquee-content');
+      const contentWidth = content.offsetWidth;
+      
+      // Удаляем предыдущую анимацию, если есть
+      gsap.killTweensOf(track);
+      
+      gsap.to(track, {
+        x: -contentWidth,
+        duration: contentWidth / 100,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+        }
+      });
+    };
 
-// Инициализация
-setupMarquee();
+    // Инициализация
+    setupMarquee();
 
-// Обработка изменения размера окна
-const resizeObserver = new ResizeObserver(setupMarquee);
-resizeObserver.observe(document.querySelector('.marquee-container'));
+    // Обработка изменения размера окна
+    const resizeObserver = new ResizeObserver(setupMarquee);
+    resizeObserver.observe(document.querySelector('.marquee-container'));
     </script>
 </body>
 </html>
