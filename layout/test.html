@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <style>
+        .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .marquee-track {
+        display: flex;
+        }
+
+        .marquee-content {
+        flex: 0 0 auto;
+        padding: 0 20px; /* Отступы между копиями текста */
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <div class="marquee-content">
+            Ваш текст бегущей строки, который будет плавно перемещаться...
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+            Ваш текст бегущей строки, который будет плавно перемещаться...
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+            Ваш текст бегущей строки, который будет плавно перемещаться...
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+const setupMarquee = () => {
+  const track = document.querySelector('.marquee-track');
+  const content = document.querySelector('.marquee-content');
+  const contentWidth = content.offsetWidth;
+  
+  // Удаляем предыдущую анимацию, если есть
+  gsap.killTweensOf(track);
+  
+  gsap.to(track, {
+    x: -contentWidth,
+    duration: contentWidth / 100,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+    }
+  });
+};
+
+// Инициализация
+setupMarquee();
+
+// Обработка изменения размера окна
+const resizeObserver = new ResizeObserver(setupMarquee);
+resizeObserver.observe(document.querySelector('.marquee-container'));
+    </script>
+</body>
+</html>

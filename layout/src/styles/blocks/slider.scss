@@ -8,6 +8,9 @@
     }
 
     &__item{
+        width: 55.83%;
+        flex-shrink: 0;
+
         &:not(:first-child){
             padding-left: rem(70);
         }
@@ -15,8 +18,8 @@
         display: grid;
         grid-template-areas:'big top'
                             'big bottom';
-        grid-template-columns: rem(612) rem(395);
-        grid-template-rows: repeat(2, rem(208));
+        grid-template-columns: 57.5% 37%;
+        grid-template-rows: repeat(2, 44.5%);
         column-gap: rem(65);
         row-gap: rem(47);
 
@@ -24,7 +27,7 @@
         
         &--blue{
             &::before{
-                content: '';
+                // content: '';
 
                 position: absolute;
                 top: 30%;
