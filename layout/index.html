@@ -51,7 +51,7 @@
 
       <main>
         <div class="blue-blocks__one">
-          <section class="hero">
+          <section class="hero text-element">
             <div class="hero__container container">
               <div class="hero__content">
                 <div class="hero__list">
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="hero__title">
-                  <p class="h2 text-up text-block">
+                  <p class="h2 text-up complex-text">
                     Не упусти шанс <span class="text-line">исполнить мечту!</span>
                   </p>
                 </div>
@@ -387,24 +387,51 @@
         });
         
       }
-
       scrollGsap();
 
-      // Обработка изменения размера окна
-      const resizeObserver = new ResizeObserver(scrollGsap);
-      resizeObserver.observe(document.querySelector('.slider__container'));
+      let showElement = (querySelector) => {
+        gsap.from(`${querySelector}`, {
+          scrollTrigger: {
+            trigger: `${querySelector}`,
+            start: "top 80%", // когда верх элемента достигнет 80% высоты окна
+            toggleActions: "play none none none" // play при входе в зону видимости
+          },
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          ease: "power2.out",
+        });
+      }
 
-      gsap.to(".question__animate-content", {
-        scrollTrigger: {
-          trigger: ".question__animate-wrapeer", // элемент, относительно которого работает sticky
-          start: "top +=160",     // когда верх триггера достигнет верха viewport
-          end: "bottom +=130", // когда низ триггера достигнет низа viewport
-          pin: true,            // закрепляем элемент
+      showElement('.hero');
+      showElement('.presentation');
+      showElement('.footer');
+
+      const stickyQuestion = () => {
+        const width = window.innerWidth;
+
+        gsap.killTweensOf(document.querySelector('.question__animate-content'));
+
+        if (width >= 1401) {
+          gsap.to(".question__animate-content", {
+            scrollTrigger: {
+              trigger: ".question__animate-wrapeer", // элемент, относительно которого работает sticky
+              start: "top +=160",     // когда верх триггера достигнет верха viewport
+              end: "bottom +=130", // когда низ триггера достигнет низа viewport
+              pin: true,            // закрепляем элемент
+            }
+          });    
         }
-      });
-    
+      }
+      stickyQuestion()
 
-      
+      // Обработка изменения размера окна
+      const resizeObserverScroll = new ResizeObserver(scrollGsap);
+      resizeObserverScroll.observe(document.querySelector('.slider__container'));
+
+      const resizeObserverSticky = new ResizeObserver(stickyQuestion);
+      resizeObserverSticky.observe(document.querySelector('.slider__container'));
+
     </script>
   </body>
 </html>

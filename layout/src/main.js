@@ -8,5 +8,3 @@ let controllerScroll = new ControllerScroll();
 
 new OpenModal(controllerScroll.stop.bind(controllerScroll));
 new CloseModal(controllerScroll.play.bind(controllerScroll));
-
-
