@@ -16,7 +16,7 @@
             background-color: var(--blue-0c);
             border-radius: 50%;
             filter: blur(350px);
-            opacity: 0.45;
+            opacity: .6;
         }
     }
 
@@ -37,7 +37,7 @@
             background-color: var(--blue-0c);
 
             transform: rotate(-150deg);
-            filter: blur(350px);
+            filter: blur(250px);
         }
     }
 
@@ -58,7 +58,7 @@
             background-color: var(--blue-0c);
             transform: rotate(-166deg);
             filter: blur(300px);
-            opacity: 0.4;
+            opacity: 0.6;
         }
 
         &::before{
@@ -75,7 +75,7 @@
             background-color: var(--blue-0c);
             transform: rotate(-166deg);
             filter: blur(300px);
-            opacity: 0.4;
+            opacity: 0.6;
         }
     }
 }
