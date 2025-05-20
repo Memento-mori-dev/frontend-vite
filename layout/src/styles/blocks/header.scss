@@ -90,9 +90,7 @@
     }
 
     @include tablet{
-        &::after{
-            display: none;
-        }
+
 
         &__container{
             grid-template-columns: min-content auto min-content;
@@ -106,6 +104,23 @@
     }
 
     @include mobile{
+        &__container{
+            padding-top: rem(17);
+            padding-bottom: rem(20);
+        }
+
+        &__logo{
+            width: rem(46);
+            height: rem(42);
+        }
+
+        &::after{
+            @include square(3vh);
+
+            top: calc(61% - 3vh);;
+            right: calc(70% - 3vh);
+        }
+
         &__address{
             display: none;
         }
