@@ -139,8 +139,6 @@
 
                 left: -30%;
                 bottom: -10%;
-
-                z-index: -1;
             }
         }
     }
@@ -163,6 +161,8 @@
                 right: -30%;
 
                 background-size: contain;
+
+                z-index: -1;
             }
             &::before{
                 display: none;
