@@ -9,13 +9,10 @@ let controllerScroll = new ControllerScroll();
 new OpenModal(controllerScroll.stop.bind(controllerScroll));
 new CloseModal(controllerScroll.play.bind(controllerScroll));
 
-// swiper
+
 const swiper = new Swiper('.swiper-slider', {
-  direction: 'horizontal',
-  slidesPerView: "auto",
-  spaceBetween: 70,
-  speed: 2000,
   loop: true,
+  speed: 2000,
   autoplay: {
     delay: 0,
     // disableOnInteraction: false 
@@ -26,7 +23,7 @@ const swiper = new Swiper('.swiper-slider', {
       spaceBetween: 30,
     },
     1024:{
-      slidesPerView: "auto",
+      slidesPerView: 1.7,
       spaceBetween: 70,
     },
   }

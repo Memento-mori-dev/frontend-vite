@@ -91,24 +91,24 @@
     & .swiper-slider{
         @media (width <= rem(2228)) {
             // margin-left: rem(-144);
-            margin-left: calc((rem(2246) - 100vw) / 2 * -1);
+            // margin-left: calc((rem(2246) - 100vw) / 2 * -1);
         }
 
         & .swiper-slide{
-            flex-shrink: 1;
+            // flex-shrink: 1;
         }
 
         @include pc-top{
-            margin-left: -6%;
+            // margin-left: -6%;
         }
 
         @include tablet{
-            margin-left: rem(-16);
+            // margin-left: rem(-16);
 
             & .swiper-slide{
-                width: 70%;
+                // width: 70%;
 
-                flex-shrink: 0;
+                // flex-shrink: 0;
             }
         }
     }
