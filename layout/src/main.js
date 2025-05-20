@@ -14,6 +14,12 @@ const swiper = new Swiper('.swiper-slider', {
   direction: 'horizontal',
   slidesPerView: "auto",
   spaceBetween: 70,
+  speed: 2000,
+  loop: true,
+  autoplay: {
+    delay: 0,
+    // disableOnInteraction: false 
+  },
   breakpoints: {
     0:{
       slidesPerView: 1.2,
