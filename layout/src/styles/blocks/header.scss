@@ -17,6 +17,22 @@
         opacity: 0.45;
     }
 
+    &::after{
+        @include square(rem(141));
+
+        content: '';
+
+        position: absolute;
+        top: rem(21);
+        right: rem(-70.5);
+
+        background-image: url(../../../public/svg/star.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        z-index: -1;
+    }
+
     &__container{
         padding-top: rem(24);
         padding-bottom: rem(30);
@@ -62,6 +78,10 @@
     }
 
     @include tablet{
+        &::after{
+            display: none;
+        }
+
         &__container{
             grid-template-columns: min-content auto min-content;
             grid-template-areas: "start address form";
