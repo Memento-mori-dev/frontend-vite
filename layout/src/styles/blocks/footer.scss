@@ -149,4 +149,36 @@
             }
         }
     }
+
+    @include mobile{
+        &::after{
+            display: none;
+        }
+
+        &__container{
+            row-gap: rem(25);
+        }
+        &__images{
+            display: none;
+        }
+
+        &__main{
+            &-button{
+                padding-top: rem(50);
+            }
+        }
+
+        &__about{
+            &-text{
+                font-size: rem(15);
+            }
+
+            &-link{
+                padding-top: rem(11);
+                & a{
+                    font-size: rem(12);
+                }
+            }
+        }
+    }
 }
