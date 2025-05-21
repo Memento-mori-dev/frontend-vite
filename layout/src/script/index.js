@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  if (document.querySelector('.hero')) {
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
       const scrollGsap = () => {
         const inner = document.querySelector(".slider__container");
@@ -70,4 +71,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const resizeObserverSticky = new ResizeObserver(stickyQuestion);
       resizeObserverSticky.observe(document.querySelector('.slider__container'));
+  }
 })
