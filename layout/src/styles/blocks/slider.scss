@@ -7,14 +7,13 @@
     }
 
     &__item{
-        width: 55%;
         flex-shrink: 0;
 
         display: grid;
         grid-template-areas:'big top'
                             'big bottom';
-        grid-template-columns: 2fr 1.3fr;
-        grid-template-rows: repeat(2, 44.5%);
+        grid-template-columns: 31vw 20vw;
+        grid-template-rows: repeat(2, 11vw);
         column-gap: rem(65);
         row-gap: rem(47);
 
@@ -80,9 +79,24 @@
 
     @include tablet {
         &__item{
-            width: 193%;
+            grid-template-columns: 113vw 68vw;
+            grid-template-rows: repeat(2, 39vw);
+            column-gap: rem(35);
+            row-gap: rem(30);
+        }
 
-            
+        &__big{
+            border-radius: rem(15);
+        }
+        &__small{
+            border-radius: rem(15);
+
+            &--top{
+                border-radius: rem(15);
+            }
+            &--bottom{
+                border-radius: rem(15);
+            }
         }
     }
 }
