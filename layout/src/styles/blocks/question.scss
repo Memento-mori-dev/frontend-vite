@@ -90,73 +90,106 @@
 
     @include laptop{
         &__container{
-            grid-template-areas:'title images'
-                                'cards cards';
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, auto);
-            gap: rem(40) rem(20);
+            flex-direction: column;
         }
 
-        &__images-main{
-            margin-top: -30%;
+        &__animate{
             width: 100%;
-            height: auto;
-            position: static;
         }
 
         &__cards{
+            width: 100%;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: rem(40);
+
+            gap: rem(30);
 
             &-item{
-                width: calc(50% - rem(20));
-                
+                width: calc(50% - rem(15));
+            }
+        }
 
-                &:last-child{
-                    padding-bottom: rem(20);
-                    border-bottom: var(--border);
-                }
-                &:not(:last-child){
-                    padding-bottom: rem(20);
-                }
+        &__images{
+            &::after{
+                top: 16%;
+            }
+            &::before{
+                top: 44%;
+            }
+
+            &-main{
+                @include square(100%);
+
+                margin-top: -15%;
+                margin-left: -10%;
+
+                position: static;
             }
         }
     }
 
     @include mobile{
-        &__container{
-            grid-template-areas:'title'
-                                'images'
-                                'cards';
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, auto);
-            gap: rem(40) rem(20);
+        &__animate-wrapeer{
+            position: relative;
         }
 
-        &__cards{
-            flex-direction: column;
+        &__title{
+            margin: auto;
+            width: 60%;
+            text-align: center;
+        }
 
-            &-item{
-                width: 100%;
+        &__images{
+            &-main{
+                @include square(rem(300))
+            }
+
+            position: absolute;
+            bottom: rem(-245);
+            left: rem(-145);
+
+            z-index: -1;
+
+            &::after,&::before{display: none;}
+        }
+
+        &__animate{
+            &-content{
+                position: relative;
             }
         }
 
-        &__images-main{
-            margin-top: -20%;
-            margin-left: -5%;
-            margin-bottom: -20%;
+
+        &__cards{
+            margin: auto;
+            max-width: rem(600);
+
+            padding-top: rem(35);
+
+            column-gap: rem(30);
+
+            &-item{
+                padding-bottom: rem(30);
+                
+                text-align: center;
+
+                width: 100%;
+            }
+            &-text{
+                margin: auto;
+                max-width: 80%;
+
+                padding-top: rem(25);
+                font-size: rem(14);
+            }
         }
     }
 
     @include mobile-s{
-        &__images-main{
-            // margin: 0;
-
-            // position: absolute;
-            // top: rem(80);
-            // left: auto;
-            // right: rem(12);
+        &__title{
+            margin: auto;
+            width: 80%;
+            text-align: center;
         }
     }
 }
