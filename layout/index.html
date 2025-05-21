@@ -318,7 +318,7 @@
             </p>
           </div>
 
-          <form action="" class="modal__block-form">
+          <form action="send.php" method="POST" class="modal__block-form">
             <div class="modal__block-item">
               <input type="text" placeholder="Введите ваше имя" name="name" class="modal__block-input">
             </div>
@@ -326,7 +326,7 @@
               <input type="text" placeholder="Введите ваш номер телефона" name="phone" class="modal__block-input" data-js-phone>
             </div>
             <div class="modal__block-item">
-              <button class="button button--85 button--blue button--submit">
+              <button type="submit" class="button button--85 button--blue button--submit">
                 <span>
                   Записаться на бесплатное занятие
                 </span>
@@ -337,8 +337,6 @@
                     <path d="M10.505 18.005C10.2317 18.2784 10.2317 18.7216 10.505 18.995C10.7784 19.2683 11.2216 19.2683 11.495 18.995L10.505 18.005ZM19.7 10.5C19.7 10.1134 19.3866 9.8 19 9.8H12.7C12.3134 9.8 12 10.1134 12 10.5C12 10.8866 12.3134 11.2 12.7 11.2H18.3V16.8C18.3 17.1866 18.6134 17.5 19 17.5C19.3866 17.5 19.7 17.1866 19.7 16.8V10.5ZM11 18.5L11.495 18.995L19.495 10.995L19 10.5L18.505 10.005L10.505 18.005L11 18.5Z" fill="#12B0EA"></path>
                   </svg>
                 </span>
-
-                <input type="submit" value="">
               </button>
             </div>
           </form>
@@ -358,101 +356,6 @@
     </div>
     
     <script type="module" src="/src/main.js"></script>
-    
-    <script>
-      Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelector('[data-js-phone]'));
-
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-      const scrollGsap = () => {
-        const inner = document.querySelector(".slider__container");
-        const block = document.querySelectorAll(".slider__item");
-        const gap = Number(window.getComputedStyle(inner)['column-gap'].split('p')[0]);
-        const blockWidth = block[0].offsetWidth;
-        const newX = blockWidth + gap;
-
-        // Удаляем предыдущую анимацию, если есть
-        gsap.killTweensOf(inner);
-
-        gsap.to(inner, {
-          x: -newX,
-          duration: 10,
-          ease: "none",
-          // repeat: -1,
-          onComplete: function() {
-            let newLastElement = document.querySelector(".slider__item");
-            gsap.set(this.targets()[0], { x: -0});
-
-            inner.appendChild(newLastElement)
-            this.restart();
-          },
-        });
-        
-      }
-      scrollGsap();
-
-      let showElement = (querySelector) => {
-        gsap.from(`${querySelector}`, {
-          scrollTrigger: {
-            trigger: `${querySelector}`,
-            start: "top 80%", // когда верх элемента достигнет 80% высоты окна
-            toggleActions: "play none none none" // play при входе в зону видимости
-          },
-          opacity: 0,
-          y: 50,
-          duration: 1,
-          ease: "power2.out",
-        });
-      }
-
-      showElement('.hero');
-      showElement('.presentation');
-      showElement('.footer');
-
-      const stickyQuestion = () => {
-        const width = window.innerWidth;
-
-        gsap.killTweensOf(document.querySelector('.question__animate-content'));
-
-        if (width >= 1401) {
-          gsap.to(".question__animate-content", {
-            scrollTrigger: {
-              trigger: ".question__animate-wrapeer", // элемент, относительно которого работает sticky
-              start: "top +=160",     // когда верх триггера достигнет верха viewport
-              end: "bottom +=130", // когда низ триггера достигнет низа viewport
-              pin: true,            // закрепляем элемент
-            }
-          });    
-        }
-      }
-      stickyQuestion()
-
-      // Обработка изменения размера окна
-      const resizeObserverScroll = new ResizeObserver(scrollGsap);
-      resizeObserverScroll.observe(document.querySelector('.slider__container'));
-
-      const resizeObserverSticky = new ResizeObserver(stickyQuestion);
-      resizeObserverSticky.observe(document.querySelector('.slider__container'));
-
-      function initScrollHeader() {
-        const header = document.querySelector('.header');
-        
-        ScrollTrigger.create({
-          start: 0, // начинаем отслеживать с верха страницы
-          end: "max", // до конца страницы
-          onUpdate: (self) => {
-            // Если прокрутка больше 10px - добавляем класс, иначе удаляем
-            if (self.scroll() > 10) {
-              header.classList.add('is-scroll');
-            } else {
-              header.classList.remove('is-scroll');
-            }
-          }
-        });
-      }
-
-      initScrollHeader();
-
-    </script>
+    <script type="module" src="./src/script/index.js"></script>
   </body>
 </html>
