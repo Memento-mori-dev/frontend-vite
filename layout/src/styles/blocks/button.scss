@@ -8,6 +8,8 @@
     align-items: center;
 
     &--48{
+        white-space: nowrap;
+
         padding: rem(13) rem(43.5);
         border-radius: rem(30);
 
