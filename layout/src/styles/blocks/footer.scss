@@ -170,7 +170,9 @@
 
         &__about{
             &-text{
+                margin: auto;
                 font-size: rem(15);
+                max-width: 75%;
             }
 
             &-link{
