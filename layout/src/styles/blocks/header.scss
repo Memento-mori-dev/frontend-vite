@@ -12,6 +12,10 @@
 
     &.is-scroll{
         background-color: var(--black);
+
+        &::after{
+            opacity: 0;
+        }
     }
 
     &::before{
@@ -41,6 +45,8 @@
         background-image: url(../../../public/svg/star.svg);
         background-repeat: no-repeat;
         background-size: 100%;
+
+        transition: all var(--transition-duration);
 
         z-index: -1;
     }
@@ -104,6 +110,12 @@
     }
 
     @include mobile{
+        &.is-scroll{
+            &::after{
+                opacity: 1;
+            }
+        }
+
         &__container{
             padding-top: rem(17);
             padding-bottom: rem(20);
