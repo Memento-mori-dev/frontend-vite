@@ -214,11 +214,19 @@
                 width: 100%;
             }
         }
+
+        &__banner-container{
+            right: auto ;
+            left: rem(64);
+            bottom: rem(48);
+        }
     }
 
     @include mobile-s{
+
         &__banner-container{
-            right: rem(16);
+            right: auto ;
+            left: rem(48);
             bottom: rem(16);
         }
 
