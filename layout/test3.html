@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+<div class="scrolling-container" style="overflow: hidden; white-space: nowrap;">
+  <div class="scrolling-content" style="display: inline-block;">
+    <!-- Ваши элементы здесь -->
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 1</div>
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 2</div>
+    <div class="scrolling-element" style="display: inline-block; margin-right: 20px;">Элемент 3</div>
+  </div>
+</div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+
+
+
+</script>
+
+</body>
+</html>

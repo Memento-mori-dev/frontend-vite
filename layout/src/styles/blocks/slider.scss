@@ -67,5 +67,23 @@
             border-radius: rem(25);
         }
     }
+
+    @include laptop {
+        &__container{
+            column-gap: rem(30);
+        }
+        &__item{
+            column-gap: rem(35);
+            row-gap: rem(30);
+        }
+    }
+
+    @include tablet {
+        &__item{
+            width: 193%;
+
+            
+        }
+    }
 }
 
