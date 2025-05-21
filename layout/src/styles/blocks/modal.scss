@@ -186,10 +186,15 @@
                     margin: auto;
                 }
             }
+
+            &-input{
+                padding: rem(15) rem(20);
+                font-size: rem(12);
+            }
         }
 
         & .button{
-            font-size: 12px;
+            font-size: rem(12);
             width: 100%;
 
             display: flex;
@@ -214,11 +219,6 @@
 
                 top: rem(-128);
                 left: rem(-124);
-            }
-
-            &-input{
-                padding: rem(15) rem(20);
-                font-size: rem(16);
             }
         }
     }
