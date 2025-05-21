@@ -20,6 +20,12 @@
 
             z-index: -10;
         }
+
+        @include mobile{
+            &::before,&::after{
+                display: none;
+            }
+        }
     }
 
     &__two{
@@ -42,6 +48,12 @@
             filter: blur(250px);
 
             z-index: -10;
+        }
+
+        @include mobile{
+            &::before,&::after{
+                display: none;
+            }
         }
     }
 
@@ -84,6 +96,12 @@
             opacity: 0.6;
 
             z-index: -10;
+        }
+
+        @include mobile{
+            &::before,&::after{
+                display: none;
+            }
         }
     }
 }
