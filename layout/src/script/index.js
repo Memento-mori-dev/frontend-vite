@@ -2,32 +2,32 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('.hero')) {
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-      const scrollGsap = () => {
-        const inner = document.querySelector(".slider__container");
-        const block = document.querySelectorAll(".slider__item");
-        const gap = Number(window.getComputedStyle(inner)['column-gap'].split('p')[0]);
-        const blockWidth = block[0].offsetWidth;
-        const newX = blockWidth + gap;
+      // const scrollGsap = () => {
+      //   const inner = document.querySelector(".slider__container");
+      //   const block = document.querySelectorAll(".slider__item");
+      //   const gap = Number(window.getComputedStyle(inner)['column-gap'].split('p')[0]);
+      //   const blockWidth = block[0].offsetWidth;
+      //   const newX = blockWidth + gap;
 
-        // Удаляем предыдущую анимацию, если есть
-        gsap.killTweensOf(inner);
+      //   // Удаляем предыдущую анимацию, если есть
+      //   gsap.killTweensOf(inner);
 
-        gsap.to(inner, {
-          x: -newX,
-          duration: 10,
-          ease: "none",
-          // repeat: -1,
-          onComplete: function() {
-            let newLastElement = document.querySelector(".slider__item");
-            gsap.set(this.targets()[0], { x: -0});
+      //   gsap.to(inner, {
+      //     x: -newX,
+      //     duration: 10,
+      //     ease: "none",
+      //     // repeat: -1,
+      //     onComplete: function() {
+      //       let newLastElement = document.querySelector(".slider__item");
+      //       gsap.set(this.targets()[0], { x: -0});
 
-            inner.appendChild(newLastElement)
-            this.restart();
-          },
-        });
+      //       inner.appendChild(newLastElement)
+      //       this.restart();
+      //     },
+      //   });
         
-      }
-      scrollGsap();
+      // }
+      // scrollGsap();
 
       let showElement = (querySelector) => {
         gsap.from(`${querySelector}`, {
@@ -66,10 +66,33 @@ document.addEventListener('DOMContentLoaded', function() {
       stickyQuestion()
 
       // Обработка изменения размера окна
-      const resizeObserverScroll = new ResizeObserver(scrollGsap);
-      resizeObserverScroll.observe(document.querySelector('.slider__container'));
+      // const resizeObserverScroll = new ResizeObserver(scrollGsap);
+      // resizeObserverScroll.observe(document.querySelector('.slider__container'));
 
       const resizeObserverSticky = new ResizeObserver(stickyQuestion);
       resizeObserverSticky.observe(document.querySelector('.slider__container'));
+
+      const swiper = new Swiper('.slider__container', {
+        loop: true,
+        freeMode: true,
+        spaceBetween: 70,
+        slidesPerView: 1.8,
+        // speed: 2000,
+        // autoplay: {
+        //   delay: 1,
+        //   disableOnInteraction: true
+        // },
+        // freeModeMomentum: false,
+        breakpoints: {
+          0:{
+            spaceBetween: 30,
+            slidesPerView: 0.54,
+          },
+          1023:{
+            spaceBetween: 70,
+            slidesPerView: 1.8,
+          }
+        }
+      })
   }
 })
