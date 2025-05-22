@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const swiper = new Swiper('.slider__container', {
         loop: true,
-        freeMode: true,
+        // freeMode: true,
         spaceBetween: 70,
         slidesPerView: 1.8,
         // speed: 2000,
