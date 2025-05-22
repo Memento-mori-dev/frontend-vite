@@ -72,17 +72,43 @@ document.addEventListener('DOMContentLoaded', function() {
       const resizeObserverSticky = new ResizeObserver(stickyQuestion);
       resizeObserverSticky.observe(document.querySelector('.slider__container'));
 
-      const swiper = new Swiper('.slider__container', {
+      // const swiper = new Swiper('.slider__container', {
+      //   loop: true,
+      //   // freeMode: true,
+      //   spaceBetween: 70,
+      //   slidesPerView: 1.8,
+      //   // speed: 2000,
+      //   // autoplay: {
+      //   //   delay: 1,
+      //   //   disableOnInteraction: true
+      //   // },
+      //   // freeModeMomentum: false,
+      //   breakpoints: {
+      //     0:{
+      //       spaceBetween: 30,
+      //       slidesPerView: 0.54,
+      //     },
+      //     1023:{
+      //       spaceBetween: 70,
+      //       slidesPerView: 1.8,
+      //     }
+      //   }
+      // })
+
+      var swiperOptions = {
         loop: true,
-        // freeMode: true,
-        spaceBetween: 70,
+        freeMode: true,
+        spaceBetween: 0,
+        grabCursor: true,
         slidesPerView: 1.8,
-        // speed: 2000,
-        // autoplay: {
-        //   delay: 1,
-        //   disableOnInteraction: true
-        // },
-        // freeModeMomentum: false,
+        loop: true,
+        autoplay: {
+          delay: 1,
+          disableOnInteraction: true
+        },
+        freeMode: true,
+        speed: 7000,
+        freeModeMomentum: false,
         breakpoints: {
           0:{
             spaceBetween: 30,
@@ -93,6 +119,25 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesPerView: 1.8,
           }
         }
-      })
+      };
+
+      var swiper = new Swiper(".slider__container", swiperOptions);
+
+      let wrapper = document.querySelector(".swiper-wrapper");
+      let transformValue;
+
+      wrapper.addEventListener("mouseenter", (event) => {
+        swiper.autoplay.stop();
+        transformValue = wrapper.style.transform;
+        wrapper.style.transitionDuration = "0ms";
+        wrapper.style.transform =
+          "translate3d(" + swiper.getTranslate() + "px, 0px, 0px)";
+      });
+
+      wrapper.addEventListener("mouseleave", (event) => {
+        wrapper.style.transitionDuration = swiper.params.speed + "ms";
+        wrapper.style.transform = transformValue;
+        swiper.autoplay.start();
+      });
   }
 })
