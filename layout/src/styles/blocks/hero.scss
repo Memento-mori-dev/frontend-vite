@@ -33,6 +33,19 @@
         }
     }
     &__list{}
+    &__sup{
+        display: flex;
+        align-items: center;
+
+        &-icon{}
+        &-text{
+            font-family: var(--third-family);
+            font-size: rem(50);
+            line-height: 145%;
+            letter-spacing: 0.01em;
+            color: var(--white-f8);
+        }
+    }
     &__title{
         padding-top: rem(17);
 
