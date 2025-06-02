@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.section{
+    overflow: hidden;
+    max-width: 100vw;
+    padding-top: fluid(130, 90);
+
+    &__star{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-item{
+            &:not(:first-child){
+                margin-left: rem(25);
+            }
+
+            &--small{
+                @include square(20);
+                & > svg{
+                    width: 100%;
+                    height: 100%
+                }
+            }
+            &--big{
+                @include square(31);
+
+                & > svg{
+                    width: 100%;
+                    height: 100%
+                }
+            }
+        }
+    }
+
+    &__title{
+        margin: rem(40) auto 0 auto;
+
+        text-align: center;
+    }
+
+    &__content{
+        margin-top: rem(80);
+    }
+}

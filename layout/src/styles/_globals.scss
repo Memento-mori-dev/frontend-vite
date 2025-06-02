@@ -23,7 +23,7 @@ h1, .h1{
     letter-spacing: 0.01em;
 }
 h2, .h2{
-    @include fluid-text(130, 58);
+    @include fluid-text(100, 58);
     line-height: 126%;
     letter-spacing: 0.02em;
 }
@@ -119,20 +119,6 @@ main{
     outline: rem(2) dashed #000;
     outline-offset: rem(4);
     transition-duration: 0s !important;
-}
-
-.section{
-    overflow: hidden;
-    max-width: 100vw;
-    padding-top: rem(150);
-
-    @include laptop{
-        padding-top: rem(90);
-    }
-
-    @include mobile{
-        padding-top: rem(50);
-    }
 }
 
 
