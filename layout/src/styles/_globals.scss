@@ -18,8 +18,8 @@ h6, .h6{
 }
 
 h1, .h1{
-    @include fluid-text(160, 70);
-    line-height: 134%;
+    @include fluid-text(150, 70);
+    line-height: 121%;
     letter-spacing: 0.01em;
 }
 h2, .h2{

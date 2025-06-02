@@ -67,6 +67,47 @@
         }
     }
 
+    &--85-border{
+        overflow: hidden;
+
+        border-radius: rem(90);
+        padding: rem(27) rem(53) rem(27) rem(67);
+
+        font-weight: 600;
+        font-size: rem(22);
+        line-height: 106%;
+
+        border: 1px solid var(--black-37);
+
+        & .icon-right{
+            padding-left: rem(35);
+
+            display: flex;
+            align-items: center;
+
+            & svg{
+                width: rem(29);
+            }
+        }
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            right: rem(29);
+
+            width: rem(156);
+            height: rem(57);
+
+            border-radius: 50%;
+
+            background-color: var(--white);
+            transform: rotate(-63deg);
+            filter: blur(130px);
+        }
+    }
+
     &--white{
         background-color: var(--white);
         color: var(--black-37);
@@ -92,6 +133,13 @@
 
             opacity: 0;
         }
+    }
+
+    &--opacity{
+        font-weight: 400;
+        background: none;
+        color: var(--white-f8);
+        border-color: var(--border-color-opacity)
     }
 
     &-circle{

@@ -11,7 +11,7 @@
         display: grid;
         grid-template-areas: 'content banner';
         grid-template-columns: 52% 48%;
-        gap: rem(75);
+        gap: rem(76);
     }
 
     &__content{
@@ -32,13 +32,25 @@
             background-size: 100%;
         }
     }
-    &__list{}
     &__sup{
+        width: 100%;
+
         display: flex;
         align-items: center;
 
-        &-icon{}
+        &-icon{
+            @include square(rem(55));
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: var(--border-blue-03);
+        }
         &-text{
+            padding-left: rem(45);
+
             font-family: var(--third-family);
             font-size: rem(50);
             line-height: 145%;
@@ -47,7 +59,7 @@
         }
     }
     &__title{
-        padding-top: rem(17);
+        padding-top: rem(24);
 
         position: relative;
         &::before{
@@ -62,37 +74,32 @@
             background-repeat: no-repeat;
             background-size: 100%;
         }
-    }
-    &__week{
-        padding-top: rem(50);
 
-        display: flex;
-        align-items: center;
-    }
-    &__week-icon{
-        @include square(rem(65))
-    }
-    &__week-text{
-        max-width: rem(600);
-
-        padding-left: rem(45);
-        font-weight: 500;
-        font-size: rem(27);
-        line-height: 145%
-
-        & span{
-            font-weight: 600;
+        &-sub{
+            padding-top: rem(42);
+        
+            font-weight: 500;
+            font-size: rem(31);
+            line-height: 145%;
+            color: var(--white-f8);
         }
     }
     &__button{
-        padding-top: rem(50);
+        margin-top: rem(51);
+
+        display: flex;
+
+        & > *:not(:first-child){
+            margin-left: rem(35);
+        }
     }
 
     &__banner{
         grid-area: banner;
 
         & .banner{
-            width: 132%;
+            width: 46vw;
+            height: 34.6vw;
         }
 
         position: relative;
