@@ -1,0 +1,69 @@
+@use '../helpers' as *;
+
+
+.whom{
+    display: grid;
+    grid-template-columns: 33% 56%;
+    justify-content: space-between;
+
+    &__header{
+
+    }
+    &__title{
+        margin-top: rem(40);
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+
+        row-gap: rem(65);        
+
+        &-item{
+            padding: rem(48) rem(29) rem(42) rem(50);
+            background-color: var(--blue);
+            border-radius: rem(35);
+
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: rem(-123);
+                right: rem(153);
+
+                width: rem(354);
+                height: rem(976);
+
+                border-radius: 100%;
+                transform: rotate(13.5deg);
+                background: rgba(255, 255, 255, 0.35);
+                filter: blur(350px);
+            }
+        }
+        &-img{
+            @include square(rem(70));
+        }
+        &-title{
+            margin-top: rem(30);
+
+            font-family: var(--second-family);
+            font-size: rem(60);
+            line-height: 96%;
+            letter-spacing: 0.01em;
+            color: var(--white);
+        }
+        &-text{
+            margin-top: rem(30);
+
+            font-size: rem(20);
+            line-height: 150%;
+            color: var(--white);
+
+            & > span{
+                font-weight: 600;
+            }
+        }
+    }
+}
