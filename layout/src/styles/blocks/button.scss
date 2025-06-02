@@ -10,10 +10,11 @@
     &--48{
         white-space: nowrap;
 
-        padding: rem(13) rem(43.5);
+        padding: rem(13) rem(41.5);
         border-radius: rem(30);
 
         font-size: rem(14);
+        font-weight: 500;
 
         & .icon-right{
             padding-left: rem(10);
@@ -94,18 +95,13 @@
     }
 
     &-circle{
-        @include square(rem(37));
+        @include square(rem(28));
         display: block;
         border-radius: 50%;
 
         display: flex;
         justify-content: center;
         align-items: center;
-
-        & svg{
-            width: rem(17);
-            height: rem(17);
-        }
     }
 
     @include mobile{

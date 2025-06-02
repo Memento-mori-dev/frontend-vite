@@ -57,10 +57,21 @@
 
         display: grid;
         align-items: center;
-        grid-template-areas: "start . address . form";
-        grid-template-columns: rem(225) rem(90) rem(290) auto min-content;
+        grid-template-areas: "start address call form";
+        grid-template-columns: repeat(min-content, 4);
+        justify-content: space-between;
 
-        border-bottom: var(--border);
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            left: var(--container-padding-x);
+            bottom: 0;
+            width: calc(100% - (var(--container-padding-x) * 2));
+            height: rem(1);
+            background-color: var(--border-color);
+        }
     }
 
     &__start{
@@ -78,17 +89,31 @@
         }
     }
     &__text{
-        padding-left: rem(23);
+        padding-left: rem(35);
         font-family: var(--third-family);
         font-weight: 300;
-        font-size: rem(11);
-        line-height: 132%;
+        font-size: rem(13);
+        line-height: 145%;
         color: var(--grey-c2);
         white-space: nowrap;
     }
 
     &__address{
         grid-area: address;
+    }
+
+    &__call{
+        display: flex;
+        align-items: center;
+
+        &-link{
+            margin-left: rem(35);
+
+            font-weight: 600;
+            font-size: rem(23);
+            color: var(--white-ef);
+            text-decoration: none;
+        }
     }
 
     &__form{
