@@ -18,7 +18,15 @@
         object-fit: cover;
     }
 
+    &--reverse{
+        transform: rotate(-1deg);
+
+        & img{
+            transform: rotate(1deg);
+        }
+    }
+
     &--normal{
-        transform: rotate(1.46deg);
+        transform: rotate(1.5deg);
     }
 }
