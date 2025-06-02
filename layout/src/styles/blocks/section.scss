@@ -46,6 +46,10 @@
         justify-content: center;
         align-items: center;
 
+        &-item:not(:first-child){
+            margin-left: rem(35);
+        }
+
         &-text{
             font-weight: 300;
             font-size: rem(25);
@@ -55,6 +59,17 @@
             & > span{
                 font-weight: 600;
                 color: var(--white);
+            }
+        }
+        &-icon{
+            @include square(rem(26));
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > svg{
+                @include square(100%);
             }
         }
 

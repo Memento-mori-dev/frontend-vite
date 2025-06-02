@@ -152,6 +152,28 @@
         align-items: center;
     }
 
+    &-slider{
+        display: flex;
+        align-items: center;
+
+        &__item{
+            &:not(:first-child){
+                margin-left: rem(25);
+            }
+
+            @include square(rem(50));
+            border-radius: 50%;
+
+            background: none;
+
+            border:1px solid var(--border-color-opacity);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     @include mobile{
         &--48{
             padding: rem(9) rem(20);
