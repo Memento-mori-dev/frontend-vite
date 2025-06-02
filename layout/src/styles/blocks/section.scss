@@ -39,6 +39,41 @@
         text-align: center;
     }
 
+    &__sub{
+        margin-top: rem(45);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-text{
+            font-weight: 300;
+            font-size: rem(25);
+            line-height: 145%;
+            color: var(--grey-a9);
+
+            & > span{
+                font-weight: 600;
+                color: var(--white);
+            }
+        }
+
+        &-list{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+
+            & > li:not(:first-child){
+                padding-left: rem(9);
+
+                & p::before{
+                    content: '/';
+                }
+            }
+        }
+    }
+
     &__content{
         margin-top: rem(80);
     }

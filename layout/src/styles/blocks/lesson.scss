@@ -1,0 +1,54 @@
+@use '../helpers' as *;
+
+
+.lesson{
+    &__content{
+        display: flex;
+        column-gap: rem(40);
+
+        &-item{
+            width: 25%;
+
+            padding: rem(37.5) rem(35);
+
+            border: var(--border);
+            border-radius: rem(15);
+        }
+
+        &-number{
+            &::before{
+                content: '// ';
+            }
+
+            font-family: var(--font-Outline);
+            font-weight: 700;
+            font-size: rem(55);
+            line-height: 110%;
+            letter-spacing: 0.07em;
+            color: var(--blue);
+        }
+        &-title{
+            padding-top: rem(30);
+
+            font-family: var(--second-family);
+            font-size: rem(45);
+            line-height: 109%;
+            letter-spacing: 0.01em;
+            color: var(--white-e6);
+        }
+        &-text{
+            padding-top: rem(30);
+
+            font-size: rem(17);
+            line-height: 150%;
+            color: var(--grey-a9);
+        }
+    }
+
+    &__button{
+        margin-top: rem(80);
+
+        display: flex;
+        justify-content: center;
+    }
+}
