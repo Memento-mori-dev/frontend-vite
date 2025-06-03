@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.remained{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(60);
+    row-gap: rem(50);
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        row-gap: rem(40);
+
+        &-img{
+            width: 100%;
+            aspect-ratio: 1.52;
+
+            object-fit: cover;
+
+            border-radius: rem(30);
+            overflow: hidden;
+        }
+
+        &-content{
+            display: flex;
+            align-items: center;
+        }
+    }
+}

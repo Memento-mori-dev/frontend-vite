@@ -23,8 +23,9 @@ arrSwiperWatch.forEach((swiper, index) => {
 // teachers
 
 const swiperTeachers = new Swiper('.teachers', {
-    slidesPerView: 3,
+    slidesPerView: 2.72,
     spaceBetween: 80,
+    initialSlide: 2,
     // Navigation arrows
     navigation: {
         nextEl: '.button-slider__item--next',
