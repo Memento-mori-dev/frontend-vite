@@ -9,7 +9,7 @@ arrSwiperWatch.forEach((swiper, index) => {
     const swiperClass = `.watch__item-${index}`;
 
     objSwiperWatch[`swiper-${index}`] = new Swiper(swiperClass, {
-        slidesPerView: 2.3,
+        slidesPerView: 2,
         spaceBetween: 70,
         // Navigation arrows
         navigation: {
