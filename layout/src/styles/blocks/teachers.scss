@@ -1,0 +1,124 @@
+@use '../helpers' as *;
+
+.teachers{
+    &__item{
+        &-banner{
+            height: rem(549);
+            width: rem(462);
+
+            position: relative;
+            &-flag{
+                @include square(rem(40));
+
+                position: absolute;
+                top: rem(30);
+                right: rem(30);
+
+                z-index: 3;
+
+                background-image: url(../../../public/svg/flag.svg);
+                background-color: var(--white);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 50%;
+            }
+            &-description{
+                border-radius: rem(35);
+                overflow: hidden;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                z-index: 2;
+
+                padding: rem(94) rem(58) rem(0) rem(58);
+
+                display: flex;
+                flex-direction: column;
+
+                &::after{
+                    content: '';
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-color: var(--black);
+                    opacity: .55;
+
+                    z-index: -1;
+                }
+
+                &-star{
+                    @include square(rem(50));
+
+                    margin: 0 auto;
+                }
+
+                &-text{
+                    padding-top: rem(30);
+
+                    font-size: rem(24);
+                    line-height: 155%;
+                    text-align: center;
+                    color: var(--white);
+
+                    & > span{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &-content{
+            margin-top: rem(40);
+            
+            display: flex;
+            align-items: center;
+        }
+        &-name{
+            padding-right: rem(33);
+
+            font-weight: 500;
+            font-size: rem(27);
+            line-height: 155%;
+            color: var(--white);
+        }
+        &-value{
+            padding-left: rem(33);
+
+            font-weight: 300;
+            font-size: rem(24);
+            line-height: 155%;
+            color: var(--grey-a9);
+
+            position: relative;
+            &::before{
+                @include square(rem(7));
+                border-radius: 50%;
+                background-color: var(--blue);
+
+                content: '';
+
+                position: absolute;
+                top: calc(50% - rem(3.5));
+                left: rem(-3.5);
+            }
+        }
+    }
+
+    &__button{
+        margin-top: rem(70);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

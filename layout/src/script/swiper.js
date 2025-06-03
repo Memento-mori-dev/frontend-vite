@@ -16,6 +16,18 @@ arrSwiperWatch.forEach((swiper, index) => {
             nextEl: '.button-slider__item--next',
             prevEl: '.button-slider__item--prev',
         },
-    });
-    
+    });  
+})
+
+
+// teachers
+
+const swiperTeachers = new Swiper('.teachers', {
+    slidesPerView: 3,
+    spaceBetween: 80,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.button-slider__item--next',
+        prevEl: '.button-slider__item--prev',
+    },
 })

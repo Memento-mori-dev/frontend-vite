@@ -211,6 +211,10 @@
             justify-content: center;
             align-items: center;
         }
+
+        &--big &__item{
+            @include square(rem(70));
+        }
     }
 
     &-up{
