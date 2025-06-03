@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.map{
+    height: rem(650);
+
+    position: relative;
+
+    &__banner{
+        overflow: hidden;
+        border-radius: rem(40);
+        background-color: var(--white);
+    }
+
+    &__address{
+        position: absolute;
+        top: rem(62);
+        left: rem(70);
+
+        padding: rem(40) rem(50) rem(40) rem(40);
+        border-radius: rem(25);
+        background-color: var(--white);
+
+        &-item{
+            &:not(:first-child){
+                margin-top: rem(30);
+            }
+        }
+        &-name{
+            &::after{
+                content: ':';
+            }
+
+            font-weight: 300;
+            font-size: rem(19);
+            line-height: 110%;
+            color: var(--grey-67);
+        }
+        &-phone{
+            padding-top: rem(17);
+
+            font-weight: 600;
+            font-size: rem(40);
+            line-height: 120%;
+            color: var(--grey-36);
+            text-decoration: none;
+        }
+        &-buttons{
+            display: flex;
+            align-items: center;
+
+            &-item{
+                &:not(:first-child){
+                    margin-left: rem(15);
+                }
+            }
+        }
+        &-text{
+            padding-top: rem(16);
+
+            font-weight: 500;
+            font-size: rem(26);
+            line-height: 130%;
+            color: var(--grey-36);
+        }
+    }
+}

@@ -8,7 +8,7 @@
     background-color: var(--blue);
 
 
-    & img{
+    & > *{
         width: 100%;
         height: 100%;
 
@@ -21,7 +21,7 @@
     &--reverse{
         transform: rotate(-1deg);
 
-        & img{
+        & > *{
             transform: rotate(1deg);
         }
     }
