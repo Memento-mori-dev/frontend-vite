@@ -29,4 +29,8 @@
     &--normal{
         transform: rotate(1.5deg);
     }
+
+    &--white{
+        background-color: var(--white);
+    }
 }

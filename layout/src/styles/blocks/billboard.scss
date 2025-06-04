@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.billboard{
+    padding: rem(30) rem(64) rem(40) rem(64);
+
+    display: grid;
+    grid-template-columns: 33% 30% 29%;
+    justify-content: space-between;
+
+    border-radius: rem(40);
+    background-color: var(--blue);
+
+    &__header{
+        & > .h2{
+            white-space: nowrap;
+        }
+
+        &-text{
+            padding-top: rem(45);
+
+            font-weight: 500;
+            font-size: rem(25);
+            line-height: 155%;
+            color: var(--white);
+        }
+    }
+
+    &__img{}
+
+    &__form{
+        justify-content: center;
+    }
+}

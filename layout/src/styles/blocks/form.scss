@@ -1,0 +1,68 @@
+@use '../helpers' as *;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(25);
+
+    &__about{
+        padding-top: rem(20);
+
+        font-weight: 300;
+        font-size: rem(12);
+        line-height: 145%;
+        text-align: center;
+        color: var(--blue-c4);
+
+        & > a{
+            font-weight: 400;
+            font-size: rem(12);
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: var(--white);
+        }
+    }
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+
+    border-radius: rem(90);
+    padding: rem(16) rem(34) rem(17) rem(34);
+
+    border: 1px solid var(--border-color-opacity);
+
+    cursor: pointer;
+}
+
+.label{
+    font-weight: 300;
+    font-size: rem(13);
+    line-height: 106%;
+    opacity: 0.7;
+
+    &--white{
+        color: var(--white);
+    }
+}
+
+.input{
+    background: none;
+    border: none;
+    outline: none;
+
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 106%;
+    letter-spacing: 0.06em;
+    
+    &--white{
+        color: var(--white);
+
+        &::placeholder{
+            color: var(--white);
+        }
+    }
+}
