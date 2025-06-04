@@ -1,5 +1,48 @@
 @use '../helpers' as *;
 
 .questions{
-    
+    display: grid;
+    grid-template-columns: 34% 50%;
+    justify-content: space-between;
+
+    &__header{
+
+    }
+    &__title{
+        margin-top: rem(40);
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(50);
+
+        &-item{
+            &:not(:last-child){
+                padding-bottom: rem(49);
+                border-bottom: var(--border);
+            }
+
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+        &-title{
+            font-family: var(--second-family);
+            font-size: rem(53);
+            line-height: 145%;
+            letter-spacing: 0.01em;
+            color: var(--white-e6);
+        }
+        &-text{
+            font-size: rem(20);
+            line-height: 150%;
+            color: var(--grey-a9);
+
+            & > span{
+                font-weight: 600;
+                color: var(--white);
+            }
+        }
+    }
 }
