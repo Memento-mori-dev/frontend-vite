@@ -32,3 +32,16 @@ const swiperTeachers = new Swiper('.teachers', {
         prevEl: '.button-slider__item--prev',
     },
 })
+
+
+// concert
+const fddsf = new Swiper('.concert', {
+    slidesPerView: 3,
+    spaceBetween: 70,
+    initialSlide: 1,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.button-slider__item--next',
+        prevEl: '.button-slider__item--prev',
+    },
+})

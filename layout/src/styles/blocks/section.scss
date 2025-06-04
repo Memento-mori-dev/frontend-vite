@@ -64,6 +64,10 @@
                 font-weight: 600;
                 color: var(--white);
             }
+
+            &--center{
+                text-align: center
+            }
         }
         &-icon{
             @include square(rem(26));
