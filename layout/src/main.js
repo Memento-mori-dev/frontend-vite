@@ -37,7 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
           msg.style.color = response.ok ? 'green' : 'red';
           msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
           form.appendChild(msg);
-          if (response.ok) form.reset();
+          if (response.ok) {
+            form.reset();
+            console.log(window.location.href);
+            
+            const url = new URL(window.location.href);
+            url.pathname = '/thanks.html';
+
+            window.location.href = url;
+          };
         } catch (err) {
           let msg = document.createElement('div');
           msg.className = 'form-msg';

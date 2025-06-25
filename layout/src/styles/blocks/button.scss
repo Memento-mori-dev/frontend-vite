@@ -73,6 +73,10 @@
     &--blue{
         background-color: var(--blue);
         color: var(--white-f8);
+
+        & svg *{
+            fill: var(--white) !important;
+        }
     }
 
     &--border{
@@ -106,7 +110,18 @@
             width: rem(17);
             height: rem(17);
         }
+
+        &-78{
+            @include square(rem(78));
+            background-color: var(--blue);
+
+            & svg{
+                @include square(rem(32));
+            }
+        }
     }
+
+
 
     @include mobile{
         &--48{
@@ -126,6 +141,16 @@
 
             &::after{
                 right: -16%;
+            }
+        }
+
+        &-circle{
+            &-78{
+                @include square(rem(50));
+
+                & svg{
+                    @include square(rem(25));
+                }
             }
         }
     }

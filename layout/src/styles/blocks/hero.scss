@@ -119,6 +119,12 @@
             z-index: 1;
             pointer-events: auto;
         }
+
+        &.none{
+            &::after,&::before{
+                display: none !important;
+            }
+        }
     }
 
     @include pc-top{
@@ -199,6 +205,10 @@
 
         &__week,&__button{
             padding-top: rem(25);
+        }
+
+        &__week.none{
+            padding-top: 0;
         }
 
         &__banner{
