@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(window.location.href);
             
             const url = new URL(window.location.href);
-            url.pathname = '/thanks.html';
+            url.pathname = '/thanks/';
 
             window.location.href = url;
           };
