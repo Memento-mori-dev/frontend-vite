@@ -13,14 +13,15 @@ h4, .h4,
 h5, .h5,
 h6, .h6{
     font-family: var(--second-family);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--white-f8);
+    text-transform: uppercase;
 }
 
 h1, .h1{
-    @include fluid-text(150, 70);
-    line-height: 121%;
-    letter-spacing: 0.01em;
+    @include fluid-text(76, 32);
+    line-height: 142%;
+    letter-spacing: 0.03em;
 }
 h2, .h2{
     @include fluid-text(100, 58);

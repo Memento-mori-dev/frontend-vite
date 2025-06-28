@@ -34,6 +34,15 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: "Murs Gothic";
+    src: local("MursGothic WideDark"),
+      local("MursGothic-WideDark"),
+      url("../fonts/MursGothic-WideDark.woff") format("woff");
+    font-weight: 800;
+}
+
+
 @font-face { 
     font-family: "Gilroy";
     src: local("Gilroy Regular"),

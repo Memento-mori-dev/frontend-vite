@@ -18,79 +18,31 @@
         grid-area: content;
 
         position: relative;
-        &::after{
-            @include square(rem(227));
-
-            content: '';
-
-            position: absolute;
-            left: -51%;
-            bottom: 15%;
-
-            background-image: url(../../../public/svg/star.svg);
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-    }
-    &__sup{
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-
-        &-icon{
-            @include square(rem(55));
-            border-radius: 50%;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border: var(--border-blue-03);
-        }
-        &-text{
-            padding-left: rem(45);
-
-            font-family: var(--third-family);
-            font-size: rem(50);
-            line-height: 145%;
-            letter-spacing: 0.01em;
-            color: var(--white-f8);
-        }
     }
     &__title{
-        padding-top: rem(24);
-
         position: relative;
-        &::before{
-            content: '';
 
-            position: absolute;
-            top: rem(65);
-            right: 3%;
-
-            @include square(rem(51));
-            background-image: url(../../../public/svg/star.svg);
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-
-        &-sub{
-            padding-top: rem(42);
-        
-            font-weight: 500;
-            font-size: rem(31);
+        &-add{
+            @include fluid-text(25, 20);
+            font-family: var(--font-family);
+            display: inline-block;
+            font-weight: 400;
             line-height: 145%;
-            color: var(--white-f8);
+            text-transform: initial;
         }
     }
     &__button{
-        margin-top: rem(51);
+        margin-top: rem(70);
 
         display: flex;
 
-        & > *:not(:first-child){
-            margin-left: rem(35);
+        position: relative;
+
+        &-line{
+            position: absolute;
+            top: rem(-110);
+            right: rem(-15);
+            transform: rotate(-8.5deg);
         }
     }
 
@@ -99,7 +51,7 @@
 
         & .banner{
             width: 46vw;
-            height: 34.6vw;
+            aspect-ratio: 16 / 9;
         }
 
         position: relative;
@@ -120,168 +72,6 @@
             background-color: var(--blue-0c);
             filter: blur(250px);
             z-index: -1;
-        }
-
-
-        &::after{
-            @include square(rem(500));
-
-            content: '';
-
-            position: absolute;
-            left: rem(-290);
-            bottom: rem(-50);
-
-            background-image: url(../../../public/images/hero-sticks.webp);
-            background-repeat: no-repeat;
-            background-size: 100%;
-
-            z-index: 1;
-            pointer-events: auto;
-        }
-    }
-
-    @include pc-top{
-        &__content{
-            &::after{
-                left: -30%;
-
-                z-index: -1;
-            }
-        }
-    }
-
-    @include laptop{
-
-        &__title{
-            &::before{
-                top: rem(60);
-                right: -8%;
-
-                width: 10%;
-                aspect-ratio: 1;
-
-                background-size: contain;
-            }
-        }
-
-        &__banner{
-            &::after{
-                @include square(rem(400));
-
-                left: -30%;
-                bottom: -10%;
-            }
-        }
-    }
-
-    @include tablet{
-        &__title{
-            padding-right: 10%;
-
-            &::before{
-                right: 0;
-            }
-        }
-
-        &__banner{
-            &::after{
-                @include square(70%);
-
-                left: auto;
-                top: -63%;
-                right: -30%;
-
-                background-size: contain;
-
-                z-index: -1;
-            }
-            &::before{
-                display: none;
-            }
-        }
-
-        &__content{
-            &::after{
-                top: 85%;
-                left: rem(-123.5);
-            }
-        }
-
-
-        &__container{
-            grid-template-areas:"content"
-                                "banner";
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, auto);
-            row-gap: rem(40);
-        }
-
-        &__week,&__button{
-            padding-top: rem(25);
-        }
-
-        &__banner{
-            & .banner{
-                width: 100%;
-            }
-        }
-    }
-
-    @include mobile{
-        padding-top: rem(35);
-        
-        &__content{
-            &::after{
-                @include square(rem(67));
-
-                top: 100%;
-                left: rem(-48);
-            }
-        }
-
-        &__title{
-            padding-top: rem(26);
-            padding-right: 0;
-            text-align: center;
-
-            &::before{
-                display: none;
-            }
-        }
-
-        &__week{
-            justify-content: center;
-
-            &-icon{
-                display: none;
-            }
-            &-text{
-                padding-left: 0;
-                font-size: rem(20);
-                text-align: center;
-            }
-        }
-
-        &__button{
-            padding-top: rem(34);
-
-            display: flex;
-            justify-content: center;
-        }
-
-        &__container{
-            row-gap: rem(50);
-        }
-
-        &__banner{
-            &::after{
-                top: auto;
-                left: -20%;
-                bottom: -20%;
-
-                z-index: 1;
-            }
         }
     }
 }

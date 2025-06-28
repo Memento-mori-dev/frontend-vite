@@ -147,6 +147,30 @@
         }
     }
 
+    &--100{
+        @include fluid-text(26, 16);
+
+        overflow: hidden;
+
+        border-radius: rem(90);
+        padding: fluid(29, 18) fluid(92, 63);
+
+        font-weight: 500;
+        line-height: 106%;
+
+
+        & .icon-right{
+            padding-left: fluid(55, 30);
+
+            display: flex;
+            align-items: center;
+
+            & svg{
+                width: rem(29);
+            }
+        }
+    }
+
     &--white{
         background-color: var(--white);
         color: var(--black-37);
