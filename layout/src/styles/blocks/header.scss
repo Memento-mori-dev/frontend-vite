@@ -12,10 +12,6 @@
 
     &.is-scroll{
         background-color: var(--black);
-
-        &::after{
-            opacity: 0;
-        }
     }
 
     &::before{
@@ -31,24 +27,6 @@
         border-radius: 50%;
         filter: blur(350px);
         opacity: 0.45;
-    }
-
-    &::after{
-        @include square(rem(141));
-
-        content: '';
-
-        position: absolute;
-        top: rem(21);
-        right: rem(-70.5);
-
-        background-image: url(../../../public/svg/star.svg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        transition: all var(--transition-duration);
-
-        z-index: -1;
     }
 
     &__container{
@@ -89,11 +67,11 @@
         }
     }
     &__text{
-        padding-left: rem(35);
+        padding-left: fluid(40, 20);
         font-family: var(--third-family);
-        font-weight: 300;
-        font-size: rem(13);
-        line-height: 145%;
+        font-weight: 200;
+        font-size: rem(14);
+        line-height: 148%;
         color: var(--grey-c2);
         white-space: nowrap;
     }
@@ -113,6 +91,10 @@
             font-size: rem(23);
             color: var(--white-ef);
             text-decoration: none;
+
+            @include hover{
+                color: var(--blue);
+            }
         }
     }
 
@@ -135,12 +117,6 @@
     }
 
     @include mobile{
-        &.is-scroll{
-            &::after{
-                opacity: 1;
-            }
-        }
-
         &__container{
             padding-top: rem(17);
             padding-bottom: rem(20);
@@ -149,13 +125,6 @@
         &__logo{
             width: rem(46);
             height: rem(42);
-        }
-
-        &::after{
-            @include square(3vh);
-
-            top: calc(61% - 3vh);;
-            right: calc(70% - 3vh);
         }
 
         &__address{
