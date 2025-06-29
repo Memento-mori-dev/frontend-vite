@@ -24,9 +24,9 @@ h1, .h1{
     letter-spacing: 0.03em;
 }
 h2, .h2{
-    @include fluid-text(100, 58);
-    line-height: 126%;
-    letter-spacing: 0.02em;
+    @include fluid-text(56, 30);
+    line-height: 138%;
+    letter-spacing: 0.07em;
 }
 h3, .h3{
     @include fluid-text(100, 55);

@@ -23,26 +23,26 @@
                 content: '// ';
             }
 
+            @include fluid-text(55, 30);
             font-family: var(--font-Outline);
             font-weight: 700;
-            font-size: rem(65);
             line-height: 110%;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.07em;
             color: var(--blue);
         }
         &-title{
-            margin-top: rem(30);
+            @include fluid-text(40, 23);
+            margin-top: fluid(30, 20);
 
             font-family: var(--second-family);
-            font-size: rem(53);
             line-height: 109%;
             letter-spacing: 0.01em;
             color: var(--white-e6);
         }
         &-text{
-            margin-top: rem(30);
+            @include fluid-text(20, 14);
+            margin-top: fluid(30, 20);
 
-            font-size: rem(20);
             line-height: 150%;
             color: var(--grey-a9);
 
@@ -54,7 +54,7 @@
 
         &-banner{
             width: 57%;
-            height: rem(350);
+            aspect-ratio: 16 / 7.83;
         }
     }
 }

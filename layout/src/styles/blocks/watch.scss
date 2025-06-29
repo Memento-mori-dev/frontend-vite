@@ -2,6 +2,32 @@
 
 
 .watch{
+    &__video{
+        margin: rem(45) auto 0 auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-content{
+            padding-left: rem(52);
+
+            &-title{
+                font-weight: 300;
+                font-size: rem(20);
+                line-height: 136%;
+                color: var(--grey-a9);
+            }
+            &-subtitle{
+                padding-top: rem(14);
+                font-weight: 200;
+                font-size: rem(14);
+                line-height: 136%;
+                color: var(--grey-a9);
+            }
+        }
+    }
+
     &__item{
         &:not(:first-child){
             margin-top: rem(60);
