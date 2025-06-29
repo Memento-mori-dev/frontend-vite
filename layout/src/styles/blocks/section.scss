@@ -44,55 +44,49 @@
     }
 
     &__sub{
-        margin-top: rem(45);
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &-item:not(:first-child){
-            margin-left: rem(35);
-        }
-
-        &-text{
-            font-weight: 300;
-            font-size: rem(25);
-            line-height: 145%;
-            color: var(--grey-a9);
-
-            & > span{
-                font-weight: 600;
-                color: var(--white);
-            }
-
-            &--center{
-                text-align: center
-            }
-        }
-        &-icon{
-            @include square(rem(26));
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & > svg{
-                @include square(100%);
-            }
-        }
-
         &-list{
+            margin-top: rem(55);
+
             list-style-type: none;
 
             display: flex;
-            align-items: center;
+            justify-content: center;
 
-            & > li:not(:first-child){
-                padding-left: rem(9);
+            position: relative;
 
-                & p::before{
-                    content: '/';
+            & li{
+                padding-top: rem(39);
+
+                &:not(:first-child){
+                    margin-left: fluid(99, 40);
                 }
+
+                position: relative;
+                &::before{
+                    content: '';
+
+                    position: absolute;
+                    top: 0;
+                    left: calc(50% - rem(7));
+
+                    width: rem(14);
+                    aspect-ratio: 1;
+                    background-color: var(--blue);
+                    border-radius: 50%;
+                }
+            }
+        }
+        &-text{
+            @include fluid-text(22, 16);
+            line-height: 147%;
+            font-weight: 300;
+            color: var(--grey-a9);
+            text-align: center;
+
+            & span{
+                white-space: nowrap;
+                color: var(--white);
+                font-weight: 600;
             }
         }
     }
