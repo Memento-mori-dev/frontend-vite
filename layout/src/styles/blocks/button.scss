@@ -250,14 +250,26 @@
     }
 
     &-up{
-        @include square(rem(35));
+        font-weight: 300;
+        font-size: rem(16);
+        line-height: 145%;
+        color: var(--blue);
 
         display: flex;
-        justify-content: center;
         align-items: center;
 
-        background-color: var(--blue);
-        border-radius: 50%;
+        & .icon-right{
+            margin-left: rem(35);
+
+            @include square(rem(35));
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: var(--blue);
+            border-radius: 50%;
+        }
     }
 
     &-social{
