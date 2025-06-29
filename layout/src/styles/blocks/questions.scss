@@ -2,41 +2,45 @@
 
 .questions{
     display: grid;
-    grid-template-columns: 34% 50%;
+    grid-template-columns: rem(440) rem(764);
     justify-content: space-between;
 
     &__header{
 
     }
     &__title{
-        margin-top: rem(40);
     }
 
     &__cards{
-        display: flex;
-        flex-direction: column;
-        row-gap: rem(50);
 
         &-item{
-            &:not(:last-child){
-                padding-bottom: rem(49);
-                border-bottom: var(--border);
+            &:not(:first-child){
+                margin-top: fluid(50, 25);
             }
-
-            display: flex;
-            flex-direction: column;
-            row-gap: rem(30);
+            &:not(:last-child){
+                border-bottom: var(--border); 
+            }
         }
         &-title{
             font-family: var(--second-family);
-            font-size: rem(53);
+            font-weight: 800;
+            font-size: fluid(37, 23);
             line-height: 145%;
             letter-spacing: 0.01em;
+
             color: var(--white-e6);
         }
+        &-content{
+            
+        }
         &-text{
-            font-size: rem(20);
-            line-height: 150%;
+            padding-top: fluid(30, 20);
+            padding-bottom: fluid(50, 36);
+
+            font-weight: 400;
+            font-size: fluid(20, 14);
+            line-height: 154%;
+
             color: var(--grey-a9);
 
             & > span{
