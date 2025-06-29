@@ -44,6 +44,11 @@
     }
 
     &__sub{
+        margin-top: fluid(45, 30);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &-list{
             margin-top: rem(55);
 
@@ -77,6 +82,7 @@
             }
         }
         &-text{
+            max-width: rem(1026);
             @include fluid-text(22, 16);
             line-height: 147%;
             font-weight: 300;
