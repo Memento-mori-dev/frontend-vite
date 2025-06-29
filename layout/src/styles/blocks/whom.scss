@@ -3,66 +3,50 @@
 
 .whom{
     display: grid;
-    grid-template-columns: 33% 56%;
+    grid-template-columns: rem(524) rem(665);
     justify-content: space-between;
 
     &__header{
 
     }
     &__title{
-        margin-top: rem(40);
+        &-line{
+            white-space: nowrap;
+        }
     }
 
     &__cards{
-        display: flex;
-        flex-direction: column;
-
-        row-gap: rem(65);        
-
         &-item{
-            padding: rem(48) rem(29) rem(42) rem(50);
-            background-color: var(--blue);
-            border-radius: rem(35);
-
-            position: relative;
-            overflow: hidden;
-            &::after{
-                content: '';
-
-                position: absolute;
-                top: rem(-123);
-                right: rem(153);
-
-                width: rem(354);
-                height: rem(976);
-
-                border-radius: 100%;
-                transform: rotate(13.5deg);
-                background: rgba(255, 255, 255, 0.35);
-                filter: blur(350px);
+            &:not(:first-child){
+               margin-top: fluid(60, 45);
             }
         }
-        &-img{
-            @include square(rem(70));
+        &-banner{
+            & .banner{
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
+        &-content{
+            padding: fluid(30, 20) fluid(12.6, 8) 0 fluid(12.6, 8);
         }
         &-title{
-            margin-top: rem(30);
-
-            font-family: var(--second-family);
-            font-size: rem(60);
+            font-weight: 800;
+            font-size: fluid(30, 20);
             line-height: 96%;
             letter-spacing: 0.01em;
-            color: var(--white);
         }
         &-text{
-            margin-top: rem(30);
+            padding-top: fluid(30, 20);
 
-            font-size: rem(20);
+            font-weight: 300;
+            font-size: fluid(30, 20);
             line-height: 150%;
-            color: var(--white);
+            color: var(--grey-a9);
 
-            & > span{
+            & span{
                 font-weight: 600;
+                color: var(--white);
             }
         }
     }
