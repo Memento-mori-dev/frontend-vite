@@ -3,9 +3,7 @@
 .hero{
     overflow: hidden;
 
-    padding-top: rem(71);
-    padding-bottom: rem(41);
-        
+    padding-top: fluid(80, 35);
 
     &__container{
         display: grid;
@@ -23,7 +21,7 @@
         position: relative;
 
         &-add{
-            @include fluid-text(25, 20);
+            font-size: rem(25);
             font-family: var(--font-family);
             display: inline-block;
             font-weight: 400;
@@ -32,7 +30,7 @@
         }
     }
     &__button{
-        margin-top: rem(70);
+        margin-top: fluid(70, 30);
 
         display: flex;
 
@@ -72,6 +70,58 @@
             background-color: var(--blue-0c);
             filter: blur(250px);
             z-index: -1;
+        }
+    }
+
+    
+    @include laptop{
+        &__title-add{
+            font-size: rem(18);
+        }
+
+        &__button-line{
+            right: -10%;
+        }
+    }
+
+    @include tablet{
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(47);
+        }
+
+        &__title{
+            text-align: center;
+
+            & p{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__button-line{
+            display: none;
+        }
+        &__button-span{
+            display: none;
+        }
+
+        &__banner{
+            display: flex;
+            justify-content: center;
+
+            & .banner{
+                flex-shrink: 0;
+                width: 118%;
+            }
         }
     }
 }
