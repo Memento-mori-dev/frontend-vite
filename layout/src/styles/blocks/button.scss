@@ -261,16 +261,19 @@
     }
 
     &-social{
-        padding: rem(10) rem(15.5);
-        border-radius: rem(6);
+        @include square(rem(38));
+        border-radius: 50%;
 
-        font-weight: 600;
-        font-size: rem(13);
-        line-height: 120%;
-        color: var(--white);
+        background-color: var(--blue);
+        overflow: hidden;
 
-        & .icon-left{
-            padding-right: rem(10);
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+
+        @include hover{
+            opacity: .8;
         }
     }
 

@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .billboard{
-    padding: rem(30) rem(64) rem(40) rem(64);
+    padding: fluid(40, 30) fluid(55, 24);
 
     display: grid;
     grid-template-columns: 33% 30% 29%;
@@ -11,15 +11,20 @@
     background-color: var(--blue);
 
     &__header{
-        & > .h2{
-            white-space: nowrap;
+        &-title{
+            position: relative;
+            &-line{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
         }
 
         &-text{
-            padding-top: rem(45);
+            padding-top: fluid(30, 25);
 
             font-weight: 500;
-            font-size: rem(25);
+            font-size: fluid(24, 16);
             line-height: 155%;
             color: var(--white);
         }

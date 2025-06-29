@@ -29,7 +29,7 @@ h2, .h2{
     letter-spacing: 0.07em;
 }
 h3, .h3{
-    @include fluid-text(100, 55);
+    @include fluid-text(42, 26);
     line-height: 126%;
     letter-spacing: 0.02em;
 }
