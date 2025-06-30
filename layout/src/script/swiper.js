@@ -11,11 +11,22 @@ arrSwiperWatch.forEach((swiper, index) => {
     objSwiperWatch[`swiper-${index}`] = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 70,
-        // Navigation arrows
+        slidesPerView: 'auto',
+        freeMode: true,
         navigation: {
             nextEl: '.button-slider__item--next',
             prevEl: '.button-slider__item--prev',
         },
+         breakpoints: {
+            1: {
+                slidesPerView: 1,
+                spaceBetween: 36,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 70,
+            }
+         }
     });  
 })
 

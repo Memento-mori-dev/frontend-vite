@@ -30,20 +30,20 @@
 
     &__item{
         &:not(:first-child){
-            margin-top: rem(60);
+            margin-top: fluid(60, 46);
         }
 
         &-sub{
-            margin-top: rem(40);
+            margin-top: fluid(40, 31);
 
             display: flex;
             align-items: center;
         }
         &-text{
-            padding-left: rem(37);
+            padding-left: fluid(37, 27);
 
             font-weight: 500;
-            font-size: rem(27);
+            font-size: fluid(27, 17);
             line-height: 155%;
             color: var(--white);
 
@@ -69,13 +69,25 @@
     }
 
     &__block{
-        height: 24.5vw;
-
         &--small{
             width: 23.1vw;
+            aspect-ratio: 1;
         }
         &--big{
             width: 48vw;
+            aspect-ratio: 16 / 9;
+        }
+    }
+
+    @include tablet{
+
+        &__block{
+            &--small{
+                width: 56vw;
+            }
+            &--big{
+                width: 100vw;
+            }
         }
     }
 }
