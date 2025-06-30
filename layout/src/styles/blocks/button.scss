@@ -245,7 +245,7 @@
         }
 
         &--big &__item{
-            @include square(rem(70));
+            @include square(fluid(70, 40));
         }
     }
 

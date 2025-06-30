@@ -61,6 +61,27 @@ const swiperTeachers = new Swiper('.teachers', {
     }
 })
 
+// remained
+const swiperRemained = new Swiper('.remained', {
+    // slidesPerView: 2.72,
+    // spaceBetween: 80,
+    // initialSlide: 2,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.button-slider__item--next',
+        prevEl: '.button-slider__item--prev',
+    },
+    breakpoints: {
+        1: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        1400: {
+            slidesPerView: 100,
+        }
+    },
+})
+
 
 // concert
 const fddsf = new Swiper('.concert', {
