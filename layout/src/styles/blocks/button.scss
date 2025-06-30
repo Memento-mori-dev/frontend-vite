@@ -32,10 +32,10 @@
         overflow: hidden;
 
         border-radius: rem(90);
-        padding: rem(24.5) rem(50) rem(24.5) rem(56);
+        padding: fluid(24.5, 20) fluid(35, 30) fluid(24.5, 20)  fluid(49, 44);
 
         font-weight: 600;
-        font-size: rem(22);
+        font-size: fluid(22, 16);
         line-height: 106%;
 
         & .icon-right{

@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .billboard{
-    padding: fluid(40, 30) fluid(55, 24);
+    padding: fluid(40, 30) fluid(55, 18);
 
     display: grid;
     grid-template-columns: 33% 30% 29%;
@@ -34,5 +34,35 @@
 
     &__form{
         justify-content: center;
+    }
+
+    @include laptop{
+        grid-template-columns: repeat(2, calc(50% - rem(15)));
+
+        &__header-title-line{
+            display: none;
+        }
+
+        &__img{
+            display: none;
+        }
+        &__form-footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+
+        &__header{
+            text-align: center;
+        }
+
+        &__form{
+            margin-top: rem(34);
+        }
     }
 }
