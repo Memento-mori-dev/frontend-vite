@@ -50,9 +50,38 @@
     }
 
     &__button{
-        margin-top: rem(80);
+        margin-top: fluid(80, 45);
 
         display: flex;
         justify-content: center;
     }
+
+    @include laptop{
+        &__content{
+            flex-wrap: wrap;
+
+            gap: rem(30);
+        
+            &-item{
+                width: calc(50% - rem(15));
+            }
+        }
+    }
+
+    @include mobile{
+        &__content{
+            flex-direction: column;
+            flex-wrap: wrap;
+        
+            &-item{
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
 }
+

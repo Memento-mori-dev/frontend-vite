@@ -100,4 +100,28 @@
     &__content{
         margin-top: fluid(80, 45);
     }
+
+    @include tablet{
+        &__sub{
+            &-list{
+                flex-wrap: wrap;
+
+                gap: rem(30);
+
+                & li{
+                    &:not(:first-child){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile{
+        &__sub{
+            &-list{
+                flex-direction: column;
+            }
+        }
+    }
 }
