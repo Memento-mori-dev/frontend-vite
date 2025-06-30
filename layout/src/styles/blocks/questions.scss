@@ -15,7 +15,7 @@
 
         &-item{
             &:not(:first-child){
-                margin-top: fluid(50, 25);
+                margin-top: fluid(50, 38);
             }
             &:not(:last-child){
                 border-bottom: var(--border); 
@@ -46,6 +46,69 @@
             & > span{
                 font-weight: 600;
                 color: var(--white);
+            }
+        }
+
+        &-button{
+            display: none;
+        }
+    }
+
+    @include laptop{
+        grid-template-columns: 40% 50%;
+    }
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+
+        &__header{
+            text-align: center;
+        }
+
+        &__cards{
+            padding-top: rem(30);
+            padding-bottom: rem(17);
+
+            &-content{
+                margin-top: rem(46);
+
+                height: 0;
+                overflow: hidden;
+            }
+
+            &-item{
+                position: relative;
+
+                text-align: center;
+            }
+
+            &-text{
+                padding-top: 0
+            }
+
+            &-button{
+                @include square(rem(30));
+
+                position: absolute;
+                left: calc(50% - rem(15));
+                bottom: rem(-15.5);
+                
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 50%;
+                border: none;
+
+                @include hover{
+                    opacity: .8;
+                }
+
+                & img{
+                    @include square(rem(10));
+                }
             }
         }
     }
