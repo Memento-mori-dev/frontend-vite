@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
         });
-      }
+    }
 
-      initScrollHeader();
+    // initScrollHeader();
 });
 
 

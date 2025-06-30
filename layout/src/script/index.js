@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // const resizeObserverScroll = new ResizeObserver(scrollGsap);
       // resizeObserverScroll.observe(document.querySelector('.slider__container'));
 
-      const resizeObserverSticky = new ResizeObserver(stickyQuestion);
-      resizeObserverSticky.observe(document.querySelector('.slider__container'));
+      // const resizeObserverSticky = new ResizeObserver(stickyQuestion);
+      // resizeObserverSticky.observe(document.querySelector('.slider__container'));
 
       // const swiper = new Swiper('.slider__container', {
       //   loop: true,
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       };
 
-      var swiper = new Swiper(".slider__container", swiperOptions);
+      // var swiper = new Swiper(".slider__container", swiperOptions);
 
       let wrapper = document.querySelector(".swiper-wrapper");
       let transformValue;
