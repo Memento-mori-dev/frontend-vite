@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .footer{
-    padding-top: rem(130);
-    padding-bottom: rem(85);
+    padding-top: fluid(130, 80);
+    padding-bottom: fluid(85, 33);
 
     &__main{
         position: relative;
@@ -23,21 +23,21 @@
             top: 0;
         }
 
-        padding: rem(40) 0;
+        padding: fluid(40, 25) 0;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         & p{
-            font-size: rem(16);
+            font-size: fluid(16, 12);
             line-height: 145%;
             text-align: center;
             color: var(--grey-ce);
         }
 
         & a{
-            font-size: rem(16);
+            font-size: fluid(16, 12);
             line-height: 145%;
             text-align: center;
             color: var(--blue-28);
@@ -66,7 +66,7 @@
 
         &-text{
             font-weight: 300;
-            font-size: rem(16);
+            font-size: fluid(16, 12);
             line-height: 145%;
             color: var(--grey-ce);
         }
@@ -80,5 +80,120 @@
                 height: rem(26);
             }
         }
+    }
+
+    @include laptop{
+        &__main{
+            flex-wrap: wrap;
+            gap: fluid(30, 20);
+
+            &-item:last-child{
+                margin-left: auto;
+            }
+
+            &::after{
+                left: calc(var(--container-padding-x) * -1);
+                width: calc(100% + (var(--container-padding-x) * 2));
+            }
+            &::before{
+                display: none;
+            }
+        }
+
+        &__about{
+            text-align: center;
+
+            padding: 0;
+
+            flex-direction: column-reverse;
+            align-items: center;
+            opacity: 1;
+
+            &-left{
+                width: 100%;
+
+                padding: rem(25) 0 0;
+
+                display: flex;
+                justify-content: center;
+
+                position: relative;
+                &::after{
+                    content: '';
+
+                    position: absolute;
+                    top: 0;
+                    left: calc(var(--container-padding-x) * -1);
+                    width: calc(100% + (var(--container-padding-x) * 2));
+
+                    height: 1px;
+                    background-color: var(--border-color-white);
+                }
+
+                & > *{
+                    opacity: 0.6;
+                }
+            }
+
+            &-right{
+                width: 100%;
+
+                padding: rem(25) 0;
+
+                display: flex;
+                justify-content: center;
+
+                position: relative;
+
+                & > *{
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    @include tablet{
+        &__main{
+            padding: 0;
+            flex-direction: column;
+
+            &-item:last-child{
+                margin-top: 0;
+            }
+        }
+
+        &__about{
+            &-logo{
+                margin: 0;
+            }
+            &-left{
+            }
+
+            &-right{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                gap: rem(25);
+            }
+        }
+    }
+
+    @include mobile{
+        
+    }
+}
+
+.up-button-phone{
+    display: none;
+
+    @include mobile{
+        display: block;
+
+        position: fixed;
+        right: rem(21);
+        bottom: rem(19);
+
+        z-index: 100;
     }
 }
