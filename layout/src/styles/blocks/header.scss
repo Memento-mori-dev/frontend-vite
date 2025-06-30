@@ -31,7 +31,7 @@
 
     &__container{
         padding-top: rem(24);
-        padding-bottom: rem(30);
+        padding-bottom: fluid(30, 20);
 
         display: grid;
         align-items: center;
@@ -60,7 +60,7 @@
     }
     &__logo{
         display: block;
-        width: rem(53);
+        width: fluid(53, 43);
 
         & img{
             width: 100%;
@@ -101,33 +101,43 @@
         grid-area: form;
     }
 
-    @include tablet{
-
-
-        &__container{
-            grid-template-columns: min-content auto min-content;
-            grid-template-areas: "start address form";
-            column-gap: 1rem;
-        }
-
+    @include laptop{
         &__text{
             display: none;
         }
     }
 
-    @include mobile{
+    &__phone{
+        display: none;
+    }
+
+    @include tablet{
+
         &__container{
-            padding-top: rem(17);
-            padding-bottom: rem(20);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::after{
+                left: calc(var(--container-padding-x) * -1);
+                width: calc(100% + (var(--container-padding-x) * 2));
+            }
         }
 
-        &__logo{
-            width: rem(46);
-            height: rem(42);
-        }
 
         &__address{
             display: none;
         }
+        &__call{
+            display: none;
+        }
+
+        &__phone{
+            display: block;
+        }
+    }
+
+    @include mobile{
+
     }
 }
