@@ -17,7 +17,7 @@ arrSwiperWatch.forEach((swiper, index) => {
             nextEl: '.button-slider__item--next',
             prevEl: '.button-slider__item--prev',
         },
-         breakpoints: {
+        breakpoints: {
             1: {
                 slidesPerView: 1,
                 spaceBetween: 36,
@@ -26,7 +26,7 @@ arrSwiperWatch.forEach((swiper, index) => {
                 slidesPerView: 2,
                 spaceBetween: 70,
             }
-         }
+        }
     });  
 })
 
@@ -42,6 +42,23 @@ const swiperTeachers = new Swiper('.teachers', {
         nextEl: '.button-slider__item--next',
         prevEl: '.button-slider__item--prev',
     },
+    breakpoints: {
+        1: {
+            slidesPerView: 1,
+        },
+        984: {
+            slidesPerView: 2,
+        },
+        1152: {
+            slidesPerView: 2.3,
+            spaceBetween: 20,
+        },
+        1400: {
+            slidesPerView: 2.72,
+            spaceBetween: 80,
+            initialSlide: 2,
+        }
+    }
 })
 
 

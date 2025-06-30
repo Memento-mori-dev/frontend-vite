@@ -8,11 +8,11 @@
 
             position: relative;
             &-flag{
-                @include square(rem(40));
+                @include square(fluid(40, 30));
 
                 position: absolute;
-                top: rem(30);
-                right: rem(30);
+                top: fluid(30, 19);
+                right: fluid(30, 16);
 
                 z-index: 3;
 
@@ -23,6 +23,10 @@
                 border-radius: 50%;
             }
             &-description{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
                 border-radius: rem(35);
                 overflow: hidden;
 
@@ -35,7 +39,7 @@
 
                 z-index: 2;
 
-                padding: rem(94) rem(58) rem(0) rem(58);
+                padding: 0 rem(58);
 
                 display: flex;
                 flex-direction: column;
@@ -63,9 +67,11 @@
                 }
 
                 &-text{
-                    padding-top: rem(30);
+                    &:not(:first-child){
+                        padding-top: fluid(30, 20);
+                    }
 
-                    font-size: rem(24);
+                    font-size: fluid(24, 20);
                     line-height: 155%;
                     text-align: center;
                     color: var(--white);
@@ -78,24 +84,24 @@
         }
 
         &-content{
-            margin-top: rem(40);
+            margin-top: fluid(40, 30);
             
             display: flex;
             align-items: center;
         }
         &-name{
-            padding-right: rem(33);
+            padding-right: fluid(33, 28);
 
             font-weight: 500;
-            font-size: rem(27);
+            font-size: fluid(27, 18);
             line-height: 155%;
             color: var(--white);
         }
         &-value{
-            padding-left: rem(33);
+            padding-left: fluid(33, 28);
 
             font-weight: 300;
-            font-size: rem(24);
+            font-size: fluid(24, 15);
             line-height: 155%;
             color: var(--grey-a9);
 
@@ -115,10 +121,23 @@
     }
 
     &__button{
-        margin-top: rem(70);
+        margin-top: fluid(70, 50);
 
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @include laptop{
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-banner{
+                width: 100%;
+                aspect-ratio: 1 / 1.2;
+            }
+        }
     }
 }
