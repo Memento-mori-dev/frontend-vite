@@ -2,6 +2,12 @@
 
 
 .watch{
+    &__title{
+        & > span span::after{
+            display: none;
+        }
+    }
+
     &__video{
         margin: rem(45) auto 0 auto;
 
@@ -80,6 +86,19 @@
     }
 
     @include tablet{
+        &__title{
+            & > span {
+                white-space: initial;
+                
+                &::after{
+                    display: none;
+                }
+
+                & > span::after{
+                    display: block;
+                }
+            }
+        }
 
         &__block{
             &--small{
