@@ -1,9 +1,15 @@
 @use '../helpers' as *;
 
 .why-us{
+    &__title{
+        & > span > span::after,
+        & > span > span > span::after{
+            display: none;
+        }
+    }
     &__item{
         &:not(:first-child){
-            margin-top: rem(90);
+            margin-top: fluid(90, 40);
         }
 
         display: flex;
@@ -55,6 +61,73 @@
         &-banner{
             width: 57%;
             aspect-ratio: 16 / 7.83;
+        }
+    }
+
+    @media screen and (max-width: 1224px) {
+        &__title{
+            & > span{
+                white-space: initial;
+
+                &::after{
+                    display: none;
+                }
+            }
+            & > span > span::after{
+                display: block;
+            }
+            & > span > span > span::after{
+                display: none;
+            }
+        }
+    }
+
+    @include tablet{
+        & > span::after{
+            display: none;
+        }
+        & > span > span::after{
+            display: block;
+        }
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+
+            &-content{
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                text-align: center;
+            }
+
+            &-banner{
+                margin-top: rem(30);
+
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile{
+        &__title{
+            & > span > span{
+                white-space: initial;
+
+                &::after{
+                    display: none;
+                }
+            }
+            & > span > span > span::after{
+                display: block;
+            }
+
+            & > span > span:last-child::after{
+                display: block;
+            }
         }
     }
 }
