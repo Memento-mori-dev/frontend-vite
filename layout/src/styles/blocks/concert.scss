@@ -5,6 +5,16 @@
         width: auto !important;
     }
 
+    &__video{
+        position: relative;
+
+        &-line{
+            position: absolute;
+            right: rem(70);
+            bottom: rem(19);
+        }
+    }
+
     &__item{
         overflow: hidden;
 
@@ -33,10 +43,38 @@
     }
 
     &__button{
-        margin-top: rem(70);
+        margin-top: fluid(70, 40);
 
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @include laptop{
+        &__video-line{
+            display: none;
+        }
+        &__item{
+            &--big{
+                width: 112vw;
+                height: 86vw;
+
+                border-radius: rem(30);
+            }
+            &--small{
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                row-gap: 7vw;
+
+                & img{
+                    width: 66.5vw;
+                    height: 39vw;
+                }
+            }
+        }
     }
 }

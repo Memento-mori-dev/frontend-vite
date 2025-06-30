@@ -88,9 +88,18 @@ const fddsf = new Swiper('.concert', {
     slidesPerView: 3,
     spaceBetween: 70,
     initialSlide: 1,
+    slidesPerView: 'auto',
     // Navigation arrows
     navigation: {
         nextEl: '.button-slider__item--next',
         prevEl: '.button-slider__item--prev',
+    },
+    breakpoints: {
+        1: {
+            spaceBetween: 30,
+        },
+        1600: {
+            spaceBetween: 70,
+        }
     },
 })
