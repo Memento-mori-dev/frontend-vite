@@ -103,8 +103,16 @@
 
 
     &__menu{
-        height: 0;
+        transition: all var(--transition-duration);
+
+        // height: 0;
         overflow: hidden;
+
+        opacity: 0;
+
+        &.is-active{
+            opacity: 1;
+        }
 
         background-color: var(--black);
 
