@@ -87,7 +87,7 @@
             margin-left: rem(35);
 
             font-weight: 600;
-            font-size: rem(23);
+            font-size: rem(24);
             color: var(--white-ef);
             text-decoration: none;
 
@@ -101,6 +101,71 @@
         grid-area: form;
     }
 
+
+    &__menu{
+        height: 0;
+        overflow: hidden;
+
+        background-color: var(--black);
+
+        &-content{
+            padding-top: rem(35);
+            padding-bottom: rem(48);
+        }
+        &-header{
+
+        }
+        &-list{
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: rem(20);
+
+            & a{
+                text-decoration: none;
+
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 148%;
+                text-align: center;
+
+                color: var(--white-f8);
+
+                @include hover{
+                    color: var(--blue);
+                }
+            }
+        }
+        &-footer{
+            margin-top: rem(40);
+            padding-top: rem(40);
+
+            position: relative;
+
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: calc(var(--container-padding-x) * -1);
+                width: calc(100% + (var(--container-padding-x) * 2));
+                height: rem(1);
+                background-color: var(--border-color-white);
+                
+            }
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-button{
+            margin-top: rem(40);
+        }
+    }
+
     @include laptop{
         &__text{
             display: none;
@@ -112,7 +177,12 @@
     }
 
     @include tablet{
-
+        &__address{
+            display: none;
+        }
+        &__phone{
+            display: block;
+        }
         &__container{
             display: flex;
             align-items: center;
@@ -123,17 +193,18 @@
                 width: calc(100% + (var(--container-padding-x) * 2));
             }
         }
-
-
-        &__address{
-            display: none;
-        }
         &__call{
             display: none;
         }
 
-        &__phone{
-            display: block;
+        &__call-link{
+            margin: 0;
+        }
+
+        &__menu{
+            &-address{
+                margin-top: rem(40);
+            }
         }
     }
 
