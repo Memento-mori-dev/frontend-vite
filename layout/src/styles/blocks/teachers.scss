@@ -23,6 +23,14 @@
                 border-radius: 50%;
             }
             &-description{
+                opacity: 0;
+
+                transition: all var(--transition-duration);
+
+                &.is-active{
+                    opacity: 1;
+                }
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

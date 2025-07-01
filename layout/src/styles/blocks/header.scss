@@ -177,6 +177,12 @@
     &__city{
         margin-top: rem(10);
 
+        &.is-active{
+            & span{
+                transform: rotate(0deg);
+            }
+        }
+
         &-title{
             font-size: rem(16);
             line-height: 130%;
@@ -186,17 +192,22 @@
 
             background: none;
             border: none;
-            &::after{
-                content: '';
 
-                position: absolute;
-                top: rem(7.5);
-                right: rem(-25);
+            display: flex;
+            align-items: center;
 
-                width: rem(9);
-                height: rem(5);
+            & span{
+                margin-left: rem(15);
 
-                background-image: url(../../../public/svg/arrow-top-w.svg);
+                display: flex;
+                align-items: center;
+
+                transform: rotate(180deg);
+                transition: all var(--transition-duration);
+            }
+
+            @include hover{
+                color: var(--blue);
             }
         }
 
@@ -206,8 +217,16 @@
             top: rem(36);
             left: 0;
 
-            // height: 0;
-            // overflow: hidden;
+            height: 0;
+            overflow: hidden;
+
+            opacity: 0;
+
+            transition: all var(--transition-duration);
+
+            &.is-active{
+                opacity: 1;
+            }
         }
         &-select{
             min-width: rem(158);

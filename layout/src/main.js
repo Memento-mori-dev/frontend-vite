@@ -1,6 +1,7 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
 import ControllerScroll from './script/controllerScroll';
 import {OpenModal, CloseModal} from './script/controllerModal';
+import ControllerShow from './script/controllerShow';
 
 useDynamicAdapt();
 
@@ -12,43 +13,43 @@ new CloseModal(controllerScroll.play.bind(controllerScroll));
 Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelector('[data-js-phone]'));
 
 document.addEventListener('DOMContentLoaded', function() {
-      const form = document.querySelector('.modal__block-form');
-      if (!form) return;
+    const form = document.querySelector('.modal__block-form');
+    if (!form) return;
 
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) submitBtn.disabled = true;
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
 
-        // Удаляем старое сообщение, если есть
-        let oldMsg = form.querySelector('.form-msg');
-        if (oldMsg) oldMsg.remove();
+      // Удаляем старое сообщение, если есть
+      let oldMsg = form.querySelector('.form-msg');
+      if (oldMsg) oldMsg.remove();
 
-        try {
-          const response = await fetch('send.php', {
-            method: 'POST',
-            body: formData
-          });
-          const text = await response.text();
-          let msg = document.createElement('div');
-          msg.className = 'form-msg';
-          msg.style.marginTop = '10px';
-          msg.style.color = response.ok ? 'green' : 'red';
-          msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
-          form.appendChild(msg);
-          if (response.ok) form.reset();
-        } catch (err) {
-          let msg = document.createElement('div');
-          msg.className = 'form-msg';
-          msg.style.marginTop = '10px';
-          msg.style.color = 'red';
-          msg.textContent = 'Ошибка отправки. Попробуйте позже.';
-          form.appendChild(msg);
-        } finally {
-          if (submitBtn) submitBtn.disabled = false;
-        }
-      });
+      try {
+        const response = await fetch('send.php', {
+          method: 'POST',
+          body: formData
+        });
+        const text = await response.text();
+        let msg = document.createElement('div');
+        msg.className = 'form-msg';
+        msg.style.marginTop = '10px';
+        msg.style.color = response.ok ? 'green' : 'red';
+        msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
+        form.appendChild(msg);
+        if (response.ok) form.reset();
+      } catch (err) {
+        let msg = document.createElement('div');
+        msg.className = 'form-msg';
+        msg.style.marginTop = '10px';
+        msg.style.color = 'red';
+        msg.textContent = 'Ошибка отправки. Попробуйте позже.';
+        form.appendChild(msg);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
 
 
     //gsap
@@ -71,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // initScrollHeader();
 });
+
+new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
 
 
 
