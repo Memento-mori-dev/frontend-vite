@@ -3,6 +3,7 @@ import ControllerScroll from './script/controllerScroll';
 import {OpenModal, CloseModal} from './script/controllerModal';
 import ControllerShow from './script/controllerShow';
 import ControllerTabs from './script/controllerTabs';
+import ControllerVideo from './script/controllerVideo';
 
 useDynamicAdapt();
 
@@ -78,6 +79,8 @@ new ControllerShow('.header__city', '.header__city-title', '.header__city-wrappe
 new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content');
 
 new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
+
+new ControllerVideo('.button--play', '.button--play__video');
 
 
 

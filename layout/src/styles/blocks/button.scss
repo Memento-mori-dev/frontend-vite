@@ -348,6 +348,32 @@
         }
     }
 
+    &--play{
+        border-radius: 50%;
+
+        width: fluid(88, 64);
+        aspect-ratio: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img{
+            width: fluid(32, 26);
+            aspect-ratio: 1;
+        }
+
+        & video{
+            display: none;
+            position: absolute;
+            opacity: 0;
+        }
+
+        &.is-active video{
+            display: block;
+        }
+    }
+
     @include mobile{
         &--48{
             padding: rem(9) rem(20);
