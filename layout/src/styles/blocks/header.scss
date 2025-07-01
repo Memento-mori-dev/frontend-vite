@@ -105,7 +105,7 @@
     &__menu{
         transition: all var(--transition-duration);
 
-        // height: 0;
+        height: 0;
         overflow: hidden;
 
         opacity: 0;
@@ -171,6 +171,94 @@
         }
         &-button{
             margin-top: rem(40);
+        }
+    }
+
+    &__city{
+        margin-top: rem(10);
+
+        &-title{
+            font-size: rem(16);
+            line-height: 130%;
+            color: var(--white);
+            
+            position: relative;
+
+            background: none;
+            border: none;
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: rem(7.5);
+                right: rem(-25);
+
+                width: rem(9);
+                height: rem(5);
+
+                background-image: url(../../../public/svg/arrow-top-w.svg);
+            }
+        }
+
+        position: relative;
+        &-wrapper{
+            position: absolute;
+            top: rem(36);
+            left: 0;
+
+            // height: 0;
+            // overflow: hidden;
+        }
+        &-select{
+            min-width: rem(158);
+
+            padding: rem(18);
+            background-color: var(--white);
+
+            border-radius: rem(10);
+        }
+        &-list{
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: column;
+
+            & li{
+                &::before{
+                    left: 0 !important;
+                    top: rem(10) !important;
+                }
+
+                margin-left: 0 !important;
+
+                padding-left: rem(19);
+
+                &:not(:first-child){
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                    padding-top: rem(12);
+
+                    &::before{
+                        top: rem(20) !important;
+                    }
+                }
+                &:not(:last-child){
+                    padding-bottom: rem(12);
+                }
+
+                & a{
+                    text-decoration: none;
+
+                    font-weight: 300;
+                    font-size: rem(12);
+                    line-height: 130%;
+                    color: var(--grey-50);
+
+                    @include hover{
+                        color: var(--blue);
+                    }
+                }
+            }
         }
     }
 
