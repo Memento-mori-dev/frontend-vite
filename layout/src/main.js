@@ -2,6 +2,7 @@ import { useDynamicAdapt } from './script/dynamicAdapt';
 import ControllerScroll from './script/controllerScroll';
 import {OpenModal, CloseModal} from './script/controllerModal';
 import ControllerShow from './script/controllerShow';
+import ControllerTabs from './script/controllerTabs';
 
 useDynamicAdapt();
 
@@ -70,10 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // initScrollHeader();
+    initScrollHeader();
 });
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
+new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content');
+
+new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
 
 
 

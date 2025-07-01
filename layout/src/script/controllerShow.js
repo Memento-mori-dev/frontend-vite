@@ -17,6 +17,7 @@ export default class ControllerShow{
         this.main.classList.add(this.stateClasses.isActive);
         this.wrapper.classList.add(this.stateClasses.isActive);
         this.main.classList.add(this.stateClasses.isShow);
+        this.open.classList.add(this.stateClasses.isActive);
 
         const newHeight = this.content.offsetHeight + 'px';
         this.wrapper.style.height = newHeight;
@@ -34,6 +35,7 @@ export default class ControllerShow{
         setTimeout(() => {
             this.wrapper.classList.remove(this.stateClasses.isActive);
             this.main.classList.remove(this.stateClasses.isActive);
+            this.open.classList.remove(this.stateClasses.isActive);
         }, 200);
     }
 

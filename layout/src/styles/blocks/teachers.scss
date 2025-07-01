@@ -21,6 +21,10 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
                 border-radius: 50%;
+
+                @include hover{
+                    opacity: .8;
+                }
             }
             &-description{
                 opacity: 0;

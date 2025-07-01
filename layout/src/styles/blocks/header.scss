@@ -10,7 +10,8 @@
 
     transition: background-color var(--transition-duration);
 
-    &.is-scroll{
+    &.is-scroll,
+    &.is-active{
         background-color: var(--black);
     }
 
