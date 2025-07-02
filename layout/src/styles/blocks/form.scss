@@ -65,4 +65,47 @@
             color: var(--white);
         }
     }
+
+    &__new{
+        height: fluid(78, 60);
+        padding: 0 fluid(35, 25);
+        border-radius: 90px;
+        border: var(--border);
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+
+
+        & *{
+            transition: all var(--transition-duration);
+        }
+
+        &-name{
+            font-weight: 500;
+            font-size: fluid(18, 15);
+            line-height: 106%;
+        }
+        &-input{
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 0;
+            line-height: 106%;
+            color: var(--white);
+
+            &:not(:placeholder-shown),
+            &:focus{
+                padding-top: fluid(10, 7);
+                font-size: fluid(18, 15);
+
+                & + .input__new-name{
+                    font-size: fluid(13, 10);
+                    opacity: .7;
+                }
+            }
+        }
+
+    }
 }
