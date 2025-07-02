@@ -73,6 +73,69 @@
         }
     }
 
+    &__clock{
+        padding-bottom: rem(25);
+
+        display: flex;
+        align-items: center;
+
+        &-icon{
+            width: fluid(41, 28);
+            aspect-ratio: 1;
+
+            border-radius: 50%;
+            border: var(--border-blue-03);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-text{
+            margin-left: fluid(45, 25);
+
+            font-weight: 300;
+            font-size:  fluid(25, 19);
+            line-height: 145%;
+            color: var(--white-f8);
+        }
+    }
+
+    &__thanks{
+        &-text{
+            max-width: rem(520);
+
+            padding-top: fluid(40, 25);
+            font-size: fluid(25, 19);
+            line-height: 156%;
+            color: var(--white-f8);
+        }
+    }
+
+    &__social{
+        padding-top: fluid(50, 25);
+
+        list-style-type: none;
+
+        display: flex;
+        align-items: center;
+
+        gap: fluid(55, 20);
+
+        & a{
+            width: fluid(78, 35);
+            aspect-ratio: 1;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & svg{
+            width: fluid(32, 16);
+        }
+    }
+
     
     @include laptop{
         &__title-add{
