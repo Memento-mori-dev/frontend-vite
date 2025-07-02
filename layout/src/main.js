@@ -53,6 +53,132 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
+    gsap.fromTo(
+      '.opacity-top',
+      {
+        opacity: 0,
+        y: -50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.opacity-top', // Элемент, который запускает анимацию
+          start: 'top 80%', // Анимация начинается, когда верх элемента достигает 80% высоты окна
+          end: 'top 20%', // Анимация заканчивается, когда верх элемента достигает 20% высоты окна
+          scrub: false, // Анимация не привязана к скроллу (выполняется один раз)
+          toggleActions: 'play none none none', // Поведение: play при входе, ничего при других событиях
+        },
+      }
+    );
+
+    document.querySelectorAll('.opacity-bottom').forEach((bottom, index) => {
+      const newClass = `opacity-bottom-${index}`;
+
+      bottom.classList.add(newClass);
+
+      gsap.fromTo(
+        `.${newClass}`,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: `.${newClass}`, // Элемент, который запускает анимацию
+            start: 'top 80%', // Анимация начинается, когда верх элемента достигает 80% высоты окна
+            end: 'top 20%', // Анимация заканчивается, когда верх элемента достигает 20% высоты окна
+            scrub: false, // Анимация не привязана к скроллу (выполняется один раз)
+            toggleActions: 'play none none none', // Поведение: play при входе, ничего при других событиях
+          },
+        }
+      );
+    })
+
+    document.querySelectorAll('.opacity-left').forEach((bottom, index) => {
+      const newClass = `opacity-left-${index}`;
+
+      bottom.classList.add(newClass);
+      gsap.fromTo(
+        `.${newClass}`,
+        {
+          opacity: 0,
+          x: -100, // Смещение влево
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: `.${newClass}`,
+            start: "top 80%", // Начало анимации, когда верх секции достигает 80% окна
+            end: "top 30%",
+            scrub: false,
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    })
+
+    document.querySelectorAll('.opacity-right').forEach((bottom, index) => {
+      const newClass = `opacity-right-${index}`;
+
+      bottom.classList.add(newClass);
+      gsap.fromTo(
+        `.${newClass}`,
+        {
+          opacity: 0,
+          x: 100, // Смещение влево
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: `.${newClass}`,
+            start: "top 80%", // Начало анимации, когда верх секции достигает 80% окна
+            end: "top 30%",
+            scrub: false,
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    })
+
+    document.querySelectorAll(".swiper-section").forEach((slider, index) => {
+      const newClass = `swiper-section-${index}`;
+
+      slider.classList.add(newClass);
+
+      gsap.fromTo(
+        `.${newClass}`,
+        {
+          opacity: 0,
+          y: 50, // Смещение вниз
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: `.${newClass}`, // Элемент, который запускает анимацию
+            start: "top 80%", // Начало анимации, когда верх секции достигает 80% высоты окна
+            end: "top 30%", // Конец анимации
+            scrub: false, // Анимация не будет "скроллиться" назад
+            toggleActions: "play none none none", // Анимация проигрывается только один раз
+          },
+        }
+      );
+    })
 
     //gsap
     function initScrollHeader() {
@@ -77,21 +203,44 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll(".parent-w").forEach((parent) => {
       const scrollContainer = parent.querySelector(".scroll-container-w");
       const children = scrollContainer.querySelectorAll(".child-w");
-      
+
       // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
       const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
 
+      // Анимация появления родительского контейнера
+      gsap.fromTo(
+        parent,
+        {
+          opacity: 0,
+          x: -100, // Начальное смещение влево
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: parent,
+            start: "top 80%", // Начало анимации появления, когда верх родителя достигает 80% окна
+            end: "top 50%", // Конец анимации появления
+            scrub: false, // Анимация появления не синхронизируется с прокруткой
+            toggleActions: "play none none none", // Проигрывается один раз
+          },
+        }
+      );
+
+      // Горизонтальная прокрутка (ваш исходный код)
       gsap.to(scrollContainer, {
         x: -scrollWidth, // Прокручиваем влево на ширину контента
         ease: "none", // Без смягчения, чтобы анимация была линейной
         scrollTrigger: {
           trigger: parent, // Триггер — родительский блок
-          start: "top +=20%", // Начало: верх родителя достигает верха окна
+          start: "top +=20%", // Начало горизонтальной прокрутки: верх родителя прижат к верху окна
           end: () => `+=${scrollWidth}`, // Конец: зависит от ширины прокрутки
           pin: true, // Фиксируем родительский блок
           scrub: 0.5, // Плавная синхронизация (0.5 для легкой инерции)
           invalidateOnRefresh: true, // Пересчитываем при ресайзе
-        }
+        },
       });
     });
 

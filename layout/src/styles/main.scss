@@ -29,3 +29,13 @@
 @use './blocks/questions.scss';
 @use './blocks/billboard.scss';
 @use './blocks/form.scss';
+
+.swiper-section {
+  opacity: 0; /* Скрываем слайдер до появления */
+  transform: translateY(50px); /* Начальное смещение */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.swiper-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
