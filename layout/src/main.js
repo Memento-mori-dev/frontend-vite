@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll(".parent").forEach((parent, index) => {
       const stickyChild = parent.querySelector(".sticky-child");
+      stickyChild.classList.add(`sticky-child-${index}`)
 
       gsap.to(stickyChild, {
         scrollTrigger: {
