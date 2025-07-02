@@ -97,7 +97,7 @@
 
             &:not(:placeholder-shown),
             &:focus{
-                padding-top: fluid(10, 7);
+                margin-top: fluid(10, 7);
                 font-size: fluid(18, 15);
 
                 & + .input__new-name{

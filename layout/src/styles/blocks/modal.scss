@@ -44,7 +44,7 @@
         flex-direction: column;
         align-items: center;
 
-        width: rem(662);
+        width: rem(781);
         padding: rem(28) rem(51) rem(42);
         border-radius: rem(18);
         background-color: var(--black);
@@ -67,27 +67,26 @@
             transform: rotate(-1.46deg);
         }
         &::before{
-            @include square(rem(500));
             content: '';
 
             position: absolute;
-            top: rem(-200);
-            left: rem(-200);
+            top: rem(-68);
+            left: calc(50% - rem(10.5));
 
-            background-image: url(../../../public/images/hero-sticks.webp);
-            background-repeat: no-repeat;
-            background-size: 100%;
-            // transform: rotate(-133deg);
+            width: rem(21);
+            aspect-ratio: 1;
+
+            background-image: url(../../../public/svg/x-white.svg);
 
             pointer-events: none;
         }
 
         &-title{
-            @include fluid-text(60, 40);
+            @include fluid-text(40, 22);
             font-family: var(--second-family);
-            font-weight: 700;
-            line-height: 126%;
-            letter-spacing: 0.02em;
+            font-weight: 800;
+            line-height: 144%;
+            letter-spacing: 0.09em;
             text-align: center;
         }
 
@@ -194,7 +193,7 @@
         }
 
         & .button{
-            font-size: rem(12);
+            font-size: rem(16);
             width: 100%;
 
             display: flex;
@@ -213,13 +212,6 @@
     @include mobile-s{
         &__block{
             padding: rem(16);
-
-            &::before{
-                @include square(rem(300));
-
-                top: rem(-128);
-                left: rem(-124);
-            }
         }
     }
 }
