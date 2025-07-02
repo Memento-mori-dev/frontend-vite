@@ -74,6 +74,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initScrollHeader();
 
+    document.querySelectorAll(".parent-w").forEach((parent) => {
+      const scrollContainer = parent.querySelector(".scroll-container-w");
+      const children = scrollContainer.querySelectorAll(".child-w");
+      
+      // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
+      const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
+
+      gsap.to(scrollContainer, {
+        x: -scrollWidth, // Прокручиваем влево на ширину контента
+        ease: "none", // Без смягчения, чтобы анимация была линейной
+        scrollTrigger: {
+          trigger: parent, // Триггер — родительский блок
+          start: "top +=20%", // Начало: верх родителя достигает верха окна
+          end: () => `+=${scrollWidth}`, // Конец: зависит от ширины прокрутки
+          pin: true, // Фиксируем родительский блок
+          scrub: 0.5, // Плавная синхронизация (0.5 для легкой инерции)
+          invalidateOnRefresh: true, // Пересчитываем при ресайзе
+        }
+      });
+    });
+
     document.querySelectorAll(".parent").forEach((parent, index) => {
       const stickyChild = parent.querySelector(".sticky-child");
 
