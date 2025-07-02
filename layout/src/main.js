@@ -74,17 +74,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initScrollHeader();
 
-    gsap.to(".sticky-child", {
-      scrollTrigger: {
-        trigger: ".parent", // Родительский блок как триггер
-        start: "top +=20%", // Начало: верх родителя достигает верха окна
-        end: "bottom +=32%", // Конец: низ родителя достигает низа окна
-        pin: ".sticky-child", // Фиксируем дочерний блок
-        pinSpacing: false, // Отключаем дополнительное пространство
-        scrub: true // Плавная синхронизация с прокруткой
-      },
-      ease: "power1.out"
+    document.querySelectorAll(".parent").forEach((parent, index) => {
+      const stickyChild = parent.querySelector(".sticky-child");
+
+      gsap.to(stickyChild, {
+        scrollTrigger: {
+          trigger: parent,
+          start: "top +=20%", // Начало: верх родителя достигает верха окна
+          end: "bottom +=32%", // Конец: низ родителя достигает низа окна
+          pin: `.sticky-child-${index}`, // Фиксируем дочерний блок
+          pinSpacing: false, // Отключаем дополнительное пространство
+          scrub: true // Плавная синхронизация с прокруткой
+        },
+        ease: "power1.out"
+      });
     });
+
+
 });
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
