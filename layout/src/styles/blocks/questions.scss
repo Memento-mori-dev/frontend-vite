@@ -83,6 +83,10 @@
                 position: relative;
 
                 text-align: center;
+
+                &.is-active .questions__cards-button{
+                    transform: rotate(0deg);
+                }
             }
 
             &-text{
@@ -90,6 +94,7 @@
             }
 
             &-button{
+                transform: rotate(45deg);
                 @include square(rem(30));
 
                 position: absolute;
