@@ -182,7 +182,7 @@
         @include hover{
             color: var(--blue);
 
-            & svg *{
+            & .svg *{
                 fill: var(--blue);
             }
         }
@@ -190,6 +190,35 @@
     &--blue{
         background-color: var(--blue);
         color: var(--white-f8);
+
+        @include hover{
+            background-color: var(--blue-8e);
+        }
+
+        &.blink{
+            position: relative;
+            &::after{
+                content: '';
+
+                position: absolute;
+                right: rem(10);
+                bottom: 0;
+
+                border-radius: 100%;
+                background-color: var(--white);
+                filter: blur(100px);
+
+                width: rem(311);
+                height: rem(99);
+
+                transform: rotate(-77deg);
+
+                animation: blink 3s ease-in-out infinite; /* Анимация */
+            }
+        }
+        &.pulse{
+            animation: pulse-blue 2s ease-in-out infinite;
+        }
     }
 
     &--border{
@@ -246,6 +275,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include hover{
+                background-color: var(--blue-8e)
+            }
         }
 
         &--big &__item{
@@ -376,6 +409,10 @@
         &.is-active video{
             display: block;
         }
+
+        @include hover{
+            background-color: var(--blue-8e);
+        }
     }
 
     @include mobile{
@@ -427,4 +464,26 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+@keyframes pulse-blue {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--blue-8e);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0% {
+    right: -75%;
+  }
+  100% {
+    right: 125%; 
+  }
 }

@@ -209,6 +209,10 @@
 
             @include hover{
                 color: var(--blue);
+
+                & svg *{
+                    fill: var(--blue);
+                }
             }
         }
 
