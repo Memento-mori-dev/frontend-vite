@@ -75,6 +75,8 @@
 
                 height: 0;
                 overflow: hidden;
+
+                transition: all var(--transition-duration);
             }
 
             &-item{
