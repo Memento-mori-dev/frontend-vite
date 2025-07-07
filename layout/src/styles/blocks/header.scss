@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
 
-    z-index: 100;
+    z-index: 1000;
 
     transition: background-color var(--transition-duration);
 
@@ -326,9 +326,21 @@
                 margin-top: rem(40);
             }
         }
+
+        
     }
 
     @include mobile{
+        &__menu-button{
+
+            & .button{
+                padding: rem(18) rem(28) rem(18) rem(42);
+            }
+            & .icon-right svg{
+                @include square(rem(20))
+            }
+        }
+
 
     }
 }

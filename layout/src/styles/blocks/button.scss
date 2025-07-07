@@ -227,6 +227,11 @@
 
     &--submit{
         position: relative;
+
+        width: 100%;
+        
+        justify-content: center;
+
         & input{
             position: absolute;
             top: 0;
@@ -313,7 +318,6 @@
         @include square(rem(38));
         border-radius: 50%;
 
-        background-color: var(--blue);
         overflow: hidden;
 
         & img{

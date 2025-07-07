@@ -45,7 +45,7 @@
         align-items: center;
 
         width: rem(781);
-        padding: rem(28) rem(51) rem(42);
+        padding: rem(40) rem(51) rem(59);
         border-radius: rem(18);
         background-color: var(--black);
 
@@ -92,9 +92,10 @@
 
         &-form{
             margin: auto;
-            max-width: rem(548);
+            width: 100%;
+            max-width: rem(601);
 
-            padding-top: rem(35);
+            padding-top: fluid(50, 35);
             
             display: flex;
             flex-direction: column;
@@ -102,7 +103,7 @@
 
         &-item{
             &:not(:first-child){
-                padding-top: rem(25);
+                padding-top: fluid(35, 20);
             }
         }
 

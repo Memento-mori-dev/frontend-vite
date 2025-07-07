@@ -575,16 +575,14 @@
                     <p class="map__address-name">Позвоните нам</p>
                     <a href="tel:<?=$mainACF['номер_телефона']['ссылка'];?>" class="map__address-phone"><?=$mainACF['номер_телефона']['название'];?></a>
                   </div>
-                  <div class="map__address-item">
-                    <div class="map__address-buttons">
-                      <? foreach ($mapACF['social'] as $key => $value): ?>
-                        <div class="map__address-buttons-item">
-                          <a href="<?=$value['link'];?>" class="button button-social">
-                            <img src="<?=$value['images']['url'];?>" alt="">
-                          </a>
-                        </div>
-                      <? endforeach; ?>
-                    </div>
+                  <div class="map__address-buttons">
+                    <? foreach ($mapACF['social'] as $key => $value): ?>
+                      <div class="map__address-buttons-item">
+                        <a href="<?=$value['link'];?>" class="button button-social">
+                          <img src="<?=$value['images']['url'];?>" alt="">
+                        </a>
+                      </div>
+                    <? endforeach; ?>
                   </div>
                   <div class="map__address-item">
                     <p class="map__address-name">Приходите в гости</p>
