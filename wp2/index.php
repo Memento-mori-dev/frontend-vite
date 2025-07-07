@@ -533,7 +533,7 @@
             </label>
 
             <div class="billboard__form-footer">
-              <button type="submit" class="button button--78 button--white" data-js-modal-open="1">
+              <button type="submit" class="button button--78 button--white">
                 <span>
                   Хочу попробовать!
                 </span>
@@ -548,7 +548,7 @@
 
               <div class="form__about">
                 Оставляя заявку, вы даете согласие на обработку <br>
-                <a href="#">своих персональных данных</a>
+                <a href="/politics/">своих персональных данных</a>
               </div>
             </div>
           </form>

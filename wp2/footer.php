@@ -15,7 +15,7 @@
                     <p>ОРГНИП: <?=$mainACF['оргнип_номер'];?></p>
                 </div>
                 <div class="footer__main-item">
-                    <a href="#">Политика конфиденциальности</a>
+                    <a href="/politics/">Политика конфиденциальности</a>
                 </div>
                 <div class="footer__main-item">
                     <a href="#" class="button-up" data-da=".up-button-phone,767.98,1">
@@ -96,7 +96,7 @@
               Оставляя заявку, вы даете согласие на обработку
             </p>
             <p class="modal__block-about-text">
-              <a href="https://drumfamily.ru/politika">своих персональных данных</a>
+              <a href="/politics/">своих персональных данных</a>
             </p>
           </div>
         </div>
