@@ -125,6 +125,10 @@
 
         }
         &-list{
+            &::after{
+                display: none !important;
+            }
+
             list-style-type: none;
 
             display: flex;
@@ -299,6 +303,10 @@
     }
 
     @include tablet{
+        &::before{
+            display: none;
+        }
+
         &__address{
             display: none;
         }
@@ -352,19 +360,6 @@
             }
 
             position: relative;
-            
-            &::after{
-                content: '';
-
-                position: absolute;
-                left: 0;
-                top: calc(50% - rem(2));
-
-                width: rem(4);
-                height: rem(4);
-
-                background-color: var(--blue);
-            }
         }
     }
 

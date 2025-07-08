@@ -203,6 +203,10 @@
                 flex-shrink: 0;
                 width: 118%;
             }
+
+            &::after{
+                display: none;
+            }
         }
     }
 

@@ -349,25 +349,29 @@
           <div class="remained swiper-remained">
             <div class="swiper-wrapper">
               <? foreach ($remainedACF['item'] as $key => $value): ?>
-                <? if($value['video']):?>
-                  <div class="remained__item-img video">
-                    <div class="video__wrapper">
-                      <button class="button button--play button--blue">
-                        <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
+                <div class="swiper-slide">
+                  <div class="remained__item">
+                    <? if($value['video']):?>
+                      <div class="remained__item-img video">
+                        <div class="video__wrapper">
+                          <button class="button button--play button--blue">
+                            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
 
-                        <video width="320" height="240" class="button--play__video">
-                          <source src="<?=$value['video']['url'];?>" type="video/mp4">
-                        </video>
-                      </button>
-                    </div>
+                            <video width="320" height="240" class="button--play__video">
+                              <source src="<?=$value['video']['url'];?>" type="video/mp4">
+                            </video>
+                          </button>
+                        </div>
 
-                    <img src="<?=$value['images']['url'];?>" alt="">
+                        <img src="<?=$value['images']['url'];?>" alt="">
+                      </div>
+                    <? else: ?>
+                      <div class="remained__item-img">
+                        <img src="<?=$value['images']['url'];?>" alt="">
+                      </div>
+                    <? endif; ?>
                   </div>
-                <? else: ?>
-                  <div class="remained__item-img">
-                    <img src="<?=$value['images']['url'];?>" alt="">
-                  </div>
-                <? endif; ?>
+                </div>
               <? endforeach; ?>
             </div>
 
