@@ -412,6 +412,7 @@
 
         &.is-active video{
             display: block;
+            opacity: 1;
         }
 
         @include hover{
