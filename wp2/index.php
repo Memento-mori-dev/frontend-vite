@@ -15,7 +15,7 @@
     
 
     // echo '<pre>';
-    // print_r($mapACF);
+    // print_r($remainedACF);
     // echo '</pre>';
 ?>
 
@@ -126,7 +126,7 @@
 
         <div class="watch__video opacity-bottom">
           <button class="button button--play button--blue pulse">
-            <img src="data:image/svg+xml,%3csvg%20width='21'%20height='24'%20viewBox='0%200%2021%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.5%209.40192C21.5%2010.5566%2021.5%2013.4434%2019.5%2014.5981L4.5%2023.2583C2.5%2024.413%207.28468e-07%2022.9697%208.29415e-07%2020.6603L1.58652e-06%203.33974C1.68747e-06%201.03034%202.5%20-0.413031%204.5%200.741669L19.5%209.40192Z'%20fill='white'%20/%3e%3c/svg%3e" alt="">
+            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
 
             <video width="320" height="240" class="button--play__video">
               <source src="<?=$watchACF['video']['file']['url'];?>" type="<?=$watchACF['video']['file']['mime_type'];?>">
@@ -349,16 +349,25 @@
           <div class="remained swiper-remained">
             <div class="swiper-wrapper">
               <? foreach ($remainedACF['item'] as $key => $value): ?>
-                <div class="swiper-slide">
-                  <div class="remained__item">
-                    <img src="<?=$value['images']['url'];?>" alt="" class="remained__item-img">
+                <? if($value['video']):?>
+                  <div class="remained__item-img video">
+                    <div class="video__wrapper">
+                      <button class="button button--play button--blue">
+                        <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
 
-                    <div class="remained__item-content">
-                      <p class="teachers__item-name"><?=$value['name'];?></p>
-                      <p class="teachers__item-value"><?=$value['year'];?></p>
+                        <video width="320" height="240" class="button--play__video">
+                          <source src="<?=$value['video']['url'];?>" type="video/mp4">
+                        </video>
+                      </button>
                     </div>
+
+                    <img src="<?=$value['images']['url'];?>" alt="">
                   </div>
-                </div>
+                <? else: ?>
+                  <div class="remained__item-img">
+                    <img src="<?=$value['images']['url'];?>" alt="">
+                  </div>
+                <? endif; ?>
               <? endforeach; ?>
             </div>
 
@@ -403,7 +412,7 @@
 
         <div class="concert__video watch__video">
           <button class="button button--play button--blue pulse">
-            <img src="data:image/svg+xml,%3csvg%20width='21'%20height='24'%20viewBox='0%200%2021%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.5%209.40192C21.5%2010.5566%2021.5%2013.4434%2019.5%2014.5981L4.5%2023.2583C2.5%2024.413%207.28468e-07%2022.9697%208.29415e-07%2020.6603L1.58652e-06%203.33974C1.68747e-06%201.03034%202.5%20-0.413031%204.5%200.741669L19.5%209.40192Z'%20fill='white'%20/%3e%3c/svg%3e" alt="">
+            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
 
             <video width="320" height="240" class="button--play__video">
               <source src="<?=$concertACF['video']['file']['url'];?>" type="<?=$concertACF['video']['file']['mime_type'];?>">
