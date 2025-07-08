@@ -38,7 +38,7 @@
     }
 
     &__title{
-        margin: rem(40) auto 0 auto;
+        margin: 0 auto;
 
         text-align: center;
 
@@ -86,9 +86,9 @@
             }
         }
         &-text{
-            max-width: rem(1026);
-            @include fluid-text(22, 16);
-            line-height: 147%;
+            max-width: rem(1086);
+            @include fluid-text(24, 16);
+            line-height: 155%;
             font-weight: 300;
             color: var(--grey-a9);
             text-align: center;

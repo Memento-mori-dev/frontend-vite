@@ -34,7 +34,7 @@
             font-family: var(--second-family);
             font-weight: 800;
             font-size: fluid(37, 23);
-            line-height: 137%;
+            line-height: 96%;
             letter-spacing: 0.01em;
         }
         &-text{
@@ -71,6 +71,9 @@
 
             &-content{
                 padding: rem(25) 0;
+            }
+            &-title{
+                line-height: 137%;
             }
         }
     }

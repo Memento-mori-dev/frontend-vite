@@ -75,13 +75,13 @@
     }
 
     &__block{
+        height: 24.5vw;
+
         &--small{
             width: 23.1vw;
-            aspect-ratio: 1;
         }
         &--big{
             width: 48vw;
-            aspect-ratio: 16 / 9;
         }
     }
 
@@ -101,8 +101,10 @@
         }
 
         &__block{
+            height: 65vw;
             &--small{
                 width: 56vw;
+
             }
             &--big{
                 width: 100vw;
