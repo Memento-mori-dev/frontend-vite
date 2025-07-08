@@ -4,13 +4,21 @@ export default class ControllerShow{
         isShow: 'is-show',
     }
 
-    constructor(mainClass, openClass, wrapperClass, contentClass){
+    constructor(mainClass, openClass, wrapperClass, contentClass, activeClose){
         this.main = document.querySelector(mainClass);
         this.open = this.main.querySelector(openClass);
         this.wrapper = this.main.querySelector(wrapperClass);
         this.content = this.main.querySelector(contentClass);
 
         this.active();
+
+        if (activeClose) {
+            this.main.querySelectorAll(activeClose).forEach(active => {
+                active.onclick = () => {
+                    this.closeContent();
+                }
+            });
+        }
     }
 
     openContent(){

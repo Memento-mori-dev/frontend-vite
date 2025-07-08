@@ -280,7 +280,7 @@ function gsapAnimation() {
 }
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
-new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content');
+new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content', '.header__menu-content a');
 
 new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
 
