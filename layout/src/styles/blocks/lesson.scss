@@ -69,6 +69,21 @@
         }
     }
 
+    
+    @include tablet{
+        &__button{
+            & .button{
+                width: 100%;
+
+                justify-content: center;
+
+                & .icon-right{
+                    height: rem(20);
+                }
+            }
+        }
+    }
+
     @include mobile{
         &__content{
             flex-direction: column;

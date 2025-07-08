@@ -108,5 +108,11 @@
                 width: 100vw;
             }
         }
+
+        &__item{
+            &-controller{
+                margin-left: auto;
+            }
+        }
     }
 }

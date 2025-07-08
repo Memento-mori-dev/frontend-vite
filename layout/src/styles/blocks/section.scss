@@ -116,6 +116,7 @@
     @include tablet{
         &__sub{
             &-list{
+                margin-top: 0;
                 flex-wrap: wrap;
 
                 gap: rem(30);
