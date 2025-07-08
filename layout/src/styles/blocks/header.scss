@@ -176,6 +176,8 @@
     }
 
     &__city{
+        z-index: 1;
+
         margin-top: rem(10);
 
         &.is-active{
@@ -327,7 +329,43 @@
             }
         }
 
-        
+        &__city-list{
+            text-align: start;
+
+            & li{
+                &:not(:first-child){
+                    margin-top: 0 !important;
+                }
+
+                &::after{
+                    content: '';
+
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% - rem(2));
+
+                    width: rem(4);
+                    height: rem(4);
+
+                    background-color: var(--blue);
+                }
+            }
+
+            position: relative;
+            
+            &::after{
+                content: '';
+
+                position: absolute;
+                left: 0;
+                top: calc(50% - rem(2));
+
+                width: rem(4);
+                height: rem(4);
+
+                background-color: var(--blue);
+            }
+        }
     }
 
     @include mobile{
