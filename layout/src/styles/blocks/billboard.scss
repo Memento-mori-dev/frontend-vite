@@ -4,14 +4,16 @@
     padding: fluid(40, 30) fluid(55, 18);
 
     display: grid;
-    grid-template-columns: 33% 30% 29%;
+    grid-template-columns: rem(455) 1fr rem(375);
     justify-content: space-between;
 
-    border-radius: rem(40);
+    border-radius: fluid(40, 20);
     background-color: var(--blue);
 
     &__header{
         &-title{
+            letter-spacing: 0.05em;
+
             position: relative;
             &-line{
                 position: absolute;
@@ -21,7 +23,7 @@
         }
 
         &-text{
-            padding-top: fluid(30, 25);
+            padding-top: rem(15);
 
             font-weight: 500;
             font-size: fluid(24, 16);
@@ -30,10 +32,35 @@
         }
     }
 
-    &__img{}
+    &__img{
+        & .banner{
+            margin: 0 auto;
+            max-width: rem(411);
+        }
+    }
 
     &__form{
-        justify-content: center;
+        gap: fluid(29, 20);
+
+        & .button{
+            font-size: fluid(21, 16);
+        }
+
+        & .input__new-input{
+            color: var(--white);
+
+            margin-top: fluid(10, 7);
+            font-size: fluid(18, 15);
+
+            &::placeholder{
+                color: var(--white);
+            }
+        }
+
+        & .button{
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     @include laptop{
@@ -53,6 +80,15 @@
         }
     }
 
+    @include tablet{
+        &__form{
+            max-width: rem(350);
+            width: 100%;
+
+            margin: 0 auto;
+        }
+    }
+
     @include mobile{
         display: flex;
         flex-direction: column;
@@ -63,6 +99,18 @@
 
         &__form{
             margin-top: rem(34);
+
+            &-footer{
+                & .icon-right svg{
+                    @include square(rem(19))
+                }
+            }
+
+            .form__about{
+                font-size: rem(10);
+            }
         }
+
+
     }
 }
