@@ -16,18 +16,18 @@
         align-items: center;
 
         &-content{
-            padding-left: rem(52);
+            padding-left: fluid(52, 30);
 
             &-title{
                 font-weight: 300;
-                font-size: rem(20);
+                font-size: fluid(20, 14);
                 line-height: 136%;
                 color: var(--grey-a9);
             }
             &-subtitle{
-                padding-top: rem(14);
+                padding-top: fluid(14, 10);
                 font-weight: 200;
-                font-size: rem(14);
+                font-size: rem(12);
                 line-height: 136%;
                 color: var(--grey-a9);
             }
