@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.blue{
+    &-why{
+        position: relative;
+
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: rem(320);
+            height: rem(410);
+
+            background-color: var(--blue-0c);
+            border-radius: 50%;
+            filter: blur(300px);
+            opacity: 0.45;
+        }
+    }
+    
+}

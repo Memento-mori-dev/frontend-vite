@@ -2,6 +2,41 @@
 
 
 .whom{
+    position: relative;
+
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: 20%;
+        left: rem(-504);
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+    &::before{
+        content: '';
+
+        position: absolute;
+        bottom: 15%;
+        right: rem(-204);
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     display: grid;
     grid-template-columns: rem(524) rem(665);
     justify-content: space-between;
@@ -58,6 +93,11 @@
     }
 
     @include tablet{
+        &::after,
+        &::before{
+            display: none;
+        }
+
         display: flex;
         flex-direction: column;
 

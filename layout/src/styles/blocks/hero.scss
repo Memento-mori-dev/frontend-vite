@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .hero{
+    position: relative;
+
     overflow: hidden;
 
     padding-top: fluid(80, 35);
@@ -46,6 +48,18 @@
     }
 
     &__banner{
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+
+            width: rem(285);
+            height: rem(410);
+
+            background-color: var(--blue-0c);
+        }
+
         grid-area: banner;
 
         & .banner{

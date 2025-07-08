@@ -1,6 +1,26 @@
 @use '../helpers' as *;
 
 .remained{
+    position: relative;
+
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: -10%;
+        right: -10%;
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
+
     & .swiper-wrapper{
         display: grid;
         grid-template-columns: repeat(2, calc(50% - rem(30)));
@@ -44,6 +64,10 @@
     }
 
     @include tablet{
+        &::after{
+            display: none;
+        }
+
         & .swiper-wrapper{
             display: flex;
             gap: 0;

@@ -5,6 +5,25 @@
     grid-template-columns: rem(440) rem(764);
     justify-content: space-between;
 
+
+    position: relative;
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: 15%;
+        right: rem(-504);
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     &__header{
 
     }
@@ -59,6 +78,10 @@
     }
 
     @include tablet{
+        &::after{
+            display: none;
+        }
+
         display: flex;
         flex-direction: column;
 

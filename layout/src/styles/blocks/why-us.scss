@@ -1,6 +1,25 @@
 @use '../helpers' as *;
 
 .why-us{
+    position: relative;
+
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: rem(-250);
+        right: rem(-350);
+
+        width: rem(320);
+        height: rem(410);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(200px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     &__title{
         & > span > span::after,
         & > span > span > span::after{
@@ -84,6 +103,10 @@
     }
 
     @include tablet{
+        &::after{
+            display: none;
+        }
+
         & > span::after{
             display: none;
         }

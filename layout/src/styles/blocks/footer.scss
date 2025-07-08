@@ -153,6 +153,23 @@
     }
 
     @include tablet{
+        &::after{
+            content: '';
+
+            position: absolute;
+            left: calc(50% - rem(233));
+            bottom: rem(-366);
+
+            width: rem(466);
+            height: rem(466);
+
+            background-color: var(--blue-0c);
+            border-radius: 900px;
+            filter: blur(250px);
+            transform: rotate(45deg);
+            opacity: 0.45;
+        }
+
         &__main{
             padding: 0;
             flex-direction: column;

@@ -21,12 +21,12 @@
         content: '';
 
         position: absolute;
-        top: rem(60);
+        top: rem(-60);
         left: rem(-322);
 
         background-color: var(--blue-0c);
         border-radius: 50%;
-        filter: blur(350px);
+        filter: blur(300px);
         opacity: 0.45;
     }
 

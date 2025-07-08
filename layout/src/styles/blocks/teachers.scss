@@ -1,6 +1,23 @@
 @use '../helpers' as *;
 
 .teachers{
+    &::after{
+        content: '';
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     &__item{
         &-banner{
             height: rem(549);
@@ -145,6 +162,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    @include tablet{
+        &::after{
+            display: none;
         }
     }
 

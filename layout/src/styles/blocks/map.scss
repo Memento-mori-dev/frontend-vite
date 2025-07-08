@@ -5,6 +5,23 @@
 
     position: relative;
 
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: 15%;
+        left: rem(-466);
+
+        width: rem(466);
+        height: rem(466);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     &__banner{
         overflow: hidden;
         border-radius: fluid(40, 20);

@@ -2,6 +2,24 @@
 
 
 .lesson{
+    position: relative;
+    &::after{
+        content: '';
+
+        position: absolute;
+        top: rem(-250);
+        left: rem(-100);
+
+        width: rem(504);
+        height: rem(504);
+
+        background-color: var(--blue-0c);
+        border-radius: 900px;
+        filter: blur(250px);
+        transform: rotate(45deg);
+        opacity: 0.45;
+    }
+
     &__content{
         display: flex;
         column-gap: rem(40);
@@ -71,6 +89,10 @@
 
     
     @include tablet{
+        &::after{
+            display: none;
+        }
+
         &__button{
             & .button{
                 width: 100%;
