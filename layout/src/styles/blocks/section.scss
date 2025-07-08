@@ -147,6 +147,12 @@
                 display: block;
             }
         }
+
+        &-text{
+            & .phone{
+                display: none;
+            }
+        }
     }
 
     @include mobile{

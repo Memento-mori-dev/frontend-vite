@@ -396,7 +396,7 @@
         </p>
 
         <div class="section__sub">
-          <p class="section__sub-text section__sub-text--center">
+          <p class="section__sub-text section__sub-text--center section-text-phone">
             <?=$concertACF['sub_title'];?>
           </p>
         </div>
@@ -535,7 +535,7 @@
             <div class="billboard__form-footer">
               <button type="submit" class="button button--78 button--white">
                 <span>
-                  Хочу попробовать!
+                  Записаться на урок!
                 </span>
 
                 <span class="icon-right">
@@ -586,11 +586,11 @@
                   </div>
                   <div class="map__address-item">
                     <p class="map__address-name">Приходите в гости</p>
-                    <p class="map__address-text"><?=$mainACF['адресс'];?></p>
+                    <p class="map__address-text"><?=$mapACF['addresses'];?></p>
                   </div>
                   <div class="map__address-item">
                     <p class="map__address-name">График работы</p>
-                    <p class="map__address-text"><?=$mainACF['график'];?></p>
+                    <p class="map__address-text"><?=$mapACF['text'];?></p>
                   </div>
                   <div class="map__address-item">
                     <button class="button button--78 button--blue" data-js-modal-open="1">

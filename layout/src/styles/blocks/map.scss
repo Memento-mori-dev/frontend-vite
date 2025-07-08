@@ -7,7 +7,7 @@
 
     &__banner{
         overflow: hidden;
-        border-radius: rem(40);
+        border-radius: fluid(40, 20);
         background-color: var(--white);
     }
 
