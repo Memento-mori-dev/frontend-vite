@@ -3,6 +3,8 @@
 
 .watch{
     &__title{
+        max-width: rem(757);
+
         & > span span::after{
             display: none;
         }

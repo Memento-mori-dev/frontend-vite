@@ -94,7 +94,7 @@
 
     <section class="section" id="где">
       <div class="container">
-        <p class="section__title h2 text-up watch__title opacity-bottom">
+        <p class="section__title h2 text-up watch__title opacity-bottom ">
           <?=$watchACF['title'];?>
         </p>
 
