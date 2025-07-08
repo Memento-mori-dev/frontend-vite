@@ -31,7 +31,7 @@
             color: var(--white-e6);
         }
         &-content{
-            
+            margin-top: fluid(30, 20);
         }
         &-text{
             padding-top: fluid(30, 20);
@@ -71,8 +71,6 @@
             padding-bottom: rem(17);
 
             &-content{
-                margin-top: rem(46);
-
                 height: 0;
                 overflow: hidden;
 
@@ -87,6 +85,8 @@
                 &.is-active .questions__cards-button{
                     transform: rotate(0deg);
                 }
+
+                border-bottom: var(--border); 
             }
 
             &-text{

@@ -28,13 +28,13 @@
             }
         }
         &-content{
-            padding: fluid(30, 20) fluid(12.6, 8) 0 fluid(12.6, 8);
+            padding: fluid(30, 25) fluid(12.6, 8) 0 fluid(12.6, 8);
         }
         &-title{
             font-family: var(--second-family);
             font-weight: 800;
             font-size: fluid(37, 23);
-            line-height: 96%;
+            line-height: 137%;
             letter-spacing: 0.01em;
         }
         &-text{
@@ -68,6 +68,16 @@
             margin-top: rem(45);
 
             text-align: center;
+
+            &-content{
+                padding: rem(25) 0;
+            }
+        }
+    }
+
+    @include mobile-s{
+        &__title{
+            margin-left: rem(-10);
         }
     }
 }
