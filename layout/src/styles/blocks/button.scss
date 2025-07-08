@@ -400,7 +400,7 @@
         align-items: center;
 
         & img{
-            width: fluid(32, 26);
+            width: fluid(32, 21);
             aspect-ratio: 1;
         }
 
@@ -449,6 +449,20 @@
         }
         &__pc{
             display: none;
+        }
+
+        &-slider{
+            &__item{
+                & svg{
+                    width: rem(7);
+                }
+
+                &--big &__item{
+                    & svg{
+                        width: rem(10);
+                    }
+                }
+            }
         }
     }
 

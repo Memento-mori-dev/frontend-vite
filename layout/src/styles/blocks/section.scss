@@ -94,10 +94,18 @@
                 color: var(--white);
                 font-weight: 600;
             }
+
+            & .phone{
+                display: none;
+            }
         }
 
         &-icon{
             margin-right: fluid(35, 15);
+
+            & svg{
+                width: fluid(26, 16);
+            }
         }
     }
 
