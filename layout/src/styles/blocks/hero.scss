@@ -21,6 +21,7 @@
         position: relative;
 
         &-add{
+            padding-left: rem(20);
             font-size: rem(25);
             font-family: var(--font-family);
             display: inline-block;
@@ -145,6 +146,9 @@
         &__button-line{
             right: -10%;
         }
+        &__title-add{
+            padding-left: 0;
+        }
     }
 
     @include tablet{
@@ -185,6 +189,12 @@
                 flex-shrink: 0;
                 width: 118%;
             }
+        }
+    }
+
+    @include mobile-s {
+        &__button{
+            width: 100%;
         }
     }
 }

@@ -157,7 +157,7 @@
         overflow: hidden;
 
         border-radius: rem(90);
-        padding: fluid(35, 18) fluid(92, 63);
+        padding: fluid(35, 18) fluid(92, 20);
 
         font-weight: 500;
         line-height: 106%;
@@ -170,7 +170,7 @@
             align-items: center;
 
             & svg{
-                width: rem(29);
+                @include square(fluid(29, 20));
             }
         }
     }
@@ -315,7 +315,7 @@
     }
 
     &-social{
-        @include square(rem(38));
+        @include square(fluid(38, 32));
         border-radius: 50%;
 
         overflow: hidden;
@@ -449,6 +449,13 @@
         }
         &__pc{
             display: none;
+        }
+    }
+
+    @include mobile-s {
+        &--100{
+            width: 100%;
+            justify-content: center;
         }
     }
 }
