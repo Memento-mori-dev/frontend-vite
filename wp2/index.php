@@ -540,7 +540,7 @@
 
           <div class="billboard__img">
             <div class="banner banner--reverse banner--white">
-              <img src="<?=get_template_directory_uri()?>/images/Фотография.webp" alt="Человек показывает лайк">
+              <img src="<?=get_template_directory_uri()?>/images/dsds.webp" alt="Человек показывает лайк">
             </div>
           </div>
 
