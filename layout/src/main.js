@@ -62,12 +62,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('resize', () => {
-  gsap.globalTimeline.clear();
   gsapAnimation();
 });
 
 function gsapAnimation() {
   let width = window.innerWidth;
+
+      document.querySelectorAll(".parent-w").forEach((parent) => {
+      const scrollContainer = parent.querySelector(".scroll-container-w");
+      const children = scrollContainer.querySelectorAll(".child-w");
+
+      // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
+      const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
+
+      // Анимация появления родительского контейнера
+      gsap.fromTo(
+        parent,
+        {
+          opacity: 0,
+          x: -100, // Начальное смещение влево
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: parent,
+            start: "top 80%", // Начало анимации появления, когда верх родителя достигает 80% окна
+            end: "top 50%", // Конец анимации появления
+            scrub: false, // Анимация появления не синхронизируется с прокруткой
+            toggleActions: "play none none none", // Проигрывается один раз
+          },
+        }
+      );
+      if (width >= 1400.98) {
+        // Горизонтальная прокрутка (ваш исходный код)
+        gsap.to(scrollContainer, {
+          x: -scrollWidth, // Прокручиваем влево на ширину контента
+          ease: "none", // Без смягчения, чтобы анимация была линейной
+          scrollTrigger: {
+            trigger: parent, // Триггер — родительский блок
+            start: "top +=20%", // Начало горизонтальной прокрутки: верх родителя прижат к верху окна
+            end: () => `+=${scrollWidth}`, // Конец: зависит от ширины прокрутки
+            pin: true, // Фиксируем родительский блок
+            scrub: 0.5, // Плавная синхронизация (0.5 для легкой инерции)
+            invalidateOnRefresh: true, // Пересчитываем при ресайзе
+          },
+        });
+      }
+    });
+
 
   gsap.fromTo(
     '.opacity-top',
@@ -210,52 +255,6 @@ function gsapAnimation() {
       }
     }
   });
-
-
-    document.querySelectorAll(".parent-w").forEach((parent) => {
-      const scrollContainer = parent.querySelector(".scroll-container-w");
-      const children = scrollContainer.querySelectorAll(".child-w");
-
-      // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
-      const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
-
-      // Анимация появления родительского контейнера
-      gsap.fromTo(
-        parent,
-        {
-          opacity: 0,
-          x: -100, // Начальное смещение влево
-        },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: parent,
-            start: "top 80%", // Начало анимации появления, когда верх родителя достигает 80% окна
-            end: "top 50%", // Конец анимации появления
-            scrub: false, // Анимация появления не синхронизируется с прокруткой
-            toggleActions: "play none none none", // Проигрывается один раз
-          },
-        }
-      );
-      if (width >= 1400.98) {
-        // Горизонтальная прокрутка (ваш исходный код)
-        gsap.to(scrollContainer, {
-          x: -scrollWidth, // Прокручиваем влево на ширину контента
-          ease: "none", // Без смягчения, чтобы анимация была линейной
-          scrollTrigger: {
-            trigger: parent, // Триггер — родительский блок
-            start: "top +=20%", // Начало горизонтальной прокрутки: верх родителя прижат к верху окна
-            end: () => `+=${scrollWidth}`, // Конец: зависит от ширины прокрутки
-            pin: true, // Фиксируем родительский блок
-            scrub: 0.5, // Плавная синхронизация (0.5 для легкой инерции)
-            invalidateOnRefresh: true, // Пересчитываем при ресайзе
-          },
-        });
-      }
-    });
 
   if (width >=  1023.98) {
     document.querySelectorAll(".parent").forEach((parent, index) => {
