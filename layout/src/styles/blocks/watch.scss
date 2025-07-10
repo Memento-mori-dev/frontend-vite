@@ -85,7 +85,15 @@
                 line-height: 136%;
                 color: var(--grey-a9);
             }
+
+            position: relative;
+            &-line{
+                position: absolute;
+                top: rem(-115);
+                right: rem(-266);
+            }
         }
+
     }
 
     &__item{
@@ -160,6 +168,10 @@
             &::after{
                 display: none;
             }
+        }
+
+        &__video-content-line{
+            display: none;
         }
 
         &__block{

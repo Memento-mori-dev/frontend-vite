@@ -3,7 +3,7 @@
 .section{
     // overflow: hidden;
     max-width: 100vw;
-    padding-top: fluid(160, 80);
+    padding-top: fluid(130, 80);
 
     &__star{
         display: flex;
@@ -54,8 +54,6 @@
         justify-content: center;
         align-items: center;
         &-list{
-            margin-top: rem(55);
-
             list-style-type: none;
 
             display: flex;

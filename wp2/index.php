@@ -136,6 +136,11 @@
           <div class="watch__video-content">
             <p class="watch__video-content-title"><?=$watchACF['video']['title'];?></p>
             <p class="watch__video-content-subtitle"><?=$watchACF['video']['time'];?></p>
+            <div class="watch__video-content-line">
+              <svg width="212" height="163" viewBox="0 0 212 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.498469 160C56.6685 176.522 295.288 92.5582 179.079 0.908271" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></path>
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -426,6 +431,11 @@
           <div class="watch__video-content">
             <p class="watch__video-content-title"><?=$concertACF['video']['text'];?></p>
             <p class="watch__video-content-subtitle"><?=$concertACF['video']['time'];?></p>
+            <div class="watch__video-content-line">
+              <svg width="212" height="163" viewBox="0 0 212 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.498469 160C56.6685 176.522 295.288 92.5582 179.079 0.908271" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></path>
+              </svg>
+            </div>
           </div>
 
           <div class="concert__video-line">

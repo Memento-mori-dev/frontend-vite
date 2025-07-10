@@ -6,6 +6,7 @@
     overflow: hidden;
 
     padding-top: fluid(43, 35);
+    padding-bottom: rem(30);
 
     &__container{
         display: grid;
@@ -168,6 +169,8 @@
     }
 
     @include tablet{
+        padding-bottom: 0;
+
         &__container{
             display: flex;
             flex-direction: column;
