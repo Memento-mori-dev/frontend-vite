@@ -4,11 +4,12 @@ export default class ControllerShow{
         isShow: 'is-show',
     }
 
-    constructor(mainClass, openClass, wrapperClass, contentClass, activeClose){
+    constructor(mainClass, openClass, wrapperClass, contentClass, activeClose, minusClass){
         this.main = document.querySelector(mainClass);
         this.open = this.main.querySelector(openClass);
         this.wrapper = this.main.querySelector(wrapperClass);
         this.content = this.main.querySelector(contentClass);
+        this.minus = document.querySelector(minusClass);
 
         this.active();
 
@@ -27,7 +28,16 @@ export default class ControllerShow{
         this.main.classList.add(this.stateClasses.isShow);
         this.open.classList.add(this.stateClasses.isActive);
 
-        const newHeight = this.content.offsetHeight + 'px';
+        let newHeight;
+
+        if (this.minus) {
+            newHeight = window.innerHeight -  this.minus.offsetHeight;
+        }else{
+            newHeight = this.content.offsetHeight;
+        }
+
+        newHeight += 'px';
+        
         this.wrapper.style.height = newHeight;
 
         this.removeShow();

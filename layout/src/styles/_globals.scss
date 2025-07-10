@@ -26,6 +26,10 @@ h1, .h1{
     @include fluid-text(76, 32);
     line-height: 142%;
     letter-spacing: 0.03em;
+
+    & .text-line::after{
+        bottom: fluid(10, 12);
+    }
 }
 h2, .h2{
     @include fluid-text(56, 30);
@@ -65,10 +69,10 @@ h6, .h6{
 
         position: absolute;
         left: 0;
-        bottom: 15%;
+        bottom: fluid(7, 2);
 
         width: 100%;
-        height: rem(12);
+        height: fluid(12, 7);
 
         background-color: var(--blue);
 

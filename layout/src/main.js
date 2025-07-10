@@ -61,10 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     gsapAnimation();
 });
 
-window.addEventListener('resize', () => {
-  gsapAnimation();
-});
-
 function gsapAnimation() {
   let width = window.innerWidth;
 
@@ -279,7 +275,7 @@ function gsapAnimation() {
 }
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
-new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content', '.header__menu-content a');
+new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content', '.header__menu-content a', '.header');
 
 new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
 

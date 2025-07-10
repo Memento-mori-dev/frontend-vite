@@ -45,10 +45,11 @@
         }
         &-number{
             &::before{
+                @include fluid-text(55, 30);
                 content: '// ';
             }
 
-            @include fluid-text(55, 30);
+            @include fluid-text(55, 40);
             font-family: var(--second-family);
             font-weight: 800;
             line-height: 110%;

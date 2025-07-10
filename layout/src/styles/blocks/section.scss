@@ -92,13 +92,13 @@
             text-align: center;
 
             & span{
-                white-space: nowrap;
                 color: var(--white);
                 font-weight: 600;
             }
 
             & .phone{
-                display: none;
+                font-weight: 300;
+                color: var(--grey-a9);
             }
         }
 
@@ -129,6 +129,12 @@
                     }
                 }
             }
+
+            &-text{     
+                & .phone{
+                    display: none;
+                }
+            }
         }
 
         &__title{
@@ -145,12 +151,6 @@
                 display: block;
             }
         }
-
-        &-text{
-            & .phone{
-                display: none;
-            }
-        }
     }
 
     @include mobile{
@@ -158,10 +158,6 @@
             &-list{
                 flex-direction: column;
             }
-        }
-
-        &-text-phone{
-            margin: 0 rem(-10);
         }
     }
 }

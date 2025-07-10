@@ -44,24 +44,24 @@
 
         &-line{
             position: absolute;
-            top: rem(-110);
-            right: rem(-17);
-            transform: rotate(-8.5deg);
+            top: rem(-76);
+            right: rem(-34);
+            transform: rotate(-2.5deg);
         }
     }
 
     &__banner{
         position: relative;
-        &::after{
-            content: '';
+        // &::after{
+        //     content: '';
 
-            position: absolute;
+        //     position: absolute;
 
-            width: rem(285);
-            height: rem(410);
+        //     width: rem(285);
+        //     height: rem(410);
 
-            background-color: var(--blue-0c);
-        }
+        //     background-color: var(--blue-0c);
+        // }
 
         grid-area: banner;
 
@@ -212,6 +212,12 @@
             &::after{
                 display: none;
             }
+        }
+    }
+
+    @include mobile{
+        &__banner .banner{
+            height: 78vw;
         }
     }
 
