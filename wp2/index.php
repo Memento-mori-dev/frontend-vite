@@ -545,14 +545,14 @@
           </div>
 
           <form action="send.php" method="POST" class="billboard__form form">
-            <label for="name-billboard" class="input-wrapper">
-              <p class="label label--white">Введите свое имя</p>
-              <input type="text" id="name-billboard" class="input input--white" placeholder="Например, Иван">
+            <label class="input__new">
+              <input type="text" class="input__new-input" placeholder="Например, Иван" name="name">
+              <span class="input__new-name">Введите ваше имя</span>
             </label>
-              
-            <label for="phone-billboard" class="input-wrapper">
-              <p class="label label--white">Введите свой телефон</p>
-              <input type="text" id="phone-billboard" class="input input--white" placeholder="+7 (___) ___-____">
+
+            <label class="input__new">
+              <input type="text" class="input__new-input" placeholder="+7 (___) ___-____" name="phone">
+              <span class="input__new-name">Введите ваше имя</span>
             </label>
 
             <div class="billboard__form-footer">
