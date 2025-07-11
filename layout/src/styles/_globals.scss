@@ -151,10 +151,3 @@ main{
 .form-msg{
     margin: rem(20) auto 0 auto;
 }
-
-@include tablet{
-    .wrapper{
-        overflow: auto;
-        overflow-x: hidden;
-    }
-}

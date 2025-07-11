@@ -104,6 +104,7 @@
 
 
     &__menu{
+        pointer-events: none;
         transition: all var(--transition-duration);
 
         height: 0;
@@ -114,6 +115,7 @@
         &.is-active{
             opacity: 1;
             overflow-y: auto;
+            pointer-events: auto;
         }
 
         background-color: var(--black);

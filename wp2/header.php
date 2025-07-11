@@ -28,8 +28,7 @@
 </head>
 
 <body data-js-scroll>
-    <div class="wrapper">
-        <header class="header opacity-top">
+    <header class="header opacity-top">
             <div class="header__container container">
                 <div class="header__start">
                 <a href="/" class="header__logo">
@@ -135,3 +134,5 @@
                 </div>
             </div>
         </header>
+    <div class="wrapper">
+        
