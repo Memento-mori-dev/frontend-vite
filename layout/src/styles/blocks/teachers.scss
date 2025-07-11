@@ -166,6 +166,9 @@
     }
 
     @include tablet{
+        &-title{
+            margin: 0 rem(-10);
+        }
         &::after{
             display: none;
         }

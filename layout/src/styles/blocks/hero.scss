@@ -220,6 +220,8 @@
     }
 
     @include mobile-s {
+        padding-top: rem(19);
+
         &__button{
             width: 100%;
         }

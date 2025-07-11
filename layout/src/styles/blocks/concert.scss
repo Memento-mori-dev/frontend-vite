@@ -50,6 +50,21 @@
         align-items: center;
     }
 
+    @include tablet{
+        &-title{
+            & > span{
+                white-space: inherit;
+
+                &::after{
+                    display: none;
+                }
+            }
+            & > span > span::after{
+                display: block;
+            }
+        }
+    }
+
     @include laptop{
         &__video-line{
             display: none;

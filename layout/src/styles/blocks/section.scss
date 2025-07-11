@@ -139,16 +139,6 @@
         &__title{
             margin-top: 0;
             text-align: center;
-             & > span{
-                white-space: inherit;
-
-                &::after{
-                    display: none;
-                }
-             }
-            & > span > span::after{
-                display: block;
-            }
         }
     }
 

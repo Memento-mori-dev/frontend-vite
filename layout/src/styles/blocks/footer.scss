@@ -153,6 +153,8 @@
     }
 
     @include tablet{
+        overflow: hidden;
+
         &::after{
             content: '';
 

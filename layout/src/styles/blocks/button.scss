@@ -204,12 +204,11 @@
                 right: rem(10);
                 bottom: 0;
 
-                border-radius: 100%;
                 background-color: var(--white);
-                filter: blur(100px);
+                filter: blur(60px);
 
-                width: rem(311);
-                height: rem(99);
+                width: rem(100);
+                height: rem(100);
 
                 transform: rotate(-77deg);
 
@@ -501,9 +500,9 @@
 
 @keyframes blink {
   0% {
-    right: -75%;
+    transform: translateX(-700%);
   }
   100% {
-    right: 125%; 
+    transform: translateX(125%);
   }
 }

@@ -275,7 +275,7 @@
 
     <section class="section swiper-section" id="преподаватели">
       <div class="container">
-        <p class="section__title h2 text-up">
+        <p class="section__title h2 text-up teachers-title">
           <?=$teachersACF['title'];?>
         </p>
 
@@ -409,7 +409,7 @@
 
     <section class="section swiper-section" id="">
       <div class="container">
-        <p class="section__title h2 text-up">
+        <p class="section__title h2 text-up concert-title">
           <?=$concertACF['title'];?>
         </p>
 
