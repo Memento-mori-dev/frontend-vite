@@ -591,7 +591,7 @@
 
             <div class="banner banner--reverse">
               <div class="map__banner">
-                <img src="<?=get_template_directory_uri()?>/assets/map-B5RRhK3k.webp" alt="">
+                <img src="<?=get_template_directory_uri()?>/images/map.webp" alt="">
 
                 <div class="map__address" data-da=".map__header,1023.98,1">
                   <div class="map__address-item">
