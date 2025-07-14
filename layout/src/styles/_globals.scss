@@ -133,8 +133,6 @@ main{
 
 
 .wrapper{
-    padding-top: rem(112);
-
     width: 100%;
     overflow: hidden;
 
@@ -142,10 +140,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-
-    @include mobile{
-        padding-top: rem(80);
-    }
 }
 
 .form-msg{

@@ -1,9 +1,10 @@
 @use '../helpers' as *;
 
 .hero{
+    padding-top: fluid(146, 124);
+
     position: relative;
 
-    padding-top: fluid(43, 35);
     padding-bottom: rem(30);
 
     &__container{
@@ -177,6 +178,8 @@
         }
 
         &__title{
+            padding-top: 0;
+
             text-align: center;
 
             & p{
@@ -221,8 +224,6 @@
     }
 
     @include mobile-s {
-        padding-top: rem(19);
-
         &__button{
             width: 100%;
         }

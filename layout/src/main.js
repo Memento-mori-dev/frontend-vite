@@ -269,10 +269,11 @@ function gsapAnimation() {
         ease: "power1.out"
       });
     }); 
+  }else{
+    ScrollTrigger.normalizeScroll(true);
   }
 
   // ScrollTrigger.refresh();
-  ScrollTrigger.normalizeScroll(true);
 }
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');

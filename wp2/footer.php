@@ -53,7 +53,7 @@
           </p>
         </div>
 
-        <form action="send.php" method="POST" class="modal__block-form">
+        <form action="send.php" method="POST" class="modal__block-form" data-js-crm>
           <div class="modal__block-item">
             <label class="input__new">
               <input type="text" class="input__new-input" placeholder=" " name="name" >

@@ -539,7 +539,7 @@
             </div>
           </div>
 
-          <form action="send.php" method="POST" class="billboard__form form">
+          <form action="send.php" method="POST" class="billboard__form form" data-js-crm>
             <label class="input__new">
               <input type="text" class="input__new-input" placeholder="Например, Иван" name="name">
               <span class="input__new-name">Введите ваше имя</span>
