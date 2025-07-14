@@ -431,11 +431,6 @@
           <div class="watch__video-content">
             <p class="watch__video-content-title"><?=$concertACF['video']['text'];?></p>
             <p class="watch__video-content-subtitle"><?=$concertACF['video']['time'];?></p>
-            <div class="watch__video-content-line">
-              <svg width="212" height="163" viewBox="0 0 212 163" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.498469 160C56.6685 176.522 295.288 92.5582 179.079 0.908271" stroke="white" stroke-opacity="0.3" stroke-width="1.5"></path>
-              </svg>
-            </div>
           </div>
 
           <div class="concert__video-line">
@@ -551,8 +546,8 @@
             </label>
 
             <label class="input__new">
-              <input type="text" class="input__new-input" placeholder="+7 (___) ___-____" name="phone">
-              <span class="input__new-name">Введите ваше имя</span>
+              <input type="text" class="input__new-input" placeholder="+7 (___) ___-____" name="phone" data-js-phone>
+              <span class="input__new-name">Введите свой телефон</span>
             </label>
 
             <div class="billboard__form-footer">

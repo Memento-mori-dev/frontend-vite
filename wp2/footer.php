@@ -64,7 +64,7 @@
           <div class="modal__block-item">
             <label class="input__new">
               <input type="text" class="input__new-input" placeholder=" " name="phone" data-js-phone>
-              <span class="input__new-name">Введите ваше имя</span>
+              <span class="input__new-name">Введите ваш номер телефона</span>
             </label>
           </div>
 

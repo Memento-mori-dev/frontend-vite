@@ -13,7 +13,7 @@ let controllerScroll = new ControllerScroll();
 new OpenModal(controllerScroll.stop.bind(controllerScroll));
 new CloseModal(controllerScroll.play.bind(controllerScroll));
 
-Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelector('[data-js-phone]'));
+Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelectorAll('[data-js-phone]'));
 
 document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('[data-js-crm]');
