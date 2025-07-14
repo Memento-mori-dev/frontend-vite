@@ -152,7 +152,7 @@ function gsapAnimation() {
           start: 'top 80%', // Анимация начинается, когда верх элемента достигает 80% высоты окна
           end: 'top 20%', // Анимация заканчивается, когда верх элемента достигает 20% высоты окна
           scrub: false, // Анимация не привязана к скроллу (выполняется один раз)
-          toggleActions: 'play none none none', // Поведение: play при входе, ничего при других событиях
+          // toggleActions: 'play none none none', // Поведение: play при входе, ничего при других событиях
         },
       }
     );
@@ -237,20 +237,20 @@ function gsapAnimation() {
     );
   })
 
-  const header = document.querySelector('.header');
+  // const header = document.querySelector('.header');
       
-  ScrollTrigger.create({
-    start: 0, // начинаем отслеживать с верха страницы
-    end: "max", // до конца страницы
-    onUpdate: (self) => {
-      // Если прокрутка больше 10px - добавляем класс, иначе удаляем
-      if (self.scroll() > 10) {
-        header.classList.add('is-scroll');
-      } else {
-        header.classList.remove('is-scroll');
-      }
-    }
-  });
+  // ScrollTrigger.create({
+  //   start: 0, // начинаем отслеживать с верха страницы
+  //   end: "max", // до конца страницы
+  //   onUpdate: (self) => {
+  //     // Если прокрутка больше 10px - добавляем класс, иначе удаляем
+  //     if (self.scroll() > 10) {
+  //       header.classList.add('is-scroll');
+  //     } else {
+  //       header.classList.remove('is-scroll');
+  //     }
+  //   }
+  // });
 
   if (width >=  1023.98) {
     document.querySelectorAll(".parent").forEach((parent, index) => {
@@ -271,7 +271,8 @@ function gsapAnimation() {
     }); 
   }
 
-  ScrollTrigger.refresh();
+  // ScrollTrigger.refresh();
+  ScrollTrigger.normalizeScroll(true);
 }
 
 new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
