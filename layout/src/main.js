@@ -270,13 +270,29 @@ function gsapAnimation() {
       });
     }); 
   }else{
-    ScrollTrigger.normalizeScroll(true);
+    ScrollTrigger.normalizeScroll({
+      allowNestedScroll: true
+    });
+    gsap.registerPlugin(ScrollToPlugin);
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Отменяем стандартное поведение
+        const targetId = this.getAttribute('href'); // Получаем ID цели
+        gsap.to(window, { 
+          duration: 1, 
+          scrollTo: { 
+            y: targetId, 
+            offsetY: 50 // Добавляем отступ в 50 пикселей
+          } 
+        }); // Плавная прокрутка с отступом
+      });
+    });
   }
 
   // ScrollTrigger.refresh();
 }
 
-new ControllerShow('.header__city', '.header__city-title', '.header__city-wrapper', '.header__city-select');
 new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content', '.header__menu-content a', '.header');
 
 new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');

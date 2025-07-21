@@ -114,6 +114,7 @@
 
         &.is-active{
             opacity: 1;
+            overflow: auto;
             overflow-y: auto;
             pointer-events: auto;
         }
@@ -226,73 +227,6 @@
         }
 
         position: relative;
-        &-wrapper{
-            position: absolute;
-            top: rem(36);
-            left: 0;
-
-            height: 0;
-            overflow: hidden;
-
-            opacity: 0;
-
-            transition: all var(--transition-duration);
-
-            &.is-active{
-                opacity: 1;
-            }
-        }
-        &-select{
-            min-width: rem(158);
-
-            padding: rem(18);
-            background-color: var(--white);
-
-            border-radius: rem(10);
-        }
-        &-list{
-            list-style-type: none;
-
-            display: flex;
-            flex-direction: column;
-
-            & li{
-                &::before{
-                    left: 0 !important;
-                    top: rem(10) !important;
-                }
-
-                margin-left: 0 !important;
-
-                padding-left: rem(19);
-
-                &:not(:first-child){
-                    border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-                    padding-top: rem(12);
-
-                    &::before{
-                        top: rem(20) !important;
-                    }
-                }
-                &:not(:last-child){
-                    padding-bottom: rem(12);
-                }
-
-                & a{
-                    text-decoration: none;
-
-                    font-weight: 300;
-                    font-size: rem(12);
-                    line-height: 130%;
-                    color: var(--grey-50);
-
-                    @include hover{
-                        color: var(--blue);
-                    }
-                }
-            }
-        }
     }
 
     @include laptop{
@@ -340,30 +274,6 @@
             }
         }
 
-        &__city-list{
-            text-align: start;
-
-            & li{
-                &:not(:first-child){
-                    margin-top: 0 !important;
-                }
-
-                &::after{
-                    content: '';
-
-                    position: absolute;
-                    left: 0;
-                    top: calc(50% - rem(2));
-
-                    width: rem(4);
-                    height: rem(4);
-
-                    background-color: var(--blue);
-                }
-            }
-
-            position: relative;
-        }
     }
 
     @include mobile{

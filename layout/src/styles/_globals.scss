@@ -2,6 +2,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-margin-top: 80px;
 }
 
 body{
@@ -148,8 +149,8 @@ main{
 
 
 @include tablet{
-    .wrapper{
-        overflow: auto;
-        overflow-x: hidden;
-    }
+    // .wrapper{
+    //     overflow: auto;
+    //     overflow-x: hidden;
+    // }
 }

@@ -224,6 +224,15 @@
         border: var(--border-black);
     }
 
+    &--no-color{
+        color: var(--grey-c7);
+
+        @include hover{
+            color: var(--white);
+            background-color: var(--blue-8e)
+        }
+    }
+
     &--submit{
         position: relative;
 
