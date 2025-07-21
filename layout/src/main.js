@@ -297,7 +297,7 @@ new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-c
 
 new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
 
-new ControllerVideo('.button--play', '.button--play__video');
+new ControllerVideo('.button--play');
 
 new ControllerToggle('.questions__cards-item', '.questions__cards-button', '.questions__cards-content', '.questions__cards-text');
 

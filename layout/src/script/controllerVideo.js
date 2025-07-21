@@ -1,35 +1,68 @@
 export default class ControllerVideo{
     stateClasses = {
         isActive: 'is-active',
+        isOpen: 'is-open',
+        isShow: 'is-show'
     }
 
-    constructor(mainClass, videoClass){
-        this.items = document.querySelectorAll(mainClass);
+    constructor(btnPlay){
+        this.modal = document.querySelector('[data-js-modal]');
+        this.videoModal = document.querySelector('[data-js-video]');
+        this.video = this.videoModal.querySelector('video');
 
-        this.items.forEach(item => {
-            const video = item.querySelector(videoClass);
+        this.init(btnPlay);
+    }
 
-            item.onclick = () => {
-                item.classList.add(this.stateClasses.isActive);
+    init(arrayBtn){
+        let arrBtn = document.querySelectorAll(arrayBtn);
 
-                setTimeout(() => {
-                    this.open(video, item);
-                }, 0);
+        arrBtn.forEach(btn => {
+            btn.onclick = () => {
+                if(!btn.classList.contains(this.stateClasses.isActive)){
+                    this.open(btn);
+                }else{
+                    console.log(2);
+                }
             }
         })
     }
 
-    open(video, item){
-        video.requestFullscreen();
+    open(btn){
+        btn.classList.add(this.stateClasses.isActive);
+
+        const url = btn.dataset.jsVideoUrl;
+        this.video.src = url;
         
-        this.close(video, item);
+        this.modal.classList.add(this.stateClasses.isOpen);
+        this.videoModal.classList.add(this.stateClasses.isShow);
+        this.video.play();
+
+        this.observer(btn);
     }
 
-    close(video, item){
-        video.addEventListener('fullscreenchange', function(e) {
-            if (!document.fullscreenElement) {
-                item.classList.remove('is-active');
-            }
+    close(btn, observer){
+        btn.classList.remove(this.stateClasses.isActive);
+
+        this.video.pause();
+        this.video.src = '';
+
+        observer.disconnect();
+    }
+
+    observer(btn){
+        const config = {
+            attributes: true, 
+            attributeFilter: ["class"],
+        };
+
+        const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+                if (mutation.type === "attributes" && mutation.attributeName === "class") {
+                    this.close(btn, observer);
+                }
+            });
         });
+
+        observer.observe(this.modal, config);
     }
 }

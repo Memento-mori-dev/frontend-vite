@@ -37,6 +37,11 @@
         &--sticks{
             margin-top: rem(90);
         }
+
+        & video{
+            width: 100%;
+            border-radius: fluid(35, 20);
+        }
     }
 
     &__block{
