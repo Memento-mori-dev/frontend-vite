@@ -270,10 +270,10 @@ function gsapAnimation() {
       });
     }); 
   }else{
-    ScrollTrigger.normalizeScroll({
-      allowNestedScroll: true
-    });
-    gsap.registerPlugin(ScrollToPlugin);
+    // ScrollTrigger.normalizeScroll({
+    //   allowNestedScroll: true
+    // });
+    // gsap.registerPlugin(ScrollToPlugin);
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {

@@ -13,6 +13,7 @@ arrSwiperWatch.forEach((swiper, index) => {
         spaceBetween: 70,
         slidesPerView: 'auto',
         freeMode: true,
+        allowTouchMove: true,
         navigation: {
             nextEl: '.button-slider__item--next',
             prevEl: '.button-slider__item--prev',
@@ -37,6 +38,7 @@ const swiperTeachers = new Swiper('.teachers', {
     slidesPerView: 2.72,
     spaceBetween: 80,
     initialSlide: 2,
+    allowTouchMove: true,
     // Navigation arrows
     navigation: {
         nextEl: '.button-slider__item--next',
@@ -67,6 +69,7 @@ const swiperRemained = new Swiper('.remained', {
     // spaceBetween: 80,
     // initialSlide: 2,
     // Navigation arrows
+    allowTouchMove: true,
     navigation: {
         nextEl: '.button-slider__item--next',
         prevEl: '.button-slider__item--prev',
@@ -89,6 +92,7 @@ const fddsf = new Swiper('.concert', {
     spaceBetween: 70,
     initialSlide: 1,
     slidesPerView: 'auto',
+    allowTouchMove: true,
     // Navigation arrows
     navigation: {
         nextEl: '.button-slider__item--next',
