@@ -22,39 +22,38 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        window.location.href = 'http://tve.jobmori1.beget.tech/thank/';
 
-        // const formData = new FormData(form);
-        // const submitBtn = form.querySelector('button[type="submit"]');
-        // if (submitBtn) submitBtn.disabled = true;
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
 
-        // // Удаляем старое сообщение, если есть
-        // let oldMsg = form.querySelector('.form-msg');
-        // if (oldMsg) oldMsg.remove();
+        // Удаляем старое сообщение, если есть
+        let oldMsg = form.querySelector('.form-msg');
+        if (oldMsg) oldMsg.remove();
 
-        // try {
-        //   const response = await fetch('send.php', {
-        //     method: 'POST',
-        //     body: formData
-        //   });
-        //   const text = await response.text();
-        //   let msg = document.createElement('div');
-        //   msg.className = 'form-msg';
-        //   msg.style.marginTop = '10px';
-        //   msg.style.color = response.ok ? 'green' : 'red';
-        //   msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
-        //   form.appendChild(msg);
-        //   if (response.ok) form.reset();
-        // } catch (err) {
-        //   let msg = document.createElement('div');
-        //   msg.className = 'form-msg';
-        //   msg.style.marginTop = '10px';
-        //   msg.style.color = 'red';
-        //   msg.textContent = 'Ошибка отправки. Попробуйте позже.';
-        //   form.appendChild(msg);
-        // } finally {
-        //   if (submitBtn) submitBtn.disabled = false;
-        // }
+        try {
+          const response = await fetch('send.php', {
+            method: 'POST',
+            body: formData
+          });
+          const text = await response.text();
+          let msg = document.createElement('div');
+          msg.className = 'form-msg';
+          msg.style.marginTop = '10px';
+          msg.style.color = response.ok ? 'green' : 'red';
+          msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
+          form.appendChild(msg);
+          if (response.ok) form.reset();
+        } catch (err) {
+          let msg = document.createElement('div');
+          msg.className = 'form-msg';
+          msg.style.marginTop = '10px';
+          msg.style.color = 'red';
+          msg.textContent = 'Ошибка отправки. Попробуйте позже.';
+          form.appendChild(msg);
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+        }
       });
     })
     
@@ -301,6 +300,7 @@ new ControllerVideo('.button--play');
 
 new ControllerToggle('.questions__cards-item', '.questions__cards-button', '.questions__cards-content', '.questions__cards-text');
 
+new ControllerToggle('.seo', '.seo__active', '.seo__wrapper', '.seo__block');
 
 
 

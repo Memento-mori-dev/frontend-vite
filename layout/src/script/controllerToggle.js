@@ -29,11 +29,14 @@ export default class ControllerToggle{
     open(item, wrapper, content){
         const thisWrapper = item.querySelector(wrapper),
             thisContent = item.querySelector(content),
+            startHeight = thisWrapper.offsetHeight + 'px',
             newHeight = thisContent.offsetHeight + 'px';
 
         thisWrapper.style.height = newHeight;
         item.classList.add(this.stateClasses.isActive);
         item.classList.add(this.stateClasses.isShow);
+
+        thisWrapper.dataset.start = startHeight;
 
         setTimeout(() => {
             item.classList.remove(this.stateClasses.isShow);
@@ -44,12 +47,16 @@ export default class ControllerToggle{
     close(item, wrapper, content){
         const thisWrapper = item.querySelector(wrapper);
         
-        thisWrapper.style.height = 0;
-        item.classList.remove(this.stateClasses.isActive);
-        item.classList.add(this.stateClasses.isShow);
+        thisWrapper.style.height = thisWrapper.offsetHeight + 'px';
 
         setTimeout(() => {
-            item.classList.remove(this.stateClasses.isShow);
-        }, 200);
+            thisWrapper.style.height = thisWrapper.dataset.start;
+            item.classList.remove(this.stateClasses.isActive);
+            item.classList.add(this.stateClasses.isShow);
+
+            setTimeout(() => {
+                item.classList.remove(this.stateClasses.isShow);
+            }, 200);
+        }, 0);
     }
 }
