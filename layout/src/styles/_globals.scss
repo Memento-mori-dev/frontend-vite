@@ -4,34 +4,48 @@ body{
     @include fluid-text(18, 14);
 
     font-family: var(--font-family);
+    color: var(--black);
 }
 
 h1, .h1,
 h2, .h2,
 h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6{
-    color: #000;
+h4, .h4{
+    font-weight: 700;
 }
 
 h1, .h1{
-    @include fluid-text();
+    @include fluid-text(42, 16);
+    line-height: 110%;
 }
 h2, .h2{
-    @include fluid-text();
+    @include fluid-text(32, 16);
+    line-height: 112%;
 }
 h3, .h3{
-    @include fluid-text();
+    @include fluid-text(20, 16);
+    line-height: 120%;
 }
 h4, .h4{
-    @include fluid-text();
+    @include fluid-text(16, 16);
+    line-height: 125%;
+    text-transform: uppercase;
 }
-h5, .h5{
-    @include fluid-text();
+
+.text-normal{
+    @include fluid-text(16, 16);
+    font-weight: 500;
+    line-height: 150%;
 }
-h6, .h6{
-    @include fluid-text();
+.text-small{
+    @include fluid-text(14, 16);
+    font-weight: 500;
+    line-height: 143%;
+}
+.description{
+    @include fluid-text(12, 16);
+    font-weight: 600;
+    line-height: 133%;
 }
 
 a,

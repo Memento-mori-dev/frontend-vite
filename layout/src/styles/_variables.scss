@@ -9,13 +9,17 @@
     --grey-b9:#B9C9D9;
     --grey-eb:#EBEDF1;
     --grey-f8:#F8F8F8;
+    --white:#FFFFFF;
+    
     // font
-    --font-family: '';
+    --font-family: 'Involve';
+    --second-family: 'Involve-Oblique';
 
     // width and padding
     --container-width: #{rem(1240)};
     --container-padding-x: #{rem(16)};
 
     // animation
-    --transition-duration: .2s;
+    --transition-duration: .3s;
+    --transition-all: all var(--transition-duration) ease;
 }

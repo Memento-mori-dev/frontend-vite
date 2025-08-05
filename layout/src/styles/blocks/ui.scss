@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.btn{
+    background: none;
+    border: none;
+
+    &-menu{
+        @include square(rem(60));
+
+        padding: rem(19.5) rem(10) rem(20.5) rem(10);
+
+        display: flex;
+        flex-direction: column;
+
+        & span{
+            height: rem(2);
+
+            background-color: var(--white);
+
+            &:not(:first-child){
+                margin-top: rem(7);
+            }
+
+            &:nth-child(2){
+                width: rem(23);
+            }
+            &:nth-child(3){
+                width: rem(35);
+            }
+
+            transition: var(--transition-all);
+        }
+
+        @include hover{
+            & span{
+                &:nth-child(2){
+                    width: 100%;
+                }
+                &:nth-child(3){
+                    width: 100%;
+                }
+            }
+        }
+
+        &.is-active{
+            & span{
+                &:nth-child(1){
+                    transform: translateY(rem(8.5)) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    width: 0;
+                }
+                &:nth-child(3){
+                    width: 100%;
+                    transform: translateY(rem(-8.5)) rotate(45deg);
+                }
+            }
+        }
+    }
+}
