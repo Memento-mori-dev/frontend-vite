@@ -52,3 +52,34 @@ if (document.querySelector('[data-js-btn-up]')) {
     const btn = document.querySelector('[data-js-btn-up]');
     btn.addEventListener('click', scrollToTop);
 }
+
+if (document.querySelector('.input')) {
+    document.addEventListener("DOMContentLoaded", () => {
+        const labels = document.querySelectorAll('label.input');
+
+        labels.forEach(label => {
+            const input = label.querySelector('input');
+
+            // При клике на label добавляем класс is-hover
+            label.addEventListener('click', () => {
+            label.classList.add('is-hover');
+            input.focus();
+            });
+
+            // Следим за вводом текста
+            input.addEventListener('input', () => {
+            if (input.value.trim().length > 0) {
+                label.classList.add('is-active');
+            } else {
+                label.classList.remove('is-active');
+            }
+            });
+
+            // При потере фокуса убираем is-hover
+            input.addEventListener('blur', () => {
+            label.classList.remove('is-hover');
+            });
+        });
+    });
+}
+

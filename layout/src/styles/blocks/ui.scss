@@ -522,6 +522,11 @@
         background-color: rgba(185, 201, 217, 0.5);
     }
 
+    transition: var(--transition-all);
+    & *{
+        transition: var(--transition-all);
+    }
+
     &.is-hover{
         &::after{
             background: var(--grey-b9);
