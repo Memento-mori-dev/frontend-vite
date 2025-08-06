@@ -14,9 +14,6 @@
     &__companies{
         margin-top: rem(40);
 
-        display: flex;
-        gap: 12px;
-
         &-item{
             flex-shrink: 0;
 
@@ -87,6 +84,8 @@
             height: 100%;
 
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+
+            z-index: 1;
         }
         &::before{
             content: '';
@@ -99,6 +98,8 @@
             height: 100%;
 
             background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+
+            z-index: 1;
         }
     }
 

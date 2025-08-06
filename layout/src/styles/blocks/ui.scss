@@ -249,6 +249,10 @@
 
             gap: rem(8);
         }
+
+        &.swiper-button-disabled{
+            opacity: 0;
+        }
     }
 
     &-main{
