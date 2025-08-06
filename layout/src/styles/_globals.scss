@@ -18,15 +18,15 @@ h4, .h4{
 }
 
 h1, .h1{
-    @include fluid-text(42, 16);
+    @include fluid-text(42, 42);
     line-height: 110%;
 }
 h2, .h2{
-    @include fluid-text(32, 16);
+    @include fluid-text(32, 32);
     line-height: 112%;
 }
 h3, .h3{
-    @include fluid-text(20, 16);
+    @include fluid-text(20, 20);
     line-height: 120%;
 }
 h4, .h4{

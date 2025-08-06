@@ -70,6 +70,8 @@
                 &::after{
                     content: ':';
                 }
+                
+                color: var(--grey-6d);
             }
             &-description{}
         }
