@@ -153,6 +153,9 @@
             position: absolute;
             
             &-background{
+                pointer-events: none;
+                opacity: 0;
+
                 z-index: -1;
 
                 width: 100%;
@@ -191,10 +194,11 @@
             }
 
             &-description{
-                padding-top: rem(23);
-
                 display: flex;
                 gap: rem(32);
+
+                opacity: 0;
+                pointer-events: none;
             }
 
             &-element{
@@ -217,12 +221,32 @@
                     position: absolute;
                     top: rem(-21);
                     right: rem(-57);
+
+                    opacity: 0;
                 }
             }
 
             transition: var(--transition-all);
             & *{
                 transition: var(--transition-all);
+            }
+
+            &.is-active{
+                .graphics__map-item-icon-line{
+                    opacity: 1;
+                }
+
+                .graphics__map-item-background{
+                    pointer-events: auto;
+                    opacity: 1;
+                }
+
+                .graphics__map-item-description{
+                    padding-top: rem(23);
+
+                    pointer-events: auto;
+                    opacity: 1;
+                }
             }
         }
     }
