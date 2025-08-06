@@ -106,7 +106,11 @@
     &__documents{
         margin-top: rem(16);
 
+        overflow: hidden;
+
         &-item{
+            display: block;
+
             cursor: pointer;
 
             width: 328px;
@@ -141,6 +145,8 @@
             }
             &-name{
                 padding-top: rem(8);
+
+                color: var(--black);
             }
 
             &::after{
@@ -218,7 +224,7 @@
 
             z-index: 10;
 
-            background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
         }
     }
 }

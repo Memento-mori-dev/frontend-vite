@@ -7,10 +7,13 @@
     <title>ДиЭйГрупп</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./src/styles/main.scss">
 
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+
   </head>
   <body>
     <header class="header">
@@ -820,23 +823,84 @@
 
           <div class="trust__documents">
             <div class="trust__documents-left">
-              <button class="btn btn-slider">
+              <button class="btn btn-slider button-slider__item--prev">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z" fill="#037DE5"></path>
                 </svg>
               </button>
             </div>
+            
+            <div class="documents-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
 
-            <div class="trust__documents-item active">
-              <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img">
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
 
-              <div class="trust__documents-item-description">
-                <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
+
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
+
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
+
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
+
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a data-fancybox data-src="./assets/images/trust-1.png" class="trust__documents-item">
+                    <img src="./assets/images/trust-1.png" alt="doc" class="trust__documents-item-img" width="324" height="460">
+
+                    <div class="trust__documents-item-description">
+                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-
-            <div class="trust__documents-right">
+            
+            <div class="trust__documents-right button-slider__item--next">
               <button class="btn btn-slider">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 1.34375L12.6565 7.00023L7.00002 12.6567L6.28022 11.9369L10.7089 7.50818L2.11849 7.50818L2.11849 6.48951L10.7061 6.48951L6.28024 2.06358L7 1.34375Z" fill="#037DE5" />
