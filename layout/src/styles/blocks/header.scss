@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.header{
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__left{
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        display: block;
+        & img{
+            width: 149px;
+            height: 36px;
+        }
+
+        transition: var(--transition-all);
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+    &__menu{
+        margin-left: rem(60);
+    }
+    &__list{
+        list-style-type: none;
+
+        display: flex;
+        align-items: center;
+
+        & li{
+            &:not(:first-child){
+                margin-left: rem(40);
+            }
+        }
+    }
+
+    &__right{}
+}

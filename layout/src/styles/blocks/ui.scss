@@ -6,7 +6,9 @@
     border: none;
 
     & .icon{
-        margin-right: rem(8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &-menu{
@@ -131,5 +133,307 @@
                 top: 0;
             }
         }
+    }
+
+    &-hero{
+        @include fluid-text(16, 16);
+        font-weight: 600;
+        line-height: 125%;
+        color: var(--white);
+        
+        display: flex;
+
+        overflow: hidden;
+        
+        & span{
+            padding: rem(25) rem(30);
+        }
+        
+        & .icon{
+            padding: rem(25);
+            transition: var(--transition-all);
+        }
+
+        position: relative;
+        &::after{
+            content: '';
+
+            z-index: -2;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-color: var(--blue-03);
+        }
+        &::before{
+            content: '';
+
+            z-index: -1;
+
+            position: absolute;
+            right: calc(-100% + rem(70));
+            width: 100%;
+            height: 100%;
+
+            background-color: var(--white);
+            opacity: .1;
+
+            transition: var(--transition-all);
+        }
+
+        @include hover{
+            &::before{
+                right: 0;
+            }
+
+            & .icon{
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &-next{
+        display: flex;
+        align-items: center;
+
+        @include fluid-text(16, 16);
+        font-weight: 600;
+        line-height: 125%;
+        color: var(--white);
+
+        & .icon{
+            padding-left: rem(8);
+            transition: var(--transition-all);
+        }
+
+        @include hover{
+            & .icon{
+                transform: translateX(rem(5))
+            }
+        }
+    }
+
+    &-slider{
+        @include square(rem(40));
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid var(--blue-03-10);
+        transition: var(--transition-all);
+
+        & svg{
+            @include square(rem(12.8));
+        }
+
+        @include hover{
+            border: 1px solid rgba($color: #000000, $alpha: 0);
+            background: var(--blue-03-20);
+        }
+
+        &--big{
+            @include square(rem(50));
+
+            & svg{
+                @include square(rem(16));
+            }
+        }
+    }
+
+    &-main{
+        display: flex;
+        align-content: center;
+
+        & .right,
+        & .left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .left{
+            padding-right: rem(8);
+        }
+
+        & .right{
+            padding-left: rem(8);
+        }
+
+        transition: var(--transition-all);
+        &::after,
+        &::before,
+        & svg *{
+            transition: var(--transition-all);
+        }
+
+        &--40{
+            height: rem(42);
+
+            padding: rem(12) rem(16);
+
+            &.icon-right{
+                padding-right: rem(12);
+            }
+
+            @include fluid-text(14, 14);
+            font-weight: 600;
+            line-height: 129%;
+        }
+
+        &--50{
+            height: rem(50);
+
+            padding: rem(15) rem(22);
+            &.icon-right{
+                padding-right: rem(15);
+            }
+
+            @include fluid-text(16, 16);
+            line-height: 125%;
+            font-weight: 600;
+        }
+
+        &--blue{
+            color: var(--white);
+            
+            position: relative;
+            &::after{
+                content: '';
+
+                z-index: -2;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--blue-03);
+            }
+
+            &::before{
+                content: '';
+
+                z-index: -1;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--white);
+                opacity: 0;
+            }
+
+            @include hover{
+                &::before{
+                    opacity: .2;
+                }
+            }
+        }
+
+        &--dirty{
+            color: var(--blue-03);
+            
+            position: relative;
+            &::after{
+                content: '';
+
+                z-index: -2;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--blue-03-10);
+            }
+
+            &::before{
+                content: '';
+
+                z-index: -1;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--blue-03);
+                opacity: 0;
+            }
+
+            @include hover{
+                color: var(--white);
+                &::before{
+                    opacity: 1;
+                }
+
+                & svg *{
+                    fill: var(--white);
+                }
+            }
+        }
+
+        &--white{
+            color: var(--blue-03);
+            border: 1px solid var(--blue-03-10);
+
+            & svg *{
+                fill: var(--blue-03);
+            }
+
+            position: relative;
+            &::before{
+                content: '';
+
+                z-index: -1;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0;
+                background-color: var(--blue-03-20);
+            }
+
+            @include hover{
+                border: 1px solid var(--blue-03-20);
+
+                &::before{
+                    opacity: 1;
+                }
+
+                & svg *{
+                    fill: var(--blue-03);
+                }
+            }
+        }
+    }
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+
+    & span{
+        @include fluid-text(16, 16);
+        font-weight: 500;
+        line-height: 150%;
+        color: var(--grey-6d);
     }
 }
