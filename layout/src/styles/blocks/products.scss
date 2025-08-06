@@ -1,3 +1,139 @@
 @use '../helpers' as *;
 
-.products{}
+.products{
+    padding-top: rem(163);
+
+    position: relative;
+    &::after{
+        content: '';
+
+        z-index: -3;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--grey-eb);
+    }
+
+
+    
+    &__header{
+        & span{
+            color: var(--blue-03);
+        }
+
+        position: relative;
+        &::after{
+            content: '';
+
+            z-index: -1;
+
+            position: absolute;
+            top: rem(-63);
+            right: rem(210);
+
+            width: rem(203);
+            height: rem(140);
+
+            background-image: url(../../../assets/svg/products-icon.svg);
+        }
+    }
+    
+    &__sub-header{
+        padding-top: rem(40);
+
+        display: flex;
+
+        &-left{
+
+        }
+        &-right{
+            margin-left: rem(87);
+
+            max-width: rem(617);
+        }
+    }
+    &__sub-title{
+
+
+        &--next{
+            padding-top: rem(8);
+            padding-left: rem(263);
+        }
+    }
+
+    &__content{
+        padding-top: rem(40);
+
+        display: flex;
+        gap: rem(20);
+    }
+    &__item{
+        width: calc(33% - rem(13.33));
+        min-height: rem(361);
+
+        padding: rem(39);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        border: var(--border);
+
+        position: relative;
+        &-arrow{
+            position: absolute;
+            top: rem(20);
+            right: rem(20);
+        }
+
+        &-title{}
+        &-sub-title{
+            padding-top: rem(12);
+
+            color: var(--grey-6d);
+        }
+        &-wrapper{
+            overflow: hidden;
+            height: 0;
+
+            opacity: 0;
+        }
+        &-text{
+            padding-top: rem(32);
+            color: var(--white);
+        }
+
+        transition: all .5s ease;
+        & *{
+            transition: var(--transition-all);
+        }
+
+        &.is-hover{
+            background-color: var(--blue-03);
+            border-color: var(--blue-03);
+
+            & *{
+                color: var(--white);
+            }
+
+            & svg{
+                @include square(rem(60));
+
+                & *{
+                    fill: var(--white);
+                }
+            }
+
+            & .products__item-wrapper{
+                height: 132px;
+
+                opacity: 1;
+            }
+        }
+    }
+}

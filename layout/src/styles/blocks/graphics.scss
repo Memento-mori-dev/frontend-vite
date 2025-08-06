@@ -22,6 +22,22 @@
         background-color: var(--black);
     }
 
+    &::before{
+        content: '';
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: rem(261);
+
+        background: linear-gradient(0, #037de5 0%, rgba(17, 24, 33, 0) 100%);
+        opacity: 0.3;
+
+        pointer-events: none;
+    }
+
     &__header{
         max-width: rem(1107);
 
@@ -113,7 +129,7 @@
         &-description{
             position: absolute;
             top: rem(75);
-            right: 0;
+            right: rem(53);
 
             max-width: rem(496);
 
@@ -170,11 +186,6 @@
                 }
             }
 
-            transition: var(--transition-all);
-            & *{
-                transition: var(--transition-all);
-            }
-
             &-title{
 
             }
@@ -207,6 +218,11 @@
                     top: rem(-21);
                     right: rem(-57);
                 }
+            }
+
+            transition: var(--transition-all);
+            & *{
+                transition: var(--transition-all);
             }
         }
     }

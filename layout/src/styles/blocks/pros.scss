@@ -76,12 +76,12 @@
             padding: rem(58);
         }
 
-            transition: all .5s ease;
+        transition: all .5s ease;
         & *{
             transition: var(--transition-all);
         }
 
-        &.is-big{
+        &.is-hover{
             height: rem(258);
 
             background-color: var(--blue-03);
@@ -95,7 +95,7 @@
             }
 
             & svg{
-                @include square(rem(60))
+                @include square(rem(60));
             }
 
             & .pros__description{
@@ -118,6 +118,10 @@
         }
     }
 
+    &__wrapper{
+        overflow: hidden;
+        height: 0;
+    }
     &__description{
         padding-top: rem(32);
 
