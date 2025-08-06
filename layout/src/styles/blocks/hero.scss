@@ -1,5 +1,57 @@
 @use '../helpers' as *;
 
 .hero{
-    
+    position: relative;
+    &::after{
+        content: '';
+
+        z-index: -4;
+
+        position: absolute;
+        top: rem(-76);
+        left: 0;
+
+        width: 100%;
+        height: calc(100% + rem(76));
+
+        background-color: var(--black);
+    }
+
+    &__container{
+        padding-top: rem(127);
+        padding-bottom: rem(193);
+    }
+
+    &__content{
+        width: 50.25%;
+
+        color: var(--white);
+    }
+    &__title{
+        & span{
+            color: var(--grey-6d);
+        }
+    }
+    &__sub-title{
+        padding-top: rem(24);
+
+        font-weight: 500;
+        @include fluid-text(20, 16);
+        line-height: 140%;
+    }
+    &__btn{
+        padding-top: rem(40);
+
+        display: flex;
+    }
+
+    &__img{
+        z-index: -3;
+
+        position: absolute;
+        top: rem(-76);
+        right: 0;
+
+        height: calc(100% + rem(76));
+    }
 }
