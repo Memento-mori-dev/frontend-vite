@@ -242,6 +242,13 @@
                 @include square(rem(16));
             }
         }
+
+        &-wrapper{
+            display: flex;
+            align-items: center;
+
+            gap: rem(8);
+        }
     }
 
     &-main{
@@ -423,6 +430,15 @@
                 }
             }
         }
+    }
+
+    &--p-100{
+        width: 100%;
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

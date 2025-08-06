@@ -1,0 +1,110 @@
+@use '../helpers' as *;
+
+.trust{
+    padding: rem(120) 0;
+
+    background-color: var(--white);
+
+    color: var(--black);
+
+
+    &__header{
+        & span{
+            color: var(--blue-03);
+        }
+    }
+
+    &__companies{
+        margin-top: rem(40);
+
+        display: flex;
+        gap: 12px;
+
+        &-item{
+            flex-shrink: 0;
+
+            text-decoration: none;
+
+            width: 250px;
+
+            padding: rem(12) rem(16) rem(22);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(10);
+
+            &-img{
+                width: 100%;
+                height: rem(76);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img{
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &-link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0;
+
+                transition: var(--transition-all);
+            }
+            &-name{
+                @include fluid-text(14, 14);
+                font-weight: 600;
+                line-height: 129%;
+
+                color: var(--black);
+            }
+            &-icon{
+                margin-left: rem(4);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover .trust__companies-item-link{
+                opacity: 1;
+            }
+        }
+
+        overflow: hidden;
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: rem(50);
+            height: 100%;
+
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        }
+        &::before{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: rem(50);
+            height: 100%;
+
+            background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        }
+    }
+    &__documents{
+        margin-top: rem(16);
+    }
+}

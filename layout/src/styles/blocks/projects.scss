@@ -1,0 +1,90 @@
+@use '../helpers' as *;
+
+.projects{
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+
+        gap: rem(40);
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & span{
+            color: var(--blue-03);
+        }
+    }
+
+    &__content{}
+    &__item{
+        width: 520px;
+
+        padding: rem(38) rem(38) rem(22);
+
+        border: var(--border);
+        
+        &-address{
+            display: flex;
+            align-items: center;
+
+            &-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-name{
+                padding-left: rem(8);
+
+                color: var(--grey-6d);
+            }
+        }
+
+        &-name{
+            padding-top: rem(12);
+        }
+
+        &-list{
+            padding-top: rem(32);
+
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: rem(20);
+
+            & li{
+                display: flex;
+                flex-direction: column;
+
+                gap: rem(8);
+            }
+
+            &-name{
+                &::after{
+                    content: ':';
+                }
+            }
+            &-description{}
+        }
+    
+        &-btn{
+            padding-top: rem(24);
+
+            display: flex;
+        }
+
+        &--black{
+            background-color: var(--grey-b9-30);
+            border-color: rgba($color: #000000, $alpha: 0);
+        }
+    }
+
+    &__btn{}
+}
