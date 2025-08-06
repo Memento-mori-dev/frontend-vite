@@ -41,12 +41,12 @@ h4, .h4{
     line-height: 150%;
 }
 .text-small{
-    @include fluid-text(14, 16);
+    @include fluid-text(14, 14);
     font-weight: 500;
     line-height: 143%;
 }
 .description{
-    @include fluid-text(12, 16);
+    @include fluid-text(12, 12);
     font-weight: 600;
     line-height: 133%;
 }
