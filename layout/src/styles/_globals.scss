@@ -5,6 +5,8 @@ body{
 
     font-family: var(--font-family);
     color: var(--black);
+
+    background-color: var(--grey-eb);
 }
 
 h1, .h1,
@@ -63,4 +65,11 @@ svg *{
     outline: rem(2) dashed #000;
     outline-offset: rem(4);
     transition-duration: 0s !important;
+}
+
+.text-up{
+    text-transform:uppercase;
+}
+.text-blue{
+    color: var(--blue-03);
 }
