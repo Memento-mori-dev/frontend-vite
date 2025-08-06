@@ -1,4 +1,5 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
+import { scrollToTop } from './script/function';
 
 useDynamicAdapt();
 
@@ -47,3 +48,7 @@ if (document.querySelector('.trust__documents')) {
     });
 }
 
+if (document.querySelector('[data-js-btn-up]')) {
+    const btn = document.querySelector('[data-js-btn-up]');
+    btn.addEventListener('click', scrollToTop);
+}
