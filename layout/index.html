@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ДиЭйГрупп</title>
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./src/styles/main.scss">
+
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -412,13 +415,13 @@
             <p class="h1"><span>Реальные проекты.</span> Измеримые результаты.</p>
 
             <div class="btn-slider-wrapper">
-              <button class="btn btn-slider btn-slider--big">
+              <button class="btn btn-slider btn-slider--big button-slider__item--prev">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z" fill="#037DE5"></path>
                 </svg>
               </button>
 
-              <button class="btn btn-slider btn-slider--big">
+              <button class="btn btn-slider btn-slider--big button-slider__item--next">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 0.929688L15.0706 8.00029L8.00002 15.0709L7.10027 14.1711L12.6362 8.63523L1.89812 8.63523L1.89811 7.36189L12.6327 7.36189L7.1003 1.82947L8 0.929688Z" fill="#037DE5" />
                 </svg>
@@ -427,49 +430,226 @@
           </div>
 
           <div class="projects__content">
-            <div class="projects__item projects__item--black">
-              <div class="projects__item-address">
-                <div class="projects__item-address-icon">
-                  <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                </div>
+            <div class="projects-swiper">
+              <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
 
-                <p class="h3 projects__item-address-name">
-                  Поволжье
-                </p>
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <p class="h2 projects__item-name">Нефтебаза</p>
+              <div class="swiper-slide">
+                <div class="projects__item">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
 
-              <ul class="projects__item-list">
-                <li>
-                  <p class="text-small projects__item-list-name">Задача</p>
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+                  </div>
 
-                  <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                </li>
+                  <p class="h2 projects__item-name">Нефтебаза</p>
 
-                <li>
-                  <p class="text-small projects__item-list-name">Решение</p>
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
 
-                  <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                </li>
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
+                    </li>
 
-                <li>
-                  <p class="text-small projects__item-list-name">Результат</p>
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
 
-                  <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                </li>
-              </ul>
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
+                    </li>
 
-              <div class="projects__item-btn">
-                <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                  Подробнее о проекте
-                </a>
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+            </div>
+            
+
+            
           </div>
 
           <div class="projects__btn">
-            <button class="btn btn-main btn-main--50 btn-main--white btn--p-100">
+            <a href="#" class="btn btn-main btn-main--50 btn-main--white btn--p-100">
               Смотреть все вроекты
 
               <span class="right">
@@ -477,7 +657,7 @@
                   <path d="M27.0005 2.69727L33.302 8.99875L27.0005 15.3002L26.1986 14.4983L31.1323 9.56463L3.56232 9.56463L3.56232 8.42979L31.1292 8.42979L26.1986 3.49918L27.0005 2.69727Z" fill="white"></path>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -634,7 +814,7 @@
             </label>
 
             <label for="phone" class="input">
-              <input type="text" id="phone" name="phone" placeholder="" />
+              <input type="text" id="phone" name="phone" placeholder="" data-js-phone minlength="10"/>
               <span class="">Телефон</span>
             </label>
 

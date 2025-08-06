@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .projects{
+    overflow: hidden;
+
     padding-top: rem(120);
     padding-bottom: rem(120);
 
