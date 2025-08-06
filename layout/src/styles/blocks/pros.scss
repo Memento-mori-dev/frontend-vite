@@ -76,7 +76,7 @@
             padding: rem(58);
         }
 
-        transition: all .5s ease;
+        transition: var(--transition-all);
         & *{
             transition: var(--transition-all);
         }
