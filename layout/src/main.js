@@ -46,3 +46,4 @@ if (document.querySelector('.trust__documents')) {
         //
     });
 }
+
