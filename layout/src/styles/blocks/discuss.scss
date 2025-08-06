@@ -1,3 +1,69 @@
 @use '../helpers' as *;
 
-.discuss{}
+.discuss{
+    padding-top: rem(53);
+    padding-bottom: rem(60);
+
+    background-color: var(--grey-b9-30);
+
+    &__container{
+        margin: auto;
+
+        width: rem(890);
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+
+        &-description{
+            margin-top: rem(6);
+            margin-left: rem(40);
+
+            max-width: rem(287);
+
+            color: var(--grey-6d);
+        }
+
+        &-form{
+            margin-top: rem(41);
+
+            display: flex;
+            align-items: center;
+
+            & .input{
+                &:not(:first-child){
+                    margin-left: rem(32);
+                }
+
+                width: rem(291);
+            }
+
+            &-submit{
+                margin-left: auto;
+            }
+        }
+
+        &-about{
+            margin-top: rem(24);
+
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            color: var(--grey-6d);
+
+            & a{
+                padding-left: rem(5);
+
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: var(--black);
+
+                @include hover{
+                    color: var(--blue-03);
+                }
+            }
+        }
+    }
+}
