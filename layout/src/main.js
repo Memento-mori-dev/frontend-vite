@@ -86,6 +86,12 @@ if (document.querySelector('.input')) {
     });
 }
 
+if (document.querySelector('.pros__items')) {
+    new dynamicPros('.pros__item--two', '.pros__link', '', '.pros__wrapper', '.pros__description', true);
+
+    new dynamicPros('.pros__item--single', '.pros__link', '', '.pros__wrapper', '.pros__description');
+}
+
 if (document.querySelector('.graphics__map')) {
     new dynamicPros('.graphics__map', '.graphics__map-item', '.graphics__map-item-hover')
 }
