@@ -151,6 +151,17 @@
             justify-content: center;
 
             position: absolute;
+
+            &-hover{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: rem(110);
+
+                z-index: 10;
+            }
             
             &-background{
                 pointer-events: none;

@@ -1,5 +1,6 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
 import { scrollToTop } from './script/function';
+import dynamicPros from './script/dynamicPros';
 
 useDynamicAdapt();
 
@@ -53,6 +54,8 @@ if (document.querySelector('[data-js-btn-up]')) {
     btn.addEventListener('click', scrollToTop);
 }
 
+
+// интерактивные элементы
 if (document.querySelector('.input')) {
     document.addEventListener("DOMContentLoaded", () => {
         const labels = document.querySelectorAll('label.input');
@@ -83,3 +86,10 @@ if (document.querySelector('.input')) {
     });
 }
 
+// if (document.querySelector('.graphics__map')) {
+//     new dynamicPros('.graphics__map', '.graphics__map-item', '.graphics__map-item-hover')
+// }
+
+if (document.querySelector('.industries__content')) {
+    new dynamicPros('.industries__content', '.industries__item', '', '.industries__item-wrapper', '.industries__item-tags');
+}
