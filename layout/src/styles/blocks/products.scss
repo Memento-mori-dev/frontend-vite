@@ -57,10 +57,12 @@
         gap: rem(20);
     }
     &__item{
+        cursor: pointer;
+
         width: calc(33% - rem(13.33));
         min-height: rem(361);
 
-        padding: rem(39);
+        padding: rem(29) rem(39) rem(39) rem(39);
 
         display: flex;
         flex-direction: column;

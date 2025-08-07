@@ -90,8 +90,8 @@ if (document.querySelector('.graphics__map')) {
     new dynamicPros('.graphics__map', '.graphics__map-item', '.graphics__map-item-hover')
 }
 
-if (document.querySelector('.industries__content')) {
-    new dynamicPros('.industries__content', '.industries__item', '', '.industries__item-wrapper', '.industries__item-tags');
+if (document.querySelector('.products__content')) {
+    new dynamicPros('.products__content', '.products__item', '', '.products__item-wrapper', '.products__item-text');
 }
 
 if (document.querySelector('.industries__content')) {

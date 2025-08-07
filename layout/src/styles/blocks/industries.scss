@@ -30,6 +30,8 @@
         gap: rem(20);
     }
     &__item{
+        cursor: pointer;
+
         overflow: hidden;
 
         width: calc(50% - rem(10));

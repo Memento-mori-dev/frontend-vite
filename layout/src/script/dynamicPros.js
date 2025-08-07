@@ -11,6 +11,7 @@ export default class dynamicPros {
         this.items = this.main.querySelectorAll(item);
         this.wrapper = wrapper;
         this.content = content;
+        this.small = small;
 
         this.items.forEach(item => {
             this.trackHover(item, classHover);
@@ -27,6 +28,14 @@ export default class dynamicPros {
                 this.active(item);
             });
         }
+    }
+
+    addSmall(){
+
+    }
+
+    removeSmall(){
+
     }
 
     openWrapper(item){
