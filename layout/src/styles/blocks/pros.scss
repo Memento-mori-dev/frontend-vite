@@ -47,6 +47,7 @@
         width: calc(50% - rem(10));
     }
     &__link{
+        text-decoration: none;
         height: rem(210);
 
         overflow: hidden;
@@ -113,7 +114,9 @@
         }
     }
 
-    &__title{}
+    &__title{
+        color: var(--black);
+    }
     &__text{
         color: var(--grey-6d);
 
