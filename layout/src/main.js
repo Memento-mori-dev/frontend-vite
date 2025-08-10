@@ -43,7 +43,9 @@ if (document.querySelector('.trust__documents')) {
             prevEl: '.trust__documents .button-slider__item--prev',
         },
     })
+}
 
+if (document.querySelector('.trust__documents') || document.querySelector('.reviews')) {
     Fancybox.bind('[data-fancybox]', {
         //
     });

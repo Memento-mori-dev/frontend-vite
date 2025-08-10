@@ -1,18 +1,23 @@
 @use '../helpers' as *;
 
 .reviews{
+    margin-top: rem(40);
 
-    &__block{
-        &:first-child{
-            margin-top: rem(60);
-        }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20);
 
-        &:not(:first-child){
-            margin-top: rem(100);
+        & .trust__documents-item{
+            width: calc(33% - rem(13.33));
+            height: rem(566);
         }
     }
 
-    &__content{
-        margin-top: rem(32);
+    &__btn{
+        margin-top: rem(20);
+
+        display: flex;
+        justify-content: center;
     }
 }
