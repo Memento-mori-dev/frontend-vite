@@ -30,8 +30,6 @@
         gap: rem(20);
     }
     &__item{
-        cursor: pointer;
-
         overflow: hidden;
 
         width: calc(50% - rem(10));
@@ -77,6 +75,14 @@
 
             z-index: -3;
         }
+        &-title{
+            text-decoration: none;
+            color: var(--white);
+
+            @include hover{
+                opacity: .8;
+            }
+        }
         &-tags{
             padding-top: rem(32);
 
@@ -86,9 +92,15 @@
             flex-wrap: wrap;
         }
         &-tag{
+            text-decoration: none;
             font-weight: 600;
             @include fluid-text(14, 14);
             line-height: 129%;
+            color: var(--white);
+
+            @include hover{
+                opacity: .8;
+            }
         }
         &-wrapper{
             overflow: hidden;

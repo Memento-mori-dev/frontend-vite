@@ -1,0 +1,16 @@
+@use '../helpers' as *;
+
+.page{
+    margin-top: rem(24);
+    margin-bottom: rem(120);
+
+    &__title{
+        margin-top: 24px;
+    }
+
+    &__description{
+        margin-top: rem(40);
+
+        max-width: rem(1025);
+    }
+}

@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.breadcrumbs{
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+
+    & a{
+        text-decoration: none;
+        color: var(--black);
+
+        @include hover{
+            color: var(--blue-03);
+        }
+    }
+
+    & p{
+        color: var(--grey-b9);
+    }
+
+    & li{
+        display: flex;
+        align-items: center;
+        
+        &:not(:first-child){
+            &::before{
+                content: '—';
+                padding-left: rem(8);
+                padding-right: rem(8);
+            }
+        }
+
+        &:last-child{
+            &::before{
+                color: var(--grey-b9);
+            }
+        }
+    }
+}

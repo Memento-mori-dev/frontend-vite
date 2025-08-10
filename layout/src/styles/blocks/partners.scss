@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.partners{
+    &__item{
+        margin-top: rem(60);
+
+        &:not(:first-child){
+            margin-top: rem(100);
+        }
+    }
+
+    &__title{}
+    &__content{
+        margin-top: rem(32);
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20);
+    }
+}

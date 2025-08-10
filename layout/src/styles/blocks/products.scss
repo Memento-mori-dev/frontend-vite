@@ -57,7 +57,7 @@
         gap: rem(20);
     }
     &__item{
-        cursor: pointer;
+        text-decoration: none;
 
         width: calc(33% - rem(13.33));
         min-height: rem(361);
@@ -77,7 +77,9 @@
             right: rem(20);
         }
 
-        &-title{}
+        &-title{
+            color: var(--black);
+        }
         &-sub-title{
             padding-top: rem(12);
 

@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.reviews{
+
+    &__block{
+        &:first-child{
+            margin-top: rem(60);
+        }
+
+        &:not(:first-child){
+            margin-top: rem(100);
+        }
+    }
+
+    &__content{
+        margin-top: rem(32);
+    }
+}
