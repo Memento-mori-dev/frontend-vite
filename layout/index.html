@@ -14,9 +14,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
   </head>
   <body>
-    <header class="header">
+    <header class="header element">
       <div class="container header__container">
         <div class="header__left">
           <a href="/" class="header__logo">
@@ -70,7 +72,7 @@
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
-            <h1 class="hero__title">
+            <h1 class="hero__title title">
               Цифровые решения <span>для</span> управления производством и <span>промышленной</span> безопасностью
             </h1>
 
@@ -91,7 +93,88 @@
             </div>
           </div>
 
-          <img src="./assets/images/hero.webp" alt="Люди смотрят на графики" class="hero__img">
+          <div class="hero__img">
+            <img src="./assets/images/hero.png" alt="Люди смотрят на графики">
+
+            <div class="hero__chess">
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+              <div class="hero__chess-item"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1149,5 +1232,46 @@
     
     <script type="module" src="/src/main.js"></script>
 
+    <script>
+      let grid = [7,10], //[rows, columns]
+      tl = gsap.timeline({repeat: -1, repeatDelay: 0.5});
+
+      //one stagger call does all the animation:
+      tl.to(".hero__chess-item", {
+          duration: 1,
+          opacity: 0,
+          yoyo: true, 
+          repeat: 1, 
+          ease: "power1.inOut",
+          stagger: {
+              amount: 1.5, 
+              grid: grid, 
+              axis: null, 
+              from: "random",
+          }
+      });
+    </script>
+
+
+    <script>
+  const title = document.querySelector(".title");
+  const chars = title.textContent.split("");
+  title.innerHTML = chars.map(c => `<span class="char">${c}</span>`).join("");
+  
+  gsap.from(".char", {
+    duration: 0.5,
+    opacity: 0,
+    y: 30,
+    stagger: 0.03,
+    ease: "back.out"
+  });
+
+  gsap.from(".element", {
+  duration: 0.8,
+  opacity: 0,
+  filter: "blur(20px)",
+  ease: "power2.in"
+});
+    </script>
   </body>
 </html>
