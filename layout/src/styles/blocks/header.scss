@@ -41,4 +41,48 @@
     }
 
     &__right{}
+
+    &--next{
+        padding-top: rem(20);
+        padding-bottom: rem(15);
+
+        & .header__container{
+            align-items: center;
+        }
+
+        & .btn-a-menu{
+            color: var(--grey-6d);
+
+            @include hover{
+                color: var(--blue-03);
+            }
+        }
+
+        & .btn-header{
+            padding: 0;
+
+            &::after,
+            &::before{
+                background: none;
+            }
+
+            color: var(--grey-6d);
+
+            & svg{
+                transition: var(--transition-all);
+
+                & *{
+                    fill: var(--grey-6d);
+                }
+            }
+
+            @include hover{
+                color: var(--blue-03);
+
+                & svg *{
+                    fill: var(--blue-03);
+                }
+            }
+        }
+    }
 }
