@@ -20,7 +20,7 @@
           <div class="footer__about">
             <p class="footer__about-text">Big Drum Family Барабанная школа для детей и взрослых</p>
             <div class="footer__about-link">
-              <a href="https://drumfamily.ru/politika">Cогласие обработки персональных данных</a>
+              <a href="/politics/">Cогласие обработки персональных данных</a>
             </div>
           </div>
           <div class="footer__images">
@@ -39,7 +39,7 @@
             </p>
           </div>
 
-          <form action="send.php" method="POST" class="modal__block-form">
+          <form action="<?=get_template_directory_uri()?>/form/send.php" method="POST" class="modal__block-form">
             <div class="modal__block-item">
               <input type="text" placeholder="Введите ваше имя" name="name" class="modal__block-input">
             </div>
@@ -68,7 +68,7 @@
                 нажимая на кнопку, вы соглашаетесь с
               </p>
               <p class="modal__block-about-text">
-                <a href="https://drumfamily.ru/politika">политикой обработки персональных</a>
+                <a href="/politics/">политикой обработки персональных</a>
               </p>
             </div>
           </div>

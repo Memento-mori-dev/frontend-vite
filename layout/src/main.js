@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (oldMsg) oldMsg.remove();
 
         try {
-          const response = await fetch('send.php', {
+          formData.append('city', form.dataset.jsCity);
+          const response = await fetch('https://drumfamily.ru/wp-content/themes/drum/form/send.php', {
             method: 'POST',
             body: formData
           });
@@ -43,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
           msg.style.color = response.ok ? 'green' : 'red';
           msg.textContent = response.ok ? 'Заявка успешно отправлена!' : ('Ошибка: ' + text);
           form.appendChild(msg);
-          if (response.ok) form.reset();
+          if (response.ok) {
+            form.reset();
+            window.location.href = "https://drumfamily.ru/thank/";
+          };
         } catch (err) {
           let msg = document.createElement('div');
           msg.className = 'form-msg';
@@ -64,11 +68,14 @@ function gsapAnimation() {
   let width = window.innerWidth;
 
       document.querySelectorAll(".parent-w").forEach((parent) => {
-      const scrollContainer = parent.querySelector(".scroll-container-w");
-      const children = scrollContainer.querySelectorAll(".child-w");
+        const scrollContainer = document.querySelector(".parent-w").querySelector(".scroll-container-w");
+        const children = scrollContainer.querySelectorAll(".child-w");
 
-      // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
-      const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
+        const widthEnd = children[0].offsetWidth * children.length + (40 * 3) - scrollContainer.offsetWidth;
+
+        // Вычисляем ширину прокрутки (общая ширина контейнера минус ширина родителя)
+        const scrollWidth = scrollContainer.scrollWidth - parent.offsetWidth;
+
 
       // Анимация появления родительского контейнера
       gsap.fromTo(
@@ -94,12 +101,12 @@ function gsapAnimation() {
       if (width >= 1400.98) {
         // Горизонтальная прокрутка (ваш исходный код)
         gsap.to(scrollContainer, {
-          x: -scrollWidth, // Прокручиваем влево на ширину контента
+          x: -widthEnd, // Прокручиваем влево на ширину контента
           ease: "none", // Без смягчения, чтобы анимация была линейной
           scrollTrigger: {
             trigger: parent, // Триггер — родительский блок
-            start: "top +=20%", // Начало горизонтальной прокрутки: верх родителя прижат к верху окна
-            end: () => `+=${scrollWidth}`, // Конец: зависит от ширины прокрутки
+            start: "top top", // Начало горизонтальной прокрутки: верх родителя прижат к верху окна
+            end: () => `+=${widthEnd}`, // Конец: зависит от ширины прокрутки
             pin: true, // Фиксируем родительский блок
             scrub: 0.5, // Плавная синхронизация (0.5 для легкой инерции)
             invalidateOnRefresh: true, // Пересчитываем при ресайзе

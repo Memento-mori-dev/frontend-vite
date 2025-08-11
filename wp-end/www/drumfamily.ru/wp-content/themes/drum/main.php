@@ -18,16 +18,17 @@ get_header();
     $remainedACF = get_field('remained', $indexACF);
     $questionsACF = get_field('questions', $indexACF);
 
-    // $mapACF = get_field('map', $indexACF);
-    // $teachersACF = get_field('teachers', $indexACF);
-    // $concertACF = get_field('concert', $indexACF);
+    $mapACF = get_field('map', $indexACF);
+    $concertACF = get_field('concert', $indexACF);
     // $watchACF = get_field('watch', $indexACF);
+    // $teachersACF = get_field('teachers', $indexACF);
 
     $watchACF = get_acf_field_lang('watch', $current_lang_slug, $indexACF);
     $teachersACF = get_acf_field_lang('teachers', $current_lang_slug, $indexACF);
-    $concertACF = get_acf_field_lang('concert', $current_lang_slug, $indexACF);
-    $mapACF = get_acf_field_lang('map', $current_lang_slug, $indexACF);
     $langMainACF = get_acf_field_lang('sub-cities', $current_lang_slug, $indexACF);
+    // $concertACF = get_acf_field_lang('concert', $current_lang_slug, $indexACF);
+    $mapLangACF = get_acf_field_lang('map', $current_lang_slug, $indexACF);
+
 
     // echo '<pre>';
     // print_r(empty(get_acf_field_lang('hero', $current_lang_slug, $indexACF)));
@@ -45,9 +46,9 @@ get_header();
       <div class="hero__container container">
         <div class="hero__content">
           <div class="hero__title">
-            <p class="h1 text-up complex-text">
+            <h1 class="h1 text-up complex-text">
               <?=$heroACF['title'];?> <span class="hero__title-add"><?=$heroACF['sub_title'];?></span>
-            </p>
+            </h1>
           </div>
 
           <div class="hero__button">
@@ -74,7 +75,7 @@ get_header();
 
         <div class="hero__banner">
           <div class="banner">
-            <img src="<?=$heroACF['images']['url'];?>" alt="<?=$heroACF['images']['alt'];?>">
+            <img src="<?=mainUrl($heroACF['images']['url']);?>" alt="<?=$heroACF['images']['alt'];?>">
           </div>
         </div>
       </div>
@@ -82,9 +83,9 @@ get_header();
 
     <section class="section" id="школа">
       <div class="container">
-        <p class="section__title h2 text-up why-us__title opacity-bottom">
+        <h2 class="section__title h2 text-up why-us__title opacity-bottom">
           <?=$whyACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__content">
           <div class="why-us">
@@ -93,7 +94,7 @@ get_header();
               <div class="why-us__item <?=($key % 2 == 0) ? "opacity-left" : "why-us__item--reverse opacity-right"?>">
                 <div class="why-us__item-content">
                   <p class="why-us__item-number">0<?=$key+1;?></p>
-                  <p class="why-us__item-title"><?=$value['title'];?></p>
+                  <h3 class="why-us__item-title"><?=$value['title'];?></h3>
                   <p class="why-us__item-text">
                     <?=$value['text'];?>
                   </p>
@@ -101,7 +102,7 @@ get_header();
 
                 <div class="why-us__item-banner">
                   <div class="banner banner--reverse">
-                    <img src="<?=$value['images']['url'];?>" alt="<?=$value['images']['alt'];?>">
+                    <img src="<?=mainUrl($value['images']['url']);?>" alt="<?=$value['images']['alt'];?>">
                   </div>
                 </div>
               </div>
@@ -112,11 +113,12 @@ get_header();
       </div>
     </section>
 
+    <? if($watchACF['title']):?>
     <section class="section" id="где">
       <div class="container">
-        <p class="section__title h2 text-up watch__title opacity-bottom ">
+        <h2 class="section__title h2 text-up watch__title opacity-bottom ">
           <?=$watchACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__sub opacity-bottom">
           <div class="section__sub-item">
@@ -146,7 +148,7 @@ get_header();
 
         <div class="watch__video opacity-bottom">
           <button class="button button--play button--blue pulse" data-js-video-url="<?=$watchACF['video']['file']['url'];?>">
-            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
+            <img src="<?=mainUrl(get_template_directory_uri())?>/assets/svg/play.svg" alt="">
           </button>
 
           <div class="watch__video-content">
@@ -169,7 +171,7 @@ get_header();
                     <div class="swiper-slide">
                       <div class="watch__block <?=($image['b']) ? "watch__block--big" : "watch__block--small"?>">
                         <div class="banner banner--reverse">
-                          <img src="<?=$image['img']['url'];?>" alt="<?=$image['img']['url'];?>">
+                          <img src="<?=mainUrl($image['img']['url']);?>" alt="<?=$image['img']['url'];?>">
                         </div>
                       </div>
                     </div>
@@ -207,12 +209,13 @@ get_header();
         </div>
       </div>
     </section>
+    <? endif;?>
 
     <section class="section" id="урок">
       <div class="container">
-        <p class="section__title h2 text-up opacity-bottom">
+        <h2 class="section__title h2 text-up opacity-bottom">
           <?=$lessonACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__sub opacity-bottom">
           <ul class="section__sub-list">
@@ -232,7 +235,7 @@ get_header();
               <? foreach ($lessonACF['card'] as $key => $value): ?>
                 <div class="lesson__content-item child-w">
                   <p class="lesson__content-number">0<?=$key+1;?></p>
-                  <p class="lesson__content-title"><?=$value['title'];?></p>
+                  <h3 class="lesson__content-title"><?=$value['title'];?></h3>
                   <p class="lesson__content-text"><?=$value['text'];?></p>
                 </div>
               <? endforeach; ?>
@@ -262,7 +265,7 @@ get_header();
         <div class="whom">
           <div class="whom__header parent">
             <div class="whom__title sticky-child">
-              <p class="h2 text-up"><?=$whomACF['title'];?></p>
+              <h2 class="h2 text-up"><?=$whomACF['title'];?></h2>
             </div>
           </div>
 
@@ -271,13 +274,13 @@ get_header();
               <div class="whom__cards-item">
                 <div class="whom__cards-banner">
                   <div class="banner banner--reverse">
-                    <img src="<?=$value['images']['url'];?>" alt="">
+                    <img src="<?=mainUrl($value['images']['url']);?>" alt="">
                   </div>
                 </div>
                 <div class="whom__cards-content">
-                  <p class="whom__cards-title">
+                  <h3 class="whom__cards-title">
                     <?=$value['title'];?>
-                  </p>
+                  </h3>
                   <p class="whom__cards-text">
                     <?=$value['text'];?>
                   </p>
@@ -289,11 +292,12 @@ get_header();
       </div>
     </section>
 
+    <? if($teachersACF['sub_title']):?>
     <section class="section swiper-section" id="преподаватели">
       <div class="container">
-        <p class="section__title h2 text-up teachers-title">
+        <h2 class="section__title h2 text-up teachers-title">
           <?=$teachersACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__sub">
           <p class="section__sub-text">
@@ -319,7 +323,7 @@ get_header();
                       </div>
 
                       <div class="banner banner--reverse">
-                        <img src="<?=$value['images']['url'];?>" alt="">
+                        <img src="<?=mainUrl($value['images']['url']);?>" alt="">
                       </div>
                     </div>
 
@@ -358,13 +362,14 @@ get_header();
         </div>
       </div>
     </section>
+    <? endif;?>
 
     <section class="section swiper-section" id="отзывы">
       <div class="container">
 
-        <p class="section__title h2 text-up">
+        <h2 class="section__title h2 text-up">
           <?=$remainedACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__content">
           <div class="remained swiper-remained">
@@ -375,16 +380,16 @@ get_header();
                     <? if($value['video']):?>
                       <div class="remained__item-img video">
                         <div class="video__wrapper">
-                          <button class="button button--play button--blue pulse" data-js-video-url="<?=$value['video']['url'];?>">
-                            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
+                          <button class="button button--play button--blue pulse" data-js-video-url="<?=mainUrl($value['video']['url']);?>">
+                            <img src="<?=mainUrl(get_template_directory_uri())?>/assets/svg/play.svg" alt="">
                           </button>
                         </div>
 
-                        <img src="<?=$value['images']['url'];?>" alt="">
+                        <img src="<?=mainUrl($value['images']['url']);?>" alt="">
                       </div>
                     <? else: ?>
                       <div class="remained__item-img">
-                        <img src="<?=$value['images']['url'];?>" alt="">
+                        <img src="<?=mainUrl($value['images']['url']);?>" alt="">
                       </div>
                     <? endif; ?>
                   </div>
@@ -419,11 +424,12 @@ get_header();
       </div>
     </section>
 
+    <? if($concertACF['title']):?>
     <section class="section swiper-section" id="">
       <div class="container">
-        <p class="section__title h2 text-up concert-title">
+        <h2 class="section__title h2 text-up concert-title">
           <?=$concertACF['title'];?>
-        </p>
+        </h2>
 
         <div class="section__sub">
           <p class="section__sub-text section__sub-text--center section-text-phone">
@@ -433,7 +439,7 @@ get_header();
 
         <div class="concert__video watch__video">
           <button class="button button--play button--blue pulse" data-js-video-url="<?=$concertACF['video']['file']['url'];?>">
-            <img src="<?=get_template_directory_uri()?>/svg/play.svg" alt="">
+            <img src="<?=mainUrl(get_template_directory_uri())?>/assets/svg/play.svg" alt="">
           </button>
 
           <div class="watch__video-content">
@@ -455,15 +461,15 @@ get_header();
               <? foreach ($concertACF['item'] as $key => $value): ?>
                 <div class="swiper-slide">
                   <div class="concert__item concert__item--big">
-                    <img src="<?=$value['big']['url'];?>" alt="">
+                    <img src="<?=mainUrl($value['big']['url']);?>" alt="">
                   </div>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="concert__item concert__item--small">
-                    <img src="<?=$value['small_2']['url'];?>" alt="">
+                    <img src="<?=mainUrl($value['small_2']['url']);?>" alt="">
 
-                    <img src="<?=$value['small_3']['url'];?>" alt="">
+                    <img src="<?=mainUrl($value['small_3']['url']);?>" alt="">
                   </div>
                 </div>
               <? endforeach; ?>
@@ -496,20 +502,21 @@ get_header();
         </div>
       </div>
     </section>
+    <? endif;?>
 
     <section class="section" id="вопросы">
       <div class="container">
         <div class="questions">
           <div class="questions__header parent">
             <div class="questions__title sticky-child">
-              <p class="h2 text-up"><?=$questionsACF['title'];?></span>
+              <h2 class="h2 text-up"><?=$questionsACF['title'];?></span>
             </div>
           </div>
 
           <div class="questions__cards">
               <? foreach ($questionsACF['item'] as $key => $value): ?>
                 <div class="questions__cards-item">
-                  <p class="questions__cards-title"><?=$value['title'];?></p>
+                  <h3 class="questions__cards-title"><?=$value['title'];?></h3>
                   <div class="questions__cards-content">
                     <p class="questions__cards-text"><?=$value['text'];?></p>
                   </div>
@@ -543,18 +550,18 @@ get_header();
 
           <div class="billboard__img">
             <div class="banner banner--reverse banner--white">
-              <img src="<?=get_template_directory_uri()?>/images/dsds.webp" alt="Человек показывает лайк">
+              <img src="<?=mainUrl(get_template_directory_uri())?>/assets/images/dsds.webp" alt="Человек показывает лайк">
             </div>
           </div>
 
-          <form action="send.php" method="POST" class="billboard__form form" data-js-crm>
+          <form action="send.php" method="POST" class="billboard__form form" data-js-crm data-js-city="<?=$langMainACF['sity-sub'];?>">
             <label class="input__new">
               <input type="text" class="input__new-input" placeholder="Например, Иван" name="name">
               <span class="input__new-name">Введите ваше имя</span>
             </label>
 
             <label class="input__new">
-              <input type="text" class="input__new-input" placeholder="+7 (___) ___-____" name="phone" data-js-phone>
+              <input type="text" class="input__new-input" placeholder="+7 (___) ___-____" name="phone" data-js-phone minlength="10">
               <span class="input__new-name">Введите свой телефон</span>
             </label>
 
@@ -582,6 +589,8 @@ get_header();
       </div>
     </section>
 
+
+
     <section class="section opacity-bottom" id="">
       <div class="container">
         <p class="section__title h2 text-up">
@@ -603,20 +612,22 @@ get_header();
                   </div>
                   <div class="map__address-buttons">
                     <? foreach ($mapACF['social'] as $key => $value): ?>
-                      <div class="map__address-buttons-item">
-                        <a href="<?=$value['link'];?>" class="button button-social">
-                          <img src="<?=$value['images']['url'];?>" alt="">
-                        </a>
-                      </div>
+                      <?if($value['link'] != 'https://www.google.com/' and $value['link'] != ''):?>
+                        <div class="map__address-buttons-item">
+                          <a href="<?=$value['link'];?>" class="button button-social">
+                            <img src="<?=$value['images']['url'];?>" alt="">
+                          </a>
+                        </div>
+                      <?endif;?>
                     <? endforeach; ?>
                   </div>
                   <div class="map__address-item">
                     <p class="map__address-name">Приходите в гости</p>
-                    <p class="map__address-text"><?=$mapACF['addresses'];?></p>
+                    <p class="map__address-text"><?=($mapLangACF['addresses']) ? $mapLangACF['addresses'] : $langMainACF['address'];?></p>
                   </div>
                   <div class="map__address-item">
                     <p class="map__address-name">График работы</p>
-                    <p class="map__address-text"><?=$mapACF['text'];?></p>
+                    <p class="map__address-text"><?=($mapLangACF['text']) ? $mapLangACF['text'] : $mapACF['text'];?></p>
                   </div>
                   <div class="map__address-item">
                     <button class="button button--78 button--blue" data-js-modal-open="1">
@@ -640,12 +651,13 @@ get_header();
       </div>
     </section>
 
+    <?if(get_the_content()):?>
     <section class="section">
       <div class="container">
         <div class="seo">
           <div class="seo__wrapper">
             <div class="seo__block">
-              <p class="footer__about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo minus quibusdam! Doloremque, blanditiis at sapiente quas harum itaque odit libero reiciendis impedit optio, nihil accusantium quae, quidem fuga illum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consectetur provident aut molestias aspernatur! Deserunt necessitatibus maxime magnam itaque saepe et expedita mollitia. Molestiae unde assumenda nulla ab officia incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere possimus minus perferendis, doloribus nesciunt doloremque mollitia soluta magnam. Fuga maiores quam delectus corporis quia reiciendis, modi architecto incidunt earum a?</p>
+              <p class="footer__about-text"><?=get_the_content();?></p>
             </div>
           </div>
           <button class="seo__active button">
@@ -654,7 +666,8 @@ get_header();
         </div>
       </div>
     </section>
+    <? endif;?>
+
   </main>
-<?php get_footer();?>
 
 <? get_footer();?>

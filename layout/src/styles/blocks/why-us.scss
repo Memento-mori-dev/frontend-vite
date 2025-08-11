@@ -65,6 +65,7 @@
             line-height: 109%;
             letter-spacing: 0.01em;
             color: var(--white-e6);
+            text-transform: none;
         }
         &-text{
             @include fluid-text(20, 14);

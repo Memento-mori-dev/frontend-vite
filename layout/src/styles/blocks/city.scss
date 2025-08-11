@@ -3,9 +3,12 @@
 .city{
     &-modal{
         width: rem(1001);
+        max-height: rem(628);
     }
 
     &__content{
+        overflow: auto;
+
         margin-top: rem(50);
 
         width: 100%;
@@ -32,11 +35,37 @@
                 filter: blur(50px);
             }
         }
+
+        &::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+        background: var(--black-38);
+        border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+        background: var(--blue);
+        border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+        background: var(--blue);
+        }
+
+        /* Стилизация для Firefox */
+        & * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--blue) var(--black-38);
+        }
+
     }
 
     @include tablet{
         &-modal{
             width: 100%;
+            max-height: 70vh;
         }
         &__content{
             & .button{

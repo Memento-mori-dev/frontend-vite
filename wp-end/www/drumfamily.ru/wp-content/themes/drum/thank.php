@@ -52,11 +52,13 @@ get_header();
 
             <ul class="hero__social">
                 <? foreach ($socialACF as $key => $value): ?>
+                    <?if($value['url'] != 'https://www.google.com/' and $value['url'] != ''):?>
                     <li>
                         <a href="<?=$value['url'];?>" class="button--blue">
                             <?=$value['svg'];?>
                         </a>
                     </li>
+                    <?endif;?>
                 <? endforeach; ?>
             </ul>
 

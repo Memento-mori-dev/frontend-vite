@@ -1,7 +1,12 @@
 <?
     $indexACF = 9;
+    // $indexACF = (get_page_by_path( 'about' ) == 0) ? 9 : get_page_by_path( 'about' );
     $mainACF = get_field('основа', $indexACF);
     $mainCityArr = wp_get_nav_menu_items('city');
+
+    $current_lang_slug  = pll_current_language( 'slug' );
+
+    $langMainACF = get_acf_field_lang('sub-cities', $current_lang_slug, $indexACF);
 ?>
         <footer class="footer opacity-bottom">
             <div class="container">
@@ -54,7 +59,7 @@
           </p>
         </div>
 
-        <form action="send.php" method="POST" class="modal__block-form" data-js-crm>
+        <form action="<?=get_template_directory_uri()?>/form/send.php" method="POST" class="modal__block-form" data-js-crm data-js-city="<?=$langMainACF['sity-sub'];?>">
           <div class="modal__block-item">
             <label class="input__new">
               <input type="text" class="input__new-input" placeholder=" " name="name" >
@@ -64,7 +69,7 @@
 
           <div class="modal__block-item">
             <label class="input__new">
-              <input type="text" class="input__new-input" placeholder=" " name="phone" data-js-phone>
+              <input type="text" class="input__new-input" placeholder=" " name="phone" data-js-phone minlength="10">
               <span class="input__new-name">Введите ваш номер телефона</span>
             </label>
           </div>
@@ -115,8 +120,8 @@
         <div class="city__content">
 
           <? foreach ($mainCityArr as $key => $value): ?>
-            <a href="<?=$value->url;?>" class="button button--78 button--blue">
-              <?=$value->post_title;?>
+            <a href="<?=$value->url;?>" class="button button--78 <?=(isSameDomain(getCurrentUrl(), $value->url)) ? 'button--blue' : '' ;?>">
+              <?=$value->title;?>
             </a>
           <? endforeach; ?>
 

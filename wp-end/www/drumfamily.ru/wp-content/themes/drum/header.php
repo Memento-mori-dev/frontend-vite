@@ -19,7 +19,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="<?=get_template_directory_uri()?>/assets/logo-DNESwDZ_.svg" />
+    <link rel="icon" type="image/svg+xml" href="<?=get_template_directory_uri()?>/assets/main/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="description" content="Научим играть на барабанах в <?=$langMainACF['sity-sub'];?>! Обучение для детей и взрослых, индивидуальные занятия, опытные преподаватели в барабанной школе Drum Family">
@@ -52,14 +52,14 @@
 
             // Создание карты
             var myMap = new ymaps.Map("map", {
-                center: [<?=$mapACF['coordinates']?>], // Координаты центра (Москва)
+                center: [<?=$langMainACF['coordinates']?>], // Координаты центра (Москва)
                 zoom: 20,
                 controls: [] // Отключение всех элементов управления
             });
 
             // Создание кастомной метки
             var myPlacemark = new ymaps.Placemark(
-                [<?=$mapACF['coordinates']?>], // Координаты метки
+                [<?=$langMainACF['coordinates']?>], // Координаты метки
                 {
                     hintContent: 'Моя метка', // Всплывающая подсказка
                     balloonContent: '<strong>Школа</strong>' // Содержимое балуна
@@ -67,7 +67,7 @@
                 {
                     // Опции.
                     iconLayout: 'default#image',
-                    iconImageHref: '<?=get_template_directory_uri()?>/svg/map.svg',
+                    iconImageHref: '<?=get_template_directory_uri()?>/assets/svg/map.svg',
                     iconImageSize: iconImageSize,
                     iconImageOffset: iconImageOffset,
                 }
@@ -101,7 +101,7 @@
             <div class="header__container container">
                 <div class="header__start">
                 <a href="/" class="header__logo">
-                    <img src="<?=get_template_directory_uri()?>/assets/logo-DNESwDZ_.svg" alt="Логотип" width="53" height="49">
+                    <img src="<?=get_template_directory_uri()?>/assets/main/logo.svg" alt="Логотип" width="53" height="49">
                 </a>
 
                 <p class="header__text">
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="header__call">
-                <a href="tel:<?=$langMainACF['phone']['link'];?>" class="header__call-link" data-da=".header__menu-call,1023.98,1"><?=$langMainACF['phone']['title'];?></a>
+                    <a href="tel:<?=$langMainACF['phone']['link'];?>" class="header__call-link" data-da=".header__menu-call,1023.98,1"><?=$langMainACF['phone']['title'];?></a>
                 </div>
 
                 <div class="header__form">
