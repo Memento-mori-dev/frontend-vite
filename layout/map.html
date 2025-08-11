@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Карта с кастомной иконкой и без контролов</title>
+    <meta charset="utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=546c478b-6222-445a-82eb-c3c6431f396f&lang=ru_RU" type="text/javascript"></script>
+    <style>
+      #map {
+        width: 600px; 
+        height: 400px; 
+      }
+    </style>
+    <script>
+      ymaps.ready(init);
+
+      function init() {
+        var map = new ymaps.Map("map", {
+          center: [55.733842, 37.588144],
+          zoom: 10,
+          controls: [] // Убираем все стандартные контролы
+        });
+
+        // Создаём метку с кастомной иконкой
+        var placemark = new ymaps.Placemark(
+          [55.733842, 37.588144],
+          {},
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // ссылка на свою иконку
+            iconImageSize: [40, 40], // размер иконки
+            iconImageOffset: [-20, -40] // смещение иконки, чтобы "точка" была по координате
+          }
+        );
+
+        map.geoObjects.add(placemark);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Карта с кастомной иконкой и без контролов</title>
+    <meta charset="utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=546c478b-6222-445a-82eb-c3c6431f396f&lang=ru_RU" type="text/javascript"></script>
+    <style>
+      #map {
+        width: 600px; 
+        height: 400px; 
+      }
+    </style>
+    <script>
+      ymaps.ready(init);
+
+      function init() {
+        var map = new ymaps.Map("map", {
+          center: [55.733842, 37.588144],
+          zoom: 10,
+          controls: [] // Убираем все стандартные контролы
+        });
+
+        // Создаём метку с кастомной иконкой
+        var placemark = new ymaps.Placemark(
+          [55.733842, 37.588144],
+          {},
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // ссылка на свою иконку
+            iconImageSize: [40, 40], // размер иконки
+            iconImageOffset: [-20, -40] // смещение иконки, чтобы "точка" была по координате
+          }
+        );
+
+        map.geoObjects.add(placemark);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

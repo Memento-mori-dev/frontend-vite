@@ -1,0 +1,143 @@
+@use '../helpers' as *;
+
+.contacts{
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+    &__map{
+        width: 50.80%;
+        aspect-ratio: 1 / 0.6380;
+    }
+    &__address{
+        padding-left: rem(60);
+
+        font-style: normal;
+
+        &-item{
+            margin-top: rem(40);
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+
+        & li{
+            &:not(:first-child){
+                margin-top: rem(32);
+            }
+
+            display: flex;
+            align-items: center;
+
+            & span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        & a{
+            text-decoration: none;
+            color: var(--grey-6d);
+
+            transition: var(--transition-all);
+
+            @include hover{
+                color: var(--blue-03);
+            }
+        }
+
+        &-item{
+            &--main{
+                & span{
+                    padding-right: rem(12);
+                }
+            }
+
+            &--map{
+                & span{
+                    padding-right: rem(8);
+                }
+            }
+        }
+    }
+
+    &__btn{
+        display: flex;
+
+        & .btn{
+            &:not(:first-child){
+                margin-left: rem(16);
+            }
+        }
+    }
+
+    &__departments{
+        margin-top: rem(24);
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20);
+
+        &-item{
+            width: calc(50% - rem(10));
+
+            padding: rem(40);
+
+            border: var(--border);
+        }
+        &-job{
+            color: var(--grey-6d);
+        }
+        &-title{
+            margin-top: rem(8);
+
+            & span{
+                color: var(--blue-03);
+            }
+        }
+        &-list{
+            margin-top: rem(24);
+
+            list-style-type: none;
+
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 125%;
+            color: var(--grey-6d);
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(20) rem(40);
+
+            & li{
+                display: flex;
+                align-items: center;
+
+                & span{
+                    padding-right: rem(8);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            & a{
+                color: var(--grey-6d);
+                text-decoration: none;
+
+                transition: var(--transition-all);
+
+                @include hover{
+                    color: var(--blue-03);
+                }
+            }
+        }
+    }
+}
