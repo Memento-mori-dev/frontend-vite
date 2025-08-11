@@ -1,8 +1,6 @@
 @use '../helpers' as *;
 
 .reviews{
-    margin-top: rem(40);
-
     &__content{
         display: flex;
         flex-wrap: wrap;
