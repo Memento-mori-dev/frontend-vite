@@ -52,6 +52,10 @@
             @include hover{
                 color: var(--blue-03);
             }
+
+            &.is-active{
+                color: var(--black);
+            }
         }
 
         & .btn-header{

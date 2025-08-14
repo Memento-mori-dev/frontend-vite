@@ -76,6 +76,12 @@
         @include hover{
             color: var(--white);
         }
+
+        &.is-active{
+            background-color: var(--blue-dc);
+            color: var(--black);
+            pointer-events: none;
+        }
     }
 
     &-header{
