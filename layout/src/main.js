@@ -1,8 +1,11 @@
 import { useDynamicAdapt } from './script/dynamicAdapt';
 import { scrollToTop } from './script/function';
 import dynamicPros from './script/dynamicPros';
+import menu from './script/menu';
 
 useDynamicAdapt();
+
+const menuSite = new menu();
 
 // input mask
 Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelectorAll('[data-js-phone]'));
@@ -105,3 +108,21 @@ if (document.querySelector('.products__content')) {
 if (document.querySelector('.industries__content')) {
     new dynamicPros('.industries__content', '.industries__item', '', '.industries__item-wrapper', '.industries__item-tags');
 }
+
+
+// menu
+
+// const menuTimeline = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+
+// menuTimeline.from(".menu__blue", {
+//     y: -1000,
+//     duration: 1.5
+// });
+
+// menuTimeline.from(".menu__content", {
+//     y: -1000,
+//     duration: 1.5
+// }, "-=1.4");
+
+// menuTimeline.play();
+// // menuTimeline.reverse();

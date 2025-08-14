@@ -14,210 +14,230 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script> -->
+
   </head>
   <body>
     <header class="header header--next">
-      <div class="container header__container">
-        <div class="header__left">
-          <a href="/" class="header__logo">
-            <img src="./assets/svg/logo-dark.svg" alt="ДиЭй Групп" width="149" height="36">
-          </a>
+        <div class="container header__container">
+            <div class="header__left">
+            <a href="/" class="header__logo">
+                <img src="./assets/svg/logo-dark.svg" alt="ДиЭй Групп" width="149" height="36">
+            </a>
 
-          <nav class="header__menu">
-            <ul class="header__list">
-              <li>
-                <a href="#" class="btn btn-a-menu is-active" data-js-menu-item="направления">Направления</a>
-              </li>
+            <nav class="header__menu">
+                <ul class="header__list">
+                <li>
+                    <a href="#" class="btn btn-a-menu">Направления</a>
+                </li>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Решения для отраслей</a>
-              </li>
+                <li>
+                    <a href="#" class="btn btn-a-menu">Решения для отраслей</a>
+                </li>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Продукты</a>
-              </li>
+                <li>
+                    <a href="#" class="btn btn-a-menu">Продукты</a>
+                </li>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Компания</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="header__right">
-          <a href="tel:+73822338848" class="btn btn-header">
-            <span class="icon">
-              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.834486 5.84493C2.43463 9.32875 5.27731 12.09 8.80615 13.5883L9.37282 13.8408C10.0003 14.1202 10.7064 14.1692 11.3665 13.9791C12.0266 13.789 12.5984 13.372 12.9812 12.8016L13.722 11.6983C13.8379 11.5252 13.8848 11.3151 13.8535 11.1091C13.8222 10.9032 13.7149 10.7165 13.5528 10.5858L11.0428 8.56076C10.9554 8.49029 10.8547 8.4382 10.7466 8.40764C10.6386 8.37708 10.5255 8.36867 10.4141 8.38291C10.3027 8.39715 10.1953 8.43376 10.0985 8.49053C10.0016 8.5473 9.91719 8.62306 9.85032 8.71326L9.07365 9.76076C7.07999 8.77613 5.46626 7.1621 4.48199 5.16826L5.52865 4.3916C5.61886 4.32473 5.69462 4.24032 5.75139 4.14345C5.80816 4.04657 5.84476 3.93922 5.859 3.82784C5.87325 3.71646 5.86484 3.60335 5.83427 3.49531C5.80371 3.38726 5.75163 3.28651 5.68115 3.19909L3.65615 0.689095C3.5254 0.526973 3.33868 0.41969 3.13277 0.388379C2.92686 0.357068 2.71668 0.404 2.54365 0.519929L1.43282 1.26493C0.858986 1.64974 0.440394 2.22577 0.251612 2.8904C0.0628305 3.55503 0.116119 4.26509 0.401985 4.8941L0.834486 5.84493Z" fill="white"></path>
-              </svg>
-            </span>
-
-            +7 (3822) 33-88-48
-          </a>
-        </div>
-      </div>
-
-      <menu class="menu">
-        <div class="menu__content">
-            <div class="container">
-                <nav class="menu__header">
-                    <div class="menu__header-item menu__secrecy" data-js-menu-item="">
-                        <p class="menu__title h2">Направления</p>
-
-                        <ul class="menu__list">
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        АСУ ТП 
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                    <p class="menu__list-description text-small">
-                                        Автоматизированные Системы Управления
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        МФСБ
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                    <p class="menu__list-description text-small">
-                                        Многофункциональные Системы Безопасности
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        Диспетчеризация
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                    <p class="menu__list-description text-small">
-                                        Системы Диспетчеризации: АСДУ, ЕСДУ, ДАС
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="menu__header-item menu__secrecy" data-js-menu-item="">
-                        <p class="menu__title h2">Решения для отраслей</p>
-
-                        <ul class="menu__list">
-                            <li>
-                                <a href="#" class="menu__link text-normal">Горнодобывающая</a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="menu__link text-normal">Нефть и газ</a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="menu__link text-normal">Гражданские объекты</a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="menu__link text-normal">Аграрный комплекс</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="menu__header-item menu__secrecy" data-js-menu-item="">
-                        <p class="menu__title h2">Продукты</p>
-
-                        <ul class="menu__list">
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        МФСБ DAGROUP
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        WP ANALYST
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <p class="menu__list-title h3">
-                                        ЦИПС
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
-                <div class="menu__footer">
-                    <div class="menu__additional menu__secrecy" data-js-menu-item="">
-                        <p class="menu__additional-title menu__title h2">Компания</p>
-
-                        <nav class="menu__additional-content">
-                            <ul>
-                                <li><a href="#" class="menu__link">История, миссия, сертификаты</a></li>
-                                <li><a href="#" class="menu__link">Успешные проекты</a></li>
-                                <li><a href="#" class="menu__link">Партнёры</a></li>
-                                <li><a href="#" class="menu__link">Отзывы</a></li>
-                                <li><a href="#" class="menu__link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <address class="menu__address"> 
-                        <div class="menu__address-item">
-                            <p class="menu__address-title">Телефон</p>
-                            <a href="tel:" class="menu__address-link menu__link">+7 (3822) 33 88 48</a>
-                        </div>
-
-                        <div class="menu__address-item">
-                            <p class="menu__address-title">E-mail</p>
-                            <a href="malto:" class="menu__address-link menu__link">info@dagroup-tsk.com</a>
-                        </div>
-
-                        <div class="menu__address-item">
-                            <p class="menu__address-title">Адрес</p>
-                            <a href="tel:" class="menu__address-link menu__link">г. Томск, пр.Фрунзе, 117А, помещение 4005</a>
-                        </div>
-                    </address>
-                </div>
+                <li>
+                    <a href="#" class="btn btn-a-menu">Компания</a>
+                </li>
+                </ul>
+            </nav>
             </div>
+
+            <div class="header__right">
+            <a href="tel:+73822338848" class="btn btn-header">
+                <span class="icon">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.834486 5.84493C2.43463 9.32875 5.27731 12.09 8.80615 13.5883L9.37282 13.8408C10.0003 14.1202 10.7064 14.1692 11.3665 13.9791C12.0266 13.789 12.5984 13.372 12.9812 12.8016L13.722 11.6983C13.8379 11.5252 13.8848 11.3151 13.8535 11.1091C13.8222 10.9032 13.7149 10.7165 13.5528 10.5858L11.0428 8.56076C10.9554 8.49029 10.8547 8.4382 10.7466 8.40764C10.6386 8.37708 10.5255 8.36867 10.4141 8.38291C10.3027 8.39715 10.1953 8.43376 10.0985 8.49053C10.0016 8.5473 9.91719 8.62306 9.85032 8.71326L9.07365 9.76076C7.07999 8.77613 5.46626 7.1621 4.48199 5.16826L5.52865 4.3916C5.61886 4.32473 5.69462 4.24032 5.75139 4.14345C5.80816 4.04657 5.84476 3.93922 5.859 3.82784C5.87325 3.71646 5.86484 3.60335 5.83427 3.49531C5.80371 3.38726 5.75163 3.28651 5.68115 3.19909L3.65615 0.689095C3.5254 0.526973 3.33868 0.41969 3.13277 0.388379C2.92686 0.357068 2.71668 0.404 2.54365 0.519929L1.43282 1.26493C0.858986 1.64974 0.440394 2.22577 0.251612 2.8904C0.0628305 3.55503 0.116119 4.26509 0.401985 4.8941L0.834486 5.84493Z" fill="white"></path>
+                </svg>
+                </span>
+
+                +7 (3822) 33-88-48
+            </a>
+            </div>
+
+            <button class="btn btn-a-menu menu-close">
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.52148" y="2.0498" width="13.3333" height="0.666667" transform="rotate(45 2.52148 2.0498)" fill="#6D7384" />
+                        <rect x="2.99219" y="1.78516" width="13.3333" height="2" transform="rotate(45 2.99219 1.78516)" fill="#6D7384" />
+                        <rect x="1.57422" y="11.1064" width="13.3333" height="2" transform="rotate(-45 1.57422 11.1064)" fill="#6D7384" />
+                    </svg>
+                </span>
+
+                Закрыть
+            </button>
         </div>
-      </menu>
+
+        <menu class="menu">
+            <div class="menu__content">
+                <div class="container menu__container">
+                    <nav class="menu__header">
+                        <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+                            <p class="menu__title h2">Направления</p>
+
+                            <ul class="menu__list">
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            АСУ ТП 
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                        <p class="menu__list-description text-small">
+                                            Автоматизированные Системы Управления
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            МФСБ
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                        <p class="menu__list-description text-small">
+                                            Многофункциональные Системы Безопасности
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            Диспетчеризация
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                        <p class="menu__list-description text-small">
+                                            Системы Диспетчеризации: АСДУ, ЕСДУ, ДАС
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+                            <p class="menu__title h2">Решения для отраслей</p>
+
+                            <ul class="menu__list">
+                                <li>
+                                    <a href="#" class="menu__link text-normal">Горнодобывающая</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="menu__link text-normal">Нефть и газ</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="menu__link text-normal">Гражданские объекты</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="menu__link text-normal">Аграрный комплекс</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+                            <p class="menu__title h2">Продукты</p>
+
+                            <ul class="menu__list">
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            МФСБ DAGROUP
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            WP ANALYST
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <p class="menu__list-title h3">
+                                            ЦИПС
+                                            <span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="#B9C9D9" />
+                                                </svg>
+                                            </span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="menu__footer">
+                        <div class="menu__additional is-secrecy-menu" data-js-menu-item>
+                            <p class="menu__additional-title menu__title h2">Компания</p>
+
+                            <nav class="menu__additional-content">
+                                <ul>
+                                    <li><a href="#" class="menu__link">История, миссия, сертификаты</a></li>
+                                    <li><a href="#" class="menu__link">Успешные проекты</a></li>
+                                    <li><a href="#" class="menu__link">Партнёры</a></li>
+                                    <li><a href="#" class="menu__link">Отзывы</a></li>
+                                    <li><a href="#" class="menu__link">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <address class="menu__address"> 
+                            <div class="menu__address-item">
+                                <p class="menu__address-title">Телефон</p>
+                                <a href="tel:" class="menu__address-link menu__link">+7 (3822) 33 88 48</a>
+                            </div>
+
+                            <div class="menu__address-item">
+                                <p class="menu__address-title">E-mail</p>
+                                <a href="malto:" class="menu__address-link menu__link">info@dagroup-tsk.com</a>
+                            </div>
+
+                            <div class="menu__address-item">
+                                <p class="menu__address-title">Адрес</p>
+                                <a href="tel:" class="menu__address-link menu__link">г. Томск, пр.Фрунзе, 117А, помещение 4005</a>
+                            </div>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="menu__grey"></div>
+            </div>
+
+            <div class="menu__blue"></div>
+        </menu>
     </header>
 
     <main>
@@ -589,6 +609,17 @@
     </footer>
     
     <script type="module" src="/src/main.js"></script>
+
+    <script>
+        // gsap.registerPlugin(ScrollSmoother);
+
+        // ScrollSmoother.create({
+        //     wrapper: "html",
+        //     content: "body",
+        //     smooth: 1.2, // скорость плавности
+        //     effects: true // если будут эффекты при скролле
+        // });
+    </script>
 
   </body>
 </html>

@@ -72,6 +72,9 @@
         color: var(--grey-b9);
 
         transition: var(--transition-all);
+        & *{
+            transition: var(--transition-all);
+        }
 
         @include hover{
             color: var(--white);
