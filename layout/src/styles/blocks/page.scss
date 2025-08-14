@@ -23,4 +23,11 @@
     &__next{
         margin-top: rem(40);
     }
+
+    &__btn{
+        margin-top: rem(20);
+
+        display: flex;
+        justify-content: center;
+    }
 }

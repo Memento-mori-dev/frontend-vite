@@ -45,6 +45,16 @@
 
                 color: var(--grey-6d);
             }
+            &-logo{
+                margin-left: auto;
+
+                max-width: rem(120);
+                max-height: rem(42);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         &-name{
@@ -90,5 +100,13 @@
         }
     }
 
-    &__btn{}
+    &__page{
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(20);
+
+        & .projects__item{
+            width: calc(50% - rem(10));
+        }
+    }
 }
