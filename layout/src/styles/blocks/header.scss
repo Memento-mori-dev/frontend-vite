@@ -25,7 +25,7 @@
         }
     }
     &__menu{
-        margin-left: rem(60);
+        margin-left: rem(40);
     }
     &__list{
         list-style-type: none;
@@ -33,19 +33,15 @@
         display: flex;
         align-items: center;
 
-        & li{
-            &:not(:first-child){
-                margin-left: rem(40);
-            }
+        & a{
+            display: block;
+            padding: rem(28) rem(20);
         }
     }
 
     &__right{}
 
     &--next{
-        padding-top: rem(20);
-        padding-bottom: rem(15);
-
         & .header__container{
             align-items: center;
         }
