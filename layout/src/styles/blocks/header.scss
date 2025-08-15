@@ -1,10 +1,9 @@
 @use '../helpers' as *;
 
 .header{
-    z-index: 10000;
-
-    position: fixed;
+    position: absolute;
     top: 0;
+
     width: 100%;
 
     &__container{
@@ -17,13 +16,19 @@
 
     &__left{
         display: flex;
-        align-items: center;
+        align-items: end;
     }
     &__logo{
+        padding-bottom: rem(12);
+
         display: block;
         & img{
             width: 149px;
             height: 36px;
+
+            &:nth-child(2){
+                display: none;
+            }
         }
 
         transition: var(--transition-all);
@@ -43,14 +48,35 @@
 
         & a{
             display: block;
-            padding: rem(28) rem(20);
+            padding: rem(35) rem(20) rem(21) rem(20);
         }
     }
 
     &__right{}
 
     &--next{
+        z-index: 10000;
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+
         background-color: var(--grey-eb);
+
+        & .header__left{
+            align-items: center;
+        }
+
+        & .header__logo{
+            padding-bottom: 0;
+        }
+
+
+        & .header__list{
+            & a{
+                padding: rem(28) rem(20);
+            }
+        }
 
         & .header__container{
             align-items: center;
@@ -80,6 +106,57 @@
                 background: none;
             }
 
+            color: var(--grey-6d);
+
+            & svg{
+                transition: var(--transition-all);
+
+                & *{
+                    fill: var(--grey-6d);
+                }
+            }
+
+            @include hover{
+                color: var(--blue-03);
+
+                & svg *{
+                    fill: var(--blue-03);
+                }
+            }
+        }
+    }
+
+    &--open{
+        background-color: var(--grey-eb);
+
+        & .header__logo{
+            & img{
+                &:first-child{
+                    display: none;
+                }
+                &:last-child{
+                    display: block;
+                }
+            }
+        }
+
+        & .btn-a-menu{
+            color: var(--grey-6d);
+
+            @include hover{
+                color: var(--blue-03);
+
+                & svg *{
+                    fill: var(--blue-03);
+                }
+            }
+
+            &.is-active{
+                color: var(--black);
+            }
+        }
+
+        & .btn-header{
             color: var(--grey-6d);
 
             & svg{

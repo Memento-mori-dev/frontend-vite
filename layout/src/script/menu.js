@@ -5,6 +5,7 @@ export default class menu {
     }
 
     elementClasses = {
+        header: '.header',
         nav: '.header__list',
         btn: '.btn',
         menu: '.menu',
@@ -12,9 +13,13 @@ export default class menu {
         item: '[data-js-menu-item]',
         blue: '.menu__blue',
         close: '.menu-close',
+
+        headerNext: 'header--next',
+        headerOpen: 'header--open',
     }
 
     constructor() {
+        this.header = document.querySelector(this.elementClasses.header);
         this.nav = document.querySelector(this.elementClasses.nav);
         this.btns = this.nav.querySelectorAll(this.elementClasses.btn);
 
@@ -56,6 +61,12 @@ export default class menu {
 
         this.animation.play();
         this.readyClose();
+        
+        if (!this.menu.classList.contains(this.stateClasses.isActive)) {
+            this.checkIndex();
+        }
+
+        this.menu.classList.add(this.stateClasses.isActive);
     }
 
     close(){
@@ -74,6 +85,9 @@ export default class menu {
         });
 
         this.shadowClose();
+        this.checkIndex();
+
+        this.menu.classList.remove(this.stateClasses.isActive);
     }
 
     actionOpen(){
@@ -104,16 +118,39 @@ export default class menu {
         });
 
         this.items[index].classList.remove(this.stateClasses.isSecrecy);
-        this.btns[index].classList.add(this.stateClasses.isActive);
+
+        if (this.menu.classList.contains(this.stateClasses.isActive)) {
+            this.btns[index].classList.add(this.stateClasses.isActive);
+        }else{
+            setTimeout(() => {
+                this.btns[index].classList.add(this.stateClasses.isActive);
+            }, 400);
+        }
     }
 
     readyClose(){
-        this.closeBtn.classList.add(this.stateClasses.isActive);
+        setTimeout(() => {
+            this.closeBtn.classList.add(this.stateClasses.isActive);
+        }, 400);
     }
     
     shadowClose(){
         setTimeout(() => {
             this.closeBtn.classList.remove(this.stateClasses.isActive);
         }, 1000);
+    }
+
+    checkIndex(){
+        if (!this.header.classList.contains(this.elementClasses.headerNext)) {
+            if (!this.header.classList.contains(this.elementClasses.headerOpen)) {
+                setTimeout(() => {
+                    this.header.classList.add(this.elementClasses.headerOpen);
+                }, 400);
+            }else{
+                setTimeout(() => {
+                    this.header.classList.remove(this.elementClasses.headerOpen);
+                }, 1000);
+            }
+        }
     }
 }

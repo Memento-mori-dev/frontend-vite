@@ -183,7 +183,7 @@
         top: 0;
         right: 0;
 
-        width: rem(170);
+        width: rem(240);
 
         padding: rem(28) rem(20);
 
@@ -205,6 +205,10 @@
             opacity: 1;
             pointer-events: auto;
             background-color: var(--grey-eb);
+
+            @include hover{
+                color: var(--blue-03);
+            }
         }
     }
 }

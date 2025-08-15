@@ -1,1330 +1,1598 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ДиЭйГрупп</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
-    <link rel="stylesheet" href="./src/styles/main.scss">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ДиЭйГрупп</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="./src/styles/main.scss">
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
 
-  </head>
-  <body>
-    <header class="header element">
-      <div class="container header__container">
-        <div class="header__left">
-          <a href="/" class="header__logo">
-            <img src="./assets/svg/logo.svg" alt="ДиЭй Групп" width="149" height="36">
-          </a>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script> -->
 
-          <nav class="header__menu">
-            <ul class="header__list">
-              <li>
-                <a href="#" class="btn btn-a-menu">Направления</a>
-              </li>
+</head>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Решения для отраслей</a>
-              </li>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__left">
+        <a href="/" class="header__logo">
+          <img src="./assets/svg/logo.svg" alt="ДиЭй Групп" width="149" height="36">
+          <img src="./assets/svg/logo-dark.svg" alt="ДиЭй Групп" width="149" height="36">
+        </a>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Продукты</a>
-              </li>
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li>
+              <a href="#" class="btn btn-a-menu">Направления</a>
+            </li>
 
-              <li>
-                <a href="#" class="btn btn-a-menu">Компания</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+            <li>
+              <a href="#" class="btn btn-a-menu">Решения для отраслей</a>
+            </li>
 
-        <div class="header__right">
-          <a href="tel:+73822338848" class="btn btn-header">
-            <span class="icon">
-              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.834486 5.84493C2.43463 9.32875 5.27731 12.09 8.80615 13.5883L9.37282 13.8408C10.0003 14.1202 10.7064 14.1692 11.3665 13.9791C12.0266 13.789 12.5984 13.372 12.9812 12.8016L13.722 11.6983C13.8379 11.5252 13.8848 11.3151 13.8535 11.1091C13.8222 10.9032 13.7149 10.7165 13.5528 10.5858L11.0428 8.56076C10.9554 8.49029 10.8547 8.4382 10.7466 8.40764C10.6386 8.37708 10.5255 8.36867 10.4141 8.38291C10.3027 8.39715 10.1953 8.43376 10.0985 8.49053C10.0016 8.5473 9.91719 8.62306 9.85032 8.71326L9.07365 9.76076C7.07999 8.77613 5.46626 7.1621 4.48199 5.16826L5.52865 4.3916C5.61886 4.32473 5.69462 4.24032 5.75139 4.14345C5.80816 4.04657 5.84476 3.93922 5.859 3.82784C5.87325 3.71646 5.86484 3.60335 5.83427 3.49531C5.80371 3.38726 5.75163 3.28651 5.68115 3.19909L3.65615 0.689095C3.5254 0.526973 3.33868 0.41969 3.13277 0.388379C2.92686 0.357068 2.71668 0.404 2.54365 0.519929L1.43282 1.26493C0.858986 1.64974 0.440394 2.22577 0.251612 2.8904C0.0628305 3.55503 0.116119 4.26509 0.401985 4.8941L0.834486 5.84493Z" fill="white"></path>
-              </svg>
-            </span>
+            <li>
+              <a href="#" class="btn btn-a-menu">Продукты</a>
+            </li>
 
-            +7 (3822) 33-88-48
-          </a>
-        </div>
+            <li>
+              <a href="#" class="btn btn-a-menu">Компания</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero__container">
-          <div class="hero__content">
-            <h1 class="hero__title title">
-              Цифровые решения <span>для</span> управления производством и <span>промышленной</span> безопасностью
-            </h1>
+      <div class="header__right">
+        <a href="tel:+73822338848" class="btn btn-header">
+          <span class="icon">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.834486 5.84493C2.43463 9.32875 5.27731 12.09 8.80615 13.5883L9.37282 13.8408C10.0003 14.1202 10.7064 14.1692 11.3665 13.9791C12.0266 13.789 12.5984 13.372 12.9812 12.8016L13.722 11.6983C13.8379 11.5252 13.8848 11.3151 13.8535 11.1091C13.8222 10.9032 13.7149 10.7165 13.5528 10.5858L11.0428 8.56076C10.9554 8.49029 10.8547 8.4382 10.7466 8.40764C10.6386 8.37708 10.5255 8.36867 10.4141 8.38291C10.3027 8.39715 10.1953 8.43376 10.0985 8.49053C10.0016 8.5473 9.91719 8.62306 9.85032 8.71326L9.07365 9.76076C7.07999 8.77613 5.46626 7.1621 4.48199 5.16826L5.52865 4.3916C5.61886 4.32473 5.69462 4.24032 5.75139 4.14345C5.80816 4.04657 5.84476 3.93922 5.859 3.82784C5.87325 3.71646 5.86484 3.60335 5.83427 3.49531C5.80371 3.38726 5.75163 3.28651 5.68115 3.19909L3.65615 0.689095C3.5254 0.526973 3.33868 0.41969 3.13277 0.388379C2.92686 0.357068 2.71668 0.404 2.54365 0.519929L1.43282 1.26493C0.858986 1.64974 0.440394 2.22577 0.251612 2.8904C0.0628305 3.55503 0.116119 4.26509 0.401985 4.8941L0.834486 5.84493Z"
+                fill="white"></path>
+            </svg>
+          </span>
 
-            <p class="hero__sub-title">
-              Создаём и внедряем системы автоматизации, диспетчеризации и аналитики под ключ
-            </p>
+          +7 (3822) 33-88-48
+        </a>
+      </div>
 
-            <div class="hero__btn">
-              <a href="" class="btn btn-hero">
-                <span>Обсудить проект</span>
+      <button class="btn btn-a-menu menu-close">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.52148" y="2.0498" width="13.3333" height="0.666667" transform="rotate(45 2.52148 2.0498)"
+              fill="#6D7384" />
+            <rect x="2.99219" y="1.78516" width="13.3333" height="2" transform="rotate(45 2.99219 1.78516)"
+              fill="#6D7384" />
+            <rect x="1.57422" y="11.1064" width="13.3333" height="2" transform="rotate(-45 1.57422 11.1064)"
+              fill="#6D7384" />
+          </svg>
+        </span>
 
-                <span class="icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z" fill="white"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
+        Закрыть
+      </button>
+    </div>
 
-          <div class="hero__img">
-            <img src="./assets/images/hero.png" alt="Люди смотрят на графики">
+    <menu class="menu">
+      <div class="menu__content">
+        <div class="container menu__container">
+          <nav class="menu__header">
+            <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+              <p class="menu__title h2">Направления</p>
 
-            <div class="hero__chess">
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
+              <ul class="menu__list">
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      АСУ ТП
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="menu__list-description text-small">
+                      Автоматизированные Системы Управления
+                    </p>
+                  </a>
+                </li>
 
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      МФСБ
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="menu__list-description text-small">
+                      Многофункциональные Системы Безопасности
+                    </p>
+                  </a>
+                </li>
 
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-              <div class="hero__chess-item hero__chess-item--none"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="pros">
-        <div class="container pros__container">
-          <div class="pros__header">
-            <div class="pros__header-item">
-              <h2 class="h1 pros__title">
-                Системная <span class="text-blue">интеграция</span>
-              </h2>
-
-              <p class="h3 pros__text">
-                <span>Объединяем</span> оборудование, платформы и интерфейсы <span>в единую</span> работающую <span>систему</span>. 
-              </p>
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      Диспетчеризация
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="menu__list-description text-small">
+                      Системы Диспетчеризации: АСДУ, ЕСДУ, ДАС
+                    </p>
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div class="pros__header-item">
-              <h2 class="h1 pros__title">
-                Импорто<span class="text-blue">замещение</span>
-              </h2>
+            <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+              <p class="menu__title h2">Решения для отраслей</p>
 
-              <p class="h3 pros__text">
-                Помогаем <span>предприятиям</span> отказаться от <span>устаревших или недоступных</span> иностранных решений. 
-              </p>
+              <ul class="menu__list">
+                <li>
+                  <a href="#" class="menu__link text-normal">Горнодобывающая</a>
+                </li>
+
+                <li>
+                  <a href="#" class="menu__link text-normal">Нефть и газ</a>
+                </li>
+
+                <li>
+                  <a href="#" class="menu__link text-normal">Гражданские объекты</a>
+                </li>
+
+                <li>
+                  <a href="#" class="menu__link text-normal">Аграрный комплекс</a>
+                </li>
+              </ul>
             </div>
-          </div>
 
-          <div class="pros__items">
-            <div class="pros__item pros__item--two">
-              <a href="#" class="pros__link">
-                <div class="pros__link-arrow">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                  </svg>
-                </div>
+            <div class="menu__header-item is-secrecy-menu" data-js-menu-item>
+              <p class="menu__title h2">Продукты</p>
 
-                <h3 class="h1 pros__title">
-                  АСУ ТП
-                </h3>
+              <ul class="menu__list">
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      МФСБ DAGROUP
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                  </a>
+                </li>
 
-                <p class="h3 pros__text">
-                  Обеспечиваем точность, стабильность и безопасность процессов.
-                </p>
-                
-                <div class="pros__wrapper">
-                  <p class="text-small pros__description">
-                    Проектируем и внедряем АСУ ТП для контроля, управления и оптимизации производственных линий и оборудования.
-                  </p>
-                </div>
-              </a>
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      WP ANALYST
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                  </a>
+                </li>
 
-              <a href="#" class="pros__link">
-                <div class="pros__link-arrow">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                  </svg>
-                </div>
-
-                <h3 class="h1 pros__title">
-                  МФСБ
-                </h3>
-
-                <p class="h3 pros__text">
-                  Обеспечиваем безопасность на предпериятии.
-                </p>
-
-                <div class="pros__wrapper">
-                  <p class="text-small pros__description">
-                    Создаём системы, которые предупреждают инциденты, упрощают контроль и обеспечивают безопасность предприятия.
-                  </p>
-                </div>
-                
-              </a>
+                <li>
+                  <a href="#">
+                    <p class="menu__list-title h3">
+                      ЦИПС
+                      <span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                            fill="#B9C9D9" />
+                        </svg>
+                      </span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="pros__item pros__item--single">
-              <a href="#" class="pros__link pros__link--single">
-                <div class="pros__link-arrow">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                  </svg>
-                </div>
+          </nav>
 
-                <h3 class="h1 pros__title text-up">
-                  Диспетчеризация
-                </h3>
+          <div class="menu__footer">
+            <div class="menu__additional is-secrecy-menu" data-js-menu-item>
+              <p class="menu__additional-title menu__title h2">Компания</p>
 
-                <p class="h3 pros__text">
-                  Снижаем потери, ускоряем реакцию, объединяем данные в единую платформу.
-                </p>
-
-                <div class="pros__wrapper">
-                  <p class="text-small pros__description">
-                    Реализуем системы диспетчеризации и централизованного управления.
-                  </p>
-                </div>
-              </a>
+              <nav class="menu__additional-content">
+                <ul>
+                  <li><a href="#" class="menu__link">История, миссия, сертификаты</a></li>
+                  <li><a href="#" class="menu__link">Успешные проекты</a></li>
+                  <li><a href="#" class="menu__link">Партнёры</a></li>
+                  <li><a href="#" class="menu__link">Отзывы</a></li>
+                  <li><a href="#" class="menu__link">Контакты</a></li>
+                </ul>
+              </nav>
             </div>
+
+            <address class="menu__address">
+              <div class="menu__address-item">
+                <p class="menu__address-title">Телефон</p>
+                <a href="tel:" class="menu__address-link menu__link">+7 (3822) 33 88 48</a>
+              </div>
+
+              <div class="menu__address-item">
+                <p class="menu__address-title">E-mail</p>
+                <a href="malto:" class="menu__address-link menu__link">info@dagroup-tsk.com</a>
+              </div>
+
+              <div class="menu__address-item">
+                <p class="menu__address-title">Адрес</p>
+                <a href="tel:" class="menu__address-link menu__link">г. Томск, пр.Фрунзе, 117А, помещение 4005</a>
+              </div>
+            </address>
           </div>
         </div>
-      </section>
 
-      <section class="graphics">
-        <div class="container">
-          <div class="graphics__header">
-            <img src="./assets/svg/logo.svg" alt="ДаЭйГрупп" class="graphics__logo">
-
-            <h3 class="h1 graphics__practice">
-              10 лет опыта и<br> безупречной репутации
-            </h3>
-          </div>
-
-          <div class="graphics__sub-header">
-            <div class="graphics__link">
-              <a href="" class="btn btn-next">
-                <span>О компании</span>
-                <span class="icon">
-                  <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30.0005 2.99661L37.0022 9.99826L30.0005 16.9999L29.1096 16.1089L34.5915 10.627L3.95814 10.627L3.95813 9.36609L34.588 9.36609L29.1096 3.88762L30.0005 2.99661Z" fill="white"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-
-            <div class="h3 graphics__description">
-              От цифровой трансформации <span>предприятий по всей стране</span> до создания <span>своих</span> продуктов.
-            </div>
-          </div>
-
-          <div class="graphics__map">
-            <p class="h3 graphics__map-description">
-              Работаем <span>с предприятиями</span> в России и СНГ. <span>Понимаем специфику отраслей, процессы и реальные задачи производств.</span>
-            </p>
-
-            <div class="graphics__map-item" style="top: 7px; left: 216px;">
-              <p class="h3 graphics__map-item-title">
-                Санкт-Петербург
-              </p>
-
-              <div class="graphics__map-item-hover"></div>
-
-              <div class="graphics__map-item-description">
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Система</p>
-
-                  <p class="text-normal">ЦИПС</p>
-                </div>
-
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Объект</p>
-
-                  <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
-                </div>
-              </div>
-
-              <div class="graphics__map-item-icon">
-                <img src="./assets/svg/map-circle.svg" alt="icon">
-                <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
-              </div>
-
-              <div class="graphics__map-item-background"></div>
-            </div>
-
-            <div class="graphics__map-item" style="top: 151px; left: 266px;">
-              <p class="h3 graphics__map-item-title">
-                Москва
-              </p>
-
-              <div class="graphics__map-item-hover"></div>
-
-              <div class="graphics__map-item-description">
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Система</p>
-
-                  <p class="text-normal">ЦИПС</p>
-                </div>
-
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Объект</p>
-
-                  <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
-                </div>
-              </div>
-
-              <div class="graphics__map-item-icon">
-                <img src="./assets/svg/map-circle.svg" alt="icon">
-                <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
-              </div>
-
-              <div class="graphics__map-item-background"></div>
-            </div>
-
-            <div class="graphics__map-item" style="top: 271px; left: 326px;">
-              <p class="h3 graphics__map-item-title">
-                Кузбасс
-              </p>
-
-              <div class="graphics__map-item-hover"></div>
-
-              <div class="graphics__map-item-description">
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Система</p>
-
-                  <p class="text-normal">ЦИПС</p>
-                </div>
-
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Объект</p>
-
-                  <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
-                </div>
-              </div>
-
-              <div class="graphics__map-item-icon">
-                <img src="./assets/svg/map-circle.svg" alt="icon">
-                <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
-              </div>
-
-              <div class="graphics__map-item-background"></div>
-            </div>
-
-            <div class="graphics__map-item" style="top: 372px; left: 330px;">
-              <p class="h3 graphics__map-item-title">
-                Хакасия
-              </p>
-
-              <div class="graphics__map-item-hover"></div>
-
-              <div class="graphics__map-item-description">
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Система</p>
-
-                  <p class="text-normal">ЦИПС</p>
-                </div>
-
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Объект</p>
-
-                  <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
-                </div>
-              </div>
-
-              <div class="graphics__map-item-icon">
-                <img src="./assets/svg/map-circle.svg" alt="icon">
-                <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
-              </div>
-
-              <div class="graphics__map-item-background"></div>
-            </div>
-
-            <div class="graphics__map-item" style="top: 335px; left: 587px;">
-              <p class="h3 graphics__map-item-title">
-                Якутия
-              </p>
-
-              <div class="graphics__map-item-hover"></div>
-
-              <div class="graphics__map-item-description">
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Система</p>
-
-                  <p class="text-normal">ЦИПС</p>
-                </div>
-
-                <div class="graphics__map-item-element">
-                  <p class="description graphics__map-item-name">Объект</p>
-
-                  <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
-                </div>
-              </div>
-
-              <div class="graphics__map-item-icon">
-                <img src="./assets/svg/map-circle.svg" alt="icon">
-                <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
-              </div>
-
-              <div class="graphics__map-item-background"></div>
-            </div>
-
-            <img src="./assets/images/map.webp" alt="map" width="1294" height="749" class="graphics__map-img">
-          </div>
-        </div>
-      </section>
-
-      <section class="products">
-        <div class="container">
-          <div class="products__header">
-            <h2 class="h1">
-              <span>Продукты</span> собственной разработки
-            </h2>
-          </div>
-
-          <div class="products__sub-header">
-            <div class="products__sub-header-left">
-              <p class="h3 products__sub-title">Мы не просто внедряем системы </p>
-
-              <p class="h3 products__sub-title products__sub-title--next">— мы создаём их.</p>
-            </div>
-
-            <div class="text-normal products__sub-header-right">
-              Все продукты могут быть адаптированы под отраслевые стандарты, требования безопасности или особенности технологических процессов. Это даёт максимальную гибкость и управляемость.
-            </div>
-          </div>
-
-          <div class="products__content">
-            <a href="#" class="products__item">
-              <div class="products__item-arrow">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                </svg>
-              </div>
-
-              <p class="h1 products__item-title">МФСБ DAGROUP</p>
-
-              <p class="h3 products__item-sub-title">Многофункциональная система безопасности</p>
-
-              <div class="products__item-wrapper">
-                <p class="text-small products__item-text">
-                  Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски. Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
-                </p>
-              </div>
-            </a>
-
-            <a href="#" class="products__item">
-              <div class="products__item-arrow">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                </svg>
-              </div>
-
-              <p class="h1 products__item-title">ЦИПС</p>
-
-              <p class="h3 products__item-sub-title">Цифровая информационная производственная система</p>
-
-              <div class="products__item-wrapper">
-                <p class="text-small products__item-text">
-                  Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски. Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
-                </p>
-              </div>
-            </a>
-
-            <a href="#" class="products__item">
-              <div class="products__item-arrow">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z" fill="#B9C9D9" />
-                </svg>
-              </div>
-
-              <p class="h1 products__item-title">WPAnalyst</p>
-
-              <p class="h3 products__item-sub-title">Система сводной аналитики и визуализации</p>
-
-              <div class="products__item-wrapper">
-                <p class="text-small products__item-text">
-                  Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски. Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="industries">
-        <div class="container">
-          <div class="industries__header">
-            <h2 class="h1"><span>Решения</span> для разных отраслей</h2>
-
-
-            <div class="industries__description">
-              <p class="text-normal">
-                Глубоко понимаем специфику каждой отрасли 
-                и адаптируем продукты под реальные задачи предприятий.
-              </p>
-            </div>
-          </div>
-
-          <div class="industries__content">
-            <div class="industries__item">
-              <a href="#" class="h2 industries__item-title">Горнодобывающая промышленность</a>
-
-              <div class="industries__item-wrapper">
-                <div class="industries__item-tags">
-                  <a href="#" class="industries__item-tag">Шахты и рудники</a>
-                  <a href="#" class="industries__item-tag">Разрезы и карьеры</a>
-                  <a href="#" class="industries__item-tag">Обогатительные фабрики</a>
-                </div>
-              </div>
-
-              <img src="./assets/images/industries-1.webp" alt="img" class="industries__item-img">
-            </div>
-
-            <div class="industries__item">
-              <a href="#" class="h2 industries__item-title">Нефтегазовая отрасль</a>
-
-              <div class="industries__item-wrapper">
-                <div class="industries__item-tags">
-                  <a href="#" class="industries__item-tag">Скважина</a>
-                  <a href="#" class="industries__item-tag">Нефтегазопровод</a>
-                  <a href="#" class="industries__item-tag">Нефтяная платформа</a>
-                  <a href="#" class="industries__item-tag">Перерабатывающее предприятие</a>
-                </div>
-              </div>
-
-              <img src="./assets/images/industries-3.webp" alt="img" class="industries__item-img">
-            </div>
-
-            <div class="industries__item">
-              <a href="#" class="h2 industries__item-title">Агропромышленный комплекс</a>
-
-              <div class="industries__item-wrapper">
-                <div class="industries__item-tags">
-                  <a href="#" class="industries__item-tag">Фермерские хозяйства</a>
-                  <a href="#" class="industries__item-tag">Зернохранилище</a>
-                  <a href="#" class="industries__item-tag">Заводы по производству и переработки</a>
-                  <a href="#" class="industries__item-tag">Тепличные комплексы</a>
-                </div>
-              </div>
-
-              <img src="./assets/images/industries-2.webp" alt="img" class="industries__item-img">
-            </div>
-
-            <div class="industries__item">
-              <a href="#" class="h2 industries__item-title">Гражданские объекты</a>
-
-              <div class="industries__item-wrapper">
-                <div class="industries__item-tags">
-                  <a href="#" class="industries__item-tag">Аэропорты</a>
-                  <a href="#" class="industries__item-tag">Торговые / Бизнес центры</a>
-                  <a href="#" class="industries__item-tag">Жилые комплексы</a>
-                  <a href="#" class="industries__item-tag">Комунальные услуги</a>
-                </div>
-              </div>
-
-              <img src="./assets/images/industries-4.webp" alt="img" class="industries__item-img">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects">
-        <div class="container projects__container">
-          <div class="projects__header">
-            <h2 class="h1"><span>Реальные проекты.</span> Измеримые результаты.</h2>
-
-            <div class="btn-slider-wrapper">
-              <button class="btn btn-slider btn-slider--big button-slider__item--prev">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z" fill="#037DE5"></path>
-                </svg>
-              </button>
-
-              <button class="btn btn-slider btn-slider--big button-slider__item--next">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0.929688L15.0706 8.00029L8.00002 15.0709L7.10027 14.1711L12.6362 8.63523L1.89812 8.63523L1.89811 7.36189L12.6327 7.36189L7.1003 1.82947L8 0.929688Z" fill="#037DE5" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="projects__content">
-            <div class="projects-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="projects__item projects__item--black">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/nda.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="projects__item">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/projects-logo.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-                
-                <div class="swiper-slide">
-                  <div class="projects__item projects__item--black">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/nda.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="projects__item">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/projects-logo.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="projects__item projects__item--black">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/nda.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="projects__item">
-                      <div class="projects__item-address">
-                          <div class="projects__item-address-icon">
-                              <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
-                          </div>
-
-                          <p class="h3 projects__item-address-name">
-                          Поволжье
-                          </p>
-
-                          <div class="projects__item-address-logo">
-                              <img src="./assets/svg/projects-logo.svg" alt="">
-                          </div>
-                      </div>
-
-                      <p class="h2 projects__item-name">Нефтебаза</p>
-
-                      <ul class="projects__item-list">
-                          <li>
-                          <p class="text-small projects__item-list-name">Задача</p>
-
-                          <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и охранной инфраструктуры.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Решение</p>
-
-                          <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и видеонаблюдением.</p>
-                          </li>
-
-                          <li>
-                          <p class="text-small projects__item-list-name">Результат</p>
-
-                          <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение времени реагирования на 40%.</p>
-                          </li>
-                      </ul>
-
-                      <div class="projects__item-btn">
-                          <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
-                          Подробнее о проекте
-                          </a>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-
-            
-          </div>
-
-          <div class="projects__btn">
-            <a href="#" class="btn btn-main btn-main--50 btn-main--white btn--p-100">
-              Смотреть все проекты
-
-              <span class="right">
-                <svg width="36" height="18" viewBox="0 0 36 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M27.0005 2.69727L33.302 8.99875L27.0005 15.3002L26.1986 14.4983L31.1323 9.56463L3.56232 9.56463L3.56232 8.42979L31.1292 8.42979L26.1986 3.49918L27.0005 2.69727Z" fill="white"></path>
+        <div class="menu__grey"></div>
+      </div>
+
+      <div class="menu__blue"></div>
+    </menu>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title title">
+            Цифровые решения <span>для</span> управления производством и <span>промышленной</span> безопасностью
+          </h1>
+
+          <p class="hero__sub-title">
+            Создаём и внедряем системы автоматизации, диспетчеризации и аналитики под ключ
+          </p>
+
+          <div class="hero__btn">
+            <a href="" class="btn btn-hero">
+              <span>Обсудить проект</span>
+
+              <span class="icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.75 3.75L16.2492 3.75V16.2491H14.6586L14.6586 6.46297L5.16745 15.9542L4.04196 14.8287L13.53 5.34059L3.75008 5.34054L3.75 3.75Z"
+                    fill="white"></path>
                 </svg>
               </span>
             </a>
           </div>
         </div>
-      </section>
 
-      <section class="trust">
-        <div class="container">
-          <div class="trust__header">
-            <h2 class="h1"><span>Нам доверяют</span> ведущие предприятия России</h2>
+        <div class="hero__img">
+          <img src="./assets/images/hero.png" alt="Люди смотрят на графики">
+
+          <div class="hero__chess">
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
+            <div class="hero__chess-item hero__chess-item--none"></div>
           </div>
-
-          <div class="trust__companies">
-            <div class="companies-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="#" class="trust__companies-item">
-                    <div class="trust__companies-item-img">
-                      <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
-                    </div>
-
-                    <div class="trust__companies-item-link">
-                      <p class="trust__companies-item-name">
-                        ООО «ИндаСофт»
-                      </p>
-
-                      <div class="trust__companies-item-icon">
-                        <img src="./assets/svg/trust-arrow.svg" alt="arrow">
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="trust__documents">
-            <div class="trust__documents-left">
-              <button class="btn btn-slider button-slider__item--prev btn-main--dirty">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z" fill="#037DE5"></path>
-                </svg>
-              </button>
-            </div>
-            
-            <div class="documents-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="swiper-slide">
-                  <a data-fancybox data-src="./assets/images/trust-1.webp" data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
-                    <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324" height="460">
-
-                    <div class="trust__documents-item-description">
-                      <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
-                      <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="trust__documents-right button-slider__item--next">
-              <button class="btn btn-slider btn-main--dirty">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 1.34375L12.6565 7.00023L7.00002 12.6567L6.28022 11.9369L10.7089 7.50818L2.11849 7.50818L2.11849 6.48951L10.7061 6.48951L6.28024 2.06358L7 1.34375Z" fill="#037DE5" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="discuss">
-        <div class="discuss__container">
-          <div class="discuss__header">
-            <h3 class="h1">
-              Обсудим ваш проект?
-            </h3>
-
-            <p class="text-normal discuss__header-description">
-              Ответим на технические вопросы и подготовим предложение.
-            </p>
-          </div>
-
-          <form action="" class="discuss__header-form">
-            <label for="name" class="input">
-              <input type="text" id="name" name="name" placeholder="" pattern="[A-Za-zА-Яа-яЁё\s]+" />
-              <span class="">Имя</span>
-            </label>
-
-            <label for="phone" class="input">
-              <input type="text" id="phone" name="phone" placeholder="" data-js-phone minlength="10"/>
-              <span class="">Телефон</span>
-            </label>
-
-            <div class="discuss__header-form-submit">
-              <button class="btn btn-main btn-main--50 btn-main--blue" type="submit">
-                Нужна консультация
-              </button>
-            </div>
-          </form>
-
-          <div class="description discuss__header-about">
-            Нажимая на кнопку “Нужная консультация” я соглашаюсь с <a href="#">политикой конфиденциальности</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__container">
-        <button class="btn footer__up" data-js-btn-up>
-          <svg width="24" height="44" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.39289 12.0016L11.9988 1.39574L22.6046 12.0016L21.255 13.3512L12.9512 5.0474L12.9512 41.1545L11.0412 41.1545V5.05266L2.74257 13.3512L1.39289 12.0016Z" fill="white" />
-          </svg>
-        </button>
-
-        <div class="footer__content">
-          <a href="#" class="footer__logo">
-            <img src="./assets/svg/logo.svg" alt="ДиЭй Групп" width="190" height="46">
-          </a>
-
-          <nav class="footer__menu">
-            <ul class="footer__list">
-              <li>
-                <p class="text-small footer__list-name">Телефон</p>
-                <a href="tel:+73822338848" class="h4 footer__list-link">+7 (3822) 33 88 48</a>
-              </li>
-
-              <li>
-                <p class="text-small footer__list-name">E-mail</p>
-                <a href="malto:info@dagroup-tsk.com" class="h4 footer__list-link">info@dagroup-tsk.com</a>
-              </li>
-
-              <li>
-                <p class="text-small footer__list-name">Адрес</p>
-                <p class="h4 footer__list-link">г. Томск, пр.Фрунзе, 117А,<br> помещение 4005</p>
-              </li>
-
-              <li class="footer__list-btn">
-                <button class="btn btn-main btn-main--50 btn-main--footer">
-                  Заказать звонок
-                </button>
-              </li>
-            </ul>
-
-            <ul class="footer__list">
-              <li>
-                <a href="" class="h3 footer__list-page">О компании</a>
-              </li>
-
-              <li>
-                <a href="" class="h3 footer__list-page">Отзывы</a>
-              </li>
-
-              <li>
-                <a href="" class="h3 footer__list-page">Контакты</a>
-              </li>
-
-              <li>
-                <a href="" class="h3 footer__list-page">Продукты</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="footer__main">
-            <p class="h2">
-              Ди Эй Групп
-            </p>
-
-            <div class="h3 footer__main-content">
-              Преобразуем <span>промышленность.</span><br>
-              Повышаем <span>эффективность.</span><br>
-              Формируем <span>будущее.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer__about">
-          <ul class="footer__about-list text-normal text-up">
-            <li>ООО "ДИ ЭЙ ГРУПП"</li>
-            <li>ИНН: 7017388659</li>
-            <li>ОГРН: 1157017019917</li>
-          </ul>
-
-          <a href="#" class="footer__about-link">Политика конфиденциальности</a>
         </div>
       </div>
-    </footer>
-    
-    <script type="module" src="/src/main.js"></script>
+    </section>
 
-    <script>
-      let grid = [10, 9];
+    <section class="pros">
+      <div class="container pros__container">
+        <div class="pros__header">
+          <div class="pros__header-item">
+            <h2 class="h1 pros__title">
+              Системная <span class="text-blue">интеграция</span>
+            </h2>
 
-      gsap.utils.toArray(".hero__chess-item").forEach(item => {
-          gsap.to(item, {
-              duration: 1.5,
-              opacity: 1,
-              yoyo: true,
-              repeat: -1,
-              ease: "power1.inOut",
-              delay: Math.random() * 1.5 
-          });
+            <p class="h3 pros__text">
+              <span>Объединяем</span> оборудование, платформы и интерфейсы <span>в единую</span> работающую
+              <span>систему</span>.
+            </p>
+          </div>
+
+          <div class="pros__header-item">
+            <h2 class="h1 pros__title">
+              Импорто<span class="text-blue">замещение</span>
+            </h2>
+
+            <p class="h3 pros__text">
+              Помогаем <span>предприятиям</span> отказаться от <span>устаревших или недоступных</span> иностранных
+              решений.
+            </p>
+          </div>
+        </div>
+
+        <div class="pros__items">
+          <div class="pros__item pros__item--two">
+            <a href="#" class="pros__link">
+              <div class="pros__link-arrow">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                    fill="#B9C9D9" />
+                </svg>
+              </div>
+
+              <h3 class="h1 pros__title">
+                АСУ ТП
+              </h3>
+
+              <p class="h3 pros__text">
+                Обеспечиваем точность, стабильность и безопасность процессов.
+              </p>
+
+              <div class="pros__wrapper">
+                <p class="text-small pros__description">
+                  Проектируем и внедряем АСУ ТП для контроля, управления и оптимизации производственных линий и
+                  оборудования.
+                </p>
+              </div>
+            </a>
+
+            <a href="#" class="pros__link">
+              <div class="pros__link-arrow">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                    fill="#B9C9D9" />
+                </svg>
+              </div>
+
+              <h3 class="h1 pros__title">
+                МФСБ
+              </h3>
+
+              <p class="h3 pros__text">
+                Обеспечиваем безопасность на предпериятии.
+              </p>
+
+              <div class="pros__wrapper">
+                <p class="text-small pros__description">
+                  Создаём системы, которые предупреждают инциденты, упрощают контроль и обеспечивают безопасность
+                  предприятия.
+                </p>
+              </div>
+
+            </a>
+          </div>
+          <div class="pros__item pros__item--single">
+            <a href="#" class="pros__link pros__link--single">
+              <div class="pros__link-arrow">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                    fill="#B9C9D9" />
+                </svg>
+              </div>
+
+              <h3 class="h1 pros__title text-up">
+                Диспетчеризация
+              </h3>
+
+              <p class="h3 pros__text">
+                Снижаем потери, ускоряем реакцию, объединяем данные в единую платформу.
+              </p>
+
+              <div class="pros__wrapper">
+                <p class="text-small pros__description">
+                  Реализуем системы диспетчеризации и централизованного управления.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="graphics">
+      <div class="container">
+        <div class="graphics__header">
+          <img src="./assets/svg/logo.svg" alt="ДаЭйГрупп" class="graphics__logo">
+
+          <h3 class="h1 graphics__practice">
+            10 лет опыта и<br> безупречной репутации
+          </h3>
+        </div>
+
+        <div class="graphics__sub-header">
+          <div class="graphics__link">
+            <a href="" class="btn btn-next">
+              <span>О компании</span>
+              <span class="icon">
+                <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M30.0005 2.99661L37.0022 9.99826L30.0005 16.9999L29.1096 16.1089L34.5915 10.627L3.95814 10.627L3.95813 9.36609L34.588 9.36609L29.1096 3.88762L30.0005 2.99661Z"
+                    fill="white"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="h3 graphics__description">
+            От цифровой трансформации <span>предприятий по всей стране</span> до создания <span>своих</span> продуктов.
+          </div>
+        </div>
+
+        <div class="graphics__map">
+          <p class="h3 graphics__map-description">
+            Работаем <span>с предприятиями</span> в России и СНГ. <span>Понимаем специфику отраслей, процессы и реальные
+              задачи производств.</span>
+          </p>
+
+          <div class="graphics__map-item" style="top: 7px; left: 216px;">
+            <p class="h3 graphics__map-item-title">
+              Санкт-Петербург
+            </p>
+
+            <div class="graphics__map-item-hover"></div>
+
+            <div class="graphics__map-item-description">
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Система</p>
+
+                <p class="text-normal">ЦИПС</p>
+              </div>
+
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Объект</p>
+
+                <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
+              </div>
+            </div>
+
+            <div class="graphics__map-item-icon">
+              <img src="./assets/svg/map-circle.svg" alt="icon">
+              <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
+            </div>
+
+            <div class="graphics__map-item-background"></div>
+          </div>
+
+          <div class="graphics__map-item" style="top: 151px; left: 266px;">
+            <p class="h3 graphics__map-item-title">
+              Москва
+            </p>
+
+            <div class="graphics__map-item-hover"></div>
+
+            <div class="graphics__map-item-description">
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Система</p>
+
+                <p class="text-normal">ЦИПС</p>
+              </div>
+
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Объект</p>
+
+                <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
+              </div>
+            </div>
+
+            <div class="graphics__map-item-icon">
+              <img src="./assets/svg/map-circle.svg" alt="icon">
+              <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
+            </div>
+
+            <div class="graphics__map-item-background"></div>
+          </div>
+
+          <div class="graphics__map-item" style="top: 271px; left: 326px;">
+            <p class="h3 graphics__map-item-title">
+              Кузбасс
+            </p>
+
+            <div class="graphics__map-item-hover"></div>
+
+            <div class="graphics__map-item-description">
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Система</p>
+
+                <p class="text-normal">ЦИПС</p>
+              </div>
+
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Объект</p>
+
+                <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
+              </div>
+            </div>
+
+            <div class="graphics__map-item-icon">
+              <img src="./assets/svg/map-circle.svg" alt="icon">
+              <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
+            </div>
+
+            <div class="graphics__map-item-background"></div>
+          </div>
+
+          <div class="graphics__map-item" style="top: 372px; left: 330px;">
+            <p class="h3 graphics__map-item-title">
+              Хакасия
+            </p>
+
+            <div class="graphics__map-item-hover"></div>
+
+            <div class="graphics__map-item-description">
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Система</p>
+
+                <p class="text-normal">ЦИПС</p>
+              </div>
+
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Объект</p>
+
+                <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
+              </div>
+            </div>
+
+            <div class="graphics__map-item-icon">
+              <img src="./assets/svg/map-circle.svg" alt="icon">
+              <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
+            </div>
+
+            <div class="graphics__map-item-background"></div>
+          </div>
+
+          <div class="graphics__map-item" style="top: 335px; left: 587px;">
+            <p class="h3 graphics__map-item-title">
+              Якутия
+            </p>
+
+            <div class="graphics__map-item-hover"></div>
+
+            <div class="graphics__map-item-description">
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Система</p>
+
+                <p class="text-normal">ЦИПС</p>
+              </div>
+
+              <div class="graphics__map-item-element">
+                <p class="description graphics__map-item-name">Объект</p>
+
+                <p class="text-normal">Завод по производству мебели “ТУРБО”</p>
+              </div>
+            </div>
+
+            <div class="graphics__map-item-icon">
+              <img src="./assets/svg/map-circle.svg" alt="icon">
+              <img src="./assets/svg/map-line.svg" alt="icon" class="graphics__map-item-icon-line">
+            </div>
+
+            <div class="graphics__map-item-background"></div>
+          </div>
+
+          <img src="./assets/images/map.webp" alt="map" width="1294" height="749" class="graphics__map-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="products__header">
+          <h2 class="h1">
+            <span>Продукты</span> собственной разработки
+          </h2>
+        </div>
+
+        <div class="products__sub-header">
+          <div class="products__sub-header-left">
+            <p class="h3 products__sub-title">Мы не просто внедряем системы </p>
+
+            <p class="h3 products__sub-title products__sub-title--next">— мы создаём их.</p>
+          </div>
+
+          <div class="text-normal products__sub-header-right">
+            Все продукты могут быть адаптированы под отраслевые стандарты, требования безопасности или особенности
+            технологических процессов. Это даёт максимальную гибкость и управляемость.
+          </div>
+        </div>
+
+        <div class="products__content">
+          <a href="#" class="products__item">
+            <div class="products__item-arrow">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                  fill="#B9C9D9" />
+              </svg>
+            </div>
+
+            <p class="h1 products__item-title">МФСБ DAGROUP</p>
+
+            <p class="h3 products__item-sub-title">Многофункциональная система безопасности</p>
+
+            <div class="products__item-wrapper">
+              <p class="text-small products__item-text">
+                Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски.
+                Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="products__item">
+            <div class="products__item-arrow">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                  fill="#B9C9D9" />
+              </svg>
+            </div>
+
+            <p class="h1 products__item-title">ЦИПС</p>
+
+            <p class="h3 products__item-sub-title">Цифровая информационная производственная система</p>
+
+            <div class="products__item-wrapper">
+              <p class="text-small products__item-text">
+                Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски.
+                Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="products__item">
+            <div class="products__item-arrow">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 7.50391L32.4983 7.50391V32.5022H29.3172L29.3172 12.9299L10.3349 31.9122L8.08392 29.6612L27.0601 10.6851L7.50015 10.685L7.5 7.50391Z"
+                  fill="#B9C9D9" />
+              </svg>
+            </div>
+
+            <p class="h1 products__item-title">WPAnalyst</p>
+
+            <p class="h3 products__item-sub-title">Система сводной аналитики и визуализации</p>
+
+            <div class="products__item-wrapper">
+              <p class="text-small products__item-text">
+                Агрегирует данные с охранных и производственных датчиков, анализирует события, визуализирует риски.
+                Поддерживает контроль доступа, видеонаблюдение и промбезопасность.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries">
+      <div class="container">
+        <div class="industries__header">
+          <h2 class="h1"><span>Решения</span> для разных отраслей</h2>
+
+
+          <div class="industries__description">
+            <p class="text-normal">
+              Глубоко понимаем специфику каждой отрасли
+              и адаптируем продукты под реальные задачи предприятий.
+            </p>
+          </div>
+        </div>
+
+        <div class="industries__content">
+          <div class="industries__item">
+            <a href="#" class="h2 industries__item-title">Горнодобывающая промышленность</a>
+
+            <div class="industries__item-wrapper">
+              <div class="industries__item-tags">
+                <a href="#" class="industries__item-tag">Шахты и рудники</a>
+                <a href="#" class="industries__item-tag">Разрезы и карьеры</a>
+                <a href="#" class="industries__item-tag">Обогатительные фабрики</a>
+              </div>
+            </div>
+
+            <img src="./assets/images/industries-1.webp" alt="img" class="industries__item-img">
+          </div>
+
+          <div class="industries__item">
+            <a href="#" class="h2 industries__item-title">Нефтегазовая отрасль</a>
+
+            <div class="industries__item-wrapper">
+              <div class="industries__item-tags">
+                <a href="#" class="industries__item-tag">Скважина</a>
+                <a href="#" class="industries__item-tag">Нефтегазопровод</a>
+                <a href="#" class="industries__item-tag">Нефтяная платформа</a>
+                <a href="#" class="industries__item-tag">Перерабатывающее предприятие</a>
+              </div>
+            </div>
+
+            <img src="./assets/images/industries-3.webp" alt="img" class="industries__item-img">
+          </div>
+
+          <div class="industries__item">
+            <a href="#" class="h2 industries__item-title">Агропромышленный комплекс</a>
+
+            <div class="industries__item-wrapper">
+              <div class="industries__item-tags">
+                <a href="#" class="industries__item-tag">Фермерские хозяйства</a>
+                <a href="#" class="industries__item-tag">Зернохранилище</a>
+                <a href="#" class="industries__item-tag">Заводы по производству и переработки</a>
+                <a href="#" class="industries__item-tag">Тепличные комплексы</a>
+              </div>
+            </div>
+
+            <img src="./assets/images/industries-2.webp" alt="img" class="industries__item-img">
+          </div>
+
+          <div class="industries__item">
+            <a href="#" class="h2 industries__item-title">Гражданские объекты</a>
+
+            <div class="industries__item-wrapper">
+              <div class="industries__item-tags">
+                <a href="#" class="industries__item-tag">Аэропорты</a>
+                <a href="#" class="industries__item-tag">Торговые / Бизнес центры</a>
+                <a href="#" class="industries__item-tag">Жилые комплексы</a>
+                <a href="#" class="industries__item-tag">Комунальные услуги</a>
+              </div>
+            </div>
+
+            <img src="./assets/images/industries-4.webp" alt="img" class="industries__item-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container projects__container">
+        <div class="projects__header">
+          <h2 class="h1"><span>Реальные проекты.</span> Измеримые результаты.</h2>
+
+          <div class="btn-slider-wrapper">
+            <button class="btn btn-slider btn-slider--big button-slider__item--prev">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z"
+                  fill="#037DE5"></path>
+              </svg>
+            </button>
+
+            <button class="btn btn-slider btn-slider--big button-slider__item--next">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8 0.929688L15.0706 8.00029L8.00002 15.0709L7.10027 14.1711L12.6362 8.63523L1.89812 8.63523L1.89811 7.36189L12.6327 7.36189L7.1003 1.82947L8 0.929688Z"
+                  fill="#037DE5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="projects__content">
+          <div class="projects-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/nda.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/projects-logo.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/nda.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/projects-logo.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item projects__item--black">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/nda.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="projects__item">
+                  <div class="projects__item-address">
+                    <div class="projects__item-address-icon">
+                      <img src="./assets/svg/projects-pin.svg" alt="pin" width="24" height="24">
+                    </div>
+
+                    <p class="h3 projects__item-address-name">
+                      Поволжье
+                    </p>
+
+                    <div class="projects__item-address-logo">
+                      <img src="./assets/svg/projects-logo.svg" alt="">
+                    </div>
+                  </div>
+
+                  <p class="h2 projects__item-name">Нефтебаза</p>
+
+                  <ul class="projects__item-list">
+                    <li>
+                      <p class="text-small projects__item-list-name">Задача</p>
+
+                      <p class="text-normal projects__item-list-description">Централизовать контроль инженерных систем и
+                        охранной инфраструктуры.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Решение</p>
+
+                      <p class="text-normal projects__item-list-description">Внедрена система МФСД с интеграцией SCADA и
+                        видеонаблюдением.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-small projects__item-list-name">Результат</p>
+
+                      <p class="text-normal projects__item-list-description">Единое рабочее место диспетчера, сокращение
+                        времени реагирования на 40%.</p>
+                    </li>
+                  </ul>
+
+                  <div class="projects__item-btn">
+                    <a href="#" class="btn btn-main btn-main--40 btn-main--dirty">
+                      Подробнее о проекте
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="projects__btn">
+          <a href="#" class="btn btn-main btn-main--50 btn-main--white btn--p-100">
+            Смотреть все проекты
+
+            <span class="right">
+              <svg width="36" height="18" viewBox="0 0 36 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M27.0005 2.69727L33.302 8.99875L27.0005 15.3002L26.1986 14.4983L31.1323 9.56463L3.56232 9.56463L3.56232 8.42979L31.1292 8.42979L26.1986 3.49918L27.0005 2.69727Z"
+                  fill="white"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <div class="trust__header">
+          <h2 class="h1"><span>Нам доверяют</span> ведущие предприятия России</h2>
+        </div>
+
+        <div class="trust__companies">
+          <div class="companies-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="#" class="trust__companies-item">
+                  <div class="trust__companies-item-img">
+                    <img src="./assets/images/trust-log-2.webp" alt="logo" width="218" height="76">
+                  </div>
+
+                  <div class="trust__companies-item-link">
+                    <p class="trust__companies-item-name">
+                      ООО «ИндаСофт»
+                    </p>
+
+                    <div class="trust__companies-item-icon">
+                      <img src="./assets/svg/trust-arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust__documents">
+          <div class="trust__documents-left">
+            <button class="btn btn-slider button-slider__item--prev btn-main--dirty">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 1.34375L1.34352 7.00023L6.99998 12.6567L7.71978 11.9369L3.29107 7.50818L11.8815 7.50818L11.8815 6.48951L3.29388 6.48951L7.71976 2.06358L7 1.34375Z"
+                  fill="#037DE5"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="documents-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a data-fancybox data-src="./assets/images/trust-1.webp"
+                  data-caption="ООО «МПС Софт» - Благодарственное письмо" class="trust__documents-item">
+                  <img src="./assets/images/trust-1.webp" alt="doc" class="trust__documents-item-img" width="324"
+                    height="460">
+
+                  <div class="trust__documents-item-description">
+                    <p class="text-normal trust__documents-item-company">ООО «МПС Софт»</p>
+                    <p class="h3 trust__documents-item-name">Благодарственное письмо</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="trust__documents-right button-slider__item--next">
+            <button class="btn btn-slider btn-main--dirty">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 1.34375L12.6565 7.00023L7.00002 12.6567L6.28022 11.9369L10.7089 7.50818L2.11849 7.50818L2.11849 6.48951L10.7061 6.48951L6.28024 2.06358L7 1.34375Z"
+                  fill="#037DE5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discuss">
+      <div class="discuss__container">
+        <div class="discuss__header">
+          <h3 class="h1">
+            Обсудим ваш проект?
+          </h3>
+
+          <p class="text-normal discuss__header-description">
+            Ответим на технические вопросы и подготовим предложение.
+          </p>
+        </div>
+
+        <form action="" class="discuss__header-form">
+          <label for="name" class="input">
+            <input type="text" id="name" name="name" placeholder="" pattern="[A-Za-zА-Яа-яЁё\s]+" />
+            <span class="">Имя</span>
+          </label>
+
+          <label for="phone" class="input">
+            <input type="text" id="phone" name="phone" placeholder="" data-js-phone minlength="10" />
+            <span class="">Телефон</span>
+          </label>
+
+          <div class="discuss__header-form-submit">
+            <button class="btn btn-main btn-main--50 btn-main--blue" type="submit">
+              Нужна консультация
+            </button>
+          </div>
+        </form>
+
+        <div class="description discuss__header-about">
+          Нажимая на кнопку “Нужная консультация” я соглашаюсь с <a href="#">политикой конфиденциальности</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <button class="btn footer__up" data-js-btn-up>
+        <svg width="24" height="44" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.39289 12.0016L11.9988 1.39574L22.6046 12.0016L21.255 13.3512L12.9512 5.0474L12.9512 41.1545L11.0412 41.1545V5.05266L2.74257 13.3512L1.39289 12.0016Z"
+            fill="white" />
+        </svg>
+      </button>
+
+      <div class="footer__content">
+        <a href="#" class="footer__logo">
+          <img src="./assets/svg/logo.svg" alt="ДиЭй Групп" width="190" height="46">
+        </a>
+
+        <nav class="footer__menu">
+          <ul class="footer__list">
+            <li>
+              <p class="text-small footer__list-name">Телефон</p>
+              <a href="tel:+73822338848" class="h4 footer__list-link">+7 (3822) 33 88 48</a>
+            </li>
+
+            <li>
+              <p class="text-small footer__list-name">E-mail</p>
+              <a href="malto:info@dagroup-tsk.com" class="h4 footer__list-link">info@dagroup-tsk.com</a>
+            </li>
+
+            <li>
+              <p class="text-small footer__list-name">Адрес</p>
+              <p class="h4 footer__list-link">г. Томск, пр.Фрунзе, 117А,<br> помещение 4005</p>
+            </li>
+
+            <li class="footer__list-btn">
+              <button class="btn btn-main btn-main--50 btn-main--footer">
+                Заказать звонок
+              </button>
+            </li>
+          </ul>
+
+          <ul class="footer__list">
+            <li>
+              <a href="" class="h3 footer__list-page">О компании</a>
+            </li>
+
+            <li>
+              <a href="" class="h3 footer__list-page">Отзывы</a>
+            </li>
+
+            <li>
+              <a href="" class="h3 footer__list-page">Контакты</a>
+            </li>
+
+            <li>
+              <a href="" class="h3 footer__list-page">Продукты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__main">
+          <p class="h2">
+            Ди Эй Групп
+          </p>
+
+          <div class="h3 footer__main-content">
+            Преобразуем <span>промышленность.</span><br>
+            Повышаем <span>эффективность.</span><br>
+            Формируем <span>будущее.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__about">
+        <ul class="footer__about-list text-normal text-up">
+          <li>ООО "ДИ ЭЙ ГРУПП"</li>
+          <li>ИНН: 7017388659</li>
+          <li>ОГРН: 1157017019917</li>
+        </ul>
+
+        <a href="#" class="footer__about-link">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+
+  <script>
+    let grid = [10, 9];
+
+    gsap.utils.toArray(".hero__chess-item").forEach(item => {
+      gsap.to(item, {
+        duration: 1.5,
+        opacity: 1,
+        yoyo: true,
+        repeat: -1,
+        ease: "power1.inOut",
+        delay: Math.random() * 1.5
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
