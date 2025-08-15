@@ -2,10 +2,15 @@ import { useDynamicAdapt } from './script/dynamicAdapt';
 import { scrollToTop } from './script/function';
 import dynamicPros from './script/dynamicPros';
 import menu from './script/menu';
+import stopScroll from './script/stopScroll';
 
 useDynamicAdapt();
 
-const menuSite = new menu();
+const stopScrollSite = new stopScroll();
+const menuSite = new menu(stopScrollSite.action.bind(stopScrollSite));
+
+
+
 
 // input mask
 Inputmask({"mask": "+7 (999) 999-99-99"}).mask(document.querySelectorAll('[data-js-phone]'));

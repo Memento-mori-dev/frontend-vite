@@ -73,6 +73,32 @@ svg *{
     color: var(--blue-03);
 }
 
+.shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--black);
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: var(--transition-all);
+
+    &.is-active{
+        opacity: .3;
+        pointer-events: auto;
+    }
+}
+
+.is-no-scroll{
+    overflow: hidden;
+}
+
 html{
     padding-top: rem(76);
 

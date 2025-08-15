@@ -18,7 +18,7 @@ export default class menu {
         headerOpen: 'header--open',
     }
 
-    constructor() {
+    constructor(controlScroll) {
         this.header = document.querySelector(this.elementClasses.header);
         this.nav = document.querySelector(this.elementClasses.nav);
         this.btns = this.nav.querySelectorAll(this.elementClasses.btn);
@@ -32,11 +32,15 @@ export default class menu {
 
         this.animation = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
 
+        this.controlScroll = controlScroll;
+
         this.ready();
         this.setupAnimation();
 
         this.actionOpen();
         this.actionClose();
+
+        this.hoverItem();
     }
 
     setupAnimation(){
@@ -49,6 +53,15 @@ export default class menu {
             y: -800,
             duration: 1.5
         }, "-=1.4");
+        
+        this.animation.to(this.closeBtn, {
+            opacity: 1,
+            duration: 0.1,
+            ease: "power2.out",
+            onComplete: () => {
+                this.closeBtn.classList.add(this.stateClasses.isActive);
+            }
+        }, "-=1");
     }
 
     ready(){
@@ -60,10 +73,10 @@ export default class menu {
         this.switching(index);
 
         this.animation.play();
-        this.readyClose();
-        
+
         if (!this.menu.classList.contains(this.stateClasses.isActive)) {
             this.checkIndex();
+            this.controlScroll();
         }
 
         this.menu.classList.add(this.stateClasses.isActive);
@@ -84,10 +97,10 @@ export default class menu {
             }
         });
 
-        this.shadowClose();
         this.checkIndex();
 
         this.menu.classList.remove(this.stateClasses.isActive);
+        this.controlScroll();
     }
 
     actionOpen(){
@@ -107,6 +120,10 @@ export default class menu {
             if (e.srcElement.classList.contains('header') || e.srcElement.classList.contains('menu__grey')) {
                 this.close();
             }
+        }
+
+        document.querySelector('.shadow').onclick = (e) =>{
+            this.close();
         }
     }
 
@@ -133,19 +150,7 @@ export default class menu {
             }, 400);
         }
     }
-
-    readyClose(){
-        setTimeout(() => {
-            this.closeBtn.classList.add(this.stateClasses.isActive);
-        }, 400);
-    }
     
-    shadowClose(){
-        setTimeout(() => {
-            this.closeBtn.classList.remove(this.stateClasses.isActive);
-        }, 1000);
-    }
-
     checkIndex(){
         if (!this.header.classList.contains(this.elementClasses.headerNext)) {
             if (!this.header.classList.contains(this.elementClasses.headerOpen)) {
@@ -158,5 +163,26 @@ export default class menu {
                 }, 1000);
             }
         }
+    }
+
+    hoverItem(){
+        
+
+        this.items.forEach(item => {
+            const mouseoutHandler = () => {
+                item.classList.add(this.stateClasses.isSecrecy);
+                item.removeEventListener('mouseout', mouseoutHandler);
+            }
+
+            item.addEventListener('mouseover', (e) => {
+                if (item.classList.contains(this.stateClasses.isSecrecy)){
+                    item.classList.remove(this.stateClasses.isSecrecy);
+
+                    item.addEventListener('mouseout', mouseoutHandler);
+                }
+            });
+
+            
+        })
     }
 }
