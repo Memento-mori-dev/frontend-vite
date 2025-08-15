@@ -102,6 +102,12 @@ export default class menu {
         this.closeBtn.onclick = () => {
             this.close();
         }
+
+        this.header.onclick = (e) => {
+            if (e.srcElement.classList.contains('header') || e.srcElement.classList.contains('menu__grey')) {
+                this.close();
+            }
+        }
     }
 
     switching(index){

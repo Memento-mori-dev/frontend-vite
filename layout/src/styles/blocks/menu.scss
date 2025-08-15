@@ -11,8 +11,6 @@
         left: 0;
 
         width: 100%;
-        
-        padding: rem(40) 0;
     }
 
     &__title{
@@ -33,6 +31,8 @@
 
     &__container{
         position: relative;
+
+        padding: rem(40) 0;
     }
 
     &__header{
