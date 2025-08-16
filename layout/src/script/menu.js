@@ -46,7 +46,7 @@ export default class menu {
     setupAnimation(){
         this.animation.from(".menu__blue", {
             y: -800,
-            duration: 1.5
+            duration: 1.5,
         });
 
         this.animation.from(".menu__content", {
@@ -64,6 +64,23 @@ export default class menu {
         }, "-=1");
     }
 
+    lockScroll() {
+        this.scrollPositionBack = window.scrollY;
+        this.scrollPosition = this.scrollPositionBack - this.header.clientHeight;
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${this.scrollPosition}px`;
+        document.body.style.width = '100%';
+    }
+
+    unlockScroll() {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, this.scrollPositionBack || 0);
+    }
+
     ready(){
         let menuHeight = this.content.offsetHeight + 'px';
         this.blue.style.height = menuHeight;
@@ -71,6 +88,8 @@ export default class menu {
 
     open(index){
         this.switching(index);
+
+        this.lockScroll();
 
         this.animation.play();
 
@@ -83,6 +102,8 @@ export default class menu {
     }
 
     close(){
+        this.unlockScroll();
+
         this.animation.reverse();
 
         this.items.forEach(item => {
