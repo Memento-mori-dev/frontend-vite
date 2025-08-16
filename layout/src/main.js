@@ -131,3 +131,64 @@ if (document.querySelector('.industries__content')) {
 
 // menuTimeline.play();
 // // menuTimeline.reverse();
+
+// для раздных страниц
+
+// для главной
+
+if (document.querySelector('.hero')) {
+    const header = document.querySelector('.header'),
+            pros = document.querySelector('.pros'),
+            topPros = pros.offsetTop / 2;
+
+    ScrollTrigger.create({
+    start: `${topPros}px top`,
+    onEnter: () => {
+        // Сначала скрываем header вверх
+        gsap.to(header, {
+        y: -100,   // уезжает вверх
+        duration: 0.3,
+        onComplete: () => {
+            // Добавляем класс
+            header.classList.add("header--next", "header--shadow");
+            header.classList.remove("header--open");
+            gsap.fromTo(header, 
+            { y: -100 }, 
+            { y: 0, duration: 1, ease: "power2.out" }
+            );
+        }
+        });
+    },
+    onLeaveBack: () => {
+        gsap.to(header, {
+        y: -100,
+        duration: 0.3,
+        onComplete: () => {
+            header.classList.remove("header--next", "header--shadow");
+            gsap.fromTo(header, 
+            { y: -100 }, 
+            { y: 0, duration: 1, ease: "power2.out" }
+            );
+        }
+        });
+    }
+    });
+}else{
+    const header = document.querySelector('.header');
+
+    ScrollTrigger.create({
+        start: "10px top",
+        onEnter: () => header.classList.add("header--shadow"),
+        onLeaveBack: () => header.classList.remove("header--shadow")
+    });
+}
+
+
+document.querySelectorAll('a').forEach(link => {
+  if (!link.getAttribute('href') || link.getAttribute('href') === '#' || link.getAttribute('href') === '.') {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Пустая ссылка нажата, переход отменен');
+    });
+  }
+});
