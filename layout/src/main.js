@@ -3,13 +3,14 @@ import { scrollToTop } from './script/function';
 import dynamicPros from './script/dynamicPros';
 import menu from './script/menu';
 import stopScroll from './script/stopScroll';
+import Video from './script/video';
 
 useDynamicAdapt();
 
 const stopScrollSite = new stopScroll();
 const menuSite = new menu(stopScrollSite.action.bind(stopScrollSite));
 
-
+new Video();
 
 
 // input mask
@@ -53,11 +54,29 @@ if (document.querySelector('.trust__documents')) {
     })
 }
 
-if (document.querySelector('.trust__documents') || document.querySelector('.reviews')) {
+if (document.querySelector('.casetyp__slider')) {
+    const swiperCasetyp = new Swiper('.casetyp-swiper', {
+        slidesPerView: 2.19,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.casetyp__slider .swiper-button-next',
+            prevEl: '.casetyp__slider .swiper-button-prev',
+        },
+    })
+}
+
+// swiper
+
+// Fancybox
+
+if (document.querySelector('.trust__documents') || document.querySelector('.reviews') || document.querySelector('.casetyp__slider')) {
     Fancybox.bind('[data-fancybox]', {
         //
     });
 }
+
+// Fancybox
 
 if (document.querySelector('[data-js-btn-up]')) {
     const btn = document.querySelector('[data-js-btn-up]');
@@ -184,11 +203,11 @@ if (document.querySelector('.hero')) {
 }
 
 
-document.querySelectorAll('a').forEach(link => {
-  if (!link.getAttribute('href') || link.getAttribute('href') === '#' || link.getAttribute('href') === '.') {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('Пустая ссылка нажата, переход отменен');
-    });
-  }
-});
+// document.querySelectorAll('a').forEach(link => {
+//   if (!link.getAttribute('href') || link.getAttribute('href') === '#' || link.getAttribute('href') === '.') {
+//     link.addEventListener('click', function(e) {
+//       e.preventDefault();
+//       console.log('Пустая ссылка нажата, переход отменен');
+//     });
+//   }
+// });

@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .page{
-    margin-top: rem(24);
+    margin-top: rem(16);
     margin-bottom: rem(120);
 
     &__title{
@@ -14,6 +14,32 @@
 
     &__description{
         max-width: rem(1025);
+
+        &--img{
+            display: flex;
+            align-items: center;
+        }
+
+        &-img{
+            flex-shrink: 0;
+
+            margin-right: rem(100);
+
+            width: rem(190);
+            height: rem(66);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img{
+                width: 100%;
+            }
+        }
+
+        &--w-100{
+            max-width: 100%;
+        }
     }
 
     &__content{
@@ -29,5 +55,30 @@
 
         display: flex;
         justify-content: center;
+    }
+
+    &__two{
+        margin-top: rem(20);
+
+        display: flex;
+        justify-content: space-between;
+
+        &-item{
+            width: calc(50% - rem(10));
+        }
+    }
+
+    &__item{
+        margin-top: rem(120);
+    }
+
+    &__text{
+        &-title{}
+
+        &-content{
+            margin-top: rem(24);
+
+            color: var(--grey-6d);
+        }
     }
 }

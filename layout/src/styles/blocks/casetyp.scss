@@ -1,0 +1,226 @@
+@use '../helpers' as *;
+
+.casetyp{
+    &__done{
+        padding: rem(40);
+
+        display: flex;
+        justify-content: space-between;
+
+        background-color: var(--white);
+
+        &-title{}
+
+        &-content{
+            max-width: rem(793);
+
+            &-list{
+                list-style-type: none;
+
+                margin-top: rem(24);
+
+                padding-left: rem(28);
+
+                & li{
+                    &:not(:first-child){
+                        margin-top: rem(8);
+                    }
+
+                    position: relative;
+                    &::after{
+                        content: '';
+
+                        position: absolute;
+                        top: rem(9.24);
+                        left: rem(-18.22);
+
+                        @include square(rem(6));
+
+                        background-color: var(--grey-6d);
+                        border-radius: 50%;
+                    }
+                }
+
+                & span{
+                    color: var(--grey-6d);
+                }
+            }
+        }
+    }
+
+    &__actions{
+        height: 100%;
+
+        padding: rem(40);
+
+        &-content{
+            margin-top: rem(40);
+        }
+
+        &-list{
+            list-style-type: none;
+
+            & li{
+                &:not(:first-child){
+                    margin-top: rem(24);
+                }
+            }
+
+            &-title{}
+            &-text{
+                margin-top: rem(12);
+            }
+
+            &--number{
+                counter-reset: my-counter;
+
+                & li{
+                    counter-increment: my-counter;
+
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        content: counter(my-counter) ". ";
+
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 120%;
+
+                        color: var(--grey-6d);
+                    }
+                }
+
+                & .casetyp__actions-list-title{
+                    padding-left: rem(22);
+                }
+            }
+        }
+
+        &--black{
+            color: var(--white);
+            
+            position: relative;
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: var(--black);
+
+                z-index: -3;
+            }
+
+            &::before{
+                content: '';
+
+                position: absolute;
+                right: rem(40);
+                bottom: 0;
+
+                width: rem(153);
+                height: rem(130);
+
+                background-image: url(../../../assets/svg/casetyp-actions.svg);
+                opacity: .2;
+            }
+
+            & .casetyp__actions-list-text{
+                color: var(--grey-b9);  
+            }
+        }
+
+        &--light{
+            background-color: var(--blue-dc);
+
+            & .casetyp__actions-list-text{
+                color: var(--grey-6d);
+            }
+        }
+    }
+
+    &__slider{
+        overflow: hidden;
+
+        position: relative;
+
+        & .swiper-button-next,
+        & .swiper-button-prev{
+            z-index: 10;
+
+            width: auto;
+
+            &::after{
+                font-size: 0;
+            }
+        }
+
+        &-item{
+            width: 100%;
+            height: rem(320);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > img{
+                width: 100%;
+                height: 100%;
+            }
+
+            cursor: pointer;
+
+            &:hover{
+                & .increase{
+                    opacity: 1;
+                }
+            }
+        }
+
+        &::after{
+            z-index: 3;
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: rem(20);
+            height: 100%;
+
+            background: linear-gradient(90deg, rgba(235, 237, 241, 0) 0%, #ebedf1 100%);
+        }
+        &::before{
+            z-index: 3;
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: rem(20);
+            height: 100%;
+
+            background: linear-gradient(-90deg, rgba(235, 237, 241, 0) 0%, #ebedf1 100%);
+        }
+    }
+
+    &__video{
+        display: flex;
+        justify-content: center;
+
+        &-content{
+            width: rem(820);
+            height: rem(461);
+        }
+    }
+}
