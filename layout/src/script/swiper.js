@@ -34,34 +34,36 @@ arrSwiperWatch.forEach((swiper, index) => {
 
 // teachers
 
-const swiperTeachers = new Swiper('.teachers', {
-    slidesPerView: 2.72,
-    spaceBetween: 80,
-    initialSlide: 2,
-    allowTouchMove: true,
-    // Navigation arrows
-    navigation: {
-        nextEl: '.button-slider__item--next',
-        prevEl: '.button-slider__item--prev',
-    },
-    breakpoints: {
-        1: {
-            slidesPerView: 1,
+if (document.querySelector('.teachers')) {
+    const swiperTeachers = new Swiper('.teachers', {
+        slidesPerView: 2.72,
+        spaceBetween: 80,
+        initialSlide: 2,
+        allowTouchMove: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.button-slider__item--next',
+            prevEl: '.button-slider__item--prev',
         },
-        984: {
-            slidesPerView: 2,
-        },
-        1152: {
-            slidesPerView: 2.3,
-            spaceBetween: 20,
-        },
-        1400: {
-            slidesPerView: 2.72,
-            spaceBetween: 80,
-            initialSlide: 2,
+        breakpoints: {
+            1: {
+                slidesPerView: 1,
+            },
+            984: {
+                slidesPerView: 2,
+            },
+            1152: {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+            },
+            1400: {
+                slidesPerView: 2.72,
+                spaceBetween: 80,
+                initialSlide: 2,
+            }
         }
-    }
-})
+    })   
+}
 
 // remained
 const swiperRemained = new Swiper('.remained', {

@@ -301,13 +301,16 @@ function gsapAnimation() {
 
 new ControllerShow('.header', '.button--menu', '.header__menu', '.header__menu-content', '.header__menu-content a', '.header');
 
-new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
+if (document.querySelector('.teachers')) {
+  new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
+}
 
 new ControllerVideo('.button--play');
 
 new ControllerToggle('.questions__cards-item', '.questions__cards-button', '.questions__cards-content', '.questions__cards-text');
 
 new ControllerToggle('.seo', '.seo__active', '.seo__wrapper', '.seo__block');
+
 
 
 

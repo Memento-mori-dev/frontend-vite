@@ -21,16 +21,17 @@ class ControllerModal{
     }
 
     open(indexItem){
-      let openIndex = indexItem - 1;
+        let openIndex = indexItem - 1;
 
-      this.items[openIndex].classList.add(this.stateClasses.isShow)
-      this.modal.classList.add(this.stateClasses.isOpen);
+        this.items[openIndex].classList.add(this.stateClasses.isShow)
+        this.modal.classList.add(this.stateClasses.isOpen);
     }
 
     close(){
-      this.modal.classList.remove(this.stateClasses.isOpen);
-      this.modal.querySelectorAll(`.${this.stateClasses.isShow}`).forEach(show => show.classList.remove(this.stateClasses.isShow));
+        this.modal.classList.remove(this.stateClasses.isOpen);
+        this.modal.querySelectorAll(`.${this.stateClasses.isShow}`).forEach(show => show.classList.remove(this.stateClasses.isShow));
     }
+
 }
 
 let controllerModal = new ControllerModal();
@@ -81,6 +82,16 @@ class CloseModal{
                 controllerModal.close();
                 this.callback();
             }
+        }
+
+        document.addEventListener("keydown", this.handleEscape);
+    }
+
+    
+    handleEscape = (event) => {
+        if (event.key === "Escape") {
+            controllerModal.close();
+            this.callback();
         }
     }
 }
