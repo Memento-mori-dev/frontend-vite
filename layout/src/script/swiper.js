@@ -89,7 +89,7 @@ const swiperRemained = new Swiper('.remained', {
 
 
 // concert
-const fddsf = new Swiper('.concert', {
+const concert = new Swiper('.concert', {
     slidesPerView: 3,
     spaceBetween: 70,
     initialSlide: 1,
@@ -97,8 +97,8 @@ const fddsf = new Swiper('.concert', {
     allowTouchMove: true,
     // Navigation arrows
     navigation: {
-        nextEl: '.button-slider__item--next',
-        prevEl: '.button-slider__item--prev',
+        nextEl: '.concert__button .button-slider__item--next',
+        prevEl: '.concert__button .button-slider__item--prev',
     },
     breakpoints: {
         1: {
@@ -108,4 +108,35 @@ const fddsf = new Swiper('.concert', {
             spaceBetween: 70,
         }
     },
+})
+
+
+
+const swiperVideo = new Swiper('.watch__item--video', {
+        slidesPerView: 3,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.button-slider__item--next',
+            prevEl: '.button-slider__item--prev',
+        },
+        breakpoints: {
+            1:{
+                spaceBetween: 20,
+                slidesPerView: 1.8,
+            },
+            700: {
+                slidesPerView: 1.8,
+                spaceBetween: 20,
+            },
+            1023: {
+                slidesPerView: 1.6,
+            },
+            1152: {
+                slidesPerView: 3.2,
+            },
+            1400: {
+                slidesPerView: 3.4,
+                spaceBetween: 80,
+            }
+        }
 })

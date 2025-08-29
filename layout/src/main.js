@@ -5,6 +5,7 @@ import ControllerShow from './script/controllerShow';
 import ControllerTabs from './script/controllerTabs';
 import ControllerVideo from './script/controllerVideo';
 import ControllerToggle from './script/controllerToggle';
+import VideoSlider from './script/controllerVideoSlider';
 
 useDynamicAdapt();
 
@@ -305,7 +306,7 @@ if (document.querySelector('.teachers')) {
   new ControllerTabs('.teachers', '.teachers__item', '.teachers__item-banner-flag', '.teachers__item-banner-description');
 }
 
-new ControllerVideo('.button--play');
+new ControllerVideo('.button--play-btn');
 
 new ControllerToggle('.questions__cards-item', '.questions__cards-button', '.questions__cards-content', '.questions__cards-text');
 
@@ -314,3 +315,4 @@ new ControllerToggle('.seo', '.seo__active', '.seo__wrapper', '.seo__block');
 
 
 
+new VideoSlider();

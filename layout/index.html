@@ -308,7 +308,7 @@
           </div>
 
           <div class="watch__video opacity-bottom">
-            <button class="button button--play button--blue pulse" data-js-video-url="./public/video/mov_bbb.mp4">
+            <button class="button button--play button--play-btn button--blue pulse" data-js-video-url="./public/video/mov_bbb.mp4">
               <img src="./public/svg/play.svg" alt="">
             </button>
 
@@ -949,10 +949,10 @@
                   <div class="remained__item">
                     <div class="remained__item-img video">
                       <div class="video__wrapper">
-                        <button class="button button--play button--blue">
+                        <button class="button button--play button--play-btn button--blue">
                           <img src="./public/svg/play.svg" alt="">
 
-                          <video width="320" height="240" class="button--play__video">
+                          <video width="320" height="240" class="button--play button--play-btn__video">
                             <source src="./public/video/mov_bbb.mp4" type="video/mp4">
                           </video>
                         </button>
@@ -1048,44 +1048,9 @@
             </p>
           </div>
 
-          <div class="concert__video watch__video">
-            <button class="button button--play button--blue pulse">
-              <img src="./public/svg/play.svg" alt="">
-
-              <video width="320" height="240" class="button--play__video">
-                <source src="./public/video/mov_bbb.mp4" type="video/mp4">
-              </video>
-            </button>
-
-            <div class="watch__video-content">
-              <p class="watch__video-content-title">Посмотрите видео <br>с отчетного концерта</p>
-              <p class="watch__video-content-subtitle">1 мин. 23 сек.</p>
-            </div>
-
-            <div class="concert__video-line">
-              <svg width="365" height="154" viewBox="0 0 365 154" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.998615 152.001C22.1523 150.338 511.485 180.989 318.498 1.50053" stroke="white" stroke-opacity="0.3" stroke-width="1.5" />
-              </svg>
-            </div>
-          </div>
-
           <div class="section__content">
               <div class="concert">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="concert__item concert__item--big">
-                      <img src="./public/images/hero-main.webp" alt="">
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="concert__item concert__item--small">
-                      <img src="./public/images/hero-main.webp" alt="">
-
-                      <img src="./public/images/hero-main.webp" alt="">
-                    </div>
-                  </div>
-
                   <div class="swiper-slide">
                     <div class="concert__item concert__item--big">
                       <img src="./public/images/hero-main.webp" alt="">
@@ -1138,7 +1103,132 @@
                   </button>
                 </div>
               </div>
-              
+
+              <div class="watch__item opacity-right watch__item--video">
+                <div class="watch__item-sub">
+                  <p class="watch__item-text">Наши видео</p>
+
+                  <div class="watch__item-controller">
+                    <div class="button-slider">
+                      <button class="button-slider__item button-slider__item--prev">
+                        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.695267 5.05421C0.434934 5.2983 0.434934 5.69402 0.695267 5.9381L4.93793 9.91558C5.19827 10.1597 5.62033 10.1597 5.88073 9.91558C6.14107 9.6715 6.14107 9.27577 5.88073 9.03169L2.10947 5.49616L5.88073 1.9606C6.14107 1.71653 6.14107 1.32085 5.88073 1.07672C5.62033 0.832658 5.19827 0.832658 4.93793 1.07672L0.695267 5.05421ZM14.5 5.49616L14.5 4.87116L1.16667 4.87116L1.16667 5.49616L1.16667 6.12116L14.5 6.12116L14.5 5.49616Z" fill="white" />
+                        </svg>
+                      </button>
+
+                      <button class="button-slider__item button-slider__item--next">
+                        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_187_235)">
+                            <path d="M14.3047 6.1704C14.5651 5.92632 14.5651 5.53059 14.3047 5.28651L10.0621 1.30903C9.80173 1.06496 9.37967 1.06496 9.11927 1.30903C8.85893 1.55311 8.85893 1.94884 9.11927 2.19292L12.8905 5.72845L9.11927 9.26402C8.85893 9.50808 8.85893 9.90376 9.11927 10.1479C9.37967 10.392 9.80173 10.392 10.0621 10.1479L14.3047 6.1704ZM0.5 5.72845V6.35345H13.8333V5.72845V5.10345H0.5V5.72845Z" fill="white" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_187_235">
+                              <rect width="14" height="10" fill="white" transform="translate(0.5 0.728516)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <video src="https://drumfamily.ru/wp-content/uploads/2025/08/Fest-%D0%9B%D0%B5%D1%82%D0%BE%D0%BC.mp4"></video>
+
+                        <div class="watch__block-video">
+                          <button class="button button--play button--blue">
+                            <img src="./public/svg/play.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <img src="./public/images/hero-main.webp" alt="Человек показывает лайк">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <img src="./public/images/hero-main.webp" alt="Человек показывает лайк">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <img src="./public/images/hero-main.webp" alt="Человек показывает лайк">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <video src="https://drumfamily.ru/wp-content/uploads/2025/08/Fest-%D0%9B%D0%B5%D1%82%D0%BE%D0%BC.mp4"></video>
+
+                        <div class="watch__block-video">
+                          <button class="button button--play button--blue">
+                            <img src="./public/svg/play.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <video src="https://drumfamily.ru/wp-content/uploads/2025/08/Fest-%D0%9B%D0%B5%D1%82%D0%BE%D0%BC.mp4"></video>
+
+                        <div class="watch__block-video">
+                          <button class="button button--play button--blue">
+                            <img src="./public/svg/play.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <video src="https://drumfamily.ru/wp-content/uploads/2025/08/Fest-%D0%9B%D0%B5%D1%82%D0%BE%D0%BC.mp4"></video>
+
+                        <div class="watch__block-video">
+                          <button class="button button--play button--blue">
+                            <img src="./public/svg/play.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide draggable-image">
+                    <div class="watch__block watch__block--video">
+                      <div class="banner banner--reverse">
+                        <video src="https://drumfamily.ru/wp-content/uploads/2025/08/Fest-%D0%9B%D0%B5%D1%82%D0%BE%D0%BC.mp4"></video>
+
+                        <div class="watch__block-video">
+                          <button class="button button--play button--blue">
+                            <img src="./public/svg/play.svg" alt="">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
@@ -1590,8 +1680,37 @@
     </div>
 
     <div class="modal__item" data-js-video>
-      <div class="modal__block city-modal">
-        <video src="" controls width="1000"></video>
+      <div class="modal__block video-modal">
+        <video src="" controls ></video>
+      </div>
+    </div>
+
+    <div class="modal__item" data-js-modal-slider>
+      <div class="modal__block video-modal">
+        <div class="video-slider">
+          <div class="swiper-wrapper">
+            
+          </div>
+        </div>
+
+        <button class="button-slider__item button-slider__item--prev">
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.695267 5.05421C0.434934 5.2983 0.434934 5.69402 0.695267 5.9381L4.93793 9.91558C5.19827 10.1597 5.62033 10.1597 5.88073 9.91558C6.14107 9.6715 6.14107 9.27577 5.88073 9.03169L2.10947 5.49616L5.88073 1.9606C6.14107 1.71653 6.14107 1.32085 5.88073 1.07672C5.62033 0.832658 5.19827 0.832658 4.93793 1.07672L0.695267 5.05421ZM14.5 5.49616L14.5 4.87116L1.16667 4.87116L1.16667 5.49616L1.16667 6.12116L14.5 6.12116L14.5 5.49616Z" fill="white" />
+          </svg>
+        </button>
+
+        <button class="button-slider__item button-slider__item--next">
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_187_235)">
+              <path d="M14.3047 6.1704C14.5651 5.92632 14.5651 5.53059 14.3047 5.28651L10.0621 1.30903C9.80173 1.06496 9.37967 1.06496 9.11927 1.30903C8.85893 1.55311 8.85893 1.94884 9.11927 2.19292L12.8905 5.72845L9.11927 9.26402C8.85893 9.50808 8.85893 9.90376 9.11927 10.1479C9.37967 10.392 9.80173 10.392 10.0621 10.1479L14.3047 6.1704ZM0.5 5.72845V6.35345H13.8333V5.72845V5.10345H0.5V5.72845Z" fill="white" />
+            </g>
+            <defs>
+              <clipPath id="clip0_187_235">
+                <rect width="14" height="10" fill="white" transform="translate(0.5 0.728516)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
