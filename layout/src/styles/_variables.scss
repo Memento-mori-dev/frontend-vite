@@ -2,14 +2,22 @@
 
 :root{
     // color
+    --purple-92:#923EAC;
+    --purple-58:#58457D;
+    --purple-ab:#AB5FC3;
+    --linear-gradient: linear-gradient(90deg, #58457d 0%, #ab5fc3 100%);
+    --black:#262626;
+    --grey-f7:#F7F7F7;
+    --grey-55:#555555;
+    --grey-8b:#8B8B8B;
 
 
     // font
     --font-family: '';
 
     // width and padding
-    --container-width: #{rem(1600)};
-    --container-padding-x: #{rem(1600)};
+    --container-width: #{rem(1260)};
+    --container-padding-x: #{rem(15)};
 
     // animation
     --transition-duration: .2s;
