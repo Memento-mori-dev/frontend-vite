@@ -1,0 +1,113 @@
+@use '../helpers' as *;
+
+.btn{
+    background: none;
+    border: none;
+
+    transition: all var(--transition-duration);
+
+    &--academy{
+        padding: rem(11.5) rem(17);
+        font-weight: 500;
+        font-size: rem(12);
+        text-transform: uppercase;
+        text-align: center;
+
+        border-radius: rem(20);
+    }
+
+    &--circle{
+        width: rem(33);
+        aspect-ratio: 1;
+
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--bor-grey{
+        border: var(--border-grey);
+    }
+
+    &--gradient{
+        background: var(--linear-gradient);
+        color: var(--white);
+
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+}
+
+.color{
+    width: rem(69);
+    height: rem(33);
+
+    padding: rem(4) rem(4.31);
+
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: rem(64);
+
+    display: flex;
+    align-items: center;
+
+    &__btn{
+        height: 100%;
+        aspect-ratio: 1;
+
+        padding: rem(2);
+
+        border-radius: 50%;
+        background: var(--linear-gradient);
+
+        position: relative;
+
+        &-icon{
+            position: absolute;
+            top: rem(2);
+            left: rem(2);
+
+            width: calc(100% - rem(4));
+            aspect-ratio: 1;
+            border-radius: 50%;
+
+            background-color: var(--white);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all var(--transition-duration);
+
+            &:last-child{
+                opacity: 0;
+            }
+
+            & svg *{
+                fill: var(--grey-55);
+            }
+        }
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+
+    &.is-switch{
+        & .color__btn{
+            margin-left: calc(100% - rem(25));
+        }
+
+        & .color__btn-icon{
+            &:last-child{
+                opacity: 1;
+            }
+            &:first-child{
+                opacity: 0;
+            }
+        }
+    }
+}
