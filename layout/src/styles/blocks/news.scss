@@ -1,0 +1,187 @@
+@use '../helpers' as *;
+
+.news{
+    &__item{
+        &-img{}
+        &-content{}
+        &-date{
+            font-size: rem(12);
+            color: var(--purple-92);
+        }
+        &-title{
+            font-weight: 700;
+            font-size: rem(21);
+        }
+        &-text{
+            font-size: rem(14);
+            line-height: 157%;
+            color: var(--grey-55);
+        }
+        &-btns{
+            margin-top: rem(22);
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-tags{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+
+            font-size: rem(12);
+
+            & li{
+                &:not(:first-child){
+                    margin-left: rem(3);
+                }
+            }
+
+            & a{
+                &::before{
+                    content: '#';
+                }
+
+                text-decoration: none;
+                color: var(--purple-92);
+
+                @include hover{
+                    opacity: .8;
+                }
+            }
+        }
+
+        &--big{
+            & .news__item-img{
+                width: 100%;
+                height: rem(225);
+
+                border-radius: rem(20);
+            }
+
+            & .news__item-content{
+                margin-top: rem(29);
+                margin-left: rem(5);
+            }
+
+            & .news__item-title{
+                margin-top: rem(13);
+            }
+
+            & .news__item-text{
+                margin-top: rem(15);
+            }
+        }
+
+        &--middle{
+            display: flex;
+
+            border-radius: rem(20);
+            overflow: hidden;
+
+            & .news__item-img{
+
+                width: rem(192);
+            }
+
+            & .news__item-content{
+                padding: rem(21) rem(18) rem(17) rem(20);
+
+                background-color: var(--grey-f7);
+            }
+
+            & .news__item-title{
+                margin-top: rem(21);
+
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & .news__item-text{
+                margin-top: rem(23);
+
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    &__add{
+        &-title{
+            font-weight: 700;
+            font-size: rem(16);
+            color: var(--grey-55);
+        }
+
+        &-list{
+            margin-top: rem(24);
+
+            list-style-type: none;
+
+            & li{
+                &:not(:first-child){
+                    margin-top: rem(10);
+                }
+            }
+
+            & a{
+                display: block;
+
+                padding-left: rem(13);
+
+                text-decoration: none;
+
+                position: relative;
+                &::before{
+                    content: '';
+
+                    position: absolute;
+                    top: rem(4);
+                    left: 0;
+
+                    width: rem(7);
+                    aspect-ratio: 1;
+
+                    background: var(--purple-92);
+                    border-radius: 50%;
+                }
+
+                &::after{
+                    content: '';
+
+                    position: absolute;
+                    top: rem(25);
+                    left: rem(3);
+
+                    width: rem(1);
+                    height: calc(100% - rem(25));
+
+                    background: var(--purple-92);
+                }
+
+                @include hover{
+                    opacity: .8;
+                }
+            }
+
+            &-title{
+                font-size: rem(12);
+                color: var(--purple-92);
+            }
+            &-text{
+                margin-top: rem(11);
+
+                font-size: rem(14);
+                line-height: 114%;
+                color: var(--grey-55);
+            }
+        }
+    }
+}

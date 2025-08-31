@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.page{
+    margin-top: rem(20);
+    padding-bottom: rem(57);
+
+    &--flex{
+        display: flex;
+        gap: rem(30);
+    }
+}

@@ -11,6 +11,8 @@
     --grey-8b:#8B8B8B;
     --black:#262626;
     --white:#fff;
+    --green:#009393;
+    --red:#f45555;
 
     color: var(--black);
 
@@ -19,7 +21,7 @@
     --second-family: 'Inter';
 
     // width and padding
-    --container-width: #{rem(1260)};
+    --container-width: #{rem(1280)};
     --container-padding-x: #{rem(15)};
 
     // animation
