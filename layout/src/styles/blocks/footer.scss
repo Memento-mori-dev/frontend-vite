@@ -1,0 +1,157 @@
+@use '../helpers' as *;
+
+.footer{
+    padding-top: rem(56);
+    padding-bottom: rem(45);
+
+    background-color: var(--grey-f7);
+
+    &__container{
+        padding-bottom: rem(31);
+
+        border-bottom: var(--border-grey);
+
+        display: flex;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+    }
+    &__logo{
+        margin-top: rem(27);
+
+        width: rem(198);
+        height: rem(53);
+
+        transition: all var(--transition-duration);
+
+        @include hover{
+            opacity: .8;
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title{
+        margin-top: rem(27);
+
+        font-size: rem(16);
+    }
+    &__form{
+        margin-top: rem(26);
+
+        height: rem(44);
+
+        padding: rem(2);
+
+        display: flex;
+
+        background: var(--linear-gradient);
+        border-radius: rem(30);
+        overflow: hidden;
+
+        & input{
+            padding: rem(7) rem(10) rem(10) rem(22);
+
+            border-top-left-radius: rem(30);
+            border-bottom-left-radius: rem(30);
+
+            background-color: var(--white);
+            border: none;
+
+            font-size: rem(14);
+            color: var(--grey-8b);
+
+            &:hover{
+                color: var(--black);
+            }
+        }
+
+        &-btn{
+            padding: 0 rem(21);
+
+            color: var(--white);
+            font-weight: 700;
+            font-size: rem(13);
+            text-transform: uppercase;  
+        }
+    }
+    &__social{
+        margin-top: rem(23);
+    }
+
+    &__right{
+        margin-left: rem(82);
+
+        width: 100%;
+        display: flex;
+
+        &-main{
+        }
+
+        &-add{
+            margin-left: rem(42);
+
+            &:last-child{
+                margin-left: auto;
+            }
+        }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+
+        text-transform: uppercase;
+
+        font-weight: 700;
+        font-size: rem(16);
+        color: var(--purple-92);
+
+        & span{
+            display: block;
+
+            margin-left: rem(15);
+            width: 100%;
+            height: rem(1);
+
+            background: var(--linear-gradient);
+        }
+    }
+    &__menu{
+        margin-top: rem(21);
+
+        display: flex;
+
+        &-item{
+            &:not(:first-child){
+                margin-left: rem(60);
+            }
+        }
+    }
+    &__list{
+        list-style-type: none;
+
+        & li{
+            &:not(:first-child){
+                margin-top: rem(24);
+            }
+        }
+
+        & a{
+            text-decoration: none;
+
+            font-weight: 400;
+            font-size: rem(14);
+            color: var(--grey-55);
+
+            transition: all var(--transition-duration);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+    }
+}
