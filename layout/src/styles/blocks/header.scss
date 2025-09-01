@@ -14,6 +14,14 @@
     }
 
     &__logo{
+        width: rem(225);
+        height: rem(60);
+
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+
         transition: all var(--transition-duration);
 
         @include hover{
@@ -47,5 +55,50 @@
                 color: var(--purple-ab);
             }
         }
+
+        &-phone{
+            display: none;
+        }
+    }
+
+    @include laptop{
+        &__menu{
+            height: 100%;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &-pc{
+                display: none;
+            }
+            &-phone{
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                gap: rem(12);
+            }
+        }
+    }
+
+    @include tablet{
+        padding: rem(19) 0;
+
+        &__logo{
+            width: rem(150);
+            height: rem(40);
+        }
+    }
+}
+
+.phone-color{
+    display: none;
+
+    position: absolute;
+    right: rem(35);
+    bottom: rem(38);
+
+    @include laptop{
+        display: block;
     }
 }
