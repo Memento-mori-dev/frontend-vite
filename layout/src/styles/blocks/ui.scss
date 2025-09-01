@@ -171,12 +171,6 @@
             opacity: .8;
         }
     }
-
-    @include laptop{
-        &__btn{
-            margin: auto;
-        }
-    }
 }
 
 .menu{
