@@ -81,6 +81,8 @@
     display: flex;
     align-items: center;
 
+    background-color: var(--white);
+
     &__btn{
         height: 100%;
         aspect-ratio: 1;
@@ -169,6 +171,12 @@
             opacity: .8;
         }
     }
+
+    @include laptop{
+        &__btn{
+            margin: auto;
+        }
+    }
 }
 
 .menu{
@@ -202,6 +210,8 @@
 
     width: 100%;
     height: 100%;
+
+    overflow: hidden;
 
     &::after{
         content: '';

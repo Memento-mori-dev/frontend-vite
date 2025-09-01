@@ -8,4 +8,8 @@
         display: flex;
         gap: rem(30);
     }
+
+    @include tablet{
+        margin-top: rem(12);
+    }
 }

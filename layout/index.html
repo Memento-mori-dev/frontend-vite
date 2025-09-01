@@ -105,12 +105,12 @@
       </div>
     </header>
 
-    <!-- <main>
-      <div class="container">
+    <main>
+      <div class="container main__container">
         <div class="page page--flex">
 
           <div class="main__left">
-            <div class="main__chart">
+            <div class="main__chart" data-da=".modal__left,1320.98,last">
               <div class="main__chart-item">
                 <div class="main__chart-header">
                   <div class="main__chart-header-left">
@@ -291,6 +291,42 @@
             <div class="inst">
               <div class="swiper swiper-inst">
                 <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <button class="inst__item btn">
+                      <div class="inst__img">
+                        <img src="./assets/img/inst.png" alt="">
+                      </div>
+
+                      <p class="inst__text">
+                        A frog can dsdsdsd
+                      </p>
+                    </button>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <button class="inst__item btn">
+                      <div class="inst__img">
+                        <img src="./assets/img/inst.png" alt="">
+                      </div>
+
+                      <p class="inst__text">
+                        A frog can dsdsdsd
+                      </p>
+                    </button>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <button class="inst__item btn">
+                      <div class="inst__img">
+                        <img src="./assets/img/inst.png" alt="">
+                      </div>
+
+                      <p class="inst__text">
+                        A frog can dsdsdsd
+                      </p>
+                    </button>
+                  </div>
+
                   <div class="swiper-slide">
                     <button class="inst__item btn">
                       <div class="inst__img">
@@ -614,7 +650,7 @@
           </div>
         </div>
       </div>
-    </main> -->
+    </main>
 
     <!-- <footer class="footer">
       <div class="container footer__container">
@@ -746,16 +782,35 @@
       </div>
     </footer> -->
 
-    <!-- <script>
+    <script>
       const swiperInst = new Swiper('.swiper-inst', {
         slidesPerView: 8,
         spaceBetween: 33,
         navigation: {
           nextEl: '.inst__btn--next',
         },
+        breakpoints: {
+          1: {
+            slidesPerView: 4,
+          },
+          553: {
+            slidesPerView: 6,
+          },
+          767.98: {
+            slidesPerView: 8,
+          },
+          1023.98: {
+            slidesPerView: 10,
+            spaceBetween: 20,
+          },
+          1320.98: {
+            slidesPerView: 8,
+            spaceBetween: 33,
+          },
+        },
       });
 
-    </script> -->
+    </script>
 
     <div class="phone-color">
     </div>
