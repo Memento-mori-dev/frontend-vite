@@ -239,4 +239,10 @@
             align-items: center;
         }
     }
+
+    &__video{
+        &:not(:first-child){
+            margin-top: rem(40);
+        }
+    }
 }
