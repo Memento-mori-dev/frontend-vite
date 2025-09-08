@@ -1,0 +1,242 @@
+@use '../helpers' as *;
+
+.paper{
+    &__banner{
+        &:not(:first-child){
+            margin-top: rem(30);
+        }
+
+        &-img{
+            width: 100%;
+            height: rem(246);
+
+            border-radius: rem(20);
+        }
+
+        &-content{
+            margin-top: rem(17);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: rem(12);
+            color: var(--grey-8b);
+        }
+        
+        &-left{
+            display: flex;
+            align-items: center;
+        }
+        &-name{
+            text-decoration: none;
+
+            padding-left: rem(7);
+
+            color: var(--grey-8b);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+        &-time{
+            padding-left: rem(7);
+
+            display: flex;
+            align-items: center;
+
+            &::after{
+                padding-left: rem(2);
+                content: ' мин.';
+            }
+
+            & span{
+                padding-right: rem(5);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &-tag{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+
+            & li{
+                &:not(:first-child){
+                }
+            }
+
+            & a{
+                text-decoration: none;
+                color: var(--grey-8b);
+
+                &::before{
+                    padding-right: rem(2);
+
+                    content: '#';
+                }
+
+                @include hover{
+                    color: var(--purple-92);
+                }
+            }
+        }
+    }
+
+    &__text{
+        &:not(:first-child){
+            margin-top: rem(20);
+        }
+
+        font-size: rem(16);
+        line-height: 137%;
+
+        color: var(--grey-55);
+
+        & > a{
+            text-decoration: underline;
+
+            color: var(--grey-55);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+    }
+
+    &__title{
+        &:not(:first-child){
+            margin-top: rem(30);
+        }
+
+        font-size: 24px;
+        line-height: 92%;
+    }
+
+    &__img{
+        &:not(:first-child){
+            margin-top: rem(25);
+        }
+
+        width: 100%;
+        height: rem(420);
+
+        border-radius: rem(20);
+    }
+
+    &__grey{
+        &:not(:first-child){
+            margin-top: rem(15);
+        }
+
+        font-size: rem(12);
+        color: var(--grey-8b);
+
+        & a{
+            color: var(--grey-8b);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+    }
+
+    &__line{
+        &:not(:first-child){
+            margin-top: rem(20);
+        }
+
+        padding: rem(6) 0 rem(6) rem(32);
+
+        font-style: italic;
+        font-weight: 300;
+        font-size: rem(18);
+        line-height: 144%;
+        color: var(--grey-8b);
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 1px;
+            height: 100%;
+
+            background: var(--linear-gradient-180);
+        }
+
+        & > a{
+            color: var(--grey-8b);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+    }
+
+    &__tags{
+        &:not(:first-child){
+            margin-top: rem(40);
+        }
+
+        list-style-type: none;
+
+        display: flex;
+        align-items: center;
+        gap: rem(14);
+
+        & li{
+
+        }
+
+        & a{
+            text-decoration: none;
+            padding: rem(8) rem(12);
+
+            background: var(--linear-gradient);
+            border-radius: rem(20);
+            color: var(--black);
+
+            &::before{
+                content: '#';
+            }
+
+            @include hover{
+                opacity: .8;
+            }
+        }
+    }
+
+    &__separation{
+        &:not(:first-child){
+            margin-top: rem(40);
+        }
+
+        display: flex;
+        align-items: center;
+
+        &-line{
+            width: 100%;
+            height: rem(1);
+
+            background: var(--linear-gradient-0);
+        }
+
+        &-icon{
+            flex-shrink: 0;
+
+            margin-left: rem(10);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

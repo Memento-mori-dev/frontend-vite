@@ -16,8 +16,7 @@
         border-radius: 50%;
     }
     &__img{
-        width: rem(75);
-        aspect-ratio: 1;
+        @include square(rem(75));
 
         padding: rem(2);
 
@@ -47,8 +46,7 @@
     &__btn{
         flex-shrink: 0;
 
-        width: rem(75);
-        aspect-ratio: 1;
+        @include square(rem(75));
 
         background-color: var(--grey-f7);
         border-radius: 50%;
