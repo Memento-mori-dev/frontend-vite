@@ -2,7 +2,9 @@
 
 .news{
     &__item{
-        &-img{}
+        &-img{
+            object-fit: cover;
+        }
         &-content{}
         &-date{
             font-size: rem(12);
@@ -181,6 +183,122 @@
                 font-size: rem(14);
                 line-height: 114%;
                 color: var(--grey-55);
+            }
+        }
+    }
+
+    &__footer{
+        margin-top: rem(40);
+
+        text-align: center;
+        font-size: rem(16);
+    }
+    &__loader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &::before,
+        &::after,
+        & span {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--purple-92); /* Цвет точек */
+            animation: blink 1.4s infinite ease-in-out both;
+        }
+
+        & span {
+            display: inline-block;
+        }
+
+        &::before {
+            animation-delay: -0.32s;
+        }
+
+        & span {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes blink {
+            0%, 80%, 100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+            40% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &.is-hide{
+            opacity: 0;
+        }
+    }
+
+    &__pagination{
+        margin-top: rem(63);
+
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        border-top: var(--border-grey-ee-2);
+
+        &-button{
+            margin-top: rem(25);
+
+            @include square(rem(31));
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: var(--border-grey-ee-2);
+            border-radius: rem(5);
+        }
+
+        &-main{
+            display: flex;
+            gap: rem(10);
+
+            font-weight: 700;
+            font-size: rem(14);
+            line-height: 143%;
+            text-align: center;
+            color: var(--black);
+
+            & a{
+                text-decoration: none;
+                display: flex;
+
+                padding: rem(11) rem(9);
+
+                color: var(--grey-8b);
+
+                @include hover{
+                    opacity: .8;
+                }
+
+                position: relative;
+                &.is-active{
+                    color: var(--black);
+
+                    &::after{
+                        content: '';
+
+                        position: absolute;
+                        top: rem(-2);
+                        left: 0;
+
+                        width: 100%;
+                        height: rem(2);
+
+                        background-color: var(--purple-92);
+                    }
+                }
             }
         }
     }

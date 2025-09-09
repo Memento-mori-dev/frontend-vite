@@ -144,7 +144,9 @@
     }
 
     &__content{
-        margin-top: rem(37);
+        &:not(:first-child){
+            margin-top: rem(37);
+        }
 
         display: flex;
         gap: rem(30);
