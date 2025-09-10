@@ -7,6 +7,10 @@
     align-items: start;
 
     gap: rem(32);
+
+    & .swiper-inst{
+        width: 100%;
+    }
     
     &__item{
         display: flex;
@@ -30,6 +34,7 @@
 
             border: rem(3) solid var(--white);
             border-radius: 50%;
+            object-fit: cover;
         }
     }
     &__text{

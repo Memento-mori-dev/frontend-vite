@@ -5,7 +5,9 @@
         &-img{
             object-fit: cover;
         }
-        &-content{}
+        &-content{
+            width: 100%;
+        }
         &-date{
             font-size: rem(12);
             color: var(--purple-92);
@@ -242,12 +244,22 @@
         margin-top: rem(63);
 
         display: flex;
+        justify-content: center;
         align-items: start;
-        justify-content: space-between;
 
         border-top: var(--border-grey-ee-2);
 
+        position: relative;
         &-button{
+            position: absolute;
+            top: 0;
+            &:first-child{
+                left: 0;
+            }
+            &:last-child{
+                right: 0;
+            }
+
             margin-top: rem(25);
 
             @include square(rem(31));
