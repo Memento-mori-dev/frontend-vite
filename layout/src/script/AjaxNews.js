@@ -4,22 +4,24 @@ export class AjaxNews{
     }
 
     elementClasses = {
-        btn: '[data-js-get-post]',
-        pageBtn: '.page__btn',
+        loader: '[data-js-news-loader]',
     }
 
     constructor(nameAjax, content){
-        this.btn = document.querySelector(this.elementClasses.btn);
-        this.pageBtn = document.querySelector(this.elementClasses.pageBtn);
+        this.loader = document.querySelector(this.elementClasses.loader);
         this.content = document.querySelector(content);
         this.nameAjax = nameAjax;
 
-        this.init();
+        this.initObserver();
     }
 
-    click(){
-        const page = this.btn.dataset.jsPage;
-        const url = `/wp-content/themes/la-theme/ajax/${this.nameAjax}.php?page=${page}`;
+    fetch(){
+        this.loader.classList.remove(this.stateClasses.isHide);
+
+        const page = this.loader.dataset.jsNewsLoader;
+        const url = `http://bit.jobmori1.beget.tech/wp-content/themes/bit/ajax/${this.nameAjax}.php?index=${page}`;
+
+        ++this.loader.dataset.jsNewsLoader;
 
         fetch(url)
             .then(response => {
@@ -29,24 +31,35 @@ export class AjaxNews{
                 return response.json();
             })
             .then(data => {
-                if (data.status == true) {
-                    this.pageBtn.classList.add(this.stateClasses.isHide);
-                }
-
                 this.content.insertAdjacentHTML('beforeend', data.data);
-                this.btn.dataset.jsPage = Number(page) + 1;
+
+                if (!data.status) {
+                    this.initObserver();
+                }else{
+                    this.loader.classList.add(this.stateClasses.isHide);
+                }
             })
             .catch(error => {
-                this.pageBtn.classList.add(this.stateClasses.isHide);
+                this.loader.classList.add(this.stateClasses.isHide);
                 
-                console.error('Произошла ошибка');
+                console.log('Произошла ошибка');
             });
     }
     
 
-    init(){
-        this.btn.onclick = () => {
-            this.click();
-        }
+    initObserver(){
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.observer.unobserve(this.loader);
+
+                    this.fetch();
+                }
+            });
+        }, {
+            threshold: 0.5 // 50% элемента должно быть видно
+        });
+
+        this.observer.observe(this.loader);
     }
 }
