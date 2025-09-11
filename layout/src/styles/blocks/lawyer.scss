@@ -114,6 +114,7 @@
             &-img{
                 @include square(rem(48));
                 border-radius: 50%;
+                object-fit: cover;
             }
             &-name{
                 text-decoration: none;
