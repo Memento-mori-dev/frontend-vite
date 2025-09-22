@@ -68,6 +68,8 @@
             }
 
             &-img{
+                flex-shrink: 0;
+
                 @include square(rem(90));
 
                 border-radius: rem(10);
@@ -85,6 +87,14 @@
                 font-size: rem(14);
                 line-height: 114%;
                 color: var(--grey-55);
+
+                & p:last-child{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
 
             &-date{

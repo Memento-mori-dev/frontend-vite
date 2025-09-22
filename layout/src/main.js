@@ -5,17 +5,20 @@ import { Inst } from './script/Inst';
 import { AjaxNews } from './script/AjaxNews';
 
 useDynamicAdapt();
-initSwiper();
 
 
-if (document.querySelector('.video')) {
-    new Video();
-}
+document.addEventListener("DOMContentLoaded", () => {
+    initSwiper();
 
-if (document.querySelector('.swiper-inst')) {
-    new Inst();
-}
+    if (document.querySelector('.video')) {
+        new Video();
+    }
 
-if (document.querySelector('.news__item--big')) {
-    new AjaxNews('news', '.main__content-news');
-}
+    if (document.querySelector('.swiper-inst')) {
+        new Inst();
+    }
+
+    if (document.querySelector('.news__item--big')) {
+        new AjaxNews('news', '.main__content-news');
+    }
+})

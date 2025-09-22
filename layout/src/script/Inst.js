@@ -7,12 +7,14 @@ export class Inst{
         main: '.swiper-inst',
         btn: 'data-js-inst',
         modal: '[data-js-inst-modal]',
+        video: '.video'
     }
 
     constructor(){
         this.main = document.querySelector(this.queryClasses.main);
         this.arrBtns = this.main.querySelectorAll(`[${this.queryClasses.btn}]`);
         this.modal = document.querySelector(this.queryClasses.modal);
+        this.arrVideo = document.querySelectorAll(this.queryClasses.video);
 
         this.init();
     }
@@ -52,12 +54,12 @@ export class Inst{
         });
 
         this.swiperModal= new Swiper('.swiper-inst-modal', {
-            slidesPerView: 1,
+            slidesPerView: 2,
             navigation: {
                 prevEl: '.swiper-inst-modal .swiper-button-prev',
                 nextEl: '.swiper-inst-modal .swiper-button-next',
             },
-        });;
+        });
     }
 
     initOpen(){
@@ -73,7 +75,10 @@ export class Inst{
 
     initClose(){
         this.modal.onclick = (event) => {
-            if (event.target.classList.contains('inst__modal-item')) {
+            console.log(event.target);
+            
+
+            if (event.target.classList.contains('inst__modal-item') || event.target == this.modal) {
                 this.close();
             }
         }
