@@ -68,6 +68,26 @@
             }
         }
     }
+
+    &--author{
+        border-radius: rem(20);
+
+        font-size: rem(12);
+
+        &-line{
+            padding: rem(8) rem(26);
+
+            background: var(--linear-gradient);
+            color: var(--grey-f7);
+        }
+
+        &-border{
+            padding: rem(6) rem(24);
+
+            color: var(--grey-55    );
+            border: var(--border-purple);
+        }
+    }
 }
 
 .color{

@@ -99,7 +99,7 @@
                 object-fit: cover;
             }
 
-            &-link{
+            &-white{
                 z-index: -1;
 
                 position: absolute;
@@ -130,6 +130,30 @@
                     color: var(--purple-92);
                 }
             }
+
+            &-link{
+                z-index: 1;
+
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                width: 100%;
+                height: rem(100);
+
+                opacity: 0;
+            
+                text-decoration: none;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-weight: 700;
+                font-size: rem(21);
+
+                color: var(--purple-92);
+            }
         }
 
         .modal.is-active & .swiper-slide{
@@ -146,6 +170,10 @@
 
                 & .inst__modal-item-content{
                     transform: translateY(rem(-70));
+                }
+
+                & .inst__modal-item-link{
+                    opacity: 1;
                 }
             }
         }

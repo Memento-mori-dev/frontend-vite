@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./src/styles/main.scss">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <img src="./assets/svg/logo.svg" alt="Bitbanker">
+        </a>
+
+        <nav class="header__menu-pc">
+          <ul class="header__menu" data-da=".modal__right,1320.98,last">
+            <li>
+              <a href="#">Главная</a>
+            </li>
+
+            <li>
+              <a href="#">Новости</a>
+            </li>
+
+            <li>
+              <a href="#">Партнеры</a>
+            </li>
+
+            <li>
+              <a href="#">Нормативные документы</a>
+            </li>
+
+            <li>
+              <a href="#">Юридическая консультация</a>
+            </li>
+
+            <li data-da=".header__menu-phone,1320.98,last">
+              <button class="btn btn--academy btn--gradient">Академия</button>
+            </li>
+
+            <li>
+              <div class="color is-switch" data-da=".phone-color,1320.98">
+                <button class="color__btn btn">
+                    <div class="color__btn-icon">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.1">
+                                <path d="M18.1887 12.6649C18.0978 12.5841 17.985 12.5321 17.8646 12.5152C17.7442 12.4983 17.6215 12.5173 17.5118 12.5699C16.4082 13.1299 15.1869 13.4189 13.9493 13.413C12.4688 13.4101 11.0183 12.9954 9.76002 12.2152C8.50173 11.4351 7.48528 10.3203 6.82434 8.99549C6.79003 8.92531 6.74223 8.86258 6.68368 8.81088C6.62513 8.75917 6.55697 8.71951 6.48309 8.69415C6.40921 8.66879 6.33106 8.65822 6.25309 8.66306C6.17513 8.66791 6.09889 8.68806 6.02871 8.72236C5.95853 8.75667 5.8958 8.80447 5.8441 8.86302C5.7924 8.92157 5.75273 8.98973 5.72737 9.06361C5.67615 9.21282 5.6863 9.37626 5.75559 9.51799C6.71543 11.4585 8.32863 12.9985 10.3116 13.8672C12.2945 14.736 14.5202 14.8779 16.5975 14.268C15.9282 15.3171 15.032 16.2025 13.9749 16.859C12.9178 17.5155 11.7268 17.9263 10.4898 18.0611C9.25274 18.1959 8.00122 18.0512 6.82755 17.6378C5.65388 17.2243 4.588 16.5527 3.70856 15.6723C2.82911 14.792 2.15854 13.7254 1.74631 12.5513C1.33407 11.3772 1.1907 10.1255 1.32676 8.88861C1.46283 7.6517 1.87485 6.46113 2.53245 5.40471C3.19004 4.3483 4.07643 3.453 5.12621 2.78486C4.97047 3.30425 4.86314 3.83694 4.80559 4.37611C4.78889 4.53189 4.83444 4.68795 4.93231 4.81029C5.03019 4.93263 5.17244 5.01133 5.32808 5.02924C5.47529 5.03063 5.61796 4.97836 5.72943 4.88219C5.84089 4.78603 5.91351 4.65256 5.93371 4.50674C6.03324 3.57494 6.30291 2.66932 6.72934 1.83486C6.78837 1.72972 6.81533 1.6096 6.80689 1.48932C6.79845 1.36903 6.75497 1.25385 6.68184 1.15799C6.60031 1.07074 6.49482 1.00953 6.37861 0.98206C6.2624 0.954593 6.14067 0.962092 6.02871 1.00361C4.56051 1.57995 3.25891 2.51277 2.24136 3.7179C1.22381 4.92304 0.522327 6.36257 0.200216 7.90659C-0.121896 9.45062 -0.0545017 11.0505 0.396317 12.562C0.847135 14.0735 1.66719 15.4489 2.78249 16.5642C3.89778 17.6795 5.27322 18.4996 6.78468 18.9504C8.29615 19.4012 9.89608 19.4686 11.4401 19.1465C12.9841 18.8244 14.4237 18.1229 15.6288 17.1053C16.8339 16.0878 17.7668 14.7862 18.3431 13.318C18.3846 13.206 18.3921 13.0843 18.3646 12.9681C18.3372 12.8519 18.276 12.7464 18.1887 12.6649Z" fill="black"></path>
+                                <path d="M10.6826 6.88184C10.6826 6.72436 10.6201 6.57334 10.5087 6.46199C10.3974 6.35064 10.2463 6.28809 10.0889 6.28809H4.15137C3.99389 6.28809 3.84287 6.35064 3.73152 6.46199C3.62017 6.57334 3.55762 6.72436 3.55762 6.88184C3.55762 7.03931 3.62017 7.19033 3.73152 7.30168C3.84287 7.41303 3.99389 7.47559 4.15137 7.47559H10.0889C10.2463 7.47559 10.3974 7.41303 10.5087 7.30168C10.6201 7.19033 10.6826 7.03931 10.6826 6.88184Z" fill="black"></path>
+                                <path d="M8.90137 9.85059H11.2764C11.4338 9.85059 11.5849 9.78803 11.6962 9.67668C11.8076 9.56533 11.8701 9.41431 11.8701 9.25684C11.8701 9.09936 11.8076 8.94834 11.6962 8.83699C11.5849 8.72564 11.4338 8.66309 11.2764 8.66309H8.90137C8.74389 8.66309 8.59287 8.72564 8.48152 8.83699C8.37017 8.94834 8.30762 9.09936 8.30762 9.25684C8.30762 9.41431 8.37017 9.56533 8.48152 9.67668C8.59287 9.78803 8.74389 9.85059 8.90137 9.85059Z" fill="black"></path>
+                                <path d="M14.8389 7.47559H17.2139C17.3713 7.47559 17.5224 7.41303 17.6337 7.30168C17.7451 7.19033 17.8076 7.03931 17.8076 6.88184C17.8076 6.72436 17.7451 6.57334 17.6337 6.46199C17.5224 6.35064 17.3713 6.28809 17.2139 6.28809H14.8389C14.6814 6.28809 14.5304 6.35064 14.419 6.46199C14.3077 6.57334 14.2451 6.72436 14.2451 6.88184C14.2451 7.03931 14.3077 7.19033 14.419 7.30168C14.5304 7.41303 14.6814 7.47559 14.8389 7.47559Z" fill="black"></path>
+                                <path d="M10.0889 5.10059H13.6514C13.8088 5.10059 13.9599 5.03803 14.0712 4.92668C14.1826 4.81533 14.2451 4.66431 14.2451 4.50684C14.2451 4.34936 14.1826 4.19834 14.0712 4.08699C13.9599 3.97564 13.8088 3.91309 13.6514 3.91309H10.0889C9.93139 3.91309 9.78037 3.97564 9.66902 4.08699C9.55767 4.19834 9.49512 4.34936 9.49512 4.50684C9.49512 4.66431 9.55767 4.81533 9.66902 4.92668C9.78037 5.03803 9.93139 5.10059 10.0889 5.10059Z" fill="black"></path>
+                                <path d="M17.2139 9.85059H13.6514C13.4939 9.85059 13.3429 9.91314 13.2315 10.0245C13.1202 10.1358 13.0576 10.2869 13.0576 10.4443C13.0576 10.6018 13.1202 10.7528 13.2315 10.8642C13.3429 10.9755 13.4939 11.0381 13.6514 11.0381H17.2139C17.3713 11.0381 17.5224 10.9755 17.6337 10.8642C17.7451 10.7528 17.8076 10.6018 17.8076 10.4443C17.8076 10.2869 17.7451 10.1358 17.6337 10.0245C17.5224 9.91314 17.3713 9.85059 17.2139 9.85059Z" fill="black"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="color__btn-icon">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 6C7.567 6 6 7.567 6 9.5C6 11.433 7.567 13 9.5 13C11.433 13 13 11.433 13 9.5C13 7.567 11.433 6 9.5 6ZM5 9.5C5 7.01472 7.01472 5 9.5 5C11.9853 5 14 7.01472 14 9.5C14 11.9853 11.9853 14 9.5 14C7.01472 14 5 11.9853 5 9.5Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17 9.5C17 9.2239 17.2239 9 17.5 9H18.5C18.7761 9 19 9.2239 19 9.5C19 9.7761 18.7761 10 18.5 10H17.5C17.2239 10 17 9.7761 17 9.5Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.5C0 9.2239 0.22386 9 0.5 9H1.5C1.77614 9 2 9.2239 2 9.5C2 9.7761 1.77614 10 1.5 10H0.5C0.22386 10 0 9.7761 0 9.5Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 17C9.7761 17 10 17.2239 10 17.5V18.5C10 18.7761 9.7761 19 9.5 19C9.2239 19 9 18.7761 9 18.5V17.5C9 17.2239 9.2239 17 9.5 17Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 0C9.7761 0 10 0.22386 10 0.5V1.5C10 1.77614 9.7761 2 9.5 2C9.2239 2 9 1.77614 9 1.5V0.5C9 0.22386 9.2239 0 9.5 0Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8027 14.8036C14.998 14.6084 15.3146 14.6084 15.5098 14.8036L16.2169 15.5107C16.4122 15.706 16.4122 16.0226 16.2169 16.2178C16.0217 16.4131 15.7051 16.4131 15.5098 16.2178L14.8027 15.5107C14.6074 15.3155 14.6074 14.9989 14.8027 14.8036Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.78316 2.78219C2.97843 2.58693 3.29501 2.58693 3.49027 2.78219L4.19738 3.4893C4.39264 3.68456 4.39264 4.00114 4.19738 4.1964C4.00212 4.39166 3.68553 4.39166 3.49027 4.1964L2.78316 3.4893C2.5879 3.29403 2.5879 2.97745 2.78316 2.78219Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.19738 14.8037C4.39264 14.999 4.39264 15.3156 4.19738 15.5108L3.49027 16.2179C3.29501 16.4132 2.97843 16.4132 2.78317 16.2179C2.5879 16.0227 2.5879 15.7061 2.78317 15.5108L3.49027 14.8037C3.68553 14.6084 4.00212 14.6084 4.19738 14.8037Z" fill="#555555"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2169 2.78219C16.4122 2.97746 16.4122 3.29404 16.2169 3.4893L15.5098 4.19641C15.3146 4.39167 14.998 4.39167 14.8027 4.19641C14.6074 4.00115 14.6074 3.68456 14.8027 3.4893L15.5098 2.78219C15.7051 2.58693 16.0217 2.58693 16.2169 2.78219Z" fill="#555555"></path>
+                        </svg>
+                    </div>
+                </button>
+              </div>
+            </li>
+
+            <li data-da=".header__menu-phone,1320.98,first">
+              <button class="btn btn--circle btn--bor-grey">
+                <img src="./assets/svg/search.svg" alt="svg">
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__menu-phone">
+          <li>
+            <button class="btn btn--circle btn--bor-grey">
+                <img src="./assets/svg/chars.svg" alt="svg">
+              </button>
+          </li>
+
+          <li>
+            <button class="btn menu">
+              <span></span>
+              <span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="author">
+            <h2 class="author__title">НАШИ АВТОРЫ</h2>
+
+            <div class="author__start">
+                <div class="author__item author__item--grey">
+                    <div class="author__item-header">
+                        <div class="author__item-img">
+                            <div class="author__item-img-wrapper">
+                                <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                            </div>
+                        </div>
+
+                        <div class="author__item-header-right">
+                            <p class="author__item-header-right-name">
+                                Игнат Лихунов
+                            </p>
+
+                            <p class="author__item-header-right-description">
+                                Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="author__item-content">
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                    </p>
+
+                    <div class="author__item-social">
+                        <a href="" class="author__item-social-item btn">
+                            <div class="author__item-social-icon">
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.988 1.03611C14.0948 0.345702 13.4384 -0.199244 12.8245 0.0702845L0.597857 5.4384C0.157637 5.63168 0.18984 6.29854 0.646414 6.44391L3.16781 7.24689C3.6491 7.40014 4.17015 7.32086 4.59041 7.03054L10.2752 3.10311C10.4466 2.98466 10.6334 3.22843 10.487 3.37937L6.39495 7.59823C5.99801 8.00751 6.07678 8.70103 6.5543 9.00043L11.1357 11.8734C11.6496 12.1956 12.3106 11.8719 12.4067 11.2509L13.988 1.03611Z" fill="white" />
+                                </svg>
+                            </div>
+
+                            <p class="author__item-social-text">
+                                @LexagencyLawStream
+                            </p>
+                        </a>
+
+                        <a href="" class="author__item-social-item btn">
+                            <div class="author__item-social-icon">
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.988 1.03611C14.0948 0.345702 13.4384 -0.199244 12.8245 0.0702845L0.597857 5.4384C0.157637 5.63168 0.18984 6.29854 0.646414 6.44391L3.16781 7.24689C3.6491 7.40014 4.17015 7.32086 4.59041 7.03054L10.2752 3.10311C10.4466 2.98466 10.6334 3.22843 10.487 3.37937L6.39495 7.59823C5.99801 8.00751 6.07678 8.70103 6.5543 9.00043L11.1357 11.8734C11.6496 12.1956 12.3106 11.8719 12.4067 11.2509L13.988 1.03611Z" fill="white" />
+                                </svg>
+                            </div>
+
+                            <p class="author__item-social-text">
+                                @LexagencyLawStream
+                            </p>
+                        </a>
+
+                        <a href="" class="author__item-social-item btn">
+                            <div class="author__item-social-icon">
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.988 1.03611C14.0948 0.345702 13.4384 -0.199244 12.8245 0.0702845L0.597857 5.4384C0.157637 5.63168 0.18984 6.29854 0.646414 6.44391L3.16781 7.24689C3.6491 7.40014 4.17015 7.32086 4.59041 7.03054L10.2752 3.10311C10.4466 2.98466 10.6334 3.22843 10.487 3.37937L6.39495 7.59823C5.99801 8.00751 6.07678 8.70103 6.5543 9.00043L11.1357 11.8734C11.6496 12.1956 12.3106 11.8719 12.4067 11.2509L13.988 1.03611Z" fill="white" />
+                                </svg>
+                            </div>
+
+                            <p class="author__item-social-text">
+                                @LexagencyLawStream
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="author__item-button">
+                        <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                        <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                    </div>
+                </div>
+
+                <div class="author__item author__item--grey">
+                    <div class="author__item-header">
+                        <div class="author__item-img">
+                            <div class="author__item-img-wrapper">
+                                <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                            </div>
+                        </div>
+
+                        <div class="author__item-header-right">
+                            <p class="author__item-header-right-name">
+                                Игнат Лихунов
+                            </p>
+
+                            <p class="author__item-header-right-description">
+                                Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="author__item-content">
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                    </p>
+
+                    <div class="author__item-button">
+                        <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                        <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                    </div>
+                </div>
+
+                <div class="author__item author__item--grey">
+                    <div class="author__item-header">
+                        <div class="author__item-img">
+                            <div class="author__item-img-wrapper">
+                                <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                            </div>
+                        </div>
+
+                        <div class="author__item-header-right">
+                            <p class="author__item-header-right-name">
+                                Игнат Лихунов
+                            </p>
+
+                            <p class="author__item-header-right-description">
+                                Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="author__item-content">
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                    </p>
+
+                    <div class="author__item-button">
+                        <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                        <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                    </div>
+                </div>
+
+                <div class="author__item author__item--grey">
+                    <div class="author__item-header">
+                        <div class="author__item-img">
+                            <div class="author__item-img-wrapper">
+                                <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                            </div>
+                        </div>
+
+                        <div class="author__item-header-right">
+                            <p class="author__item-header-right-name">
+                                Игнат Лихунов
+                            </p>
+
+                            <p class="author__item-header-right-description">
+                                Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="author__item-content">
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                    </p>
+
+                    <div class="author__item-button">
+                        <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                        <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                    </div>
+                </div>
+
+                <div class="author__item author__item--grey">
+                    <div class="author__item-header">
+                        <div class="author__item-img">
+                            <div class="author__item-img-wrapper">
+                                <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                            </div>
+                        </div>
+
+                        <div class="author__item-header-right">
+                            <p class="author__item-header-right-name">
+                                Игнат Лихунов
+                            </p>
+
+                            <p class="author__item-header-right-description">
+                                Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="author__item-content">
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                    </p>
+
+                    <div class="author__item-button">
+                        <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                        <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="author__next">
+                <h2 class="author__title">НАШИ ЭКСПЕРТЫ</h2>
+
+                <div class="author__next-content">
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+
+                    <div class="author__item author__item--border">
+                        <div class="author__item-header">
+                            <div class="author__item-img">
+                                <div class="author__item-img-wrapper">
+                                    <img src="./assets/img/new-1.png" alt="" class="author__item-img-content">
+                                </div>
+                            </div>
+
+                            <div class="author__item-header-right">
+                                <p class="author__item-header-right-name">
+                                    Игнат Лихунов
+                                </p>
+
+                                <p class="author__item-header-right-description">
+                                    Адвокат, руководитель юридического агентства Cartesius Адвокат, руководитель юридического агентства Cartesius
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="author__item-content">
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                            Игнат Лихунов — опытный журналист, пишущий о криптовалютах и новых технологиях, умеющий освещать самые острые события в эт...
+                        </p>
+
+                        <div class="author__item-button">
+                            <a href="" class="btn btn--author btn--author-line">Биография</a>
+
+                            <a href="" class="btn btn--author btn--author-border">Все статьи</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__left">
+          <a href="#" class="footer__logo">
+            <img src="./assets/svg/logo.svg" alt="Bitbanker">
+          </a>
+
+          <p class="footer__title-logo">
+            Подпишись на наши новости
+          </p>
+
+          <form action="" class="footer__form">
+            <input type="text" placeholder="Введите ваш e-mail...">
+
+            <button type="submit" class="btn footer__form-btn">Подписаться</button>
+          </form>
+
+          <div class="footer__social">
+            <div class="social">
+              <a href="#" class="social__btn">
+                <img src="./assets/svg/tg.svg" alt="">
+              </a>
+
+              <a href="#" class="social__btn">
+                <img src="./assets/svg/vk.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__right">
+          <div class="footer__right-main">
+            <p class="footer__title">
+              НОВОСТИ
+              <span></span>
+            </p>
+
+            <div class="footer__menu">
+              <div class="footer__menu-item">
+                <ul class="footer__list">
+                  <li>
+                    <a href="#">Новости</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Лонгриды</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Подкасты</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Дайджест месяца</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__menu-item">
+                <ul class="footer__list">
+                  <li>
+                    <a href="#">Искусственный интеллект</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Матрица</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Крипториум</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Спецпроекты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__right-next">
+            <div class="footer__right-add">
+              <p class="footer__title">
+                АКАДЕМИЯ
+              </p>
+
+              <div class="footer__menu">
+                <div class="footer__menu-item">
+                  <ul class="footer__list">
+                    <li>
+                      <a href="#">Обучение</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Подкасты</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__right-add">
+              <p class="footer__title">
+                О НАС
+              </p>
+
+              <div class="footer__menu">
+                <div class="footer__menu-item">
+                  <ul class="footer__list">
+                    <li>
+                      <a href="#">О нас</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Наши авторы</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Реклама</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Политика приватности</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="phone-color">
+    </div>
+
+    <div class="modal">
+      <div class="modal__left">
+        
+      </div>
+
+      <div class="modal__right">
+
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

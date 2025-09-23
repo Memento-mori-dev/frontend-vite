@@ -1,0 +1,290 @@
+@use '../helpers' as *;
+
+.author{
+    margin-top: rem(50);
+
+    padding-bottom: rem(40);
+
+    &__title{
+        font-size: rem(28);
+        font-weight: 400;
+
+        color: var(--grey-55);
+    }
+
+    &__start{
+        margin-top: rem(50);
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: rem(30);
+    }
+
+    &__item{
+        &-header{
+            display: flex;
+            align-items: center;
+
+            gap: rem(18);
+
+            &-right{
+                &-name{
+                    font-weight: 700;
+                    font-size: rem(21);
+
+                    color: var(--grey-55);
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                &-description{
+                    font-size: rem(12);
+
+                    color: var(--purple-92);
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        &-img{
+            flex-shrink: 0;
+            overflow: hidden;
+
+            @include square(rem(75));
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: var(--linear-gradient);
+
+            &-wrapper{
+                overflow: hidden;
+
+                @include square(rem(71));
+                border-radius: 50%;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-content{
+                overflow: hidden;
+
+                @include square(rem(63));
+                border-radius: 50%;
+
+                object-fit: cover;
+            }
+        }
+
+        &-content{
+            margin-top: rem(20);
+
+            font-size: rem(14);
+            line-height: 143%;
+
+            color: var(--grey-8b);
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-social{
+            margin-top: rem(10);
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(10) rem(20);
+
+            &-item{
+                display: flex;
+                align-items: center;
+                gap: rem(7.5);
+
+                text-decoration: none
+            }
+
+            &-icon{
+                @include square(rem(24));
+
+                border-radius: 50%;
+
+                background-color: var(--grey-55);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-text{
+                font-size: rem(10);
+
+                color: var(--black);
+            }
+        }
+
+        &-button{
+            margin-top: rem(26);
+
+            display: flex;
+            align-items: center;
+            gap: rem(16);
+        }
+
+        &--grey{
+            overflow: hidden;
+
+            width: calc(33.33% - rem(20));
+
+            padding: rem(20) rem(25);
+
+            border-radius: rem(20);
+            background-color: var(--grey-f7);
+
+            & .author__item-img-wrapper{
+                background-color: var(--grey-f7);
+            }
+        }
+
+        &--border{
+            width: calc(33.33% - rem(0.66));
+
+            padding: rem(30) rem(40);
+
+            position: relative;
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: rem(15);
+                left: rem(-1);
+
+                width: rem(1);
+                height: calc(100% - rem(30));
+
+                background-color: var(--grey-8b);
+            }
+            &::before{
+                content: '';
+
+                position: absolute;
+                left: rem(15);
+                bottom: 0;
+
+                width: calc(100% - rem(30));
+                height: rem(1);
+
+                background-color: var(--grey-8b);
+            }
+
+            &:first-child,
+            &:nth-child(3n+1){
+                &::after{
+                    display: none;
+                }
+            }
+            &:nth-last-child(-n+3){
+                &::before{
+                    display: none;
+                }
+            }
+
+            & .author__item-img-wrapper{
+                background-color: var(--white);
+            }
+        }
+    }
+
+    &__next{
+        margin-top: rem(32);
+
+        display: flex;
+        flex-direction: column;
+
+        gap: rem(32);
+
+        &-content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-single{
+        &__img{
+            width: 100%;
+            aspect-ratio: 1;
+
+            border-radius: rem(20);
+
+            object-fit: cover;
+        }
+
+        &__content{
+            margin-top: rem(12);
+        }
+
+        &__title{
+            font-weight: 700;
+            font-size: 36px;
+
+            color: var(--grey-55);
+        }
+
+        &__description{
+            margin-top: rem(26);
+
+            font-size: 16px;
+
+            color: var(--purple-92);
+        }
+
+        &__short-history{
+            margin-top: rem(24);
+
+            font-size: 16px;
+            line-height: 125%;
+
+            color: var(--grey-8b);
+        }
+
+        &__social{
+            margin-top: rem(24);
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(10) rem(20);
+        }
+
+        &__button{
+            margin-top: rem(27);
+
+            display: flex;
+            gap: rem(30);
+        }
+
+        &__tabs{
+            margin-top: rem(50);
+        }
+
+        &__history{
+            font-size: 14px;
+            line-height: 143%;
+
+            color: var(--black);
+        }
+    }
+}
