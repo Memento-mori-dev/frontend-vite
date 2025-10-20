@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+.breadcrumbs{
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+
+    & li{
+        padding-right: rem(15);
+
+        font-size: rem(10);
+        line-height: rem(10);
+
+        position: relative;
+        &::after{
+            content: '';
+
+            position: absolute;
+            top: rem(2);
+            right: 0;
+
+            width: rem(5);
+            height: rem(8);
+
+            background-image: url(../../../assets/svg/breadcrumbs-arrow.svg);
+            background-size: cover;
+        }
+        &:last-child{
+            pointer-events: none;
+
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    & a{
+        text-decoration: none;
+        text-transform: uppercase;
+
+        
+        color: var(--grey-8b);
+
+        @include hover{
+            color: var(--purple-92);
+        }
+    }
+}
