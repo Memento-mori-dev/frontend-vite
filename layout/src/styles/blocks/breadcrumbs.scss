@@ -1,6 +1,8 @@
 @use '../helpers' as *;
 
 .breadcrumbs{
+    margin-top: rem(20);
+
     list-style-type: none;
 
     display: flex;

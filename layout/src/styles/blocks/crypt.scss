@@ -184,4 +184,304 @@
             }
         }
     }
+
+    &__start{
+        &-header{
+            margin-top: rem(10);
+
+            position: relative;
+
+            &-title{
+                max-width: rem(707);
+
+
+                font-size: rem(48);
+                color: var(--purple-92);
+
+            }
+            &-text{
+                margin-top: rem(18);
+
+                max-width: rem(707);
+
+                font-size: rem(16); 
+                color: var(--white);
+            }
+
+            &-img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                
+                @include square(rem(198));
+                background-blend-mode: plus-lighter;
+                mix-blend-mode: plus-lighter;
+            }
+        }
+
+        &-next{
+            margin-top: rem(50);
+        }
+
+        &-img{
+            width: 100%;
+            height: rem(374);
+
+            border-radius: 20px;
+        }
+
+        &-description{
+            margin-top: rem(20);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-parameters{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+            gap: rem(20);
+
+            font-size: rem(12);
+            color: var(--black-55);
+
+            & li{
+                display: flex;
+                align-items: center;
+                gap: rem(4);
+            }
+
+            & a{
+                text-decoration: none;
+                color: var(--black-55);
+
+                transition: var(--transition);
+
+                @include hover{
+                    color: var(--purple-92);
+                }
+            }
+        }
+        &-tags{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+            gap: rem(20);
+
+            & li{
+
+            }
+
+            & a{
+                text-decoration: none;
+
+                font-size: rem(12);
+                color: var(--purple-92);
+
+                &::before{
+                    content: '#';
+                }
+
+                transition: var(--transition);
+                @include hover{
+                    opacity: .8;
+                }
+            }
+        }
+
+        &-title{
+            display: inline-block;
+
+            margin-top: rem(20);
+
+            text-decoration: none;
+
+            font-size: rem(21);
+            font-weight: 700;
+            color: var(--white);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+        &-text{
+            margin-top: rem(16);
+
+            font-size: rem(14);
+            line-height: rem(20); /* 142.857% */
+            color: var(--grey-8b);
+        }
+    }
+    
+    &__news{
+        border-radius: 20px;
+        overflow: hidden;
+
+        display: flex;
+
+        &-wrapper{
+            margin-top: rem(70);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(30);
+        }
+
+        &-img{
+            width: rem(384);
+            height: rem(239);
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &-main{
+            width: calc(100% - rem(384));
+
+            padding: rem(30) rem(20) rem(30) rem(30);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-color: var(--black);
+        }
+        &-top{
+            display: flex;
+            flex-direction: column;
+            gap: rem(17);
+        }
+        &-title{
+            text-decoration: none;
+
+            font-size: rem(21);
+            font-weight: 700;
+            color: var(--white);
+        }
+        &-text{
+            font-size: rem(14);
+            line-height: rem(20);
+            align-self: stretch;
+            color: var(--grey-8b);
+
+            display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
+            -webkit-line-clamp: 3;         /* ограничение по количеству строк */
+            -webkit-box-orient: vertical;  /* ориентация блоков по вертикали */
+            overflow: hidden;              /* скрываем лишний текст */
+            text-overflow: ellipsis;       /* добавляем многоточие */
+        }
+
+        &-btn{
+            &-wrapper{
+                margin-top: rem(50);
+
+                display: flex;
+                justify-content: center;
+            }
+
+            display: inline-block;
+
+            padding: rem(14) rem(33);
+
+            text-decoration: none;
+
+            font-size: rem(16);
+            color: var(--white);
+
+            background: var(--linear-gradient);
+            border-radius: 26.25px;
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        gap: rem(22);
+
+        &-icon{
+            flex-shrink: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-text{
+            flex-shrink: 0;
+
+            font-size: rem(36);
+            color: var(--grey-8b);
+        }
+
+        &-line{
+            width: 100%;
+            height: 1px;
+            background-color: var(--grey-8b);
+        }
+    }
+
+    &__longreads{
+        &-wrapper{
+            margin-top: rem(30);
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: rem(23);
+        }
+
+        &-item{
+            width: calc(50% - rem(11.5));
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+        }
+
+        &-img{
+            width: 100%;
+            aspect-ratio: 76/43;
+
+            border-radius: 24.715px;
+
+            object-fit: cover;
+        }
+        &-link{
+            text-decoration: none;
+
+            font-size: rem(21);
+            font-weight: 700;
+            color: var(--white);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+        &-text{
+            font-size: rem(16);
+            line-height: rem(24);
+            color: var(--grey-8b);
+
+            display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
+            -webkit-line-clamp: 4;         /* ограничение по количеству строк */
+            -webkit-box-orient: vertical;  /* ориентация блоков по вертикали */
+            overflow: hidden;              /* скрываем лишний текст */
+            text-overflow: ellipsis;       /* добавляем многоточие */
+        }
+    }
+
+    &__podcasts{}
 }
