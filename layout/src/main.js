@@ -22,21 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.getElementById("shareBtn").addEventListener("click", async (e) => {
-  e.preventDefault(); // ❗ чтобы ссылка не перезагружала страницу
+if (document.getElementById("shareBtn")) {
+    document.getElementById("shareBtn").addEventListener("click", async (e) => {
+        e.preventDefault(); // ❗ чтобы ссылка не перезагружала страницу
 
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: document.title || "Посмотри это!", // берём реальный заголовок
-        text: "Нашёл интересную ссылку 👇",
-        url: window.location.href, // текущая страница
-      });
-      console.log("Ссылка успешно отправлена!");
-    } catch (err) {
-      console.log("Отмена или ошибка:", err);
-    }
-  } else {
-    alert("Функция 'Поделиться' не поддерживается этим браузером 😕");
-  }
-});
+        if (navigator.share) {
+            try {
+            await navigator.share({
+                title: document.title || "Посмотри это!", // берём реальный заголовок
+                text: "Нашёл интересную ссылку 👇",
+                url: window.location.href, // текущая страница
+            });
+            console.log("Ссылка успешно отправлена!");
+            } catch (err) {
+            console.log("Отмена или ошибка:", err);
+            }
+        } else {
+            alert("Функция 'Поделиться' не поддерживается этим браузером 😕");
+        }
+    });
+}
+
