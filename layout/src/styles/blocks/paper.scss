@@ -295,6 +295,10 @@
         &-title{
             font-size: rem(21);
             color:var(--grey-55);
+
+            &--next{
+                margin-top: rem(29);
+            }
         }
 
         &-wrapper{

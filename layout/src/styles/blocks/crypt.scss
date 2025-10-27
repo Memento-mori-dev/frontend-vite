@@ -186,6 +186,18 @@
     }
 
     &__start{
+        &-wrapper{
+            margin-top: rem(20);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(40);
+
+            & .crypt__start-next{
+                margin-top: 0;
+            }
+        }
+
         &-header{
             margin-top: rem(10);
 
@@ -220,7 +232,7 @@
         }
 
         &-next{
-            margin-top: rem(50);
+            margin-top: rem(70);
         }
 
         &-img{
@@ -330,6 +342,10 @@
             display: flex;
             flex-direction: column;
             gap: rem(30);
+
+            &--page{
+                margin-top: rem(20);
+            }
         }
 
         &-img{
@@ -405,6 +421,8 @@
     }
 
     &__header{
+        margin-top: rem(40);
+
         display: flex;
         align-items: center;
         gap: rem(22);

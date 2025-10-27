@@ -288,7 +288,7 @@
 
                 padding: rem(11) rem(9);
 
-                color: var(--grey-8b);
+                color: var(--grey);
 
                 @include hover{
                     opacity: .8;
@@ -296,7 +296,7 @@
 
                 position: relative;
                 &.is-active{
-                    color: var(--black);
+                    color: var(--purple-92);
 
                     &::after{
                         content: '';
