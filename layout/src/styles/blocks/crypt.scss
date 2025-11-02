@@ -350,7 +350,7 @@
 
         &-img{
             width: rem(384);
-            height: rem(239);
+            min-height: rem(239);
 
             object-fit: cover;
             object-position: center;

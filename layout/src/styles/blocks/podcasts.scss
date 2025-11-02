@@ -1,7 +1,177 @@
 @use '../helpers' as *;
 
 .podcasts{
-    &-start{
-        
+    &__start{
+        width: calc(50% - rem(15));
+
+        border-radius: 20px;
+
+        padding-bottom: rem(160);
+
+        overflow: hidden;
+
+        &-img{
+            width: 100%;
+            height: rem(280);
+
+            object-fit: cover;
+            object-position: center;
+        }
+
+        position: relative;
+        &-content{
+            z-index: 10;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: rem(165);
+
+            padding: rem(20) rem(20) rem(16) rem(20);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &::after{
+                z-index: -1;
+
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background: var(--grey-f7);
+
+                transition: var(--transition);
+            }
+        }
+        &-top{
+            display: flex;
+            flex-direction: column;
+            gap: rem(14);
+
+            & .crypt__start-tags{
+                gap: rem(8);
+            }
+        }
+        &-link{
+            text-decoration: none;
+
+            font-size: rem(16);
+            font-weight: 700;
+            color: var(--white);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;      /* ограничение в 2 строки */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-bottom{
+            display: flex;
+            justify-content: space-between;
+
+            font-size: rem(12);
+            color: var(--purple-92);
+        }
+
+        &-start{
+            position: absolute;
+            top: rem(-35);
+            right: rem(40);
+        }
+
+        &-play{
+            @include square(rem(55));
+
+            padding: rem(2);
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            border: rem(1) solid var(--black-36);
+            background: var(--grey-f7);
+
+            &-color{
+                width: 100%;
+                height: 100%;
+
+                padding: rem(3);
+
+                background: var(--linear-gradient);
+
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            &-icon{
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: var(--grey-f7);
+
+                border-radius: 50%;
+                overflow: hidden;
+
+                & svg{
+                    margin-right: -3px;
+                }
+            }
+
+            @keyframes glow {
+                0%, 100% {
+                    filter: drop-shadow(0 0 5px var(--white));
+                    transform: scale(1);
+                }
+                50% {
+                    filter: drop-shadow(0 0 15px var(--white));
+                    transform: scale(1.1);
+                }
+            }
+
+                
+
+            @include hover{
+                & svg {
+                    animation: glow 2s infinite ease-in-out;
+                }
+            }
+        }
+
+        & *{
+            transition: var(--transition);
+        }
+
+        &:hover{
+            background: var(--linear-gradient);
+
+            & .podcasts__start-content{
+                &::after{
+                    opacity: 0;
+                }
+
+                & .podcasts__start-bottom{
+                    color: var(--white);
+                }
+            }
+        }
     }
 }
