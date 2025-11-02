@@ -140,7 +140,9 @@
             &-text{
                 font-size: rem(10);
 
-                color: var(--black);
+                color: var(--white);
+
+
             }
         }
 
@@ -160,10 +162,10 @@
             padding: rem(20) rem(25);
 
             border-radius: rem(20);
-            background-color: var(--grey-f7);
+            background-color: var(--black-36);
 
             & .author__item-img-wrapper{
-                background-color: var(--grey-f7);
+                background-color: var(--black-36);
             }
         }
 
@@ -211,7 +213,7 @@
             }
 
             & .author__item-img-wrapper{
-                background-color: var(--white);
+                background-color: var(--background);
             }
         }
     }
