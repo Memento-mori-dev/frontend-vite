@@ -221,39 +221,375 @@
             </li>
           </ul>
 
-          <div class="podcasts__start">
-            <img src="./assets/img/new-1.png" alt="" class="podcasts__start-img">
+          <div class="podcasts__wrapper">
+            <div class="podcasts__start" data-js-pod>
+              <img src="./assets/img/new-1.png" alt="" class="podcasts__start-img" data-js-pod-img>
 
-            <div class="podcasts__start-content">
-              <div class="podcasts__start-start">
-                <button class="podcasts__start-play">
-                  <div class="podcasts__start-play-color">
-                    <div class="podcasts__start-play-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
-                        <path d="M20.25 8.57701C23.0921 10.2179 23.0921 14.3201 20.25 15.961L6.39478 23.9604C3.55268 25.6012 4.06921e-05 23.5501 4.08356e-05 20.2684L4.15349e-05 4.26967C4.16783e-05 0.98789 3.55267 -1.06322 6.39478 0.577674L20.25 8.57701Z" fill="#F5F5F5"/>
-                      </svg>
+              <div class="podcasts__start-content" data-js-pod-content>
+                <div class="podcasts__start-start">
+                  <button class="podcasts__start-play">
+                    <div class="podcasts__start-play-color">
+                      <div class="podcasts__start-play-icon" data-js-start>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
+                          <path d="M20.25 8.57701C23.0921 10.2179 23.0921 14.3201 20.25 15.961L6.39478 23.9604C3.55268 25.6012 4.06921e-05 23.5501 4.08356e-05 20.2684L4.15349e-05 4.26967C4.16783e-05 0.98789 3.55267 -1.06322 6.39478 0.577674L20.25 8.57701Z" fill="#F5F5F5"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="podcasts__start-top">
+                  <ul class="crypt__start-tags">
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                  </ul>
+
+                  <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+                </div>
+                
+                <div class="podcasts__start-bottom">
+                  <p>Авг 1, 8:22</p>
+
+                  <p>48:32</p>
+                </div>
+              </div>
+
+              <div class="podcasts__start-next" data-js-pod-controller>
+                <div class="podcasts__start-top">
+                  <div class="podcasts__start-control-header">
+                    <ul class="crypt__start-tags">
+                      <li><a href="">мемы</a></li>
+                      <li><a href="">мемы</a></li>
+                      <li><a href="">мемы</a></li>
+                    </ul>
+
+                    <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+                  </div>
+
+                  <div class="podcasts__start-control">
+                    <div class="podcasts__start-control-speed">
+                      <button data-js-pod-speed='1.5'>x1.5</button>
+                      <button data-js-pod-speed='1'>x1</button>
+                      <button data-js-pod-speed='2'>x2</button>
+                    </div>
+
+                    <div class="podcasts__start-control-log" data-js-loader>
+                      <button class="podcasts__start-control-log-point" data-js-point></button>
+                    </div>
+
+                    <div class="podcasts__start-control-btn">
+                      <button class="podcasts__start-control-btn-small" data-js-restart>
+                        <div class="podcasts__start-control-btn-small-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                            <path d="M0.36499 9.74023V0.990234M9.11499 10.3652L2.86499 5.36523L9.11499 0.365234V10.3652Z" stroke="#F5F5F5" stroke-width="0.73" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-middle"  data-js-back="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M10.2805 9.42634C9.11956 10.2307 9.11956 11.9471 10.2805 12.7514L15.9565 16.6838C17.2978 17.6131 19.1309 16.6531 19.1309 15.0213L19.1309 7.15645C19.1309 5.52461 17.2978 4.5646 15.9565 5.49392L10.2805 9.42634Z" fill="#F5F5F5"/>
+                              <path d="M2.46104 9.25439C1.23344 10.1697 1.23344 12.0089 2.46104 12.9242L9.22404 17.9665C10.7337 19.092 12.8808 18.0146 12.8808 16.1316L12.8808 6.04696C12.8808 4.16393 10.7337 3.08654 9.22404 4.21208L2.46104 9.25439Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-big" data-js-play>
+                        <div class="podcasts__start-control-btn-big-color">
+                          <div class="podcasts__start-control-btn-big-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="34" viewBox="0 0 31 34" fill="none">
+                              <path d="M27.25 11.5417C31.0745 13.7498 31.0745 19.2701 27.25 21.4782L8.60523 32.2428C4.78066 34.4509 -3.60407e-05 31.6907 -3.58477e-05 27.2745L-3.49066e-05 5.74541C-3.47136e-05 1.32919 4.78067 -1.43095 8.60523 0.777159L27.25 11.5417Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-middle" data-js-next="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M12.6003 9.42634C13.7613 10.2307 13.7613 11.9471 12.6003 12.7514L6.92439 16.6838C5.58303 17.6131 3.75 16.6531 3.75 15.0213L3.75 7.15645C3.75 5.52461 5.58303 4.5646 6.92439 5.49392L12.6003 9.42634Z" fill="#F5F5F5"/>
+                              <path d="M20.4193 9.25439C21.6469 10.1697 21.6469 12.0089 20.4193 12.9242L13.6563 17.9665C12.1467 19.092 9.99955 18.0146 9.99955 16.1316L9.99955 6.04696C9.99955 4.16393 12.1467 3.08654 13.6563 4.21208L20.4193 9.25439Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-small" data-js-speak>
+                        <div class="podcasts__start-control-btn-small-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <path d="M10.9992 0.366211C12.1669 1.53427 12.8228 3.11829 12.8228 4.76993C12.8228 6.42157 12.1669 8.00559 10.9992 9.17365M8.80041 2.56496C9.38427 3.14899 9.71226 3.941 9.71226 4.76682C9.71226 5.59263 9.38427 6.38464 8.80041 6.96868M5.97256 0.409812L2.85819 2.90131H0.366699V6.63855H2.85819L5.97256 9.13005V0.409812Z" stroke="white" stroke-width="0.733334" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </button>
                     </div>
                   </div>
-                </button>
+                </div>
+
+                <div class="podcasts__start-bottom">
+                  <p class="podcasts__start-control-time">
+                    <span data-js-timer>00:00</span> / 00:02
+                  </p>
+                </div>
               </div>
 
-              <div class="podcasts__start-top">
-                <ul class="crypt__start-tags">
-                  <li><a href="">мемы</a></li>
-                  <li><a href="">мемы</a></li>
-                  <li><a href="">мемы</a></li>
-                </ul>
+              <audio controls src="./assets/add/audio.mp3" class="podcasts__start-audio" data-js-audio></audio>
+            </div>
 
-                <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+            <div class="podcasts__start" data-js-pod>
+              <img src="./assets/img/new-1.png" alt="" class="podcasts__start-img" data-js-pod-img>
+
+              <div class="podcasts__start-content" data-js-pod-content>
+                <div class="podcasts__start-start">
+                  <button class="podcasts__start-play">
+                    <div class="podcasts__start-play-color">
+                      <div class="podcasts__start-play-icon" data-js-start>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
+                          <path d="M20.25 8.57701C23.0921 10.2179 23.0921 14.3201 20.25 15.961L6.39478 23.9604C3.55268 25.6012 4.06921e-05 23.5501 4.08356e-05 20.2684L4.15349e-05 4.26967C4.16783e-05 0.98789 3.55267 -1.06322 6.39478 0.577674L20.25 8.57701Z" fill="#F5F5F5"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="podcasts__start-top">
+                  <ul class="crypt__start-tags">
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                  </ul>
+
+                  <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+                </div>
+                
+                <div class="podcasts__start-bottom">
+                  <p>Авг 1, 8:22</p>
+
+                  <p>48:32</p>
+                </div>
               </div>
-              
-              <div class="podcasts__start-bottom">
-                <p>Авг 1, 8:22</p>
 
-                <p>48:32</p>
+              <div class="podcasts__start-next" data-js-pod-controller>
+                <div class="podcasts__start-top">
+                  <div class="podcasts__start-control-header">
+                    <ul class="crypt__start-tags">
+                      <li><a href="">мемы</a></li>
+                      <li><a href="">мемы</a></li>
+                      <li><a href="">мемы</a></li>
+                    </ul>
+
+                    <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+                  </div>
+
+                  <div class="podcasts__start-control">
+                    <div class="podcasts__start-control-speed">
+                      <button data-js-pod-speed='1.5'>x1.5</button>
+                      <button data-js-pod-speed='1'>x1</button>
+                      <button data-js-pod-speed='2'>x2</button>
+                    </div>
+
+                    <div class="podcasts__start-control-log" data-js-loader>
+                      <button class="podcasts__start-control-log-point" data-js-point></button>
+                    </div>
+
+                    <div class="podcasts__start-control-btn">
+                      <button class="podcasts__start-control-btn-small" data-js-restart>
+                        <div class="podcasts__start-control-btn-small-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                            <path d="M0.36499 9.74023V0.990234M9.11499 10.3652L2.86499 5.36523L9.11499 0.365234V10.3652Z" stroke="#F5F5F5" stroke-width="0.73" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-middle"  data-js-back="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M10.2805 9.42634C9.11956 10.2307 9.11956 11.9471 10.2805 12.7514L15.9565 16.6838C17.2978 17.6131 19.1309 16.6531 19.1309 15.0213L19.1309 7.15645C19.1309 5.52461 17.2978 4.5646 15.9565 5.49392L10.2805 9.42634Z" fill="#F5F5F5"/>
+                              <path d="M2.46104 9.25439C1.23344 10.1697 1.23344 12.0089 2.46104 12.9242L9.22404 17.9665C10.7337 19.092 12.8808 18.0146 12.8808 16.1316L12.8808 6.04696C12.8808 4.16393 10.7337 3.08654 9.22404 4.21208L2.46104 9.25439Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-big" data-js-play>
+                        <div class="podcasts__start-control-btn-big-color">
+                          <div class="podcasts__start-control-btn-big-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="34" viewBox="0 0 31 34" fill="none">
+                              <path d="M27.25 11.5417C31.0745 13.7498 31.0745 19.2701 27.25 21.4782L8.60523 32.2428C4.78066 34.4509 -3.60407e-05 31.6907 -3.58477e-05 27.2745L-3.49066e-05 5.74541C-3.47136e-05 1.32919 4.78067 -1.43095 8.60523 0.777159L27.25 11.5417Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-middle" data-js-next="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M12.6003 9.42634C13.7613 10.2307 13.7613 11.9471 12.6003 12.7514L6.92439 16.6838C5.58303 17.6131 3.75 16.6531 3.75 15.0213L3.75 7.15645C3.75 5.52461 5.58303 4.5646 6.92439 5.49392L12.6003 9.42634Z" fill="#F5F5F5"/>
+                              <path d="M20.4193 9.25439C21.6469 10.1697 21.6469 12.0089 20.4193 12.9242L13.6563 17.9665C12.1467 19.092 9.99955 18.0146 9.99955 16.1316L9.99955 6.04696C9.99955 4.16393 12.1467 3.08654 13.6563 4.21208L20.4193 9.25439Z" fill="#F5F5F5"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-small" data-js-speak>
+                        <div class="podcasts__start-control-btn-small-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <path d="M10.9992 0.366211C12.1669 1.53427 12.8228 3.11829 12.8228 4.76993C12.8228 6.42157 12.1669 8.00559 10.9992 9.17365M8.80041 2.56496C9.38427 3.14899 9.71226 3.941 9.71226 4.76682C9.71226 5.59263 9.38427 6.38464 8.80041 6.96868M5.97256 0.409812L2.85819 2.90131H0.366699V6.63855H2.85819L5.97256 9.13005V0.409812Z" stroke="white" stroke-width="0.733334" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="podcasts__start-bottom">
+                  <p class="podcasts__start-control-time">
+                    <span data-js-timer>00:00</span> / 00:02
+                  </p>
+                </div>
+              </div>
+
+              <audio controls src="./assets/add/audio.mp3" class="podcasts__start-audio" data-js-audio></audio>
+            </div>
+          </div>
+
+          <div class="podcasts__single">
+            <div class="podcasts__single-start" data-js-pod-main>
+              <img src="./assets/img/new-1.png" alt="" class="podcasts__single-img">
+
+              <div class="podcasts__single-content">
+                <div class="podcasts__single-header">
+                  <ul class="crypt__start-tags">
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                    <li><a href="">мемы</a></li>
+                  </ul>
+
+                  <a href="" class="podcasts__start-link">Подкаст про профессии и профессионалов</a>
+                </div>
+
+                <div class="podcasts__single-speed">
+                  <button data-js-pod-speed="1.5" aria-pressed="false">x1.5</button>
+                  <button data-js-pod-speed="1" aria-pressed="true">x1</button>
+                  <button data-js-pod-speed="2" aria-pressed="false">x2</button>
+                </div>
+
+                <div class="podcasts__single-log" data-js-loader>
+                  <button class="podcasts__single-log-point" data-js-point></button>
+                </div>
+
+                <div class="podcasts__single-controller">
+                  <button class="podcasts__start-control-btn-small" data-js-restart>
+                    <div class="podcasts__start-control-btn-small-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                        <path d="M0.36499 9.74023V0.990234M9.11499 10.3652L2.86499 5.36523L9.11499 0.365234V10.3652Z" stroke="#F5F5F5" stroke-width="0.73" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </button>
+
+                  <div class="podcasts__single-controller-center">
+                    <button class="podcasts__start-control-btn-middle" data-js-back="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M10.2805 9.42634C9.11956 10.2307 9.11956 11.9471 10.2805 12.7514L15.9565 16.6838C17.2978 17.6131 19.1309 16.6531 19.1309 15.0213L19.1309 7.15645C19.1309 5.52461 17.2978 4.5646 15.9565 5.49392L10.2805 9.42634Z" fill="#F5F5F5"></path>
+                              <path d="M2.46104 9.25439C1.23344 10.1697 1.23344 12.0089 2.46104 12.9242L9.22404 17.9665C10.7337 19.092 12.8808 18.0146 12.8808 16.1316L12.8808 6.04696C12.8808 4.16393 10.7337 3.08654 9.22404 4.21208L2.46104 9.25439Z" fill="#F5F5F5"></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-big is-active" data-js-play>
+                        <div class="podcasts__start-control-btn-big-color">
+                          <div class="podcasts__start-control-btn-big-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="34" viewBox="0 0 31 34" fill="none">
+                              <path d="M27.25 11.5417C31.0745 13.7498 31.0745 19.2701 27.25 21.4782L8.60523 32.2428C4.78066 34.4509 -3.60407e-05 31.6907 -3.58477e-05 27.2745L-3.49066e-05 5.74541C-3.47136e-05 1.32919 4.78067 -1.43095 8.60523 0.777159L27.25 11.5417Z" fill="#F5F5F5"></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+
+                      <button class="podcasts__start-control-btn-middle" data-js-next="5">
+                        <div class="podcasts__start-control-btn-middle-color">
+                          <div class="podcasts__start-control-btn-middle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                              <path d="M12.6003 9.42634C13.7613 10.2307 13.7613 11.9471 12.6003 12.7514L6.92439 16.6838C5.58303 17.6131 3.75 16.6531 3.75 15.0213L3.75 7.15645C3.75 5.52461 5.58303 4.5646 6.92439 5.49392L12.6003 9.42634Z" fill="#F5F5F5"></path>
+                              <path d="M20.4193 9.25439C21.6469 10.1697 21.6469 12.0089 20.4193 12.9242L13.6563 17.9665C12.1467 19.092 9.99955 18.0146 9.99955 16.1316L9.99955 6.04696C9.99955 4.16393 12.1467 3.08654 13.6563 4.21208L20.4193 9.25439Z" fill="#F5F5F5"></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                  </div>
+
+                  <button class="podcasts__start-control-btn-small" data-js-speak>
+                      <div class="podcasts__start-control-btn-small-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                          <path d="M10.9992 0.366211C12.1669 1.53427 12.8228 3.11829 12.8228 4.76993C12.8228 6.42157 12.1669 8.00559 10.9992 9.17365M8.80041 2.56496C9.38427 3.14899 9.71226 3.941 9.71226 4.76682C9.71226 5.59263 9.38427 6.38464 8.80041 6.96868M5.97256 0.409812L2.85819 2.90131H0.366699V6.63855H2.85819L5.97256 9.13005V0.409812Z" stroke="white" stroke-width="0.733334" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </button>
+                </div>
+
+                <div class="podcasts__single-description">
+                  <p>Авг 1, 8:22</p>
+
+                  <p><span data-js-timer>00:00</span> / 48:32</p>
+                </div>
+
+                <audio src="./assets/add/audio.mp3" class="podcasts__single-audio"></audio>
               </div>
             </div>
           </div>
+
+          <div class="podcasts__content">
+            date
+          </div>
+
+          <ul class="paper__tags">
+
+            <li>
+              <a href="/news/?tag=tag3">#tag3</a>
+            </li>
+    
+            <li>
+                <a href="#" class="share" id="shareBtn">Поделиться статьей</a>
+            </li>
+          </ul>
+
+          <div class="paper__author">
+              <p class="paper__author-title">Автор статьи</p>
+
+              <div class="paper__author-wrapper">
+                  <div class="paper__author-item">
+                  <img src="http://bit.jobmori1.beget.tech/wp-content/uploads/2025/09/bitcoin-Novosti-bitkoina-tsena-bitkoina.webp" alt="" class="paper__author-img">
+
+                  <div class="paper__author-content">
+                      <a href="%d0%bf%d1%80%d0%be%d1%85%d0%be%d1%80%d0%be%d0%b2-%d0%b0%d0%bd%d0%b4%d1%80%d0%b5%d0%b9-%d0%b2%d0%bb%d0%b0%d0%b4%d0%b8%d0%bc%d0%b8%d1%80%d0%be%d0%b2%d0%b8%d1%87" class="paper__author-link">Прохоров Андрей Владимирович</a>
+
+                      <p class="paper__author-text">
+                          Короткое описание                    </p>
+
+                      <a href="/news/?=author%d0%bf%d1%80%d0%be%d1%85%d0%be%d1%80%d0%be%d0%b2-%d0%b0%d0%bd%d0%b4%d1%80%d0%b5%d0%b9-%d0%b2%d0%bb%d0%b0%d0%b4%d0%b8%d0%bc%d0%b8%d1%80%d0%be%d0%b2%d0%b8%d1%87" class="paper__author-btn">
+                          Все статьи автора
+                      </a>
+                  </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="paper__separation">
+              <div class="paper__separation-line"></div>
+
+              <img src="http://bit.jobmori1.beget.tech/wp-content/themes/bit/assets/svg/paper-line.svg" alt="" class="paper__separation-icon">
+          </div>
+
+          <p class="paper__author-title paper__author-title--next">Похожие материалы</p>
         </div>
       </div>
     </main>
@@ -389,6 +725,8 @@
         </div>
       </div>
     </footer>
+
+
 
     <div class="phone-color">
     </div>
