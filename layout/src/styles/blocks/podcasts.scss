@@ -165,6 +165,7 @@
         }
 
         &-next{
+            pointer-events: none;
             z-index: 11;
 
             position: absolute;
@@ -428,6 +429,8 @@
             }
 
             & .podcasts__start-next{
+                pointer-events: auto;
+
                 opacity: 1;
                 height: rem(240);
 

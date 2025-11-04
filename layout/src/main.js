@@ -76,6 +76,9 @@ if (document.querySelector(".podcasts__start")) {
       const timerEl    = root.querySelector('[data-js-timer]');
       const controller = root.querySelector('[data-js-pod-controller]'); // блок с контролами
 
+      // НОВОЕ: все элементы с конечным временем
+      const timerEndEls = Array.from(root.querySelectorAll('[data-js-timer-end]'));
+
       // позиция точки
       if (point) {
         point.style.position = 'absolute';
@@ -101,6 +104,21 @@ if (document.querySelector(".podcasts__start")) {
       const renderTimer = () => {
         if (!timerEl) return;
         timerEl.textContent = fmt(audio.currentTime || 0);
+      };
+
+      // НОВОЕ: конечное время (длительность)
+      const renderDuration = () => {
+        if (!timerEndEls.length) return;
+        const d = (audio && isFinite(audio.duration) && audio.duration > 0) ? audio.duration : 0;
+        const text = fmt(d);
+        timerEndEls.forEach(el => el.textContent = text);
+      };
+
+      // НОВОЕ: сброс конечного времени (например, при смене src/emptied)
+      const resetDuration = () => {
+        if (!timerEndEls.length) return;
+        const text = fmt(0);
+        timerEndEls.forEach(el => el.textContent = text);
       };
 
       const onTimeUpdate = () => {
@@ -163,7 +181,11 @@ if (document.querySelector(".podcasts__start")) {
       audio.addEventListener('loadedmetadata', () => {
         renderProgress();
         renderTimer();
+        renderDuration(); // НОВОЕ
       });
+      audio.addEventListener('durationchange', renderDuration); // НОВОЕ
+      audio.addEventListener('emptied', resetDuration); // НОВОЕ
+
       audio.addEventListener('timeupdate', onTimeUpdate);
       audio.addEventListener('play',  () => setPlayingUI(true));
       audio.addEventListener('pause', () => setPlayingUI(false));
@@ -210,6 +232,12 @@ if (document.querySelector(".podcasts__start")) {
       setSpeed(1);
       renderProgress();
       renderTimer();
+      // НОВОЕ: сразу выставим длительность, если уже известна (метаданные успели загрузиться)
+      if (isFinite(audio.duration) && audio.duration > 0) {
+        renderDuration();
+      } else {
+        resetDuration();
+      }
     });
 
     // авто-пауза остальных плееров
@@ -220,127 +248,139 @@ if (document.querySelector(".podcasts__start")) {
 }
 
 if (document.querySelector(".podcasts__single")) {
-(() => {
-  const pad = (n) => String(Math.floor(n)).padStart(2, '0');
-  const fmt = (sec) => {
-    if (!isFinite(sec) || sec < 0) sec = 0;
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60);
-    return `${pad(m)}:${pad(s)}`;
-  };
+  (() => {
+    const pad = (n) => String(Math.floor(n)).padStart(2, '0');
+    const fmt = (sec) => {
+      if (!isFinite(sec) || sec < 0) sec = 0;
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${pad(m)}:${pad(s)}`;
+    };
 
-  const root = document.querySelector('[data-js-pod-main]');
-  if (!root) return;
+    const root = document.querySelector('[data-js-pod-main]');
+    if (!root) return;
 
-  const audio      = root.querySelector('audio');
-  if (!audio) return;
+    const audio      = root.querySelector('audio');
+    if (!audio) return;
 
-  const playBtn    = root.querySelector('[data-js-play]');
-  const restartBtn = root.querySelector('[data-js-restart]');
-  const backBtn    = root.querySelector('[data-js-back]');
-  const nextBtn    = root.querySelector('[data-js-next]');
-  const speakBtn   = root.querySelector('[data-js-speak]');
-  const speedBtns  = Array.from(root.querySelectorAll('[data-js-pod-speed]'));
-  const log        = root.querySelector('[data-js-loader]');
-  const point      = root.querySelector('[data-js-point]');
-  const timerEl    = root.querySelector('[data-js-timer]');
+    const playBtn    = root.querySelector('[data-js-play]');
+    const restartBtn = root.querySelector('[data-js-restart]');
+    const backBtn    = root.querySelector('[data-js-back]');
+    const nextBtn    = root.querySelector('[data-js-next]');
+    const speakBtn   = root.querySelector('[data-js-speak]');
+    const speedBtns  = Array.from(root.querySelectorAll('[data-js-pod-speed]'));
+    const log        = root.querySelector('[data-js-loader]');
+    const point      = root.querySelector('[data-js-point]');
+    const timerEl    = root.querySelector('[data-js-timer]');
+    const timerEndEls = Array.from(root.querySelectorAll('[data-js-timer-end]')); // NEW
 
-  const setPlayingUI = (isPlaying) => {
-    root.classList.toggle('is-playing', isPlaying);
-    if (playBtn) playBtn.classList.toggle('is-active', isPlaying);
-  };
+    const setPlayingUI = (isPlaying) => {
+      root.classList.toggle('is-playing', isPlaying);
+      if (playBtn) playBtn.classList.toggle('is-active', isPlaying);
+    };
 
-  const renderProgress = () => {
-    if (!point) return;
-    const dur = audio.duration || 0;
-    const ratio = dur ? Math.min(1, Math.max(0, audio.currentTime / dur)) : 0;
-    point.style.left = (ratio * 100) + '%';
-  };
+    const renderProgress = () => {
+      if (!point) return;
+      const dur = audio.duration || 0;
+      const ratio = dur ? Math.min(1, Math.max(0, audio.currentTime / dur)) : 0;
+      point.style.left = (ratio * 100) + '%';
+    };
 
-  const renderTimer = () => {
-    if (!timerEl) return;
-    timerEl.textContent = fmt(audio.currentTime || 0);
-  };
+    const renderTimer = () => {
+      if (!timerEl) return;
+      timerEl.textContent = fmt(audio.currentTime || 0);
+    };
 
-  const onTimeUpdate = () => {
+    // NEW: рендер длительности во все [data-js-timer-end] внутри root
+    const renderTimerEnd = () => {
+      if (!timerEndEls.length) return;
+      const dur = (isFinite(audio.duration) && audio.duration > 0) ? audio.duration : 0;
+      const text = fmt(dur);
+      timerEndEls.forEach(el => { el.textContent = text; });
+    };
+
+    const onTimeUpdate = () => {
+      renderProgress();
+      renderTimer();
+    };
+
+    const doPlay    = () => { audio.play().catch(()=>{}); };
+    const doToggle  = () => { audio.paused ? doPlay() : audio.pause(); };
+    const doRestart = () => { audio.currentTime = 0; doPlay(); };
+    const doSeekRel = (delta) => {
+      let t = (audio.currentTime || 0) + delta;
+      if (isFinite(audio.duration)) t = Math.min(audio.duration - 0.01, Math.max(0, t));
+      else t = Math.max(0, t);
+      audio.currentTime = t;
+    };
+    const setSpeed = (rate) => {
+      audio.playbackRate = rate;
+      speedBtns.forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.jsPodSpeed) === rate)));
+    };
+    const toggleMute = () => {
+      audio.muted = !audio.muted;
+      if (speakBtn) speakBtn.classList.toggle('is-active', audio.muted);
+    };
+
+    const seekFromClientX = (clientX) => {
+      if (!log) return;
+      const rect = log.getBoundingClientRect();
+      const x = Math.min(rect.right, Math.max(rect.left, clientX));
+      const ratio = (x - rect.left) / rect.width;
+      const dur = audio.duration || 0;
+      if (dur > 0) audio.currentTime = ratio * dur;
+    };
+
+    // drag бегунка
+    let dragging = false;
+    const onPointerDown = (e) => {
+      dragging = true;
+      point?.setPointerCapture?.(e.pointerId);
+      seekFromClientX(e.clientX);
+      e.preventDefault();
+    };
+    const onPointerMove = (e) => { if (dragging) seekFromClientX(e.clientX); };
+    const stopDrag = (e) => { if (dragging) { dragging = false; point?.releasePointerCapture?.(e.pointerId); } };
+
+    // audio события
+    audio.addEventListener('loadedmetadata', () => { renderProgress(); renderTimer(); renderTimerEnd(); }); // UPDATED
+    audio.addEventListener('durationchange', renderTimerEnd); // NEW
+    audio.addEventListener('timeupdate', onTimeUpdate);
+    audio.addEventListener('play',  () => setPlayingUI(true));
+    audio.addEventListener('pause', () => setPlayingUI(false));
+    audio.addEventListener('ended', () => setPlayingUI(false));
+
+    // кнопки
+    playBtn    && playBtn.addEventListener('click', doToggle);
+    restartBtn && restartBtn.addEventListener('click', doRestart);
+    backBtn    && backBtn.addEventListener('click', () => doSeekRel(-Number(backBtn.dataset.jsBack || 5)));
+    nextBtn    && nextBtn.addEventListener('click', () => doSeekRel(+Number(nextBtn.dataset.jsNext || 5)));
+    speakBtn   && speakBtn.addEventListener('click', toggleMute);
+    speedBtns.forEach(btn => btn.addEventListener('click', () => setSpeed(Number(btn.dataset.jsPodSpeed || 1))));
+
+    // клик по линии прогресса
+    if (log) {
+      const cs = getComputedStyle(log);
+      if (!cs.position || cs.position === 'static') log.style.position = 'relative';
+      log.addEventListener('click', (e) => {
+        if (e.target === point) return;
+        seekFromClientX(e.clientX);
+      });
+    }
+
+    if (point) {
+      point.addEventListener('pointerdown', onPointerDown);
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup',   stopDrag);
+      window.addEventListener('pointercancel', stopDrag);
+      window.addEventListener('blur', stopDrag);
+    }
+
+    // init
+    setSpeed(1);
     renderProgress();
     renderTimer();
-  };
-
-  const doPlay    = () => { audio.play().catch(()=>{}); };
-  const doToggle  = () => { audio.paused ? doPlay() : audio.pause(); };
-  const doRestart = () => { audio.currentTime = 0; doPlay(); };
-  const doSeekRel = (delta) => {
-    let t = (audio.currentTime || 0) + delta;
-    if (isFinite(audio.duration)) t = Math.min(audio.duration - 0.01, Math.max(0, t));
-    else t = Math.max(0, t);
-    audio.currentTime = t;
-  };
-  const setSpeed = (rate) => {
-    audio.playbackRate = rate;
-    speedBtns.forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.jsPodSpeed) === rate)));
-  };
-  const toggleMute = () => {
-    audio.muted = !audio.muted;
-    if (speakBtn) speakBtn.classList.toggle('is-active', audio.muted);
-  };
-
-  const seekFromClientX = (clientX) => {
-    if (!log) return;
-    const rect = log.getBoundingClientRect();
-    const x = Math.min(rect.right, Math.max(rect.left, clientX));
-    const ratio = (x - rect.left) / rect.width;
-    const dur = audio.duration || 0;
-    if (dur > 0) audio.currentTime = ratio * dur;
-  };
-
-  // drag бегунка
-  let dragging = false;
-  const onPointerDown = (e) => {
-    dragging = true;
-    point?.setPointerCapture?.(e.pointerId);
-    seekFromClientX(e.clientX);
-    e.preventDefault();
-  };
-  const onPointerMove = (e) => { if (dragging) seekFromClientX(e.clientX); };
-  const stopDrag = (e) => { if (dragging) { dragging = false; point?.releasePointerCapture?.(e.pointerId); } };
-
-  // audio события
-  audio.addEventListener('loadedmetadata', () => { renderProgress(); renderTimer(); });
-  audio.addEventListener('timeupdate', onTimeUpdate);
-  audio.addEventListener('play',  () => setPlayingUI(true));
-  audio.addEventListener('pause', () => setPlayingUI(false));
-  audio.addEventListener('ended', () => setPlayingUI(false));
-
-  // кнопки
-  playBtn    && playBtn.addEventListener('click', doToggle);
-  restartBtn && restartBtn.addEventListener('click', doRestart);
-  backBtn    && backBtn.addEventListener('click', () => doSeekRel(-Number(backBtn.dataset.jsBack || 5)));
-  nextBtn    && nextBtn.addEventListener('click', () => doSeekRel(+Number(nextBtn.dataset.jsNext || 5)));
-  speakBtn   && speakBtn.addEventListener('click', toggleMute);
-  speedBtns.forEach(btn => btn.addEventListener('click', () => setSpeed(Number(btn.dataset.jsPodSpeed || 1))));
-
-  // клик по линии прогресса
-  if (log) {
-    const cs = getComputedStyle(log);
-    if (!cs.position || cs.position === 'static') log.style.position = 'relative';
-    log.addEventListener('click', (e) => {
-      if (e.target === point) return;
-      seekFromClientX(e.clientX);
-    });
-  }
-
-  if (point) {
-    point.addEventListener('pointerdown', onPointerDown);
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('pointerup',   stopDrag);
-    window.addEventListener('pointercancel', stopDrag);
-    window.addEventListener('blur', stopDrag);
-  }
-
-  // init
-  setSpeed(1);
-  renderProgress();
-  renderTimer();
-})();
+    // Если метаданные уже доступны (к примеру, при кэшированном источнике) — сразу выставим длительность
+    if (audio.readyState >= 1) renderTimerEnd();
+  })();
 }
