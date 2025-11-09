@@ -402,6 +402,8 @@
                 gap: rem(20);
 
                 & a{
+                    display: inline-block;
+
                     padding: rem(8) rem(12);
 
                     text-decoration: none;
@@ -428,6 +430,20 @@
                 display: flex;
                 justify-content: center;
                 gap: rem(20);
+            }
+        }
+
+        &-content{
+            margin-top: rem(30);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(30);
+        }
+
+        &-pagination{
+            &.is-hide{
+                display: none;
             }
         }
     }

@@ -270,6 +270,10 @@
 
             border: var(--border-grey-ee-2);
             border-radius: rem(5);
+
+            & svg{
+                pointer-events: none;
+            }
         }
 
         &-main{

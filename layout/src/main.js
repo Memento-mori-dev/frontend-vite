@@ -4,6 +4,8 @@ import Video from "./script/Video";
 import { Inst } from "./script/Inst";
 import { AjaxNews } from "./script/AjaxNews";
 
+import AjaxAuthor from "./script/AjaxAuthor";
+
 useDynamicAdapt();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -383,4 +385,9 @@ if (document.querySelector(".podcasts__single")) {
     // Если метаданные уже доступны (к примеру, при кэшированном источнике) — сразу выставим длительность
     if (audio.readyState >= 1) renderTimerEnd();
   })();
+}
+
+
+if (document.querySelector('[data-js-author]')) {
+  new AjaxAuthor();
 }
