@@ -47,11 +47,6 @@
             display: flex;
             align-items: center;
 
-            &::after{
-                padding-left: rem(2);
-                content: ' мин.';
-            }
-
             & span{
                 padding-right: rem(5);
 
@@ -117,6 +112,8 @@
 
         font-size: 24px;
         line-height: 92%;
+
+        color: var(--white);
     }
 
     &__img{

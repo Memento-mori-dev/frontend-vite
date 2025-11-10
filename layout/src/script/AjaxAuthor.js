@@ -47,7 +47,11 @@ export default class AjaxAuthor{
 
     constructor(){
         // подготовка url
+        this.url = window.location.pathname;
+
+        this.state.url.base = window.location.origin;
         this.state.url.main = new URL('/wp-json/site/v1/content-block', this.state.url.base);
+        this.state.url.params.author = this.url.split('/').filter(Boolean).pop();
 
         // this.state.url = new URL(this.state.mainUrl);
 
@@ -147,7 +151,7 @@ export default class AjaxAuthor{
     }
     
     renderPagButtons(total, page, edge = 1, around = 2) {
-        const pages = [];
+        let pages = [];
         const clamp = (x, min, max) => Math.min(Math.max(x, min), max);
 
         // гварды
@@ -189,7 +193,7 @@ export default class AjaxAuthor{
 
         pages = pages.map(e => this.renderPagButton(e));
 
-        return pages
+        return pages;
     }
 
     renderPag(arr, maxPage){

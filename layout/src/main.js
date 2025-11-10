@@ -391,3 +391,119 @@ if (document.querySelector(".podcasts__single")) {
 if (document.querySelector('[data-js-author]')) {
   new AjaxAuthor();
 }
+
+if (document.querySelector('[data-js-time]')) {
+  (() => {
+    const WPM = 190; // слов в минуту
+    const EXCLUDE = [
+      '.paper__title',
+      '.paper__text',
+      '.paper__line',
+    ];
+
+    const root = document.querySelector('.global__right');
+    if (!root) return;
+
+    // --- Собираем текст ---
+    const isExcluded = (el) => el && EXCLUDE.some(s => el.closest(s));
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        const t = node.nodeValue.trim();
+        if (!t) return NodeFilter.FILTER_REJECT;
+        if (isExcluded(node.parentElement)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    let text = '';
+    while (walker.nextNode()) text += ' ' + walker.currentNode.nodeValue;
+
+    // --- Подсчёт слов ---
+    const words = (text.match(/[\p{L}\p{N}'’-]+/gu) || []).length;
+
+    // --- Подсчёт изображений ---
+    const imgs = Array.from(root.querySelectorAll('img')).filter(img => !isExcluded(img));
+    let imgSec = 0;
+    for (let i = 0; i < imgs.length; i++) {
+      imgSec += Math.max(3, 12 - i);
+    }
+
+    // --- Итог ---
+    const totalSec = Math.ceil((words / WPM) * 60 + imgSec);
+
+    // --- Вставляем в data-js-time ---
+    const el = document.querySelector('[data-js-time]');
+    if (el) {
+
+      el.textContent = `${Math.round(totalSec / 60)} мин (${totalSec} сек)`;
+      // если нужно — можно добавить в title для отладки:
+      el.title = `≈ ${Math.round(totalSec / 60)} мин (${totalSec} сек)`;
+    }
+  })();
+}
+
+if (document.querySelector('[data-js-nav]')) {
+  // Находим все заголовки
+  const titles = document.querySelectorAll('.crypt__start-title, .paper__title');
+
+  // Если заголовки найдены
+  if (titles.length) {
+    // Находим первый crypt__start-title
+    const firstCryptTitle = document.querySelector('.crypt__start-title');
+
+    // Находим все paper__title
+    const paperTitles = document.querySelectorAll('.paper__title');
+
+    // Создаём общий массив для навигации
+    const allTitles = [];
+
+    if (firstCryptTitle) allTitles.push(firstCryptTitle);
+    paperTitles.forEach(el => allTitles.push(el));
+
+    if (allTitles.length) {
+      // Создаем основной контейнер
+      const wrapper = document.createElement('div');
+      wrapper.className = 'paper__content';
+
+      // Заголовок навигации
+      const title = document.createElement('p');
+      title.className = 'paper__content-title';
+      title.textContent = 'Содержание';
+      wrapper.appendChild(title);
+
+      // Список
+      const ul = document.createElement('ul');
+      ul.className = 'paper__content-list';
+
+      let counter = 1;
+
+      allTitles.forEach(el => {
+        const text = el.textContent.trim();
+        let id = el.id || `section-${counter}`;
+
+        // Гарантируем уникальность
+        if (document.getElementById(id)) id = `section-${counter}`;
+        el.id = id;
+        counter++;
+
+        // Формируем ссылку
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${id}`;
+        a.textContent = text;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      wrapper.appendChild(ul);
+
+      // Вставляем в data-js-nav
+      const navTarget = document.querySelector('[data-js-nav]');
+      if (navTarget) {
+        navTarget.innerHTML = ''; // очищаем
+        navTarget.appendChild(wrapper);
+      }
+    }
+  }
+}
