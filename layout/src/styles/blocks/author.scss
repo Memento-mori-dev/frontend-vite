@@ -447,4 +447,13 @@
             }
         }
     }
+
+    &__question{
+        margin-top: rem(40);
+
+        &-title{
+            font-size: rem(28);
+            color: var(--grey-55);
+        }
+    }
 }

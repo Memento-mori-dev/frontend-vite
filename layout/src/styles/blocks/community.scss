@@ -1,0 +1,284 @@
+@use '../helpers' as *;
+
+.community{
+    &__news{
+        &-header{
+            margin-bottom: rem(20);
+
+            display: flex;
+            gap: rem(20);
+        }
+        &-name{
+            text-decoration: none;
+
+            padding: rem(8) rem(10);
+
+            font-size: rem(12);
+            color: var(--white);
+
+            background-color: var(--grey);
+            border-radius: rem(20);
+        }
+
+        &-footer{
+            margin-top: rem(20);
+
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__question{
+        &-wrapper{
+            margin-top: rem(40);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(40);
+        }
+
+        padding: rem(30);
+
+        background-color: var(--grey-f7);
+        border-radius: rem(20);
+
+        &-header{
+            display: flex;
+            align-items: center;
+            gap: rem(20);
+        }
+        &-img{
+            flex-shrink: 0;
+
+            width: rem(50);
+            aspect-ratio: 1;
+
+            object-fit: cover;
+            object-position: center;
+
+            border-radius: 50%;
+        }
+        &-date{
+            font-size: rem(12);
+            color: var(--grey);
+        }
+
+        &-title{
+            text-decoration: none;
+
+            display: inline-block;
+
+            margin-top: rem(20);
+            
+            font-size: rem(21);
+            font-weight: 700;
+            color: var(--white);
+        }
+        &-description{
+            margin-top: rem(16);
+
+            font-size: rem(14);
+            line-height: rem(20);
+            color: var(--grey-8b);
+        }
+
+        &-footer{
+            margin-top: rem(20);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-right{
+            display: flex;
+            gap: rem(20);
+        }
+    }
+
+    &__event{
+        width: calc(50% - rem(15));
+
+        border-radius: rem(20);
+        overflow: hidden;
+
+        background-color: var(--grey-f7);
+
+        &-banner{
+            position: relative;
+
+            height: rem(260);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &-date{
+            z-index: 10;
+
+            position: absolute;
+            top: rem(20);
+            right: rem(25);
+
+            padding: rem(14) rem(27);
+
+            border-radius: rem(20);
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(5);
+
+            &::after{
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0.8;
+                background: var(--grey-f7);
+
+                z-index: -1;
+            }
+
+            &-number{
+                font-size: rem(48);
+                color: var(--purple-92);
+            }
+            &-name{
+                font-size: rem(12);
+                color: var(--purple-92);
+            }
+        }
+        
+        &-content{
+            padding: rem(17) rem(20) rem(70);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+        }
+        &-place{
+            display: flex;
+            align-items: center;
+            gap: rem(6);
+
+            font-size: rem(14);
+            color: var(--purple-92);
+
+            &-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &-title{
+            text-decoration: none;
+
+            font-size: rem(21);
+            font-weight: 700;
+            color: var(--white);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3; /* количество строк */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-description{
+            font-size: rem(16);
+            line-height: rem(24);
+            color: var(--grey-8b);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4; /* количество строк */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__vacancy{
+        width: calc(33.33% - rem(20));
+
+        padding: rem(30) rem(40);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+
+        background-color: var(--grey-f7);
+        border-radius: rem(20);
+
+        &-title{
+            height: rem(42);
+
+            display: flex;
+            align-items: end;
+
+            & > a{
+                text-decoration: none;
+
+                font-size: rem(21);
+
+                color: var(--white);
+
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2; /* количество строк */
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        
+        &-tags{
+            list-style-type: none;
+
+            display: flex;
+            align-items: center;
+            gap: rem(12);
+
+            & > li{
+                position: relative;
+                &:not(:first-child)::after{
+                    content: '';
+
+                    position: absolute;
+                    top: calc(50% - 0.5px);
+                    left: -5.5px;
+
+                    width: 1px;
+                    aspect-ratio: 1;
+
+                    background-color: var(--grey-8b);
+                }
+            }
+
+            & a{
+                text-decoration: none;
+
+                color: var(--grey-8b);
+            }
+        }
+
+
+        &-description{
+            height: rem(37);
+
+            font-size: rem(16);
+
+            color: var(--white);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* количество строк */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

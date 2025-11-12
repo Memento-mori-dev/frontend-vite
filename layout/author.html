@@ -1,471 +1,544 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Name</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/styles/main.scss">
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header__container">
-        <a href="#" class="header__logo">
-          <img src="./assets/svg/logo.svg" alt="Bitbanker">
-        </a>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <nav class="header__menu-pc">
-          <ul class="header__menu" data-da=".modal__right,1320.98,last">
-            <li>
-              <a href="#">Главная</a>
-            </li>
+  <link rel="stylesheet" href="./src/styles/main.scss">
+</head>
 
-            <li>
-              <a href="#">Новости</a>
-            </li>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo">
+        <img src="./assets/svg/logo.svg" alt="Bitbanker">
+      </a>
 
-            <li>
-              <a href="#">Партнеры</a>
-            </li>
-
-            <li>
-              <a href="#">Нормативные документы</a>
-            </li>
-
-            <li>
-              <a href="#">Юридическая консультация</a>
-            </li>
-
-            <li data-da=".header__menu-phone,1320.98,last">
-              <button class="btn btn--academy btn--gradient">Академия</button>
-            </li>
-
-            <li>
-              <div class="color">
-                
-              </div>
-            </li>
-
-            <li data-da=".header__menu-phone,1320.98,first">
-              <button class="btn btn--circle btn--bor-grey">
-                <img src="./assets/svg/search.svg" alt="svg">
-              </button>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="header__menu-phone">
+      <nav class="header__menu-pc">
+        <ul class="header__menu" data-da=".modal__right,1320.98,last">
           <li>
-            <button class="btn btn--circle btn--bor-grey">
-                <img src="./assets/svg/chars.svg" alt="svg">
-              </button>
+            <a href="#">Главная</a>
           </li>
 
           <li>
-            <button class="btn menu">
-              <span></span>
-              <span></span>
+            <a href="#">Новости</a>
+          </li>
+
+          <li>
+            <a href="#">Партнеры</a>
+          </li>
+
+          <li>
+            <a href="#">Нормативные документы</a>
+          </li>
+
+          <li>
+            <a href="#">Юридическая консультация</a>
+          </li>
+
+          <li data-da=".header__menu-phone,1320.98,last">
+            <button class="btn btn--academy btn--gradient">Академия</button>
+          </li>
+
+          <li>
+            <div class="color">
+
+            </div>
+          </li>
+
+          <li data-da=".header__menu-phone,1320.98,first">
+            <button class="btn btn--circle btn--bor-grey">
+              <img src="./assets/svg/search.svg" alt="svg">
             </button>
           </li>
         </ul>
-      </div>
-    </header>
+      </nav>
 
-    <main>
-      <div class="global container">
-        <div class="global__left">
-          <ul class="crypt__menu">
-            <li><a href="/">Новости</a></li>
-            <li><a href="/">Аналитика</a></li>
-            <li><a href="/">Лонгриды</a></li>
-            <li><a href="/">Подкасты</a></li>
-          </ul>
+      <ul class="header__menu-phone">
+        <li>
+          <button class="btn btn--circle btn--bor-grey">
+            <img src="./assets/svg/chars.svg" alt="svg">
+          </button>
+        </li>
 
-          <div class="crypt__change">
-            <p class="crypt__change-title">
-              Конвертер и калькулятор криптовалют
-            </p>
+        <li>
+          <button class="btn menu">
+            <span></span>
+            <span></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-            <p class="crypt__change-description">
-              BTС в Рубли: 1 Bitcoin конвертируется в 10 638 237,84 KGS KGS по состоянию на 9 октября в 14:18
-            </p>
+  <main>
+    <div class="global container">
+      <div class="global__left">
+        <ul class="crypt__menu">
+          <li><a href="/">Новости</a></li>
+          <li><a href="/">Аналитика</a></li>
+          <li><a href="/">Лонгриды</a></li>
+          <li><a href="/">Подкасты</a></li>
+        </ul>
 
-            <div class="crypt__change-main">
-              <div class="crypt__change-toggle">
-                <div class="crypt__change-toggle-header">
-                  <div class="crypt__change-toggle-header-money">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
-                      <path d="M4.53899 1.53148V0.523158C4.53899 0.523158 4.63982 0.25091 4.68015 0.200494C4.92215 -0.0818374 5.3759 -0.0515876 5.57756 0.260993C5.77923 0.573574 5.61789 1.19874 5.66831 1.56173C7.04972 1.69282 8.26979 2.71122 8.60254 4.06238C8.87479 5.19171 8.45129 6.30086 7.59421 7.04702C7.52363 7.10752 7.17072 7.32936 7.1808 7.37977C7.86646 7.82343 8.39079 8.46876 8.59245 9.26534C8.75379 9.90059 8.71345 10.4047 8.49162 11.0198C8.04796 12.2097 6.92872 13.0466 5.66831 13.1776C5.62798 13.218 5.68848 14.1154 5.66831 14.2868C5.61789 14.5792 5.27506 14.7809 4.98265 14.7204C4.79107 14.68 4.5289 14.4179 4.5289 14.2162V13.2079H3.45L3.39958 13.2583V14.3171C3.39958 14.3171 3.30883 14.4683 3.28866 14.4986C3.0265 14.8414 2.50217 14.791 2.32067 14.3977C2.31059 14.3675 2.26017 14.2263 2.26017 14.2162V13.2079H0.394769C0.253603 13.2079 0.0418547 12.9155 0.0116049 12.7743C-0.0589779 12.4819 0.203186 12.0685 0.505684 12.0685H1.51401V2.66081H0.505684C0.21327 2.66081 -0.0589779 2.24739 0.0116049 1.95498C0.0418547 1.8239 0.253603 1.5214 0.394769 1.5214H2.26017V0.513075C2.26017 0.513075 2.32067 0.331576 2.33075 0.301326C2.51225 -0.0717541 3.03658 -0.102004 3.28866 0.230744C3.30883 0.260993 3.39958 0.402159 3.39958 0.412242V1.47098L3.45 1.5214H4.5289L4.53899 1.53148ZM2.65342 6.80503H5.61789C6.02122 6.80503 6.72705 6.36136 6.9993 6.05887C8.4131 4.46695 6.81334 2.67089 5.08348 2.67089C4.27682 2.67089 3.46008 2.67089 2.65342 2.67089V6.81511V6.80503ZM2.65342 12.0685C3.46008 12.0685 4.27682 12.0685 5.08348 12.0685C6.80784 12.0685 8.4182 10.267 6.9993 8.68051C6.72705 8.37801 6.02122 7.93435 5.61789 7.93435H2.65342V12.0786V12.0685Z" fill="#555555"/>
-                    </svg>
-                  </div>
+        <div class="crypt__change">
+          <p class="crypt__change-title">
+            Конвертер и калькулятор криптовалют
+          </p>
 
-                  <p class="crypt__change-toggle-header-type">
-                    BTC
-                  </p>
+          <p class="crypt__change-description">
+            BTС в Рубли: 1 Bitcoin конвертируется в 10 638 237,84 KGS KGS по состоянию на 9 октября в 14:18
+          </p>
 
-                  <button class="crypt__change-toggle-open">
-                    <div class="crypt__change-toggle-open-color">
-                      <div class="crypt__change-toggle-open-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                          <path d="M9.14279 1.14285V17.5513M9.14279 17.5513L1.14282 9.5513M9.14279 17.5513L17.1428 9.5513" stroke="#D9D9D9" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
+          <div class="crypt__change-main">
+            <div class="crypt__change-toggle">
+              <div class="crypt__change-toggle-header">
+                <div class="crypt__change-toggle-header-money">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                    <path
+                      d="M4.53899 1.53148V0.523158C4.53899 0.523158 4.63982 0.25091 4.68015 0.200494C4.92215 -0.0818374 5.3759 -0.0515876 5.57756 0.260993C5.77923 0.573574 5.61789 1.19874 5.66831 1.56173C7.04972 1.69282 8.26979 2.71122 8.60254 4.06238C8.87479 5.19171 8.45129 6.30086 7.59421 7.04702C7.52363 7.10752 7.17072 7.32936 7.1808 7.37977C7.86646 7.82343 8.39079 8.46876 8.59245 9.26534C8.75379 9.90059 8.71345 10.4047 8.49162 11.0198C8.04796 12.2097 6.92872 13.0466 5.66831 13.1776C5.62798 13.218 5.68848 14.1154 5.66831 14.2868C5.61789 14.5792 5.27506 14.7809 4.98265 14.7204C4.79107 14.68 4.5289 14.4179 4.5289 14.2162V13.2079H3.45L3.39958 13.2583V14.3171C3.39958 14.3171 3.30883 14.4683 3.28866 14.4986C3.0265 14.8414 2.50217 14.791 2.32067 14.3977C2.31059 14.3675 2.26017 14.2263 2.26017 14.2162V13.2079H0.394769C0.253603 13.2079 0.0418547 12.9155 0.0116049 12.7743C-0.0589779 12.4819 0.203186 12.0685 0.505684 12.0685H1.51401V2.66081H0.505684C0.21327 2.66081 -0.0589779 2.24739 0.0116049 1.95498C0.0418547 1.8239 0.253603 1.5214 0.394769 1.5214H2.26017V0.513075C2.26017 0.513075 2.32067 0.331576 2.33075 0.301326C2.51225 -0.0717541 3.03658 -0.102004 3.28866 0.230744C3.30883 0.260993 3.39958 0.402159 3.39958 0.412242V1.47098L3.45 1.5214H4.5289L4.53899 1.53148ZM2.65342 6.80503H5.61789C6.02122 6.80503 6.72705 6.36136 6.9993 6.05887C8.4131 4.46695 6.81334 2.67089 5.08348 2.67089C4.27682 2.67089 3.46008 2.67089 2.65342 2.67089V6.81511V6.80503ZM2.65342 12.0685C3.46008 12.0685 4.27682 12.0685 5.08348 12.0685C6.80784 12.0685 8.4182 10.267 6.9993 8.68051C6.72705 8.37801 6.02122 7.93435 5.61789 7.93435H2.65342V12.0786V12.0685Z"
+                      fill="#555555" />
+                  </svg>
                 </div>
-              </div>
 
-              <input type="number" class="crypt__change-input">
+                <p class="crypt__change-toggle-header-type">
+                  BTC
+                </p>
 
-              <button class="crypt__change-switch">
-                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 23 17" fill="none">
-                  <path d="M6.4028 0.800731V16.0074M6.4028 16.0074L12.0052 10.4049M6.4028 16.0074L0.800346 10.4049" stroke="#555555" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M16.4075 16.007V0.800354M16.4075 0.800354L22.0099 6.40281M16.4075 0.800354L10.805 6.40281" stroke="#555555" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-
-              <div class="crypt__change-toggle">
-                <div class="crypt__change-toggle-header">
-                  <div class="crypt__change-toggle-header-money">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
-                      <path d="M4.53899 1.53148V0.523158C4.53899 0.523158 4.63982 0.25091 4.68015 0.200494C4.92215 -0.0818374 5.3759 -0.0515876 5.57756 0.260993C5.77923 0.573574 5.61789 1.19874 5.66831 1.56173C7.04972 1.69282 8.26979 2.71122 8.60254 4.06238C8.87479 5.19171 8.45129 6.30086 7.59421 7.04702C7.52363 7.10752 7.17072 7.32936 7.1808 7.37977C7.86646 7.82343 8.39079 8.46876 8.59245 9.26534C8.75379 9.90059 8.71345 10.4047 8.49162 11.0198C8.04796 12.2097 6.92872 13.0466 5.66831 13.1776C5.62798 13.218 5.68848 14.1154 5.66831 14.2868C5.61789 14.5792 5.27506 14.7809 4.98265 14.7204C4.79107 14.68 4.5289 14.4179 4.5289 14.2162V13.2079H3.45L3.39958 13.2583V14.3171C3.39958 14.3171 3.30883 14.4683 3.28866 14.4986C3.0265 14.8414 2.50217 14.791 2.32067 14.3977C2.31059 14.3675 2.26017 14.2263 2.26017 14.2162V13.2079H0.394769C0.253603 13.2079 0.0418547 12.9155 0.0116049 12.7743C-0.0589779 12.4819 0.203186 12.0685 0.505684 12.0685H1.51401V2.66081H0.505684C0.21327 2.66081 -0.0589779 2.24739 0.0116049 1.95498C0.0418547 1.8239 0.253603 1.5214 0.394769 1.5214H2.26017V0.513075C2.26017 0.513075 2.32067 0.331576 2.33075 0.301326C2.51225 -0.0717541 3.03658 -0.102004 3.28866 0.230744C3.30883 0.260993 3.39958 0.402159 3.39958 0.412242V1.47098L3.45 1.5214H4.5289L4.53899 1.53148ZM2.65342 6.80503H5.61789C6.02122 6.80503 6.72705 6.36136 6.9993 6.05887C8.4131 4.46695 6.81334 2.67089 5.08348 2.67089C4.27682 2.67089 3.46008 2.67089 2.65342 2.67089V6.81511V6.80503ZM2.65342 12.0685C3.46008 12.0685 4.27682 12.0685 5.08348 12.0685C6.80784 12.0685 8.4182 10.267 6.9993 8.68051C6.72705 8.37801 6.02122 7.93435 5.61789 7.93435H2.65342V12.0786V12.0685Z" fill="#555555"/>
-                    </svg>
-                  </div>
-
-                  <p class="crypt__change-toggle-header-type">
-                    BTC
-                  </p>
-
-                  <button class="crypt__change-toggle-open">
-                    <div class="crypt__change-toggle-open-color">
-                      <div class="crypt__change-toggle-open-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
-                          <path d="M9.14279 1.14285V17.5513M9.14279 17.5513L1.14282 9.5513M9.14279 17.5513L17.1428 9.5513" stroke="#D9D9D9" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
+                <button class="crypt__change-toggle-open">
+                  <div class="crypt__change-toggle-open-color">
+                    <div class="crypt__change-toggle-open-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M9.14279 1.14285V17.5513M9.14279 17.5513L1.14282 9.5513M9.14279 17.5513L17.1428 9.5513"
+                          stroke="#D9D9D9" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
                     </div>
-                  </button>
-                </div>
+                  </div>
+                </button>
               </div>
-
-              <input type="number" class="crypt__change-input">
             </div>
+
+            <input type="number" class="crypt__change-input">
+
+            <button class="crypt__change-switch">
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 23 17" fill="none">
+                <path d="M6.4028 0.800731V16.0074M6.4028 16.0074L12.0052 10.4049M6.4028 16.0074L0.800346 10.4049"
+                  stroke="#555555" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.4075 16.007V0.800354M16.4075 0.800354L22.0099 6.40281M16.4075 0.800354L10.805 6.40281"
+                  stroke="#555555" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="crypt__change-toggle">
+              <div class="crypt__change-toggle-header">
+                <div class="crypt__change-toggle-header-money">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+                    <path
+                      d="M4.53899 1.53148V0.523158C4.53899 0.523158 4.63982 0.25091 4.68015 0.200494C4.92215 -0.0818374 5.3759 -0.0515876 5.57756 0.260993C5.77923 0.573574 5.61789 1.19874 5.66831 1.56173C7.04972 1.69282 8.26979 2.71122 8.60254 4.06238C8.87479 5.19171 8.45129 6.30086 7.59421 7.04702C7.52363 7.10752 7.17072 7.32936 7.1808 7.37977C7.86646 7.82343 8.39079 8.46876 8.59245 9.26534C8.75379 9.90059 8.71345 10.4047 8.49162 11.0198C8.04796 12.2097 6.92872 13.0466 5.66831 13.1776C5.62798 13.218 5.68848 14.1154 5.66831 14.2868C5.61789 14.5792 5.27506 14.7809 4.98265 14.7204C4.79107 14.68 4.5289 14.4179 4.5289 14.2162V13.2079H3.45L3.39958 13.2583V14.3171C3.39958 14.3171 3.30883 14.4683 3.28866 14.4986C3.0265 14.8414 2.50217 14.791 2.32067 14.3977C2.31059 14.3675 2.26017 14.2263 2.26017 14.2162V13.2079H0.394769C0.253603 13.2079 0.0418547 12.9155 0.0116049 12.7743C-0.0589779 12.4819 0.203186 12.0685 0.505684 12.0685H1.51401V2.66081H0.505684C0.21327 2.66081 -0.0589779 2.24739 0.0116049 1.95498C0.0418547 1.8239 0.253603 1.5214 0.394769 1.5214H2.26017V0.513075C2.26017 0.513075 2.32067 0.331576 2.33075 0.301326C2.51225 -0.0717541 3.03658 -0.102004 3.28866 0.230744C3.30883 0.260993 3.39958 0.402159 3.39958 0.412242V1.47098L3.45 1.5214H4.5289L4.53899 1.53148ZM2.65342 6.80503H5.61789C6.02122 6.80503 6.72705 6.36136 6.9993 6.05887C8.4131 4.46695 6.81334 2.67089 5.08348 2.67089C4.27682 2.67089 3.46008 2.67089 2.65342 2.67089V6.81511V6.80503ZM2.65342 12.0685C3.46008 12.0685 4.27682 12.0685 5.08348 12.0685C6.80784 12.0685 8.4182 10.267 6.9993 8.68051C6.72705 8.37801 6.02122 7.93435 5.61789 7.93435H2.65342V12.0786V12.0685Z"
+                      fill="#555555" />
+                  </svg>
+                </div>
+
+                <p class="crypt__change-toggle-header-type">
+                  BTC
+                </p>
+
+                <button class="crypt__change-toggle-open">
+                  <div class="crypt__change-toggle-open-color">
+                    <div class="crypt__change-toggle-open-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M9.14279 1.14285V17.5513M9.14279 17.5513L1.14282 9.5513M9.14279 17.5513L17.1428 9.5513"
+                          stroke="#D9D9D9" stroke-width="2.28571" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <input type="number" class="crypt__change-input">
           </div>
         </div>
+      </div>
 
-        <div class="global__right">
-          <ul class="breadcrumbs">
-            <li>
-              <a href="">Главная</a>
-            </li>
+      <div class="global__right">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="">Главная</a>
+          </li>
 
-            <li>
-              <a href="">КРИПТОВАЛЮТЫ</a>
-            </li>
-          </ul>
+          <li>
+            <a href="">КРИПТОВАЛЮТЫ</a>
+          </li>
+        </ul>
 
-          <div class="author__single-start">
-            <img src="./assets/img/inst.png" alt="" class="author__single-start-img">
+        <div class="author__single-start">
+          <img src="./assets/img/inst.png" alt="" class="author__single-start-img">
 
-            <div class="author__single-start-content">
-              <div class="author__single-start-top">
-                <p class="author__single-start-title">Прохоров Андрей Владимирович</p>
+          <div class="author__single-start-content">
+            <div class="author__single-start-top">
+              <p class="author__single-start-title">Прохоров Андрей Владимирович</p>
 
-                <p class="author__single-start-description">
-                  Должность: аналитик цифровых активов и консультант по блокчейн-инфраструктуре Опыт: более 12 лет в сфере финтеха, аналитики и управления цифровыми продуктами
-                </p>
+              <p class="author__single-start-description">
+                Должность: аналитик цифровых активов и консультант по блокчейн-инфраструктуре Опыт: более 12 лет в сфере
+                финтеха, аналитики и управления цифровыми продуктами
+              </p>
 
-                <div class="author__single-start-spheres">
-                  <p class="author__single-start-add-title">Сферы компетенции:</p>
+              <div class="author__single-start-spheres">
+                <p class="author__single-start-add-title">Сферы компетенции:</p>
 
-                  <ul class="author__single-start-list">
-                    <li>– токенизация активов и DeFi</li>
-                    <li>– токенизация активов и DeFi</li>
+                <ul class="author__single-start-list">
+                  <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
 
-                    <li>– токенизация активов и DeFi</li>
-                    <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
 
-                    <li>– токенизация активов и DeFi</li>
-                    <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
 
-                    <li>– токенизация активов и DeFi</li>
-                    <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
+                  <li>– токенизация активов и DeFi</li>
 
-                  </ul>
-                </div>
-
-                <p class="author__single-start-add-title">
-                  Контакты:
-                </p>
-
-                <ul class="author__single-start-call">
-                  <li><a href="">LinkedIn</a></li>
-                  <li><a href="">LinkedIn</a></li>
-                  <li><a href="">LinkedIn</a></li>
-                  <li><a href="">LinkedIn</a></li>
                 </ul>
               </div>
 
-              <div class="author__single-start-bottom">
-                <a href="" class="author__single-start-link">
-                  Задать вопрос этому эксперту
-                </a>
-              </div>
-            </div>
-          </div>
+              <p class="author__single-start-add-title">
+                Контакты:
+              </p>
 
-          <div class="author__single-about">
-            <p class="author__single-about-title">О специалисте:</p>
-
-            <p class="author__single-about-text">
-              Алексей Ковалёв — один из первых российских специалистов, кто начал исследовать применение блокчейна в банковских процессах и автоматизации инвестиций. Работал с децентрализованными платформами и системами анализа транзакций. Консультирует компании по цифровым валютам, токенизации активов и внедрению искусственного интеллекта в финансовые процессы. <br><br>
-              Алексей убеждён, что цифровая экономика — это не просто технологии, а новая культура взаимодействия человека и капитала. В своих материалах он помогает понять, как безопасно использовать криптовалюту, как строятся новые бизнес-модели на блокчейне и как развивается рынок Web3.
-            </p>
-          </div>
-
-          <div class="paper__separation">
-            <div class="paper__separation-line"></div>
-
-            <div class="paper__separation-icon">
-              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.1926 10.9082H10.9609V13.0943H13.1926V10.9082Z" fill="url(#paint0_linear_975_1524)"></path>
-                <path d="M8.11002 9.49327C8.89565 9.49327 9.53254 8.86037 9.53254 8.07964C9.53254 7.29892 8.89565 6.66602 8.11002 6.66602C7.32438 6.66602 6.6875 7.29892 6.6875 8.07964C6.6875 8.86037 7.32438 9.49327 8.11002 9.49327Z" fill="url(#paint1_linear_975_1524)"></path>
-                <path d="M8.11154 14.5078H8.11002C7.32361 14.5078 6.6875 15.1415 6.6875 15.9214C6.6875 16.7014 7.32513 17.3351 8.11002 17.3351C8.89491 17.3351 9.53254 16.7014 9.53254 15.9214C9.53254 15.1415 8.89643 14.5078 8.11154 14.5078Z" fill="url(#paint2_linear_975_1524)"></path>
-                <path d="M12.0755 0C5.40618 0 0 5.37239 0 12C0 18.6276 5.40618 24 12.0755 24C18.7448 24 24.1509 18.6276 24.1509 12C24.1509 5.37239 18.7448 0 12.0755 0ZM16.0045 13.0923C16.0151 13.0923 16.0257 13.0923 16.0364 13.0923C17.6092 13.0923 18.8829 14.3596 18.8829 15.921C18.8829 17.4825 17.6092 18.7498 16.0364 18.7498C14.4635 18.7498 13.1898 17.484 13.1898 15.921V14.5074H10.9581V15.921C10.9581 17.4825 9.68437 18.7498 8.11155 18.7498C6.53873 18.7498 5.26499 17.484 5.26499 15.921C5.26499 14.3581 6.54025 13.0923 8.11155 13.0923C8.11155 13.0923 8.11155 13.0923 8.11307 13.0923H9.53407V10.9062H7.99465V10.9002C6.47649 10.8398 5.26347 9.60121 5.26347 8.07745C5.26347 6.55368 6.53873 5.24868 8.11003 5.24868C9.68133 5.24868 10.9566 6.51597 10.9566 8.07745V9.49107H13.1883V8.07745C13.1883 6.51597 14.462 5.24868 16.0348 5.24868C17.6077 5.24868 18.8814 6.51597 18.8814 8.07745C18.8814 9.63893 17.6077 10.9062 16.0348 10.9062H14.6123V13.0923H16.003H16.0045Z" fill="url(#paint3_linear_975_1524)"></path>
-                <path d="M14.6172 8.08115C14.6172 8.86114 15.2548 9.49327 16.0397 9.49327C16.8246 9.49327 17.4622 8.85963 17.4622 8.07964C17.4622 7.29966 16.8246 6.66602 16.0397 6.66602C15.2548 6.66602 14.6172 7.29966 14.6172 8.07964V8.08115Z" fill="url(#paint4_linear_975_1524)"></path>
-                <path d="M14.6172 15.9214C14.6172 16.7029 15.2548 17.3351 16.0397 17.3351C16.8246 17.3351 17.4622 16.7014 17.4622 15.9214C17.4622 15.1415 16.8246 14.5078 16.0397 14.5078C15.2548 14.5078 14.6172 15.1399 14.6172 15.9199V15.9214Z" fill="url(#paint5_linear_975_1524)"></path>
-                <defs>
-                  <linearGradient id="paint0_linear_975_1524" x1="11.5413" y1="12.0012" x2="13.0981" y2="12.0012" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_975_1524" x1="7.42741" y1="8.07964" x2="9.41202" y2="8.07964" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                  <linearGradient id="paint2_linear_975_1524" x1="7.42741" y1="15.9214" x2="9.41202" y2="15.9214" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                  <linearGradient id="paint3_linear_975_1524" x1="6.28092" y1="11.9999" x2="23.1279" y2="11.9999" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                  <linearGradient id="paint4_linear_975_1524" x1="15.3571" y1="8.07964" x2="17.3417" y2="8.07964" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                  <linearGradient id="paint5_linear_975_1524" x1="15.3571" y1="15.9214" x2="17.3417" y2="15.9214" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#58457D"></stop>
-                    <stop offset="1" stop-color="#AB5FC3"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          <div class="author__single-articles" data-js-author>
-            <p class="author__single-articles-title">Публикации и ответы</p>
-
-            <div class="author__single-articles-main">
-              <ul class="author__single-articles-control">
-                <li>
-                  <a class="is-active" data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="">Все материалы</a>
-                </li>
-
-                <li>
-                  <a data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="news-type,news">Новости</a>
-                </li>
-
-                <li>
-                  <a data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="news-type,longreads">Лонгриды</a>
-                </li>
+              <ul class="author__single-start-call">
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">LinkedIn</a></li>
               </ul>
-
-              <div>
-                <div class="author__single-content"  data-js-content>
-
-                </div>
-
-                <div class="author__single-pagination" data-js-pag>
-                  <div class="news__pagination">
-                    <button class="btn news__pagination-button" aria-label="Предыдущая страница" data-js-prev>
-                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.13207 11.2591C6.31669 11.4644 6.63282 11.4813 6.83818 11.2966C7.04354 11.112 7.06035 10.7959 6.87574 10.5905L6.50391 10.9248L6.13207 11.2591ZM6.50391 10.9248L6.87574 10.5905L1.99869 5.16553L1.62686 5.4998L1.25502 5.83408L6.13207 11.2591L6.50391 10.9248Z" fill="#555555"></path>
-                        <path d="M7.3867 0.949454C7.59124 0.763933 7.60665 0.447726 7.42113 0.243186C7.23561 0.0386461 6.91941 0.0232284 6.71487 0.20875L7.05078 0.579102L7.3867 0.949454ZM1.28986 5.12932L0.919513 5.46523L1.59134 6.20594L1.9617 5.87002L1.62578 5.49967L1.28986 5.12932ZM7.05078 0.579102L6.71487 0.20875L1.28986 5.12932L1.62578 5.49967L1.9617 5.87002L7.3867 0.949454L7.05078 0.579102Z" fill="#555555"></path>
-                        </svg>
-                    </button>
-
-                    <div class="news__pagination-main" data-js-pag-main>
-                        
-                    </div>
-
-                    <button class="btn news__pagination-button" aria-label="Следующая страница" data-js-next>
-                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.86793 0.740919C1.68331 0.535562 1.36718 0.518747 1.16182 0.703363C0.95646 0.887978 0.939645 1.20411 1.12426 1.40947L1.49609 1.0752L1.86793 0.740919ZM1.49609 1.0752L1.12426 1.40947L6.00131 6.83447L6.37315 6.5002L6.74498 6.16592L1.86793 0.740919L1.49609 1.0752Z" fill="#555555"></path>
-                        <path d="M0.613303 11.0505C0.408763 11.2361 0.393346 11.5523 0.578867 11.7568C0.764388 11.9614 1.08059 11.9768 1.28513 11.7913L0.949219 11.4209L0.613303 11.0505ZM6.71013 6.87068L7.08049 6.53477L6.40866 5.79406L6.0383 6.12998L6.37422 6.50033L6.71013 6.87068ZM0.949219 11.4209L1.28513 11.7913L6.71013 6.87068L6.37422 6.50033L6.0383 6.12998L0.613303 11.0505L0.949219 11.4209Z" fill="#555555"></path>
-                        </svg>
-                    </button>
-                </div>
-                </div>
-              </div>
             </div>
-          </div>
-      </div>
-    </main>
 
-    <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer__left">
-          <a href="#" class="footer__logo">
-            <img src="./assets/svg/logo.svg" alt="Bitbanker">
-          </a>
-
-          <p class="footer__title-logo">
-            Подпишись на наши новости
-          </p>
-
-          <form action="" class="footer__form">
-            <input type="text" placeholder="Введите ваш e-mail...">
-
-            <button type="submit" class="btn footer__form-btn">Подписаться</button>
-          </form>
-
-          <div class="footer__social">
-            <div class="social">
-              <a href="#" class="social__btn">
-                <img src="./assets/svg/tg.svg" alt="">
-              </a>
-
-              <a href="#" class="social__btn">
-                <img src="./assets/svg/vk.svg" alt="">
+            <div class="author__single-start-bottom">
+              <a href="" class="author__single-start-link">
+                Задать вопрос этому эксперту
               </a>
             </div>
           </div>
         </div>
 
-        <div class="footer__right">
-          <div class="footer__right-main">
+        <div class="author__single-about">
+          <p class="author__single-about-title">О специалисте:</p>
+
+          <p class="author__single-about-text">
+            Алексей Ковалёв — один из первых российских специалистов, кто начал исследовать применение блокчейна в
+            банковских процессах и автоматизации инвестиций. Работал с децентрализованными платформами и системами
+            анализа транзакций. Консультирует компании по цифровым валютам, токенизации активов и внедрению
+            искусственного интеллекта в финансовые процессы. <br><br>
+            Алексей убеждён, что цифровая экономика — это не просто технологии, а новая культура взаимодействия человека
+            и капитала. В своих материалах он помогает понять, как безопасно использовать криптовалюту, как строятся
+            новые бизнес-модели на блокчейне и как развивается рынок Web3.
+          </p>
+        </div>
+
+        <div class="paper__separation">
+          <div class="paper__separation-line"></div>
+
+          <div class="paper__separation-icon">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.1926 10.9082H10.9609V13.0943H13.1926V10.9082Z" fill="url(#paint0_linear_975_1524)"></path>
+              <path
+                d="M8.11002 9.49327C8.89565 9.49327 9.53254 8.86037 9.53254 8.07964C9.53254 7.29892 8.89565 6.66602 8.11002 6.66602C7.32438 6.66602 6.6875 7.29892 6.6875 8.07964C6.6875 8.86037 7.32438 9.49327 8.11002 9.49327Z"
+                fill="url(#paint1_linear_975_1524)"></path>
+              <path
+                d="M8.11154 14.5078H8.11002C7.32361 14.5078 6.6875 15.1415 6.6875 15.9214C6.6875 16.7014 7.32513 17.3351 8.11002 17.3351C8.89491 17.3351 9.53254 16.7014 9.53254 15.9214C9.53254 15.1415 8.89643 14.5078 8.11154 14.5078Z"
+                fill="url(#paint2_linear_975_1524)"></path>
+              <path
+                d="M12.0755 0C5.40618 0 0 5.37239 0 12C0 18.6276 5.40618 24 12.0755 24C18.7448 24 24.1509 18.6276 24.1509 12C24.1509 5.37239 18.7448 0 12.0755 0ZM16.0045 13.0923C16.0151 13.0923 16.0257 13.0923 16.0364 13.0923C17.6092 13.0923 18.8829 14.3596 18.8829 15.921C18.8829 17.4825 17.6092 18.7498 16.0364 18.7498C14.4635 18.7498 13.1898 17.484 13.1898 15.921V14.5074H10.9581V15.921C10.9581 17.4825 9.68437 18.7498 8.11155 18.7498C6.53873 18.7498 5.26499 17.484 5.26499 15.921C5.26499 14.3581 6.54025 13.0923 8.11155 13.0923C8.11155 13.0923 8.11155 13.0923 8.11307 13.0923H9.53407V10.9062H7.99465V10.9002C6.47649 10.8398 5.26347 9.60121 5.26347 8.07745C5.26347 6.55368 6.53873 5.24868 8.11003 5.24868C9.68133 5.24868 10.9566 6.51597 10.9566 8.07745V9.49107H13.1883V8.07745C13.1883 6.51597 14.462 5.24868 16.0348 5.24868C17.6077 5.24868 18.8814 6.51597 18.8814 8.07745C18.8814 9.63893 17.6077 10.9062 16.0348 10.9062H14.6123V13.0923H16.003H16.0045Z"
+                fill="url(#paint3_linear_975_1524)"></path>
+              <path
+                d="M14.6172 8.08115C14.6172 8.86114 15.2548 9.49327 16.0397 9.49327C16.8246 9.49327 17.4622 8.85963 17.4622 8.07964C17.4622 7.29966 16.8246 6.66602 16.0397 6.66602C15.2548 6.66602 14.6172 7.29966 14.6172 8.07964V8.08115Z"
+                fill="url(#paint4_linear_975_1524)"></path>
+              <path
+                d="M14.6172 15.9214C14.6172 16.7029 15.2548 17.3351 16.0397 17.3351C16.8246 17.3351 17.4622 16.7014 17.4622 15.9214C17.4622 15.1415 16.8246 14.5078 16.0397 14.5078C15.2548 14.5078 14.6172 15.1399 14.6172 15.9199V15.9214Z"
+                fill="url(#paint5_linear_975_1524)"></path>
+              <defs>
+                <linearGradient id="paint0_linear_975_1524" x1="11.5413" y1="12.0012" x2="13.0981" y2="12.0012"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+                <linearGradient id="paint1_linear_975_1524" x1="7.42741" y1="8.07964" x2="9.41202" y2="8.07964"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+                <linearGradient id="paint2_linear_975_1524" x1="7.42741" y1="15.9214" x2="9.41202" y2="15.9214"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+                <linearGradient id="paint3_linear_975_1524" x1="6.28092" y1="11.9999" x2="23.1279" y2="11.9999"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+                <linearGradient id="paint4_linear_975_1524" x1="15.3571" y1="8.07964" x2="17.3417" y2="8.07964"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+                <linearGradient id="paint5_linear_975_1524" x1="15.3571" y1="15.9214" x2="17.3417" y2="15.9214"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#58457D"></stop>
+                  <stop offset="1" stop-color="#AB5FC3"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div class="author__single-articles" data-js-author>
+          <p class="author__single-articles-title">Публикации и ответы</p>
+
+          <div class="author__single-articles-main">
+            <ul class="author__single-articles-control">
+              <li>
+                <a class="is-active" data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="">Все
+                  материалы</a>
+              </li>
+
+              <li>
+                <a data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="news-type,news">Новости</a>
+              </li>
+
+              <li>
+                <a data-js-url-temp="news" data-js-url-post="news" data-js-url-tax="news-type,longreads">Лонгриды</a>
+              </li>
+            </ul>
+
+            <div>
+              <div class="author__single-content" data-js-content>
+
+              </div>
+
+              <div class="author__single-pagination" data-js-pag>
+                <div class="news__pagination">
+                  <button class="btn news__pagination-button" aria-label="Предыдущая страница" data-js-prev>
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.13207 11.2591C6.31669 11.4644 6.63282 11.4813 6.83818 11.2966C7.04354 11.112 7.06035 10.7959 6.87574 10.5905L6.50391 10.9248L6.13207 11.2591ZM6.50391 10.9248L6.87574 10.5905L1.99869 5.16553L1.62686 5.4998L1.25502 5.83408L6.13207 11.2591L6.50391 10.9248Z"
+                        fill="#555555"></path>
+                      <path
+                        d="M7.3867 0.949454C7.59124 0.763933 7.60665 0.447726 7.42113 0.243186C7.23561 0.0386461 6.91941 0.0232284 6.71487 0.20875L7.05078 0.579102L7.3867 0.949454ZM1.28986 5.12932L0.919513 5.46523L1.59134 6.20594L1.9617 5.87002L1.62578 5.49967L1.28986 5.12932ZM7.05078 0.579102L6.71487 0.20875L1.28986 5.12932L1.62578 5.49967L1.9617 5.87002L7.3867 0.949454L7.05078 0.579102Z"
+                        fill="#555555"></path>
+                    </svg>
+                  </button>
+
+                  <div class="news__pagination-main" data-js-pag-main>
+
+                  </div>
+
+                  <button class="btn news__pagination-button" aria-label="Следующая страница" data-js-next>
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.86793 0.740919C1.68331 0.535562 1.36718 0.518747 1.16182 0.703363C0.95646 0.887978 0.939645 1.20411 1.12426 1.40947L1.49609 1.0752L1.86793 0.740919ZM1.49609 1.0752L1.12426 1.40947L6.00131 6.83447L6.37315 6.5002L6.74498 6.16592L1.86793 0.740919L1.49609 1.0752Z"
+                        fill="#555555"></path>
+                      <path
+                        d="M0.613303 11.0505C0.408763 11.2361 0.393346 11.5523 0.578867 11.7568C0.764388 11.9614 1.08059 11.9768 1.28513 11.7913L0.949219 11.4209L0.613303 11.0505ZM6.71013 6.87068L7.08049 6.53477L6.40866 5.79406L6.0383 6.12998L6.37422 6.50033L6.71013 6.87068ZM0.949219 11.4209L1.28513 11.7913L6.71013 6.87068L6.37422 6.50033L6.0383 6.12998L0.613303 11.0505L0.949219 11.4209Z"
+                        fill="#555555"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="author__question">
+
+
+          <div class="paper__banner-content">
+            <div class="paper__banner-left">
+              <p>Ноя 6, 14:32</p>
+
+              <p class="paper__banner-time">
+                <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.0026 1.33301C7.6344 1.33301 7.33594 1.63149 7.33594 1.99967V3.99967C7.33594 4.36786 7.6344 4.66634 8.0026 4.66634C8.3708 4.66634 8.66927 4.36786 8.66927 3.99967V2.7076C11.3001 3.03567 13.3359 5.27993 13.3359 7.99967C13.3359 10.9452 10.9481 13.333 8.0026 13.333C5.05708 13.333 2.66927 10.9452 2.66927 7.99967C2.66927 6.40243 3.37057 4.96979 4.48428 3.99135C4.76088 3.74834 4.78812 3.32711 4.54511 3.05051C4.3021 2.7739 3.88087 2.74667 3.60426 2.98967C2.21465 4.21051 1.33594 6.00288 1.33594 7.99967C1.33594 11.6815 4.3207 14.6663 8.0026 14.6663C11.6845 14.6663 14.6693 11.6815 14.6693 7.99967C14.6693 4.31777 11.6845 1.33301 8.0026 1.33301Z"
+                      fill="#8B8B8B"></path>
+                    <path
+                      d="M6.83079 5.55005C6.58244 5.27821 6.16076 5.25914 5.88892 5.50746C5.61707 5.75579 5.598 6.17747 5.84633 6.44931L7.51298 8.27387C7.76132 8.54567 8.18305 8.56474 8.45485 8.31641C8.72672 8.06814 8.74579 7.64641 8.49745 7.37461L6.83079 5.55005Z"
+                      fill="#8B8B8B"></path>
+                  </svg>
+                </span>
+                <span data-js-time="" title="≈ 2 мин (92 сек)">2 мин (92 сек)</span>
+              </p>
+            </div>
+
+            <ul class="crypt__start-tags">
+              <li><a href="/news/?tag=tag">tag</a></li>
+              <li><a href="/news/?tag=tag">tag</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <a href="#" class="footer__logo">
+          <img src="./assets/svg/logo.svg" alt="Bitbanker">
+        </a>
+
+        <p class="footer__title-logo">
+          Подпишись на наши новости
+        </p>
+
+        <form action="" class="footer__form">
+          <input type="text" placeholder="Введите ваш e-mail...">
+
+          <button type="submit" class="btn footer__form-btn">Подписаться</button>
+        </form>
+
+        <div class="footer__social">
+          <div class="social">
+            <a href="#" class="social__btn">
+              <img src="./assets/svg/tg.svg" alt="">
+            </a>
+
+            <a href="#" class="social__btn">
+              <img src="./assets/svg/vk.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__right-main">
+          <p class="footer__title">
+            НОВОСТИ
+            <span></span>
+          </p>
+
+          <div class="footer__menu">
+            <div class="footer__menu-item">
+              <ul class="footer__list">
+                <li>
+                  <a href="#">Новости</a>
+                </li>
+
+                <li>
+                  <a href="#">Лонгриды</a>
+                </li>
+
+                <li>
+                  <a href="#">Подкасты</a>
+                </li>
+
+                <li>
+                  <a href="#">Дайджест месяца</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu-item">
+              <ul class="footer__list">
+                <li>
+                  <a href="#">Искусственный интеллект</a>
+                </li>
+
+                <li>
+                  <a href="#">Матрица</a>
+                </li>
+
+                <li>
+                  <a href="#">Крипториум</a>
+                </li>
+
+                <li>
+                  <a href="#">Спецпроекты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__right-next">
+          <div class="footer__right-add">
             <p class="footer__title">
-              НОВОСТИ
-              <span></span>
+              АКАДЕМИЯ
             </p>
 
             <div class="footer__menu">
               <div class="footer__menu-item">
                 <ul class="footer__list">
                   <li>
-                    <a href="#">Новости</a>
-                  </li>
-
-                  <li>
-                    <a href="#">Лонгриды</a>
+                    <a href="#">Обучение</a>
                   </li>
 
                   <li>
                     <a href="#">Подкасты</a>
                   </li>
-
-                  <li>
-                    <a href="#">Дайджест месяца</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__menu-item">
-                <ul class="footer__list">
-                  <li>
-                    <a href="#">Искусственный интеллект</a>
-                  </li>
-
-                  <li>
-                    <a href="#">Матрица</a>
-                  </li>
-
-                  <li>
-                    <a href="#">Крипториум</a>
-                  </li>
-
-                  <li>
-                    <a href="#">Спецпроекты</a>
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div class="footer__right-next">
-            <div class="footer__right-add">
-              <p class="footer__title">
-                АКАДЕМИЯ
-              </p>
+          <div class="footer__right-add">
+            <p class="footer__title">
+              О НАС
+            </p>
 
-              <div class="footer__menu">
-                <div class="footer__menu-item">
-                  <ul class="footer__list">
-                    <li>
-                      <a href="#">Обучение</a>
-                    </li>
+            <div class="footer__menu">
+              <div class="footer__menu-item">
+                <ul class="footer__list">
+                  <li>
+                    <a href="#">О нас</a>
+                  </li>
 
-                    <li>
-                      <a href="#">Подкасты</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  <li>
+                    <a href="#">Наши авторы</a>
+                  </li>
 
-            <div class="footer__right-add">
-              <p class="footer__title">
-                О НАС
-              </p>
+                  <li>
+                    <a href="#">Реклама</a>
+                  </li>
 
-              <div class="footer__menu">
-                <div class="footer__menu-item">
-                  <ul class="footer__list">
-                    <li>
-                      <a href="#">О нас</a>
-                    </li>
-
-                    <li>
-                      <a href="#">Наши авторы</a>
-                    </li>
-
-                    <li>
-                      <a href="#">Реклама</a>
-                    </li>
-
-                    <li>
-                      <a href="#">Политика приватности</a>
-                    </li>
-                  </ul>
-                </div>
+                  <li>
+                    <a href="#">Политика приватности</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <div class="phone-color">
+  <div class="phone-color">
+  </div>
+
+  <div class="modal">
+    <div class="modal__left">
+
     </div>
 
-    <div class="modal">
-      <div class="modal__left">
-        
-      </div>
+    <div class="modal__right">
 
-      <div class="modal__right">
-
-      </div>
     </div>
-    
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
