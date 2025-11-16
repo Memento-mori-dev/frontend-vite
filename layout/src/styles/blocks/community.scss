@@ -2,6 +2,14 @@
 
 .community{
     &__news{
+        &-wrapper{
+            margin-top: rem(40);
+
+            display: flex;
+            flex-direction: column;
+            gap: rem(40);
+        }
+
         &-header{
             margin-bottom: rem(20);
 
@@ -96,7 +104,15 @@
     }
 
     &__event{
-        width: calc(50% - rem(15));
+        &-wrapper{
+            margin-top: rem(40);
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(15);
+        }
+
+        width: calc(50% - rem(7.5));
 
         border-radius: rem(20);
         overflow: hidden;
