@@ -1,0 +1,236 @@
+@use '../helpers' as *;
+
+.question{
+    &__slider{
+        margin-top: rem(40);
+
+        &-title{
+            font-size:rem(28);
+            color: var(--grey-55);
+        }
+
+        &-wrapper{
+            overflow: hidden;
+
+            margin-top: rem(20);
+
+            padding-bottom: rem(40);
+
+            position: relative;
+
+            & .swiper-pagination-bullet{
+                @include square(rem(13));
+
+                background: var(--black-36);
+                opacity: 1;
+
+                &.swiper-pagination-bullet-active{
+                    background: var(--purple-92);
+                }
+            }
+        }
+
+        &-card{
+            
+        }
+    }
+
+    &__form{
+        margin: rem(50) auto 0 auto;
+
+        width: rem(426);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+
+        &-title{
+            font-size: rem(21);
+            color: var(--grey-d9);
+        }
+
+        &-main{
+            display: flex;
+            flex-direction: column;
+            gap: rem(20);
+        }
+
+        &-select{
+            display: flex;
+            flex-direction: column;
+
+            border: 1px solid var(--purple-92);
+            border-radius: rem(20);
+
+            font-size: rem(12);
+
+            position: relative;
+
+            &-arrow{
+                position: absolute;
+                top: rem(11.8);
+                right: rem(11.8);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                pointer-events: none;
+
+                transition: var(--transition);
+            }
+
+            &-input{
+                display: none;
+            }
+
+            &-button{
+                padding: rem(8) rem(12);
+
+                text-align: start;
+                
+                color: var(--grey-5d);
+            }
+
+            &-wrapper{
+                height: 0;
+                overflow: hidden;
+            }
+
+            &-list{
+                list-style-type: none;
+
+                padding: rem(5) 0;
+
+                display: flex;
+                flex-direction: column;
+
+                & button{
+                    width: 100%;
+
+                    padding: rem(5) rem(10);
+
+                    color: var(--grey-8b);
+                    
+                    text-align: start;
+                }
+            }
+
+            &.is-active{
+                & .question__form-select-arrow{
+                    transform: rotate(180deg);
+                }
+            }
+
+            &.is-pick{
+                & .question__form-select-button{
+                    color: var(--white);
+                }
+            }
+        }
+
+        &-item{
+            display: flex;
+            flex-direction: column;
+            gap: rem(6);
+
+            &-text{
+                margin-left: rem(12);
+
+                font-size: rem(12);
+                color: var(--grey-d9);
+            }
+        }
+
+        &-input{
+            padding: rem(8) rem(12);
+
+            background: none;
+
+            border: 1px solid var(--purple-92);
+            border-radius: rem(20);
+
+            font-size: rem(12);
+
+            color: var(--white);
+
+            &::placeholder{
+                color: var(--grey-5d);
+            }
+        }
+
+        &-textarea{
+            height: rem(130);
+
+            padding: rem(8) rem(12);
+
+            background: none;
+            resize: none;
+
+            border: 1px solid var(--purple-92);
+            border-radius: rem(20);
+
+            font-size: rem(12);
+
+            color: var(--white);
+
+            &::placeholder{
+                color: var(--grey-5d);
+            }
+        }
+
+        &-submit{
+            padding: rem(8) rem(12);
+
+            background: var(--linear-gradient);
+
+            font-size: rem(12);
+            color: var(--white);
+
+            border-radius: rem(20);
+        }
+
+        &-accept{
+            margin-left: 4px;
+
+            display: flex;
+            gap: rem(8);
+
+            &-btn{
+                flex-shrink: 0;
+                
+                margin-top: rem(3);
+
+                @include square(rem(10));
+
+                border-radius: 50%;
+
+                border: 1px solid var(--purple-92);
+                background: none;
+
+                &.is-active{
+                    background: var(--purple-92);
+                }
+            }
+
+            &-text{
+                font-size: rem(12);
+                color: var(--grey-8b);
+
+                & a{
+                    text-decoration: none;
+
+                    color: var(--grey-8b);
+
+                    @include hover{
+                        opacity: .8;
+                    }
+                }
+            }
+
+            &-input{
+                display: none;
+            }
+        }
+    }
+}

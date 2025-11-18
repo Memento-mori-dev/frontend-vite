@@ -507,3 +507,183 @@ if (document.querySelector('[data-js-nav]')) {
     }
   }
 }
+
+if (document.querySelector('.question__slider')) {
+  const swiper = new Swiper('.swiper-author', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+}
+
+if (document.querySelectorAll("[data-js-select-question]")) {
+  const DURATION = 200; // ms
+
+  const selects = document.querySelectorAll('[data-js-select-question]');
+
+  selects.forEach((select) => {
+    const btn = select.querySelector('[data-js-button]');
+    const wrapper = select.querySelector('[data-js-wrapper]');
+    const content = select.querySelector('[data-js-content]');
+    const input = select.querySelector('[data-js-input]');
+
+    if (!btn || !wrapper || !content || !input) return;
+
+    let isOpen = false;
+    let animating = false;
+
+    // init accessible state
+    btn.setAttribute('aria-expanded', 'false');
+    // default styles for animation
+    wrapper.style.display = wrapper.style.display || 'none';
+    wrapper.style.overflow = 'hidden';
+
+    const open = () => {
+      if (animating || isOpen) return;
+      animating = true;
+
+      // add active class
+      select.classList.add('is-active');
+
+      wrapper.style.display = 'block';
+      wrapper.style.height = '0px';
+
+      requestAnimationFrame(() => {
+        const targetH = content.offsetHeight;
+        wrapper.style.transition = `height ${DURATION}ms ease`;
+        wrapper.style.height = targetH + 'px';
+
+        setTimeout(() => {
+          wrapper.style.transition = '';
+          wrapper.style.height = 'auto';
+          wrapper.style.overflow = '';
+          animating = false;
+          isOpen = true;
+          btn.setAttribute('aria-expanded', 'true');
+        }, DURATION);
+      });
+    };
+
+    const close = () => {
+      if (animating || !isOpen) return;
+      animating = true;
+
+      // remove active class
+      select.classList.remove('is-active');
+
+      const startH = content.offsetHeight;
+      wrapper.style.height = startH + 'px';
+      wrapper.style.overflow = 'hidden';
+
+      requestAnimationFrame(() => {
+        wrapper.style.transition = `height ${DURATION}ms ease`;
+        wrapper.style.height = '0px';
+
+        setTimeout(() => {
+          wrapper.style.transition = '';
+          wrapper.style.display = 'none';
+          wrapper.style.height = '';
+          wrapper.style.overflow = '';
+          animating = false;
+          isOpen = false;
+          btn.setAttribute('aria-expanded', 'false');
+        }, DURATION);
+      });
+    };
+
+    // toggle on button click
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (animating) return;
+      isOpen ? close() : open();
+    });
+
+    // choose item (prevent default to avoid form submit / navigation)
+    const items = select.querySelectorAll('[data-js-slug]');
+    items.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault(); // отключаем переход / submit
+
+        const slug = item.getAttribute('data-js-slug') ?? '';
+        const text = item.textContent.trim();
+
+        // записываем в input.value
+        input.value = slug;
+
+        // заменяем видимый текст кнопки (если нужно сохранить иконки/HTML — скажи, переделаю)
+        btn.textContent = text;
+
+        // пометка что выбран элемент
+        if (slug !== '') {
+          select.classList.add('is-pick');
+        } else {
+          select.classList.remove('is-pick');
+        }
+
+        close();
+      });
+    });
+
+    // Закрывать при клике вне селекта
+    document.addEventListener('click', (e) => {
+      if (!isOpen) return;
+      if (select.contains(e.target)) return;
+      close();
+    });
+
+    // Закрывать на ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        close();
+      }
+    });
+  });
+}
+
+if (document.querySelectorAll("[data-js-checkbox]")) {
+  document.querySelectorAll('[data-js-checkbox]').forEach(btn => {
+        const input = btn.querySelector('[data-js-input]');
+
+        if (!input) return;
+
+        const syncActiveClass = () => {
+            btn.classList.toggle('is-active', input.checked);
+        };
+
+        // 1. Полностью отключаем любое поведение у кнопки
+        btn.addEventListener('click', e => {
+            e.preventDefault();      // отключаем submit у <button>
+            e.stopPropagation();     // на всякий случай
+
+            // если кликнули прямо по инпуту — ничего не делаем
+            if (e.target === input) return;
+
+            input.checked = !input.checked;
+            syncActiveClass();
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+
+        // 2. Отключаем любое стандартное поведение у самого чекбокса
+        input.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
+        // 3. Если чекбокс меняют через клавиатуру (пробел) — тоже не даём submit
+        input.addEventListener('keydown', e => {
+            if (e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+
+        // Синхронизация состояния
+        input.addEventListener('change', syncActiveClass);
+        syncActiveClass(); // при загрузке
+    });
+}
