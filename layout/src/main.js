@@ -6,6 +6,8 @@ import { AjaxNews } from "./script/AjaxNews";
 
 import AjaxAuthor from "./script/AjaxAuthor";
 
+import AjaxQuestions from "./script/AjaxQuestions";
+
 useDynamicAdapt();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -686,4 +688,171 @@ if (document.querySelectorAll("[data-js-checkbox]")) {
         input.addEventListener('change', syncActiveClass);
         syncActiveClass(); // при загрузке
     });
+}
+
+
+if (document.querySelector('[data-js-question]')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const forms = document.querySelectorAll('[data-js-question]');
+    if (!forms.length) return;
+
+    forms.forEach(form => initQuestionForm(form));
+
+    function initQuestionForm(form) {
+        // Отключаем стандартное поведение формы
+        form.setAttribute('novalidate', 'novalidate');
+        form.addEventListener('submit', (e) => e.preventDefault());
+
+        // Блокируем Enter в inputs
+        form.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.tagName.toLowerCase() === 'input') {
+                e.preventDefault();
+            }
+        });
+
+        // Делаем все кнопки type="button"
+        form.querySelectorAll('button').forEach(btn => {
+            if (!btn.hasAttribute('type')) btn.setAttribute('type', 'button');
+        });
+
+        // Элементы формы
+        const requiredBlocks = form.querySelectorAll('[data-js-input]');
+        const submitBtn      = form.querySelector('[data-js-submit]');
+        const authorInput    = form.querySelector('[name="author"]');
+
+        // Модалки
+        const modalTrue  = form.querySelector('[data-js-modal-true]');
+        const modalFalse = form.querySelector('[data-js-modal-flase]');
+
+        // -------- ВАЛИДАЦИЯ --------
+
+        function validateBlock(block) {
+            let field;
+
+            if (block.matches('input, textarea')) {
+                field = block;
+            } else {
+                field = block.querySelector('input, textarea');
+            }
+            if (!field) return true;
+
+            let isValid = true;
+
+            if (field.type === 'checkbox') {
+                isValid = field.checked;
+            } else {
+                isValid = field.value.trim() !== '';
+            }
+
+            if (!isValid) block.classList.add('is-false');
+            else block.classList.remove('is-false');
+
+            return isValid;
+        }
+
+        function validateForm() {
+            let ok = true;
+            requiredBlocks.forEach(block => {
+                if (!validateBlock(block)) ok = false;
+            });
+            return ok;
+        }
+
+        // Убираем ошибки при вводе
+        requiredBlocks.forEach(block => {
+            let field = block.matches('input, textarea')
+                ? block
+                : block.querySelector('input, textarea');
+
+            if (!field) return;
+
+            const handler = () => validateBlock(block);
+            field.addEventListener('input', handler);
+            if (field.type === 'checkbox') field.addEventListener('change', handler);
+        });
+
+        // -------- КАСТОМНЫЙ SELECT АВТОРА --------
+
+        const authorButtons = form.querySelectorAll('[data-js-slug]');
+        authorButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const slug = btn.dataset.jsSlug || '';
+                authorInput.value = slug;
+
+                let block = authorInput.matches('[data-js-input]')
+                    ? authorInput
+                    : authorInput.closest('[data-js-input]');
+
+                if (block) validateBlock(block);
+            });
+        });
+
+        // -------- ОТПРАВКА --------
+
+        if (submitBtn) {
+            submitBtn.addEventListener('click', async () => {
+                // Скрываем модалки до отправки
+                if (modalTrue)  modalTrue.classList.remove('is-active');
+                if (modalFalse) modalFalse.classList.remove('is-active');
+
+                // Валидация
+                const valid = validateForm();
+                if (!valid) {
+                    console.log('❌ Ошибки в форме');
+                    // Модалку ошибки показываем только ПОСЛЕ ответа сервера — значит не показываем её здесь
+                    return;
+                }
+
+                // Собираем данные
+                const nameField = form.querySelector('input[placeholder="Ваше имя"]');
+                const mailField = form.querySelector('input[placeholder="Ваш e-mail"]');
+                const textField = form.querySelector('textarea');
+
+                const resultData = {
+                    slug: authorInput ? authorInput.value.trim() : '',
+                    name: nameField ? nameField.value.trim() : '',
+                    mail: mailField ? mailField.value.trim() : '',
+                    text: textField ? textField.value.trim() : '',
+                };
+
+                console.log('📤 Отправляем:', resultData);
+
+                try {
+                    const response = await fetch('http://bit.jobmori1.beget.tech/wp-admin/admin-ajax.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                        },
+                        body: new URLSearchParams({
+                            action: 'send_question',
+                            data: JSON.stringify(resultData),
+                        }),
+                    });
+
+                    const json = await response.json();
+                    console.log('📥 Ответ сервера:', json);
+
+                    // ВАЖНО: только после ответа сервера показываем модалку
+                    if (json.success) {
+                        if (modalTrue) modalTrue.classList.add('is-active');
+                    } else {
+                        if (modalFalse) modalFalse.classList.add('is-active');
+                    }
+
+                } catch (err) {
+                    console.log('❌ Ошибка сети/JS:', err);
+
+                    // Показ модалки ошибки ПОСЛЕ ошибки сети
+                    if (modalFalse) modalFalse.classList.add('is-active');
+                }
+            });
+        }
+    }
+});
+
+}
+
+if (document.querySelector('[data-js-question]')) {
+  new AjaxQuestions();
 }

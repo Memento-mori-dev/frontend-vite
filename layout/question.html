@@ -402,14 +402,15 @@
 
                         <div class="swiper-pagination"></div>
                     </div>
+                </div>
 
-                    <div class="question__form">
+                <div class="question__form">
+                    <p class="question__form-title">
+                        Задать вопрос эксперту
+                    </p>
 
-                        <p class="question__form-title">
-                            Задать вопрос эксперту
-                        </p>
-
-                        <form action="question__form-main" id="dsad" class="question__form-main">
+                    <form action="" id="dsad" class="question__form-main" data-js-question>
+                        <div class="question__form-item" data-js-input>
                             <div class="question__form-select" data-js-select-question="">
                                 <input type="text" name="author" class="question__form-select-input" data-js-input>
 
@@ -439,39 +440,38 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="question__form-item">
-                                <input type="mail" placeholder="Ваше имя" class="question__form-input">
+                        <div class="question__form-item" data-js-input>
+                            <input type="mail" placeholder="Ваше имя" class="question__form-input">
+                        </div>
+
+                        <div class="question__form-item">
+                            <input type="mail" placeholder="Ваш e-mail" class="question__form-input">
+
+                            <p class="question__form-item-text">Ваш e-mail не будет опубликован</p>
+                        </div>
+
+                        <div class="question__form-item" data-js-input>
+                            <textarea name="" placeholder="Текст вашего вопроса" class="question__form-textarea"></textarea>
+                        </div>
+
+                        <div class="question__form-item">
+                            <div class="question__form-accept">
+                                <button class="question__form-accept-btn" data-js-checkbox>
+                                    <input type="checkbox" name="accept" class="question__form-accept-input" data-js-input>
+                                </button>
+
+                                <p class="question__form-accept-text">
+                                    «Даю согласие на обработку персональных данных»,<a href=""> с ссылкой на соответствующую политику</a>.
+                                </p>
                             </div>
+                        </div>
 
-                            <div class="question__form-item">
-                                <input type="mail" placeholder="Ваш e-mail" class="question__form-input">
-
-                                <p class="question__form-item-text">Ваш e-mail не будет опубликован</p>
-                            </div>
-
-                            <div class="question__form-item">
-                                <textarea name="" placeholder="Текст вашего вопроса" class="question__form-textarea"></textarea>
-                            </div>
-
-                            <div class="question__form-item">
-                                <div class="question__form-accept">
-                                    <button class="question__form-accept-btn" data-js-checkbox>
-                                        <input type="checkbox" name="accept" class="question__form-accept-input" data-js-input>
-                                    </button>
-
-                                    <p class="question__form-accept-text">
-                                        «Даю согласие на обработку персональных данных»,<a href=""> с ссылкой на соответствующую политику</a>.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="question__form-item">
-                                <button class="question__form-submit btn">Отправить вопрос</button>
-                            </div>
-                        </form>
-                    </div>
-                    
+                        <div class="question__form-item">
+                            <button class="question__form-submit btn" data-js-submit>Отправить вопрос</button>
+                        </div>
+                    </form>
                 </div>
 
                 
@@ -622,6 +622,14 @@
         <div class="modal__right">
 
         </div>
+    </div>
+
+    <div data-js-modal-true>
+        Удачно отправлено
+    </div>
+
+    <div data-js-modal-flase>
+        Увы, попробуйте посже =(
     </div>
 
     <script type="module" src="/src/main.js"></script>
