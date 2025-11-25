@@ -40,6 +40,10 @@
 
         flex-shrink: 0;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         border: 1px solid var(--black-36) !important;
         border-radius: 50%;
         box-shadow: var(--shadow);
@@ -48,6 +52,10 @@
 
         @include hover{
             opacity: .8;
+        }
+
+        & > img{
+            @include square(rem(20))
         }
     }
 
