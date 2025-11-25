@@ -22,6 +22,8 @@
     }
 
     &--circle{
+        flex-shrink: 0;
+
         width: rem(33);
         aspect-ratio: 1;
 
