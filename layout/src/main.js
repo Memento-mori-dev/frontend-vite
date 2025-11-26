@@ -856,3 +856,45 @@ if (document.querySelector('[data-js-question]')) {
 if (document.querySelector('[data-js-question]')) {
   new AjaxQuestions();
 }
+
+if (document.querySelector('[data-search]')) {
+  // Находим все блоки с поиском
+  const searchBlocks = document.querySelectorAll('[data-search]');
+
+  searchBlocks.forEach(function (block) {
+    const input = block.querySelector('[data-search-input]');
+    const button = block.querySelector('[data-search-btn]');
+    const items = block.querySelectorAll('[data-search-item]');
+
+    if (!input || !button || !items.length) return;
+
+    // Функция поиска
+    function doSearch() {
+      const query = input.value.trim().toLowerCase();
+
+      items.forEach(function (item) {
+        const searchValue = (item.getAttribute('data-search-item') || '').toLowerCase();
+
+        // Если строка поиска пустая — показываем все
+        const match = !query || searchValue.indexOf(query) !== -1;
+
+        item.style.display = match ? '' : 'none';
+      });
+    }
+
+    // Поиск по кнопке
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      doSearch();
+    });
+
+    // Дополнительно: поиск по Enter в инпуте (можешь убрать, если не нужно)
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        doSearch();
+      }
+    });
+  });
+  
+}
