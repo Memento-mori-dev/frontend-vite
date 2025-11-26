@@ -210,6 +210,10 @@
                 font-size: rem(48);
                 color: var(--purple-92);
 
+                &--white{
+                    color: var(--white);
+                }
+
             }
             &-text{
                 margin-top: rem(18);
