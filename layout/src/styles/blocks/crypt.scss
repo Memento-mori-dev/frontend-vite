@@ -382,6 +382,12 @@
             font-size: rem(21);
             font-weight: 700;
             color: var(--white);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--purple-92);
+            }
         }
         &-text{
             font-size: rem(14);

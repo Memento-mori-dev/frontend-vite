@@ -26,6 +26,12 @@
 
             background-color: var(--grey);
             border-radius: rem(20);
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
         }
 
         &-footer{
