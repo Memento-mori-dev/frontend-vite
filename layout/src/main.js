@@ -898,3 +898,29 @@ if (document.querySelector('[data-search]')) {
   });
   
 }
+
+
+if (document.querySelector('[data-start-first]')) {
+  document.querySelectorAll("[data-start-first]").forEach(startBlock => {
+    const items = startBlock.querySelectorAll("[data-item]");
+    const buttons = startBlock.querySelectorAll("[data-btn]");
+
+    // обработка всех кнопок в правом блоке
+    buttons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        // убрать is-active у всех кнопок
+        buttons.forEach(b => b.classList.remove("is-active"));
+        // активировать нужную кнопку
+        btn.classList.add("is-active");
+
+        // убрать is-active у всех item
+        items.forEach(item => item.classList.remove("is-active"));
+        // активировать item с тем же индексом
+        if (items[index]) {
+          items[index].classList.add("is-active");
+        }
+      });
+    });
+  });
+}
+
