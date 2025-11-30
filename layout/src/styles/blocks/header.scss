@@ -36,6 +36,8 @@
     }
 
     &__search{
+        display: none !important;
+
         @include square(rem(33));
 
         flex-shrink: 0;

@@ -39,6 +39,9 @@
     }
 
     &__change{
+        display: none !important;
+
+
         padding: rem(41) rem(35);
         
         border: 1px solid var(--black-37);
@@ -200,6 +203,9 @@
 
         &-header{
             margin-top: rem(10);
+            margin-bottom: rem(40);
+
+            min-height: rem(164);
 
             position: relative;
 

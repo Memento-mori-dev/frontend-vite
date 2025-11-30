@@ -141,5 +141,14 @@
         & .academy__video{
             width: calc(50% - rem(15));
         }
+
+        & .crypt__news{
+            width: 100%;
+        }
+
+        & .crypt__longreads-item,
+        & .community__event{
+            width: calc(50% - rem(15));
+        }
     }
 }
