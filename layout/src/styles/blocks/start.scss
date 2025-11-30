@@ -2,6 +2,8 @@
 
 .start{
     &__first{
+        width: 100%;
+
         &-title{
             font-size: rem(48);
             color: var(--purple-92);
