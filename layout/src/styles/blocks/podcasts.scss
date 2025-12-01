@@ -459,7 +459,7 @@
         &-content{
             padding: rem(20) rem(20) rem(14) rem(20);
 
-            background-color: var(--grey-f7);
+            background-color: var(--background);
         }
         &-header{
             display: flex;
@@ -592,5 +592,22 @@
 @include mobile{
     .podcasts__start{
         width: 100%;
+    }
+}
+
+@include mobile{
+    .podcasts__single-img{
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 63 / 25;
+    }
+
+    .podcasts__single-controller{
+        gap: rem(30);
+    }
+
+    .podcasts__start-control-btn-small{
+        flex-shrink: 0;
     }
 }
