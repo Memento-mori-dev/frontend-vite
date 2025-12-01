@@ -34,16 +34,31 @@ export class Inst{
             },
             breakpoints: {
                 1: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
+                    spaceBetween: 20,
                 },
-                553: {
+                410: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                500: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+                600: {
                     slidesPerView: 6,
+                    spaceBetween: 20,
+                },
+                700: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
                 },
                 767.98: {
-                    slidesPerView: 8,
+                    slidesPerView: 7,
+                    spaceBetween: 20,
                 },
-                1023.98: {
-                    slidesPerView: 10,
+                960: {
+                    slidesPerView: 9,
                     spaceBetween: 20,
                 },
                 1320.98: {

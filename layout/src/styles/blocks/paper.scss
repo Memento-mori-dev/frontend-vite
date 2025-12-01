@@ -8,7 +8,8 @@
 
         &-img{
             width: 100%;
-            height: rem(246);
+
+            aspect-ratio: 63/25;
 
             border-radius: rem(20);
             object-fit: cover;
@@ -23,7 +24,7 @@
             align-items: center;
 
             font-size: rem(12);
-            color: var(--grey-8b);
+            color: var(--grey);
         }
         
         &-left{
@@ -35,7 +36,7 @@
 
             padding-left: rem(7);
 
-            color: var(--grey-8b);
+            color: var(--grey);
 
             @include hover{
                 color: var(--purple-92);
@@ -159,7 +160,7 @@
         font-weight: 300;
         font-size: rem(18);
         line-height: 144%;
-        color: var(--grey-8b);
+        color: var(--grey);
 
         position: relative;
         &::after{
@@ -176,7 +177,7 @@
         }
 
         &  a{
-            color: var(--grey-8b);
+            color: var(--grey);
 
             @include hover{
                 color: var(--purple-92);
@@ -206,7 +207,6 @@
             text-decoration: none;
             padding: rem(8) rem(30);
 
-            background: var(--linear-gradient);
             border-radius: rem(20);
             color: var(--white);
 
@@ -292,11 +292,24 @@
     }
 
     &__author{
+        position: relative;
+
         margin-top: rem(40);
 
         padding-top: rem(29);
 
-        border-top: 1px solid var(--black-37);
+        &::before{
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 1px;
+
+            background: var(--linear-gradient);
+        }
 
         &-title{
             font-size: rem(21);
@@ -346,6 +359,8 @@
         }
         &-text{
             margin-top: rem(16);
+
+            max-width: rem(500);
 
             font-size: rem(14);
             color:var(--grey-55);
@@ -427,5 +442,18 @@
                 }
             }
         }
+    }
+}
+
+@media (width <= rem(1240)) {
+    
+}
+
+@include mobile-s{
+    .paper__author-item{
+        flex-direction: column;
+        align-items: start;
+
+        gap: rem(20);
     }
 }

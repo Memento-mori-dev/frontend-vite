@@ -181,3 +181,9 @@
 
 
 }
+
+@include mobile{
+    .inst__btn{
+        display: none;
+    }
+}

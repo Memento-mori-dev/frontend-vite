@@ -36,6 +36,9 @@
     }
 
     .global__left{
+        margin: 0 calc(var(--container-padding-x) * -1);
+
+        width: calc(100% + (var(--container-padding-x) * 2));
         height: 0;
         overflow: hidden;
 
@@ -44,5 +47,15 @@
         align-items: center;
 
         transition: var(--transition);
+
+        background-color: var(--background);
+
+        padding: 0;
+    }
+
+    .global__left-wrapper{
+        width: 100%;
+
+        padding: rem(20) var(--container-padding-x) rem(40) var(--container-padding-x);
     }
 }
