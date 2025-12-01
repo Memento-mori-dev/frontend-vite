@@ -924,3 +924,50 @@ if (document.querySelector('[data-start-first]')) {
   });
 }
 
+if (document.querySelector('[data-js-open-left]')) {
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('[data-js-open-left]');
+    if (!btn) return;
+
+    const wrapper = document.querySelector('[data-js-left-wrapper]');
+    const target  = document.querySelector('[data-js-left]');
+    if (!wrapper || !target) return;
+
+    const isActive = btn.classList.contains('is-active');
+
+    if (isActive) {
+        // --- ЗАКРЫТИЕ ---
+        const currentHeight = target.scrollHeight + 'px';
+
+        // фиксируем текущую высоту
+        target.style.height = currentHeight;
+
+        // даём браузеру один такт, чтобы применить высоту
+        requestAnimationFrame(() => {
+            target.style.height = '0px';
+        });
+
+        btn.classList.remove('is-active');
+        target.classList.remove('is-active');
+
+    } else {
+        // --- ОТКРЫТИЕ ---
+        const fullHeight = wrapper.scrollHeight + 'px';
+
+        // сначала высота 0, затем плавно до контента
+        target.style.height = fullHeight;
+
+        btn.classList.add('is-active');
+        target.classList.add('is-active');
+
+        // через 0.2s ставим auto
+        setTimeout(() => {
+            // ставим auto только если блок всё ещё открыт
+            if (target.classList.contains('is-active')) {
+                target.style.height = 'auto';
+            }
+        }, 200);
+    }
+});
+
+}

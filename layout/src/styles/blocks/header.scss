@@ -118,6 +118,16 @@
 
             background-color: var(--background);
             border-radius: 50%;
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
+
+            &.is-active{
+                transform: rotate(90deg);
+            }
         }
 
         &-menu{
@@ -126,6 +136,12 @@
             @include square(rem(25));
 
             background: none;
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
         }
     }
 }

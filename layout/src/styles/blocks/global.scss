@@ -18,3 +18,25 @@
         width: calc(100% - rem(326));
     }
 }
+
+@media (width <= rem(1240)) {
+    .global{
+        flex-direction: column;
+    }
+
+    .global__left,
+    .global__right{
+        width: 100%;
+    }
+
+    .global__left{
+        height: 0;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transition: var(--transition);
+    }
+}
