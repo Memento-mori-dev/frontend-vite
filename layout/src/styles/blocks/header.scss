@@ -3,6 +3,8 @@
 .header{
     padding: rem(35) 0 rem(5) 0;
 
+    position: relative;
+
     &__container{
         display: flex;
         justify-content: space-between;
@@ -147,5 +149,89 @@
 }
 
 .phone-menu{
+    display: none;   
+}
 
+@media (width <= rem(1140)) {
+    .phone-menu{
+        position: absolute;
+        top: 0;
+        right: rem(-1000);
+
+        width: rem(370);
+
+        padding: rem(30) rem(20) rem(40) rem(30);
+        
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        background-color: var(--background);
+
+        &__btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        transition: var(--transition);
+
+        &.is-active{
+            right: 0;
+        }
+    }
+
+    .header__menu{
+        & > ul{
+            flex-direction: column;
+            gap: 0;
+        }
+        
+        & li{
+            width: 100%;
+
+            &:first-child{
+                & a{
+                    padding-top: 0;
+                }
+            }
+
+            &:last-child{
+                & a{
+                    padding-bottom: 0;
+
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        & a{
+            display: inline-block;
+
+            width: 100%;
+
+            padding: rem(26) rem(20);
+
+            font-size: rem(16);
+
+            &.is-active{
+                color: var(--purple-92);
+            }
+
+            position: relative;
+            &::after{
+                content: '';
+
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                width: 100%;
+                height: 1px;
+                background: var(--linear-gradient);
+            }
+        }
+    }
 }

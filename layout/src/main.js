@@ -971,3 +971,23 @@ if (document.querySelector('[data-js-open-left]')) {
 });
 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openBtn  = document.querySelector('[data-js-open-menu]');
+    const closeBtn = document.querySelector('[data-js-close-menu]');
+    const menu     = document.querySelector('[data-js-menu]');
+
+    if (!openBtn || !closeBtn || !menu) return;
+
+    // Открытие меню
+    openBtn.addEventListener('click', () => {
+        openBtn.classList.add('is-active');
+        menu.classList.add('is-active');
+    });
+
+    // Закрытие меню
+    closeBtn.addEventListener('click', () => {
+        openBtn.classList.remove('is-active');
+        menu.classList.remove('is-active');
+    });
+});
