@@ -86,16 +86,50 @@
             }
         }
     }
+
+    &__phone{
+        display: none;
+    }
 }
 
-.phone-color{
-    display: none;
-
-    position: fixed;
-    right: rem(35);
-    bottom: rem(38);
-
-    @include laptop{
-        display: block;
+@media (width <= rem(1140)) {
+    .header{
+        padding: rem(29) 0 rem(7) 0;
     }
+    .header__content{
+        display: none;
+    }
+    .header__logo{
+        & > img{
+            width: rem(120);
+            height: rem(50);
+        }
+    }
+
+    .header__phone{
+        display: flex;
+        align-items: center;
+        gap: rem(13);
+
+        &-btn{
+            border: none;
+
+            @include square(rem(32));
+
+            background-color: var(--background);
+            border-radius: 50%;
+        }
+
+        &-menu{
+            border: none;
+
+            @include square(rem(25));
+
+            background: none;
+        }
+    }
+}
+
+.phone-menu{
+
 }
