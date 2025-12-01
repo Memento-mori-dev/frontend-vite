@@ -19,6 +19,12 @@
 
             display: flex;
             gap: rem(30);
+
+            background-color: var(--background);
+
+            & .crypt__start-text{
+                -webkit-line-clamp: 100;
+            }
         }
         &-left{
             width: 100%;
@@ -37,6 +43,8 @@
             &-img{
                 width: 100%;
                 height: rem(460);
+
+                object-fit: cover;
             }
             &-content{
                 height: calc(100% - rem(460));
@@ -87,12 +95,16 @@
                     width: 100%;
                     height: 1px;
 
-                    background: var(--purple-6E);
+                    background: var(--grey);
                 }
             }
 
-            & button{
-                padding: rem(30) 0;
+            & a{
+                display: block;
+
+                padding: rem(30) rem(20);
+
+                text-align: start;
 
                 font-size: rem(16);
                 font-weight: 700;
@@ -120,7 +132,7 @@
         
 
         & .crypt__header-line{
-            background: var(--purple-6E);
+            background: var(--grey);
         }
     }
 
@@ -149,6 +161,65 @@
         & .crypt__longreads-item,
         & .community__event{
             width: calc(50% - rem(15));
+        }
+    }
+}
+
+@include tablet{
+    .start__first-title{
+        font-size: rem(36);
+    }
+
+    .start__first-left-content{
+        .crypt__start-title,
+        .crypt__start-text{
+            padding: 0;
+        }
+    }
+
+    .start__first-left-img{
+        height: auto;
+
+        aspect-ratio: 63 / 25;
+    }
+
+    .start__first-main{
+        flex-direction: column;
+
+        padding-bottom: rem(20);
+    }
+
+    .start__first-list{
+        padding: 0 rem(20);
+
+        & a{
+            width: 100%;
+
+            padding: rem(16);
+
+            text-align: center;
+        }
+    }
+
+    .start__first-left,
+    .start__first-right{
+        width: 100%;
+    }
+}
+
+@include mobile{
+    .start__content .crypt__longreads-item,
+    .start__content .community__event,
+    .start__content .academy__video{
+        width: 100%;
+    }
+}
+
+@include mobile-s{
+    .start__first-list{
+
+        & a{
+            text-align: start;
         }
     }
 }
