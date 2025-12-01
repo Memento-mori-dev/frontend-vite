@@ -86,7 +86,7 @@
 
             padding: rem(60);
 
-            background-color: var(--black);
+            background-color: var(--background);
             border-radius: rem(20);
 
             display: flex;
@@ -116,6 +116,8 @@
                 & img{
                     @include square(100%);
                     border-radius: 50%;
+
+                    object-fit: cover;
                 }
             }
 
@@ -176,7 +178,7 @@
 
         padding: rem(30);
 
-        background-color: var(--black);
+        background-color: var(--background);
         border-radius: rem(20);
 
         display: flex;
@@ -269,5 +271,68 @@
             border-radius: rem(20);
             overflow: hidden;
         }
+    }
+}
+
+
+@include laptop{
+    .about__team-item{
+        padding: rem(30);
+    }
+}
+
+@include tablet{
+    .about__team-item{
+        flex-direction: column;
+    }
+
+    .about__call{
+        flex-direction: column;
+    }
+
+    .about__call-left,
+    .about__call-right{
+        width: 100%;
+    }
+
+    .about__call-map{
+        height: rem(250);
+    }
+
+}
+
+@include mobile{
+
+    .about__team-main{
+        gap: rem(20);
+    }
+
+    .about__team-item{
+        width: 100%;
+
+        flex-direction: row;
+    }
+
+    .about__team-item-header{
+        align-items: center;
+    }
+    .about__team-item-name{
+        text-align: center;
+    }
+
+    .about__team-item-footer{
+        text-align: center;
+    }
+}
+
+@include mobile-s{
+    .about__team-item{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__call-header{
+        flex-direction: column;
+        align-items: start;
     }
 }

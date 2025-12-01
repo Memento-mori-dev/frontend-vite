@@ -907,7 +907,7 @@ if (document.querySelector('[data-start-first]')) {
 
     // обработка всех кнопок в правом блоке
     buttons.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("mouseenter", () => {
         // убрать is-active у всех кнопок
         buttons.forEach(b => b.classList.remove("is-active"));
         // активировать нужную кнопку
@@ -921,7 +921,7 @@ if (document.querySelector('[data-start-first]')) {
         }
       });
     });
-  });
+});
 }
 
 if (document.querySelector('[data-js-open-left]')) {

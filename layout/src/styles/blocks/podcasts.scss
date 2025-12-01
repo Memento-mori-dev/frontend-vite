@@ -140,7 +140,9 @@
                 overflow: hidden;
 
                 & svg{
-                    margin-right: -3px;
+                    &:first-child{
+                        margin-right: -3px;
+                    }
                 }
             }
 
@@ -611,3 +613,18 @@
         flex-shrink: 0;
     }
 }
+
+// .is-playing{
+//     .podcasts__start-play-icon,
+//     .podcasts__start-control-btn-big{
+//         & svg{
+//             &:first-child{
+//                 display: none;
+//             }
+
+//             &:last-child{
+//                 display: block;
+//             }
+//         }
+//     }
+// }

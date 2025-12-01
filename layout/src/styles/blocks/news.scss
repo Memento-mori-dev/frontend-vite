@@ -381,3 +381,10 @@
         }
     }
 }
+
+@include tablet{
+    .news__pagination{
+        margin-top: rem(25);
+        margin-bottom: rem(10);
+    }
+}

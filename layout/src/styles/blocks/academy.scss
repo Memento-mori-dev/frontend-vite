@@ -299,3 +299,43 @@
         }
     }
 }
+
+@include tablet{
+    .academy__main{
+        padding: rem(20);
+
+        gap: rem(20);
+    }
+
+    .academy__blocs{
+        gap: rem(20);
+    }
+
+    .academy__video{
+        width: calc(50% - rem(10));
+    }
+}
+
+@include mobile{
+    .academy__banner{
+        height: auto;
+        min-height: rem(120);
+
+        padding: rem(30) rem(20);
+    }
+    .academy__banner-title{
+        font-size: rem(30);
+    }
+
+    .author__single-articles-control{
+        gap: rem(15);
+    }
+
+    .academy__video{
+        width: 100%;
+    }
+
+    .academy__tabs a{
+        padding: rem(8) rem(10);
+    }
+}
