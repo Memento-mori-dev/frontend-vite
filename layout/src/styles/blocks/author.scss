@@ -359,6 +359,10 @@
             }
 
             &-link{
+                .author__single-start-bottom &{
+                    display: none !important;
+                }
+
                 padding: rem(7) rem(11);
 
                 text-decoration: none;
