@@ -267,7 +267,7 @@
             gap: rem(20);
 
             font-size: rem(12);
-            color: var(--black-55);
+            color: var(--grey);
 
             & li{
                 display: flex;
@@ -277,7 +277,7 @@
 
             & a{
                 text-decoration: none;
-                color: var(--black-55);
+                color: var(--grey);
 
                 transition: var(--transition);
 
@@ -290,6 +290,7 @@
             list-style-type: none;
 
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: rem(20);
 
@@ -301,7 +302,7 @@
                 text-decoration: none;
 
                 font-size: rem(12);
-                color: var(--purple-92);
+                color: var(--purple-ce);
 
                 &::before{
                     content: '#';
@@ -336,7 +337,13 @@
 
             font-size: rem(14);
             line-height: rem(20); /* 142.857% */
-            color: var(--grey-8b);
+            color: var(--white);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3; /* количество строк */
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     
@@ -360,7 +367,8 @@
 
         &-img{
             width: rem(384);
-            min-height: rem(239);
+            min-height: rem(240);
+            max-height: rem(240);
 
             object-fit: cover;
             object-position: center;
@@ -375,7 +383,7 @@
             flex-direction: column;
             justify-content: space-between;
 
-            background-color: var(--black);
+            background-color: var(--background);
         }
         &-top{
             display: flex;
@@ -394,12 +402,18 @@
             @include hover{
                 color: var(--purple-92);
             }
+
+            display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
+            -webkit-line-clamp: 3;         /* ограничение по количеству строк */
+            -webkit-box-orient: vertical;  /* ориентация блоков по вертикали */
+            overflow: hidden;              /* скрываем лишний текст */
+            text-overflow: ellipsis;       /* добавляем многоточие */
         }
         &-text{
             font-size: rem(14);
             line-height: rem(20);
             align-self: stretch;
-            color: var(--grey-8b);
+            color: var(--grey-cd);
 
             display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
             -webkit-line-clamp: 3;         /* ограничение по количеству строк */
@@ -455,13 +469,13 @@
             flex-shrink: 0;
 
             font-size: rem(36);
-            color: var(--grey-8b);
+            color: var(--grey);
         }
 
         &-line{
             width: 100%;
             height: 1px;
-            background-color: var(--grey-8b);
+            background-color: var(--grey);
         }
     }
 
@@ -507,7 +521,7 @@
         &-text{
             font-size: rem(16);
             line-height: rem(24);
-            color: var(--grey-8b);
+            color: var(--grey-cd);
 
             display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
             -webkit-line-clamp: 4;         /* ограничение по количеству строк */
@@ -518,4 +532,141 @@
     }
 
     &__podcasts{}
+}
+
+@include tablet{
+    .crypt__start-header-img{
+        display: none;
+    }
+}
+
+@include mobile{
+    .crypt__start-header-img{
+        display: none;
+    }
+
+    .crypt__start-next{
+        border-radius: rem(20);
+        overflow: hidden;
+
+        background-color: var(--background);
+    }
+    .crypt__start-img{
+        height: auto;
+
+        aspect-ratio: 2.6 / 1;
+
+        border-radius: 0;
+    }
+    .crypt__start-description{
+        margin-top: rem(20);
+
+        padding: 0 rem(20);
+        flex-wrap: wrap;
+
+        gap: rem(20);
+    }
+
+    .crypt__start-title{
+        padding: 0 rem(20);
+
+        font-size: rem(24);
+    }
+
+    .crypt__start-text{
+        padding: 0 rem(20) rem(20) rem(20);
+
+        color: var(--grey);
+    }
+
+    .crypt__news{
+        flex-direction: column;
+    }
+    .crypt__news-img{
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 2.6 / 1;
+    }
+
+    .crypt__news-main{
+        width: 100%;
+
+        padding: rem(20);
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+    .crypt__news-top{
+        gap: rem(20);
+
+        & .crypt__news-title{
+            order: 2;
+        }
+
+        & .crypt__start-parameters{
+            order: 1;
+        }
+
+        & .crypt__news-text{
+            order: 3;
+
+            color: var(--grey);
+        }
+    }
+
+    .crypt__longreads-item{
+        width: 100%;
+
+        padding-bottom: rem(20);
+
+        border-radius: rem(20);
+        overflow: hidden;
+
+        background-color: var(--background);
+    }
+
+    .crypt__longreads-img{
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 2.6 / 1;
+
+        border-radius: 0;
+    }
+
+    .crypt__longreads-item{
+        .crypt__start-parameters,
+        .crypt__longreads-link,
+        .crypt__longreads-text,
+        .crypt__start-tags{
+            padding: 0 rem(20);
+        }
+    }
+
+    .crypt__start-tags{
+        gap: rem(15);
+    }
+
+    .crypt__start-header-title{
+        font-size: rem(28);
+    }
+    .crypt__start-header-text{
+        font-size: rem(14);
+    }
+
+    .crypt__start-header{
+        margin-bottom: rem(30);
+
+        min-height: auto;
+    }
+
+    .crypt__start-wrapper{
+        gap: rem(30);
+    }
+
+    .crypt__header-text{
+        font-size: rem(21);
+    }
 }

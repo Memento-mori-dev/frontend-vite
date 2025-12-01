@@ -94,7 +94,7 @@
             justify-content: space-between;
 
             font-size: rem(12);
-            color: var(--purple-92);
+            color: var(--purple-ce);
         }
 
         &-start{
@@ -190,7 +190,7 @@
             opacity: 0;
 
             & .podcasts__start-link{
-                color: var(--grey);
+                color: var(--white);
             }
 
             & .podcasts__start-top{
@@ -586,5 +586,11 @@
 
     &__content{
         margin-top: rem(30);
+    }
+}
+
+@include mobile{
+    .podcasts__start{
+        width: 100%;
     }
 }

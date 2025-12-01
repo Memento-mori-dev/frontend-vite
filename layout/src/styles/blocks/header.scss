@@ -1,6 +1,10 @@
 @use '../helpers' as *;
 
 .header{
+    overflow: hidden;
+
+    width: 100%;
+
     padding: rem(35) 0 rem(5) 0;
 
     position: relative;
