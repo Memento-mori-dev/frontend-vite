@@ -187,3 +187,9 @@
         display: none;
     }
 }
+
+@media (width < rem(1600)) {
+    .inst__modal{
+        padding-left: 0;
+    }
+}

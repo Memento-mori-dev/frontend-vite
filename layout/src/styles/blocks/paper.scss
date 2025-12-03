@@ -9,7 +9,7 @@
         &-img{
             width: 100%;
 
-            aspect-ratio: 63/25;
+            aspect-ratio: 16 / 9;
 
             border-radius: rem(20);
             object-fit: cover;
@@ -91,7 +91,7 @@
         }
 
         font-size: rem(16);
-        line-height: 137%;
+        // line-height: 137%;
 
         color: var(--grey-55);
 
@@ -107,6 +107,12 @@
 
         & *{
             color: var(--grey-55);
+        }
+
+        & {
+            h1,h2,h3,h4{
+                line-height: normal !important;
+            }
         }
     }
 

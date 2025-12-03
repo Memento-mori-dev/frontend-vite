@@ -1,8 +1,6 @@
 @use '../helpers' as *;
 
 .header{
-    overflow: hidden;
-
     width: 100%;
 
     padding: rem(35) 0 rem(5) 0;
@@ -158,6 +156,8 @@
 
 @media (width <= rem(1140)) {
     .phone-menu{
+        z-index: 10000;
+
         position: absolute;
         top: 0;
         right: rem(-1000);
