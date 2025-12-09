@@ -459,6 +459,12 @@
                 opacity: .8;
             }
         }
+
+        &.width{
+            .crypt__news-main{
+                width: 100%;
+            }
+        }
     }
 
     &__header{
