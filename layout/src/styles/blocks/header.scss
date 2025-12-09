@@ -88,6 +88,10 @@
             @include hover{
                 opacity: .8;
             }
+
+            &.is-active{
+                color: var(--purple-92);
+            }
         }
     }
 

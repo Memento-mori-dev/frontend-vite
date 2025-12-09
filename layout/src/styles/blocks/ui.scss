@@ -12,13 +12,24 @@
     }
 
     &--academy{
-        padding: rem(11.5) rem(17);
+        padding: rem(9.5) rem(15);
         font-weight: 500;
         font-size: rem(12);
         text-transform: uppercase;
         text-align: center;
 
         border-radius: rem(20);
+
+        color: var(--white);
+
+        border: 2px solid var(--purple-92);
+
+        &.is-active{
+            padding: rem(11.5) rem(17);
+
+            background: var(--linear-gradient);
+            border: none;
+        }
     }
 
     &--circle{

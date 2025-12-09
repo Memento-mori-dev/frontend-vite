@@ -35,6 +35,10 @@
             @include hover{
                 color: var(--purple-92);
             }
+
+            &.is-active{
+                color: var(--purple-92);
+            }
         }
     }
 
@@ -588,14 +592,16 @@
     }
 
     .crypt__start-next{
+        padding-bottom: rem(20);
+
         border-radius: rem(20);
         overflow: hidden;
 
         background-color: var(--background);
     }
     .crypt__start-img{
+        width: 100%;
         height: auto;
-
         aspect-ratio: 2.6 / 1;
 
         border-radius: 0;
