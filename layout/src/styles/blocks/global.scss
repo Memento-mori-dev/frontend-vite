@@ -14,13 +14,12 @@
         gap: rem(30);
 
         &-wrapper{
+            position: sticky;
+            top: 10px;
+                
             display: flex;
             flex-direction: column;
             gap: rem(30);
-
-            &.is-fixed{
-                position: fixed;
-            }
         }
     }
 
@@ -40,8 +39,13 @@
     }
 
     .global__left{
-        position: sticky;
-        top: 10px;
+        position: static;
+
+        margin: 0 calc(var(--container-padding-x) * -1);
+
+        width: calc(100% + (var(--container-padding-x) * 2));
+        height: 0;
+        overflow: hidden;
 
         display: flex;
         flex-direction: column;
@@ -52,10 +56,6 @@
         background-color: var(--background);
 
         padding: 0;
-    }
-
-    .global__left-wrapper.is-fixed{
-        position: static;
     }
 
     .global__left-wrapper{

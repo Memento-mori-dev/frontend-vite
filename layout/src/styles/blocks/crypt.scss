@@ -351,6 +351,12 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        &-no-img{
+            .crypt__start-title{
+                margin: 0;
+            }
+        }
     }
     
     &__news{
