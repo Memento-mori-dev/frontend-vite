@@ -40,11 +40,8 @@
     }
 
     .global__left{
-        margin: 0 calc(var(--container-padding-x) * -1);
-
-        width: calc(100% + (var(--container-padding-x) * 2));
-        height: 0;
-        overflow: hidden;
+        position: sticky;
+        top: 10px;
 
         display: flex;
         flex-direction: column;

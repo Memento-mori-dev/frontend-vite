@@ -155,7 +155,21 @@
 }
 
 .phone-menu{
-    display: none;   
+    display: none;
+
+    &__wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        pointer-events: none;
+
+        &.is-active{
+            pointer-events: auto;
+        }
+    }
 }
 
 @media (width <= rem(1140)) {

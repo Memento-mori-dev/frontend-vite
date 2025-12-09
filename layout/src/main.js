@@ -976,6 +976,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openBtn  = document.querySelector('[data-js-open-menu]');
     const closeBtn = document.querySelector('[data-js-close-menu]');
     const menu     = document.querySelector('[data-js-menu]');
+    const menuWrapper     = document.querySelector('[data-js-menu-wrapper]');
 
     if (!openBtn || !closeBtn || !menu) return;
 
@@ -983,11 +984,13 @@ document.addEventListener('DOMContentLoaded', () => {
     openBtn.addEventListener('click', () => {
         openBtn.classList.add('is-active');
         menu.classList.add('is-active');
+        menuWrapper.classList.add('is-active');
     });
 
     // Закрытие меню
     closeBtn.addEventListener('click', () => {
         openBtn.classList.remove('is-active');
         menu.classList.remove('is-active');
+        menuWrapper.classList.remove('is-active');
     });
 });
