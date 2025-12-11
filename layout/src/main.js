@@ -994,3 +994,30 @@ document.addEventListener('DOMContentLoaded', () => {
         menuWrapper.classList.remove('is-active');
     });
 });
+
+
+const socket = new WebSocket("wss://bitbanker-ws.aws.dev.bitbanker.org/");
+
+// открыт
+socket.onopen = () => {
+  console.log("WS: соединение открыто");
+};
+
+// получили данные
+socket.onmessage = (event) => {
+  console.log("WS: данные →", event.data);
+};
+
+// ошибка
+socket.onerror = (event) => {
+  console.error("WS: ОШИБКА →", event);
+};
+
+// закрыт
+socket.onclose = (event) => {
+  if (!event.wasClean) {
+    console.error("WS: соединение закрыто с ошибкой", event.code, event.reason);
+  } else {
+    console.log("WS: соединение закрыто нормально");
+  }
+};
