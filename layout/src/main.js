@@ -996,28 +996,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const socket = new WebSocket("wss://bitbanker-ws.aws.dev.bitbanker.org/");
+document.addEventListener('click', (e) => {
+    const openBtn = e.target.closest('[data-js-modal-open]');
+    const closeBtn = e.target.closest('[data-js-modal-close]');
 
-// открыт
-socket.onopen = () => {
-  console.log("WS: соединение открыто");
-};
+    // Открытие модалки
+    if (openBtn) {
+        const modalName = openBtn.dataset.jsModalOpen;
+        const modal = document.querySelector('[data-js-modal]');
+        const modalItem = document.querySelector(
+            `[data-js-modal-item="${modalName}"]`
+        );
 
-// получили данные
-socket.onmessage = (event) => {
-  console.log("WS: данные →", event.data);
-};
+        if (!modal || !modalItem) return;
 
-// ошибка
-socket.onerror = (event) => {
-  console.error("WS: ОШИБКА →", event);
-};
+        // сброс активных состояний
+        modal.classList.remove('is-active');
+        modal.querySelectorAll('[data-js-modal-item]').forEach(item => {
+            item.classList.remove('is-active');
+        });
 
-// закрыт
-socket.onclose = (event) => {
-  if (!event.wasClean) {
-    console.error("WS: соединение закрыто с ошибкой", event.code, event.reason);
-  } else {
-    console.log("WS: соединение закрыто нормально");
-  }
-};
+        // активация
+        modalItem.classList.add('is-active');
+        modal.classList.add('is-active');
+    }
+
+    // Закрытие модалки
+    if (closeBtn) {
+        const modal = closeBtn.closest('[data-js-modal]');
+        if (!modal) return;
+
+        modal.classList.remove('is-active');
+        modal.querySelectorAll('.is-active').forEach(el => {
+            el.classList.remove('is-active');
+        });
+    }
+});
+
+

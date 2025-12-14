@@ -1,0 +1,86 @@
+@use '../helpers' as *;
+
+.modal{
+    z-index: 10000;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    &::after{
+        z-index: -1;
+
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: var(--black-00);
+        opacity: 0.8;
+    }
+
+    transition: var(--transition);
+
+    &.is-active{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__item{
+        display: none;
+
+        &.is-active{
+            display: block;
+        }
+    }
+
+    &__social{
+        position: relative;
+
+        padding: rem(46) rem(40);
+
+        border-radius: 20px;
+        background-color: var(--black);
+        border: 1px solid var(--purple-92);
+
+
+        &-close{
+            position: absolute;
+            top: rem(17);
+            right: rem(20);
+        }
+
+        &-title{
+            color: var(--white);
+            text-align: center;
+        }
+
+        &-content{
+            margin-top: rem(24);
+
+            display: flex;
+            align-items: center;
+            gap: rem(48);
+        }
+
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
