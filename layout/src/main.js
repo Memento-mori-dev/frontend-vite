@@ -8,6 +8,8 @@ import AjaxAuthor from "./script/AjaxAuthor";
 
 import AjaxQuestions from "./script/AjaxQuestions";
 
+import Converter from "./script/Converter";
+
 useDynamicAdapt();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1034,3 +1036,6 @@ document.addEventListener('click', (e) => {
 });
 
 
+if (document.querySelector('[data-js-converter]')) {
+  new Converter();
+}

@@ -1,9 +1,9 @@
 @use '../helpers' as *;
 
-.modal{
+.modal-new{
     z-index: 10000;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -62,6 +62,14 @@
             position: absolute;
             top: rem(17);
             right: rem(20);
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
         }
 
         &-title{
@@ -81,6 +89,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
         }
     }
+
+    
 }

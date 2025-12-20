@@ -221,7 +221,10 @@
                 color: var(--purple-92);
 
                 &--white{
-                    color: var(--white);
+                    color: var(--white) !important;
+                    @include hover{
+                        color: var(--white) !important;
+                    }
                 }
 
             }
@@ -231,7 +234,7 @@
                 max-width: rem(707);
 
                 font-size: rem(16); 
-                color: var(--white);
+                color: var(--grey-c5);
             }
 
             &-img{
@@ -337,13 +340,20 @@
             @include hover{
                 color: var(--purple-92);
             }
+
+            &--white{
+                color: var(--white) !important;
+                @include hover{
+                    color: var(--white) !important;
+                }
+            }
         }
         &-text{
             margin-top: rem(16);
 
             font-size: rem(14);
             line-height: rem(20); /* 142.857% */
-            color: var(--white);
+            color: var(--grey-c5);
 
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -424,7 +434,7 @@
             font-size: rem(14);
             line-height: rem(20);
             align-self: stretch;
-            color: var(--grey-cd);
+            color: var(--grey-c5);
 
             display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
             -webkit-line-clamp: 3;         /* ограничение по количеству строк */
@@ -538,7 +548,7 @@
         &-text{
             font-size: rem(16);
             line-height: rem(24);
-            color: var(--grey-cd);
+            color: var(--grey-c5);
 
             display: -webkit-box;          /* создаёт флекс-контейнер в виде блока */
             -webkit-line-clamp: 4;         /* ограничение по количеству строк */
@@ -634,6 +644,12 @@
 
         &--single{
             padding: 0;
+        }
+
+        &--white{
+            @include hover{
+                color: var(--white);
+            }
         }
     }
 

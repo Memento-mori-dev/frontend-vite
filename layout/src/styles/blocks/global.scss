@@ -90,6 +90,11 @@
                     font-size: rem(14);
                     line-height: rem(16);
                     color: var(--grey-55);
+
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;      /* количество строк */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
             }
         }
