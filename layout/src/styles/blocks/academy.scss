@@ -247,13 +247,16 @@
         &-header{
             position: relative;
 
-            height: rem(226);
-
             background-size: cover;
             background-position:center;
             background-repeat: no-repeat;
 
             border-radius: rem(20);
+            overflow: hidden;
+
+            &-img{
+                width: 100%;
+            }
 
             &-author{
                 text-decoration: none;
