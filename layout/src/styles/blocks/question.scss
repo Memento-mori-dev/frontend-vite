@@ -140,6 +140,13 @@
                 font-size: rem(12);
                 color: var(--grey-d9);
             }
+
+            &.is-false{
+                .question__form-select,
+                .question__form-input{
+                    border-color: var(--red);
+                }
+            }
         }
 
         &-input{
