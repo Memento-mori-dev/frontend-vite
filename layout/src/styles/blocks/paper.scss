@@ -30,6 +30,8 @@
             margin-top: rem(17);
 
             display: flex;
+            flex-wrap: wrap;
+            gap: rem(10);
             justify-content: space-between;
             align-items: center;
 
@@ -234,7 +236,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: rem(20);
+        gap: rem(10) rem(20);
 
         & li{
 

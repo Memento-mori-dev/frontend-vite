@@ -240,4 +240,10 @@
             }
         }
     }
+
+    @include mobile{
+        &__form{
+            width: 100%;
+        }
+    }
 }

@@ -6,6 +6,8 @@
     padding-bottom: rem(40);
 
     &__title{
+        margin-top: rem(8);
+
         font-size: rem(28);
         font-weight: 400;
 
@@ -13,7 +15,7 @@
     }
 
     &__start{
-        margin-top: rem(50);
+        margin-top: rem(26);
 
         display: flex;
         flex-wrap: wrap;
@@ -37,7 +39,7 @@
                     font-weight: 700;
                     font-size: rem(21);
 
-                    color: var(--grey-55);
+                    color: var(--white);
 
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
@@ -103,7 +105,7 @@
             font-size: rem(14);
             line-height: 143%;
 
-            color: var(--grey-8b);
+            color: var(--grey-9a);
 
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -154,27 +156,31 @@
             display: flex;
             align-items: center;
             gap: rem(16);
+
+            & > .btn{
+                flex-shrink: 0;
+            }
         }
 
         &--grey{
             overflow: hidden;
 
-            width: calc(33.33% - rem(20));
+            width: calc(50% - rem(15));
 
-            padding: rem(20) rem(25);
+            padding: rem(20) rem(30) rem(20) rem(20);
 
             border-radius: rem(20);
-            background-color: var(--black-36);
+            background-color: var(--background);
 
             & .author__item-img-wrapper{
-                background-color: var(--black-36);
+                background-color: var(--background);
             }
         }
 
         &--border{
-            width: calc(33.33% - rem(0.66));
+            width: calc(50% -  rem(0.66));
 
-            padding: rem(30) rem(40);
+            padding: rem(20) rem(40);
 
             position: relative;
             &::after{
@@ -187,7 +193,7 @@
                 width: rem(1);
                 height: calc(100% - rem(30));
 
-                background-color: var(--grey-8b);
+                background-color: var(--grey-9a);
             }
             &::before{
                 content: '';
@@ -199,16 +205,17 @@
                 width: calc(100% - rem(30));
                 height: rem(1);
 
-                background-color: var(--grey-8b);
+                background-color: var(--grey-9a);
             }
 
             &:first-child,
-            &:nth-child(3n+1){
+            &:nth-child(2n+1){
+                padding-left: 0;
                 &::after{
                     display: none;
                 }
             }
-            &:nth-last-child(-n+3){
+            &:nth-last-child(-n+2){
                 &::before{
                     display: none;
                 }
@@ -359,6 +366,8 @@
             }
 
             &-link{
+                flex-shrink: 0;
+
                 padding: rem(7) rem(11);
 
                 text-decoration: none;
@@ -418,6 +427,8 @@
             }
 
             &-control{
+                list-style-type: none;
+
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -476,6 +487,65 @@
         &-title{
             font-size: rem(28);
             color: var(--grey-55);
+        }
+    }
+
+    @include tablet{
+        &__single-start{
+            flex-direction: column;
+
+            &-img{
+                margin: auto;
+
+                width: 100%;
+                max-width: rem(400);
+            }
+        }
+    }
+
+    @include mobile{
+        &__single-start{
+            &-list{
+                flex-direction: column;
+
+                li{
+                    width: 100%;
+                }
+            }
+
+            &-bottom{
+                flex-wrap: wrap;
+
+                gap: rem(10);
+            }
+        }
+
+        &__item--grey,
+        &__item--border{
+            width: 100%;
+        }
+
+        &__item--border{
+            padding-left: rem(20);
+            padding-right: rem(20);
+
+            &:nth-child(2n+1){
+                padding-left: rem(20);
+            }
+
+            &::after{
+                display: none;
+            }
+
+            &:nth-last-child(-n+2){
+                &::before{
+                    display: block;
+                }
+            }
+
+            &:last-child::before{
+                display: none;
+            }
         }
     }
 }

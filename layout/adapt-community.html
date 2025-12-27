@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/styles/main.scss">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img src="./assets/svg/logo.svg" alt="">
+      </a>
+
+      <div class="header__content">
+        <menu class="header__menu">
+          <ul>
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+          </ul>
+        </menu>
+
+        <button class="btn btn--academy btn--gradient">Академия</button>
+
+        <button class="btn header__search">
+          <img src="http://bit.jobmori1.beget.tech/wp-content/themes/bit/assets/svg/search.svg" alt="svg">
+        </button>
+      </div>
+
+      <div class="header__phone">
+        <button class="header__phone-btn" data-js-open-left>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15.5" transform="rotate(-180 16 16)" fill="#171C33" stroke="#171C33" />
+            <path d="M21.108 11.8467L17 15.9547L21.108 20.0626" stroke="white" stroke-width="1.18428"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13 11V21" stroke="white" stroke-width="0.909091" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <button class="header__phone-menu" data-js-open-menu>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="11" viewBox="0 0 25 11" fill="none">
+            <line y1="1" x2="25" y2="1" stroke="white" stroke-width="2" />
+            <line y1="10" x2="20" y2="10" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="phone-menu__wrapper" data-js-menu-wrapper>
+      <div class="phone-menu" data-js-menu>
+        <menu class="header__menu">
+          <ul>
+            <li>
+              <a href="">
+
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                КРИПТОВАЛЮТЫ
+              </a>
+            </li>
+          </ul>
+        </menu>
+
+        <button class="phone-menu__btn btn" data-js-close-menu>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="11" viewBox="0 0 25 11" fill="none">
+            <line y1="1" x2="25" y2="1" stroke="white" stroke-width="2" />
+            <line y1="10" x2="20" y2="10" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+
+
+
+  </header>
+
+<main>
+   <div class="global container">
+      <div class="global__left">
+        <ul class="crypt__menu">
+    <li>
+        <a href="/opinions/">
+            Мнения
+        </a>
+    </li>
+
+    <li>
+        <a href="/question/">
+            Вопрос эксперту
+        </a>
+    </li>
+
+    <li>
+        <a href="/events/">
+            Мероприятия
+        </a>
+    </li>
+
+    <li>
+        <a href="/partners/">
+            Эксперты
+        </a>
+    </li>
+
+    <li>
+        <a href="/news-author/">
+            Авторы
+        </a>
+    </li>
+
+    <li>
+        <a href="">
+            Стажировки и вакансии
+        </a>
+    </li>
+</ul>
+        <div class="converter" data-js-converter="">
+    <p class="converter__title">
+        Конвертер и калькулятор криптовалют
+    </p>
+
+    <div class="converter__main">
+        <button class="converter__main-open btn" data-js-converter-main="">
+            Выберите
+        </button>
+
+        <div class="converter__main-wrapper" data-js-converter-main-wrapper="">
+            <div class="converter__main-content" data-js-converter-main-content="">
+                <div class="converter__main-list" data-js-converter-main-selection="">
+                <button class="btn" data-js-converter-main-item="USDT/RUBR">USDT/RUBR</button><button class="btn" data-js-converter-main-item="BTC/RUBR">BTC/RUBR</button><button class="btn" data-js-converter-main-item="USDT/USD.R">USDT/USD.R</button><button class="btn" data-js-converter-main-item="USDC/USDT">USDC/USDT</button><button class="btn" data-js-converter-main-item="TON/USDT">TON/USDT</button><button class="btn" data-js-converter-main-item="USDT/RUB.N">USDT/RUB.N</button><button class="btn" data-js-converter-main-item="BTC/USDT">BTC/USDT</button><button class="btn" data-js-converter-main-item="ETH/USDT">ETH/USDT</button><button class="btn" data-js-converter-main-item="TRX/RUBR">TRX/RUBR</button><button class="btn" data-js-converter-main-item="TON/RUBR">TON/RUBR</button><button class="btn" data-js-converter-main-item="EUR/USDT">EUR/USDT</button><button class="btn" data-js-converter-main-item="TRX/USDT">TRX/USDT</button></div>
+            </div>
+        </div>
+
+        <div class="converter__footer">
+            Текущий курс <p data-js-converter-form-course="">1 USDT = 79.90 RUBR</p>
+        </div>
+    </div>
+
+    <div class="converter__form" data-js-converter-form="">
+        <div class="converter__form-item">
+            <img src="" alt="" class="converter__form-item-img is-hide" data-js-converter-form-one-img="">
+
+            <input type="number" class="converter__form-input" placeholder="Отдаете" inputmode="numeric" min="0" data-js-converter-form-one="">
+
+            <p class="converter__form-item-text">
+                Мин. <span data-js-converter-form-one-span="">500 RUBR</span>
+            </p>
+        </div>
+
+        <div class="converter__form-item">
+            <button class="btn" data-js-converter-revers="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17" fill="none">
+                    <path d="M6.40341 0.801158V16.0078M6.40341 16.0078L12.0059 10.4054M6.40341 16.0078L0.800957 10.4054" stroke="white" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M17.4073 16.0074V0.800781M17.4073 0.800781L23.0098 6.40323M17.4073 0.800781L11.8049 6.40323" stroke="white" stroke-width="1.6007" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="converter__form-item">
+            <img src="" alt="" class="converter__form-item-img is-hide" data-js-converter-form-two-img="">
+
+            <input type="number" class="converter__form-input" placeholder="Получаете" inputmode="numeric" min="0" data-js-converter-form-two="">
+
+            <p class="converter__form-item-text">
+                Мин. <span data-js-converter-form-two-span="">500 RUBR</span>
+            </p>
+        </div>
+    </div>
+</div>      </div>
+
+      <div class="global__right">
+        
+<div class="inst">
+    <div class="swiper swiper-inst swiper-initialized swiper-horizontal">
+        <div class="swiper-wrapper" id="swiper-wrapper-f6b4c510a10fc6d1be" aria-live="polite">
+                                            <div class="swiper-slide swiper-slide-active" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="1 / 11">
+                    <button class="inst__item btn" data-js-inst="0">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/photo_2025-12-24_20-30-29-3.jpg" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide swiper-slide-next" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="2 / 11">
+                    <button class="inst__item btn" data-js-inst="1">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/photo_2025-12-24_20-30-29-2.jpg" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="3 / 11">
+                    <button class="inst__item btn" data-js-inst="2">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/photo_2025-12-24_20-30-29.jpg" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="4 / 11">
+                    <button class="inst__item btn" data-js-inst="3">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/chem_chat_gpt_otlichaetsya_ot_ii_dlya_biznesa_png.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="5 / 11">
+                    <button class="inst__item btn" data-js-inst="4">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/naskolko_rastet_effektivnost_kompanii_s_ii_.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="6 / 11">
+                    <button class="inst__item btn" data-js-inst="5">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/kak-vyvodit-kriptu-v-rubli-na-kartu-banka.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="7 / 11">
+                    <button class="inst__item btn" data-js-inst="6">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/photo_2025-12-19_15-21-26.jpg" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="8 / 11">
+                    <button class="inst__item btn" data-js-inst="7">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/chem_chat_gpt_otlichaetsya_ot_ii_dlya_biznesa_1_png-1.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="9 / 11">
+                    <button class="inst__item btn" data-js-inst="8">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/13.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" style="width: 93.5556px; margin-right: 20px;" role="group" aria-label="10 / 11">
+                    <button class="inst__item btn" data-js-inst="9">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/14.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                                            <div class="swiper-slide" role="group" aria-label="11 / 11" style="width: 93.5556px; margin-right: 20px;">
+                    <button class="inst__item btn" data-js-inst="10">
+                        <div class="inst__img">
+                            <img src="https://bitbanker.space/wp-content/uploads/2025/12/2.png" alt="">
+                        </div>
+                    </button>
+                </div>
+                    </div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+    <button class="btn inst__btn inst__btn--next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-f6b4c510a10fc6d1be" aria-disabled="false">
+        <img src="https://bitbanker.space/wp-content/themes/bit/assets/svg/inst-arrow.svg" alt="next">
+    </button>
+</div>
+            
+    <ul class="breadcrumbs"><li><a href="https://bitbanker.space/">Главная</a></li><li><a href="https://bitbanker.space/community/">Cообщество</a></li></ul>    
+    <div class="crypt__start-header">
+        <h1 class="crypt__start-header-title">Сообщество</h1>
+        <p class="crypt__start-header-text">Экспертные колонки, разборы вопросов от аудитории, подборки событий и карьерных возможностей в сферах финансов и криптовалют. Раздел объединяет открытую коммуникацию с экспертами и актуальные профессиональные возможности, формируя пространство для развития и взаимодействия между участниками рынка.</p>
+        <div class="crypt__start-header-img">
+            <img src="https://bitbanker.space/wp-content/themes/bit/assets/img/community.png" alt="">
+        </div>
+    </div>
+    
+    <div class="crypt__header">
+    <div class="crypt__header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 17 24" fill="none">
+            <rect y="8" width="3" height="16" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="7" width="3" height="24" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="14" y="4" width="3" height="20" rx="1.5" fill="#D9D9D9"></rect>
+        </svg>
+    </div>
+
+    <p class="crypt__header-text">Мнения экспертов</p>
+
+    <div class="crypt__header-line"></div>
+</div>
+
+
+<div class="community__news-wrapper">
+            
+<div class="crypt__news">
+        <img src="https://bitbanker.space/wp-content/uploads/2025/12/1920x1200.jpeg" alt="" class="crypt__news-img">
+
+        <div class="crypt__news-main">
+
+            <div class="community__news-header">
+                <a href="/news-author/zernov-xprt" class="community__news-name">
+                   Владимир З.</a>
+
+                <a href="" class="author__single-start-link" type="button" js-open-modal-question="zernov-xprt">
+                    Задать вопрос этому эксперту
+                </a>
+            </div>
+
+            <div class="crypt__news-top">
+                <a href="https://bitbanker.space/opinions/926/" class="crypt__news-title">
+                    757869576</a>
+
+                <ul class="crypt__start-parameters">
+                    <li>Дек 25, 17:17  </li>
+                </ul>
+
+                <p class="crypt__news-text">
+                    jghvukhjvb </p>
+            </div>
+
+            <div class="community__news-footer">
+                <ul class="crypt__start-tags">
+                    <li><a href="/opinions/?tag=115fz">115ФЗ</a></li>                </ul>
+
+                <a href="/opinions/?author=zernov-xprt" class="author__single-start-link">
+                    Все мнения эксперта
+                </a>
+            </div>
+
+        </div>
+    </div>
+            
+<div class="crypt__news">
+        <img src="https://bitbanker.space/wp-content/uploads/2025/12/image3-5.png" alt="" class="crypt__news-img">
+
+        <div class="crypt__news-main">
+
+            <div class="community__news-header">
+                <a href="/news-author/denis-mayasov-author" class="community__news-name">
+                   Денис М.</a>
+
+                <a href="" class="author__single-start-link" type="button" js-open-modal-question="denis-mayasov-author">
+                    Задать вопрос этому эксперту
+                </a>
+            </div>
+
+            <div class="crypt__news-top">
+                <a href="https://bitbanker.space/opinions/manhettenskij-proekt-ery-ii-kak-genesis-mission-perepisyvaet-pravila-nauchnoj-gonki/" class="crypt__news-title">
+                    Манхэттенский проект эры ИИ: как Genesis Mission переписывает правила научной гонки</a>
+
+                <ul class="crypt__start-parameters">
+                    <li>Дек 25, 17:00  </li>
+                </ul>
+
+                <p class="crypt__news-text">
+                    В статье разбираем суть Genesis Mission — масштабного проекта США, который президент Трамп сравнил с Манхэттенским проектом и программой Apollo. Речь идёт о консолидации суперкомпьютеров, научных данных и экспертных ресурсов для ускорения прорывов в биотехе, энергетике, космосе и оборонке. Мы рассматриваем, как проект меняет правила игры для Big Tech, анализируем риски (от безопасности до монополизации), сравниваем с китайским аналогом и объясняем, почему для России отсутствие аналогичного механизма грозит технологической зависимостью. </p>
+            </div>
+
+            <div class="community__news-footer">
+                <ul class="crypt__start-tags">
+                    <li><a href="/opinions/?tag=ai">AI</a></li><li><a href="/opinions/?tag=infrastruktura">Инфраструктура</a></li><li><a href="/opinions/?tag=makroekonomika">Макроэкономика</a></li>                </ul>
+
+                <a href="/opinions/?author=denis-mayasov-author" class="author__single-start-link">
+                    Все мнения эксперта
+                </a>
+            </div>
+
+        </div>
+    </div>
+            
+<div class="crypt__news">
+        <img src="https://bitbanker.space/wp-content/uploads/2025/11/chto-takoe-smart-kontrakty.png" alt="" class="crypt__news-img">
+
+        <div class="crypt__news-main">
+
+            <div class="community__news-header">
+                <a href="/news-author/dadasdasd" class="community__news-name">
+                   Эксперт</a>
+
+                <a href="" class="author__single-start-link" type="button" js-open-modal-question="dadasdasd">
+                    Задать вопрос этому эксперту
+                </a>
+            </div>
+
+            <div class="crypt__news-top">
+                <a href="https://bitbanker.space/opinions/chto-delat-esli-bank-zablokiroval-perevod-poshagovaya-instrukcziya-i-rekomendaczii-yurista/" class="crypt__news-title">
+                    Что делать, если банк заблокировал перевод: пошаговая инструкция и рекомендации юриста</a>
+
+                <ul class="crypt__start-parameters">
+                    <li>Дек 24, 15:15  </li>
+                </ul>
+
+                <p class="crypt__news-text">
+                    В&nbsp;последнее&nbsp;время&nbsp;банки&nbsp;значительно&nbsp;чаще&nbsp;блокируют&nbsp;финансовые&nbsp;операции.&nbsp;В&nbsp;статье&nbsp;эксперт‑юрист&nbsp;объясняет&nbsp;причины&nbsp;таких&nbsp;блокировок,&nbsp;даёт&nbsp;рекомендации&nbsp;по&nbsp;грамотной&nbsp;реакции&nbsp;и приводит&nbsp;алгоритм действий для снятия&nbsp;ограничений. </p>
+            </div>
+
+            <div class="community__news-footer">
+                <ul class="crypt__start-tags">
+                    <li><a href="/opinions/?tag=115fz">115ФЗ</a></li><li><a href="/opinions/?tag=161fz">161ФЗ</a></li><li><a href="/opinions/?tag=finance">Finance</a></li><li><a href="/opinions/?tag=%d0%b1%d0%b0%d0%bd%d0%ba%d0%b8">Банки</a></li><li><a href="/opinions/?tag=regulirovanie">Регулирование</a></li>                </ul>
+
+                <a href="/opinions/?author=dadasdasd" class="author__single-start-link">
+                    Все мнения эксперта
+                </a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+<div class="crypt__news-btn-wrapper">
+    <a href="/opinion/" class="crypt__news-btn">
+        Все мнения
+    </a>
+</div>
+    <div class="crypt__header">
+    <div class="crypt__header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 17 24" fill="none">
+            <rect y="8" width="3" height="16" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="7" width="3" height="24" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="14" y="4" width="3" height="20" rx="1.5" fill="#D9D9D9"></rect>
+        </svg>
+    </div>
+
+    <p class="crypt__header-text">Вопрос эксперту</p>
+
+    <div class="crypt__header-line"></div>
+</div>
+
+
+<div class="community__news-wrapper">
+                    
+
+        
+
+
+<div class="community__question">
+    <div class="community__question-header">
+        <img src="https://bitbanker.space/wp-content/uploads/2025/11/zernov.png" alt="" class="community__question-img">
+
+        <a href="/news-author/dadasdasd" class="community__news-name">
+            Эксперт        </a>
+
+        <div class="community__question-date">
+            Дек 25, 17:10        </div>
+    </div>
+
+    <a href="https://bitbanker.space/question/vopros-ot-eweewe/" class="community__question-title">
+        Вопрос от eweewe</a>
+    
+
+    <p class="community__question-description">
+        dadqaweqweqw    </p>
+
+    <div class="community__question-footer">
+        <ul class="crypt__start-tags">
+            <li><a href="/question/?tag=115fz">115ФЗ</a></li>        </ul>
+
+        <div class="community__question-right">
+            <a href="/author/dadasdasd" class="author__single-start-link" type="button" js-open-modal-question="dadasdasd">
+                Задать вопрос этому эксперту
+            </a>
+
+            <a href="/question/?author=dadasdasd" class="author__single-start-link">
+                Все вопросы эксперта
+            </a>
+        </div>
+    </div>
+</div>
+
+                    
+
+        
+
+
+<div class="community__question">
+    <div class="community__question-header">
+        <img src="https://bitbanker.space/wp-content/uploads/2025/12/vladimir-zernov.png" alt="" class="community__question-img">
+
+        <a href="/news-author/zernov-xprt" class="community__news-name">
+            Владимир Зернов        </a>
+
+        <div class="community__question-date">
+            Дек 25, 8:04        </div>
+    </div>
+
+    <a href="https://bitbanker.space/question/vopros-ot-kirill/" class="community__question-title">
+        «Как повышение НДС с 20% до 22% может повлиять на инфляцию?», — вопрос от Кирилла</a>
+    
+
+    <p class="community__question-description">
+        В ответе рассматривается вопрос, как повышение НДС с 20 % до 22 % может повлиять на инфляцию: приводятся оценки экспертов, перечисляются ключевые факторы, от которых зависит реальный эффект, и обозначается наиболее вероятный сценарий роста цен в 2026 году.    </p>
+
+    <div class="community__question-footer">
+        <ul class="crypt__start-tags">
+                    </ul>
+
+        <div class="community__question-right">
+            <a href="/author/dadasdasd" class="author__single-start-link" type="button" js-open-modal-question="zernov-xprt">
+                Задать вопрос этому эксперту
+            </a>
+
+            <a href="/question/?author=zernov-xprt" class="author__single-start-link">
+                Все вопросы эксперта
+            </a>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+<div class="crypt__news-btn-wrapper">
+    <a href="/question/" class="crypt__news-btn">
+        Все мнения
+    </a>
+</div>
+    <div class="crypt__header">
+    <div class="crypt__header-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="24" viewBox="0 0 17 24" fill="none">
+            <rect y="8" width="3" height="16" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="7" width="3" height="24" rx="1.5" fill="#D9D9D9"></rect>
+            <rect x="14" y="4" width="3" height="20" rx="1.5" fill="#D9D9D9"></rect>
+        </svg>
+    </div>
+
+    <p class="crypt__header-text">Мероприятия</p>
+
+    <div class="crypt__header-line"></div>
+</div>
+
+
+<div class="community__event-wrapper">
+
+    
+    <div class="community__event">
+
+        <div class="community__event-banner" style="background-image: url('https://bitbanker.space/wp-content/uploads/2025/12/1920x1080-9.jpg');">
+            <div class="community__event-date">
+                <p class="community__event-date-number">23</p>
+                <p class="community__event-date-name">январь</p>
+            </div>
+        </div>
+
+        <div class="community__event-content">
+
+            <div class="community__event-place">
+                <div class="community__event-place-icon">
+                    <img src="https://bitbanker.space/wp-content/themes/bit/assets/svg/place-icon.svg" alt="">
+                </div>
+
+                <p>Москва, ул. Новый Арбат, д.21</p>
+            </div>
+
+            <a href="https://bitbanker.space/events/%f0%9f%8f%86-crypto-awards-2025-premiya-dlya-liderov-rynka-kriptovalyut-i-blokchejn-tehnologij/" class="community__event-title">
+                <img draggable="false" role="img" class="emoji" alt="🏆" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f3c6.svg"> Crypto Awards 2025: премия для лидеров рынка криптовалют и блокчейн‑технологий!            </a>
+
+            <p class="community__event-description">
+                Онлайн-голосование за номинантов премии уже открыто. Crypto Awards 2025 — это площадка для признания заслуг ведущих компаний и экспертов отрасли, возможность отметить инновационные решения и прорывные проекты. 
+            </p>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="crypt__news-btn-wrapper">
+    <a href="/events/" class="crypt__news-btn">
+        Все мероприятия
+    </a>
+</div>
+          </div>
+    </div>
+
+</main>
+
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__top">
+        <div class="footer__start">
+          <div class="footer__start-logo">
+            <a href="/">
+              <img src="./assets/svg/logo.svg" alt="">
+            </a>
+          </div>
+
+          <div class="footer__start-form"></div>
+
+          <!-- <p class="footer__start-text">
+                          Лучшее от Bitbanker Space — в вашей почте
+                        </p> -->
+        </div>
+
+        <div class="footer__menu">
+          <div class="footer__menu-item">
+            <p class="footer__title">
+              НОВОСТИ
+              <span></span>
+            </p>
+
+            <div class="footer__menu-item-content">
+              <ul class="footer__menu-item-list">
+                <li><a href="">Криптовалюты</a></li>
+                <li><a href="">Финансы</a></li>
+                <li><a href="">Технологии (IT и AI)</a></li>
+              </ul>
+
+              <ul class="footer__menu-item-list">
+                <li><a href="">Редакционная политика</a></li>
+                <li><a href="">Политика приватности</a></li>
+                <li><a href="">Политика Cookies</a></li>
+                <li><a href="">Карта сайта</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__menu-item-two">
+            <div class="footer__menu-item">
+              <p class="footer__title">
+                АКАДЕМИЯ
+              </p>
+
+              <div class="footer__menu-item-content">
+                <ul class="footer__menu-item-list">
+                  <li><a href="">Статьи</a></li>
+                  <li><a href="">Видео</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer__menu-item">
+              <p class="footer__title">
+                О НАС
+              </p>
+
+              <div class="footer__menu-item-content">
+                <ul class="footer__menu-item-list">
+                  <li><a href="">Контактная информация</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="footer__bottom">
+        <div class="footer__social">
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" fill="none">
+              <path
+                d="M18.2704 1.38148C18.4128 0.460936 17.5376 -0.265659 16.7191 0.0937127L0.416934 7.2512C-0.170026 7.50891 -0.127089 8.39806 0.481677 8.59188L3.84354 9.66251C4.48525 9.86686 5.18 9.76114 5.74034 9.37406L13.32 4.13749C13.5486 3.97954 13.7977 4.30457 13.6024 4.50583L8.1464 10.131C7.61714 10.6767 7.72217 11.6014 8.35885 12.0006L14.4674 15.8312C15.1526 16.2608 16.0339 15.8293 16.1621 15.0013L18.2704 1.38148Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" fill="none">
+              <path
+                d="M21.363 11.2115C21.363 11.2115 23.3043 13.4458 23.7823 14.4829C23.796 14.5042 23.8028 14.5256 23.8074 14.5362C24.0018 14.9175 24.0475 15.2135 23.9515 15.4348C23.7914 15.8027 23.2426 15.984 23.0551 16H19.6251C19.3873 16 18.8888 15.928 18.2851 15.4428C17.8218 15.0649 17.3653 14.4453 16.9202 13.8412L16.9177 13.8377C16.2523 12.9365 15.676 12.158 15.0952 12.158C15.0214 12.1578 14.9481 12.1713 14.878 12.198C14.4389 12.3633 13.8764 13.0938 13.8764 15.0402C13.8764 15.6481 13.4648 15.9973 13.1744 15.9973H11.6035C11.0684 15.9973 8.28095 15.7787 5.81135 12.7419C2.78837 9.0225 0.0672422 1.56241 0.0443756 1.49308C-0.127124 1.0105 0.227309 0.751875 0.613755 0.751875H4.07805C4.53996 0.751875 4.69088 1.07982 4.79607 1.37044C4.91955 1.70905 5.37231 3.05549 6.11547 4.5699C7.32055 7.03883 8.05914 8.04133 8.65139 8.04133C8.76244 8.0398 8.87151 8.00687 8.96923 7.94534C9.74213 7.44409 9.59807 4.2313 9.56377 3.56474C9.56377 3.43943 9.56148 2.12765 9.16588 1.49842C8.88234 1.04249 8.39985 0.869188 8.10716 0.805199C8.22563 0.614594 8.38171 0.460042 8.56221 0.354607C9.09271 0.0453253 10.0485 0 10.9975 0H11.5257C12.5547 0.0159973 12.82 0.0933183 13.1927 0.202633C13.9473 0.413265 13.9633 0.981171 13.897 2.92485C13.8764 3.47675 13.8558 4.10065 13.8558 4.83653C13.8558 4.9965 13.849 5.16714 13.849 5.34844L13.8488 5.35567C13.826 6.34307 13.8001 7.46121 14.3978 7.92135C14.4759 7.97848 14.5662 8.00896 14.6585 8.00933C14.8665 8.00933 15.4931 8.00933 17.1898 4.61523C17.7131 3.52277 18.1678 2.38754 18.5504 1.21846C18.5847 1.14914 18.6853 0.935845 18.8042 0.853192C18.8919 0.80103 18.9892 0.774495 19.0877 0.77587H23.1603C23.6039 0.77587 23.908 0.85319 23.9652 1.05316C24.0658 1.37044 23.9469 2.33828 22.0878 5.27379L21.2578 6.55091C19.5725 9.12648 19.5725 9.25712 21.363 11.2115Z"
+                fill="white" />
+            </svg>
+          </a>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+              <path
+                d="M5.12227 0L9.40939 5.7667L14.7544 0H16.2205L10.1024 6.68502L17 16H11.9705L7.2933 9.74846C7.23168 9.74809 6.94847 10.054 6.885 10.1206C5.04692 12.0476 3.31314 14.0804 1.46616 16H0L6.5721 8.83535L0.0371179 0H5.12227ZM14.81 14.8837L4.54694 1.11628H2.22707L12.4902 14.8837H14.81Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+
+        <a href="malto:pochta@bitbanker.com" class="footer__mail">pochta@bitbanker.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-new" data-js-modal>
+    <div class="modal-new__item" data-js-modal-item="social">
+      <div class="modal-new__social">
+        <div class="modal-new__social-close" data-js-modal-close>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.3346 13.3346L2.66797 2.66797M13.3346 2.66797L2.66797 13.3346" stroke="white" stroke-width="2"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <p class="modal-new__social-title">
+          Поделиться
+        </p>
+
+        <div class="modal-new__social-content">
+          <a href="" class="modal-new__social-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="32" viewBox="0 0 37 32" fill="none">
+              <path
+                d="M36.5408 2.76297C36.8256 0.921873 35.0752 -0.531318 33.4382 0.187425L0.833868 14.5024C-0.340052 15.0178 -0.254178 16.7961 0.963354 17.1838L7.68708 19.325C8.97051 19.7337 10.36 19.5223 11.4807 18.7481L26.64 8.27497C27.0972 7.95909 27.5954 8.60914 27.2048 9.01166L16.2928 20.2619C15.2343 21.3534 15.4443 23.2028 16.7177 24.0012L28.9349 31.6624C30.3052 32.5216 32.0679 31.6585 32.3241 30.0025L36.5408 2.76297Z"
+                fill="white" />
+            </svg>
+          </a>
+
+          <a href="" class="modal-new__social-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="28" viewBox="0 0 42 28" fill="none">
+              <path
+                d="M37.3852 19.6201C37.3852 19.6201 40.7826 23.5301 41.6189 25.3451C41.6429 25.3824 41.655 25.4198 41.663 25.4384C42.0031 26.1056 42.0831 26.6236 41.9151 27.0108C41.6349 27.6547 40.6745 27.972 40.3464 28H34.3439C33.9277 28 33.0554 27.874 31.9989 27.0248C31.1882 26.3635 30.3893 25.2793 29.6104 24.222L29.6059 24.216C28.4415 22.6389 27.433 21.2765 26.4166 21.2765C26.2875 21.2762 26.1592 21.2998 26.0365 21.3464C25.2681 21.6357 24.2837 22.9142 24.2837 26.3203C24.2837 27.3841 23.5634 27.9953 23.0552 27.9953H20.3061C19.3697 27.9953 14.4917 27.6127 10.1699 22.2983C4.87965 15.7894 0.117674 2.73421 0.0776572 2.6129C-0.222468 1.76837 0.39779 1.31578 1.07407 1.31578H7.13659C7.94493 1.31578 8.20904 1.88968 8.39312 2.39827C8.60921 2.99083 9.40154 5.34711 10.7021 7.99733C12.811 12.3179 14.1035 14.0723 15.1399 14.0723C15.3343 14.0697 15.5251 14.012 15.6962 13.9044C17.0487 13.0272 16.7966 7.40477 16.7366 6.23829C16.7366 6.019 16.7326 3.72338 16.0403 2.62223C15.5441 1.82436 14.6997 1.52108 14.1875 1.4091C14.3948 1.07554 14.668 0.805074 14.9839 0.620562C15.9122 0.0793192 17.5849 0 19.2456 0H20.17C21.9708 0.0279953 22.435 0.163307 23.0872 0.354609C24.4078 0.723214 24.4358 1.71705 24.3197 5.11848C24.2837 6.08432 24.2477 7.17614 24.2477 8.46393C24.2477 8.74388 24.2357 9.04249 24.2357 9.35977L24.2354 9.37242C24.1955 11.1004 24.1502 13.0571 25.1961 13.8624C25.3329 13.9623 25.4909 14.0157 25.6523 14.0163C26.0165 14.0163 27.1129 14.0163 30.0821 8.07665C30.9979 6.16484 31.7936 4.17819 32.4631 2.13231C32.5232 2.011 32.6992 1.63773 32.9073 1.49309C33.0609 1.4018 33.2312 1.35537 33.4035 1.35777H40.5305C41.3068 1.35777 41.839 1.49308 41.9391 1.84302C42.1151 2.39827 41.9071 4.09199 38.6537 9.22913L37.2011 11.4641C34.2519 15.9713 34.2519 16.2 37.3852 19.6201Z"
+                fill="white" />
+            </svg>
+          </a>
+
+          <a href="" class="modal-new__social-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path
+                d="M31.9812 31.9989H25.365L25.3023 19.6633C25.0389 17.0444 23.8523 15.5744 21.0453 16.0259C18.8867 16.3733 18.1994 18.0553 18.0012 20.0383L17.9385 31.9989H11.3223V10.6363H17.6889V13.5726C17.9974 13.2527 18.2006 12.8325 18.5017 12.4814C20.5574 10.0832 24.1396 9.64672 27.0507 10.4808C30.9665 11.6034 31.8031 15.2771 31.985 18.9107L31.9825 32.0002L31.9812 31.9989Z"
+                fill="white" />
+              <path d="M7.20238 10.6367H0.523438V31.9993H7.20238V10.6367Z" fill="white" />
+              <path
+                d="M0.0244581 4.45257C-0.0081527 4.19795 -0.0081527 3.52065 0.0244581 3.26603C0.228903 1.66936 1.83436 0.166753 3.42727 0.0187499C7.12484 -0.326172 9.17932 4.17036 6.48642 6.70271C4.24505 8.80987 0.408262 7.45652 0.0244581 4.45257Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-single" data-js-form-true="">
+    <div class="modal-single__form">
+      <img src="./assets/img/form-true.png" alt="" class="modal-single__form-img">
+
+      <p class="modal-single__form-text">
+        Ваша заявка<br>
+        успешно отправлена
+      </p>
+    </div>
+  </div>
+
+  <div class="modal-single" data-js-form-false="">
+    <div class="modal-single__form">
+      <img src="./assets/img/form-false.png" alt="" class="modal-single__form-img">
+
+      <p class="modal-single__form-text">
+        Ваша заявка<br>
+        не отправлена
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

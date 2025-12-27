@@ -14,7 +14,8 @@
             margin-bottom: rem(20);
 
             display: flex;
-            gap: rem(20);
+            flex-wrap: wrap;
+            gap: rem(10) rem(20);
         }
         &-name{
             text-decoration: none;
@@ -38,7 +39,9 @@
             margin-top: rem(20);
 
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            gap: rem(10);
         }
     }
 
@@ -301,6 +304,24 @@
             -webkit-line-clamp: 2; /* количество строк */
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+    }
+
+    @media (width <= rem(1240)) {
+        &__event{
+            &-banner{
+                height: 27vw;
+            }
+        }
+    }
+
+    @include mobile{
+        &__event{
+            width: 100%;
+
+            &-banner{
+                height: 53vw;
+            }
         }
     }
 }
