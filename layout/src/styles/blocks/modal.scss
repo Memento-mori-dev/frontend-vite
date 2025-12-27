@@ -139,7 +139,7 @@
         pointer-events: auto;
     }
 
-    &__form{
+    &__form-action{
         max-width: rem(600);
         width: 100%;
 
@@ -164,4 +164,13 @@
             text-align: center;
         }
     }
+
+    &__form{
+        padding: rem(30);
+
+        border-radius: rem(20);
+        background: var(--grey-5d);
+    }
+
+
 }

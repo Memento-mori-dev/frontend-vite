@@ -10,6 +10,8 @@ import AjaxQuestions from "./script/AjaxQuestions";
 
 import Converter from './script/Converter.js';
 
+import AjaxLine from './script/AjaxLine.js';
+
 useDynamicAdapt();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1038,4 +1040,8 @@ document.addEventListener('click', (e) => {
 
 if (document.querySelector('[data-js-converter]')) {
   new Converter();
+}
+
+if (document.querySelector('[data-js-line]')) {
+  new AjaxLine();
 }

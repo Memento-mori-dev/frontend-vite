@@ -1,0 +1,88 @@
+@use "../helpers" as *;
+
+.line {
+    margin-top: rem(30);
+
+    overflow: hidden;
+    width: 100%;
+
+    &__track {
+        display: flex;
+        width: max-content;
+        animation: line-marquee 40s linear infinite;
+        will-change: transform;
+
+        display: none;
+
+        &.is-active{
+            display: flex;
+        }
+    }
+
+    &__group {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 rem(16);
+        display: flex;
+        flex-direction: column;
+        gap: rem(9);
+        flex: 0 0 auto;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: rem(5.5);
+            left: rem(0.5);
+            width: rem(1);
+            height: calc(100% - rem(11));
+            background-color: var(--grey-74);
+        }
+
+        &-top,
+        &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(12);
+        }
+
+        &-name,
+        &-short,
+        &-price {
+        font-size: rem(12);
+        color: var(--grey-55);
+        }
+
+        &-short {
+        font-weight: 300;
+        }
+
+        &-prec {
+        color: var(--grey-55);
+
+        &.red {
+            color: var(--red);
+        }
+
+        &.green {
+            color: var(--green);
+        }
+        }
+    }
+}
+
+@keyframes line-marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .line__track {
+        animation: none;
+        transform: none;
+    }
+}
