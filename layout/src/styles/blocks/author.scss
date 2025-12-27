@@ -36,6 +36,8 @@
 
             &-right{
                 &-name{
+                    text-decoration: none;
+
                     font-weight: 700;
                     font-size: rem(21);
 
@@ -82,6 +84,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                background-color: var(--background);
             }
 
             &-content{
@@ -421,9 +425,7 @@
                 background-color: var(--black);
                 border-radius: 20px;
 
-                
-                
-
+                background: var(--background);
             }
 
             &-control{
@@ -500,6 +502,9 @@
                 width: 100%;
                 max-width: rem(400);
             }
+            &-bottom{
+                margin-top: rem(10);
+            }
         }
     }
 
@@ -510,6 +515,8 @@
 
                 li{
                     width: 100%;
+                    
+                    padding-left: 0;
                 }
             }
 

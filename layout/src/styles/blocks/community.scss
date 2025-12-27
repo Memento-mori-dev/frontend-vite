@@ -96,7 +96,7 @@
 
             font-size: rem(14);
             line-height: rem(20);
-            color: var(--grey-8b);
+            color: var(--grey-c5);
         }
 
         &-footer{
@@ -108,7 +108,12 @@
         }
         &-right{
             display: flex;
+            flex-wrap: wrap;
             gap: rem(20);
+        }
+
+        .author__single-start-link{
+            border-color: var(--grey-8b);
         }
     }
 
@@ -218,7 +223,7 @@
         &-description{
             font-size: rem(16);
             line-height: rem(24);
-            color: var(--grey-8b);
+            color: var(--grey-c5);
 
             display: -webkit-box;
             -webkit-box-orient: vertical;

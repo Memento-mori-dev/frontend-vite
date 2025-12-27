@@ -247,7 +247,7 @@
         justify-content: center;
         align-items: start;
 
-        border-top: var(--border-grey-ee-2);
+        border-top: 1px solid var(--grey-9a);
 
         position: relative;
         &-button{
@@ -268,11 +268,16 @@
             justify-content: center;
             align-items: center;
 
-            border: var(--border-grey-ee-2);
+            background-color: var(--grey-9a);
+            border: var(--grey-9a);
             border-radius: rem(5);
 
             & svg{
                 pointer-events: none;
+
+                & *{
+                    fill: var(--background);
+                }
             }
         }
 
