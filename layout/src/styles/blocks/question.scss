@@ -4,6 +4,34 @@
     &__slider{
         margin-top: rem(40);
 
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-btns{
+                display: flex;
+                gap: rem(5);
+
+                &-item{
+                    @include square(rem(32));
+
+                    background-color: var(--background);
+                    border-radius: 50%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    transition: var(--transition);
+
+                    @include hover{
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+
         &-title{
             font-size:rem(28);
             color: var(--grey-55);

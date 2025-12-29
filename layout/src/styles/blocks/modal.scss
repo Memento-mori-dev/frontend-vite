@@ -172,5 +172,119 @@
         background: var(--grey-5d);
     }
 
+    &__search{
+        width: 60%;
 
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+
+        &-header{
+            width: 100%;
+
+            padding: rem(10) rem(20);
+
+            background-color: var(--background);
+            border-radius: rem(20);
+
+            border: 1px solid var(--grey-8b);
+
+            display: flex;
+            gap: rem(10);
+
+            &-input{
+                width: 100%;
+                background: none;
+                border: none;
+                outline: none;
+
+                color: var(--white);
+
+                &::placeholder{
+                    color: var(--white)
+                }
+            }
+
+            &-btn{
+                @include square(rem(33));
+
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: var(--grey-8b);
+            }
+        }
+
+        &-content{
+            display: none;
+
+            max-height: rem(360);
+
+            width: 100%;
+
+            padding: rem(10) rem(20);
+
+            background-color: var(--background);
+            border-radius: rem(20);
+
+            border: 1px solid var(--grey-8b);
+
+            padding: rem(30);
+
+            background-color: var(--background);
+            border-radius: rem(20) rem(10) rem(10) rem(20);
+
+            overflow: auto;
+
+            &.is-active{
+                display: flex;
+                flex-direction: column;
+                gap: rem(20);
+            }
+
+            &::-webkit-scrollbar {
+                width: rem(10);
+                height: rem(10);
+            }
+
+            /* Фон полосы */
+            &::-webkit-scrollbar-track {
+                background: #f3f4f6;
+                border-radius: rem(10);
+            }
+
+            /* Ползунок */
+            &::-webkit-scrollbar-thumb {
+                background: var(--grey-8b);
+                border-radius: rem(10);
+                border: 2px solid #f3f4f6;
+            }
+        }
+
+        &-item{
+            text-decoration: none;
+
+            font-size: fluid(28, 18);
+            font-weight: 700;
+
+            color: var(--white);
+
+            transition: var(--transition);
+
+            @include hover{
+                color: var(--purple-92);
+            }
+        }
+    }
+
+    @include mobile{
+        &__search{
+            margin: 0 var(--container-padding-x);
+
+            width: 100%;
+        }
+    }
 }

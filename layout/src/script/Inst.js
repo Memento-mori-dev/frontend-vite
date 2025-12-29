@@ -68,8 +68,8 @@ export class Inst{
             },
         });
 
-        this.swiperModal= new Swiper('.swiper-inst-modal', {
-            slidesPerView: 2,
+        this.swiperModal = new Swiper('.swiper-inst-modal', {
+            slidesPerView: 1,
             navigation: {
                 prevEl: '.swiper-inst-modal .swiper-button-prev',
                 nextEl: '.swiper-inst-modal .swiper-button-next',

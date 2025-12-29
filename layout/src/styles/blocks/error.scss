@@ -1,0 +1,61 @@
+@use '../helpers' as *;
+
+.error{
+    &__content{
+        margin-top: rem(30);
+
+        padding: rem(60);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(20);
+
+        background-color: var(--background);
+        border-radius: rem(20);
+    }
+
+    &__pre{
+        text-align: center;
+        font-size: rem(28);
+        font-weight: 700;
+        color: var(--grey-55);
+    }
+
+    &__title{
+        font-size: rem(128);
+        font-weight: 700;
+        color: var(--grey-8b);
+        text-align: center;
+    }
+
+    &__text{
+        font-size: rem(16);
+        font-weight: 700;
+        color: var(--white);
+        text-align: center;
+
+        a{
+            text-decoration: none;
+
+            color: var(--purple-92);
+        }
+    }
+
+    @include mobile{
+        &__content{
+            padding: rem(20);
+        }
+        &__pre{
+            font-size: rem(18);
+        }
+
+        &__title{
+            font-size: rem(64);
+        }
+
+        &__text{
+            font-size: rem(14);
+        }
+    }
+}

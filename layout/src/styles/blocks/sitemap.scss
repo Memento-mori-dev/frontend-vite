@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+.sitemap{
+    margin-top: rem(32);
+
+    display: flex;
+    flex-direction: column;
+
+    &-title{
+        font-size: rem(28);
+        color: var(--white);
+    }
+
+    &-subtitle{
+        text-decoration: none;
+
+        margin-top: rem(18);
+        margin-left: rem(4);
+
+        font-size: rem(21);
+        line-height: rem(22);
+        color: var(--purple-92);
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+
+    &-link{
+        text-decoration: none;
+
+        margin-top: rem(18);
+        margin-left: rem(4);
+        
+        display: flex;
+        flex-direction: column;
+        gap: rem(6);
+
+        & a{
+            text-decoration: none;
+
+            font-size: rem(16);
+            line-height: rem(22);
+            color: var(--grey-55);
+        }
+
+        @include hover{
+            opacity: .8;
+        }
+    }
+}

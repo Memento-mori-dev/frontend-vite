@@ -203,6 +203,16 @@
             & .crypt__start-next{
                 margin-top: 0;
             }
+
+            &--video{
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: rem(20);
+
+                .academy__video{
+                    width: calc(33.33% - rem(13.33));
+                }
+            }
         }
 
         &-header{
@@ -610,6 +620,18 @@
     .crypt__start-header-img{
         display: none;
     }
+
+    .crypt__start-wrapper{
+        &--video{
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: rem(20);
+
+            .academy__video{
+                width: calc(50% - rem(10));
+            }
+        }
+    }
 }
 
 @include mobile{
@@ -752,5 +774,13 @@
 
     .crypt__header-text{
         font-size: rem(21);
+    }
+
+    .crypt__start-wrapper{
+        &--video{
+            .academy__video{
+                width: 100%;
+            }
+        }
     }
 }

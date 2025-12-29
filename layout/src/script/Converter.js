@@ -126,6 +126,7 @@ export default class Converter{
 
         Object.keys(data).forEach((key1, index) => {
             const key2 = Object.keys(dataNew)[index];
+
             result[key1] = {
                 main: data[key1],
                 price: dataNew[key2].items[0].price
@@ -182,6 +183,9 @@ export default class Converter{
         this.formOne.max = data.main.maxOne;
         this.formTwo.min = data.main.minTwo;
         this.formTwo.max = data.main.maxTwo;
+
+        // console.log(this.main);
+        
 
         this.formOneSpan.textContent = data.main.minOne + ' ' + oneName;
         this.formTwoSpan.textContent = data.main.minTwo + ' ' + twoName;

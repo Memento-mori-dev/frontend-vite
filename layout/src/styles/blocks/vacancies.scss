@@ -16,7 +16,9 @@
         }
 
         &-breadcrumbs{
-
+            .breadcrumbs{
+                margin: 0;
+            }
         }
     }
 
@@ -564,6 +566,12 @@
             &-item{
                 flex-direction: column;
             }
+        }
+    }
+
+    @media (width <= rem(1140)) {
+        &__header-line{
+            display: none;
         }
     }
 }

@@ -46,7 +46,64 @@
             color: var(--grey-d9);
         }
         &-form{
+            margin-top: rem(30);
+
             width: 377px;
+
+            .b-unisender-form{
+                padding: 0;
+                display: flex;
+                align-items: center;
+
+                border-radius: rem(30);
+                overflow: hidden;
+
+                border-color: var(--purple-92);
+                background-color: var(--grey-f7);
+            }
+            .b-unisender-field{
+                margin: 0;
+
+                display: flex;
+                align-items: center;
+            }
+            .b-unisender-field__input{
+                border: none;
+
+                color: var(--white);
+            }
+            .b-unisender-field__label{
+                display: none;
+            }
+            .b-unisender-form__main{
+                width: 100%;
+            }
+
+            .b-unisender-form .b-unisender-field[data-unisender-field-name="email"] .b-unisender-field__input, .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="email"] .b-unisender-checkbox__input{
+                margin: 0;
+                border: none;
+
+                background-color: var(--grey-f7);
+            }
+            .b-unisender-form .b-unisender-field[data-unisender-field-name="email"], .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="email"]{
+                margin: 0;
+            }
+
+            .b-unisender-form .b-unisender-form__submit-button{
+                height: rem(36) !important;
+
+                color: var(--black);
+                background: var(--linear-gradient);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: rem(13);
+                font-weight: 700;
+            }
+
+
         }
     }
     &__menu{
@@ -177,10 +234,6 @@
     .footer__menu-item-content,
     .footer__menu-item-two{
         flex-wrap: wrap;
-    }
-
-    .footer__start-form{
-        display: none;
     }
 
     .footer__menu-item-content{
