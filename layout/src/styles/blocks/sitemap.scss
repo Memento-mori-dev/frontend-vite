@@ -7,6 +7,10 @@
     flex-direction: column;
 
     &-title{
+        &:not(:first-child){
+            margin-top: rem(30);
+        }
+
         font-size: rem(28);
         color: var(--white);
     }
@@ -20,6 +24,8 @@
         font-size: rem(21);
         line-height: rem(22);
         color: var(--purple-92);
+
+        transition: var(--transition);
 
         @include hover{
             opacity: .8;
@@ -42,10 +48,14 @@
             font-size: rem(16);
             line-height: rem(22);
             color: var(--grey-55);
+
+            transition: var(--transition);
+
+            @include hover{
+                opacity: .8;
+            }
         }
 
-        @include hover{
-            opacity: .8;
-        }
+        
     }
 }
