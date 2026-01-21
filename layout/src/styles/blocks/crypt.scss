@@ -536,6 +536,12 @@
             display: flex;
             flex-direction: column;
             gap: rem(20);
+
+            h3{
+                a{
+                    display: flex;
+                }
+            }
         }
 
         &-img{
